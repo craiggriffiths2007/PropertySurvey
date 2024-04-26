@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PropertySurvey.RepairOrReplace"
+             Title="Repair / Replace">
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="Center" Spacing="20">
+            <Button Text="Replace original before 1st Oct 2010" Clicked="replace_old_button_clicked" HorizontalOptions="Center" WidthRequest="230"/>
+            <Button Text="Replace original on/after 1st Oct 2010" Clicked="replace_new_button_clicked" HorizontalOptions="Center" WidthRequest="230"/>
+            <Button Text="Repair" Clicked="repair_button_clicked" WidthRequest="230"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

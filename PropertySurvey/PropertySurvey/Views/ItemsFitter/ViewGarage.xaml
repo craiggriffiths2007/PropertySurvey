@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:controls="clr-namespace:MartControls"
+             x:Class="PropertySurvey.ViewGarage"
+             Title="Garage">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Margin="3">
+                <controls:ViewTextLabel LabelText="Cause of damage" TextBinding="cause_of_damage"/>
+                <controls:ViewTextLabel LabelText="Why is cause different to contract" x:Name="cause_different_answer" TextBinding="cause_of_damage_reason_different"/>
+                <controls:ViewButtonLabel LabelText="Entry gained through this item" x:Name="point_of_entry_answer" button_binding="point_of_entry"/>
+                <controls:ViewButtonLabel LabelText="Was it locked" x:Name="was_it_locked_answer" button_binding="was_it_locked"/>
+                <controls:ViewTextLabel LabelText="What locks were on this item" x:Name="type_of_locking_system_answer" TextBinding="type_of_lockng_system_required"/>
+                <controls:ViewTextLabel LabelText="Colour" TextBinding="color"/>
+                <controls:ViewButtonLabel LabelText="Subframe material" x:Name="subframe_material_answer" button_binding="door_fits_into"/>
+                <controls:ViewButtonLabel LabelText="New subframe" x:Name="new_subframe_answer" button_binding="new_subframe_req"/>
+                <controls:ViewButtonLabel LabelText="Obstruction outside" button_binding="obstruction_outside_b"/>
+                <controls:ViewTextLabel LabelText="Obstruction outside detail" x:Name="obstruction_outside_detail_answer" TextBinding="obstruction_outside"/>
+                <controls:ViewButtonLabel LabelText="Obstruction inside" button_binding="obstruction_inside_b"/>
+                <controls:ViewTextLabel LabelText="Obstruction inside detail" x:Name="obstruction_inside_detail_answer" TextBinding="obstruction_inside"/>
+                <controls:ViewTextLabel LabelText="Actual door width" TextBinding="actual_door_width"/>
+                <controls:ViewTextLabel LabelText="Actual door height" TextBinding="actual_door_height"/>
+                <controls:ViewButtonLabel LabelText="Frame fix type" x:Name="frame_fix_type_answer" button_binding="frame_fix_type"/>
+                <controls:ViewButtonLabel LabelText="Is the garage door in customers house perimeter" button_binding="door_within_perimeter"/>
+                <controls:ViewTextLabel LabelText="Where is it" x:Name="where_is_garage_answer" TextBinding="where_is_garage" IsVisible="False"/>
+                <controls:ViewTextLabel LabelText="Type of garage" TextBinding="type_of_garage"/>
+                <controls:ViewTextLabel LabelText="New Electric operator required" TextBinding="new_electric_operator_req"/>
+                <controls:ViewTextLabel LabelText="Is the door motor hard wired or is it into a 240v plug" x:Name="hard_wired_answer" TextBinding="wire_type"/>
+                <controls:ViewButtonLabel LabelText="Is there a 240v socket within 1m of where the motor is to be positione" x:Name="socket_within_1m_answer" button_binding="socket_within_1m"/>
+                <controls:ViewButtonLabel LabelText="Electric door" button_binding="electric_door"/>
+                <controls:ViewButtonLabel LabelText="Motor position" x:Name="motor_position_answer" button_binding="motor_position"/>
+                <controls:ViewButtonLabel LabelText="Other access into garage" button_binding="other_access"/>
+                <controls:ViewButtonLabel LabelText="Need safety release" x:Name="safety_release_required_answer" button_binding="need_safety_release"/>
+                <controls:ViewButtonLabel LabelText="Handle on the outside" button_binding="handle_outside"/>
+                <controls:ViewButtonLabel LabelText="Garage door stuck shut" button_binding="door_stuck_shut"/>
+
+                <StackLayout Orientation="Horizontal">
+                    <Image Source="garageside.jpg" VerticalOptions="Start"/>
+                    <StackLayout>
+                        <controls:ViewTextLabel LabelText="A" TextBinding="side_size_A" Orientation="Horizontal"/>
+                        <controls:ViewTextLabel LabelText="B" TextBinding="side_size_B" Orientation="Horizontal"/>
+                        <controls:ViewTextLabel LabelText="C" TextBinding="side_size_C" Orientation="Horizontal"/>
+                        <controls:ViewTextLabel LabelText="D" TextBinding="side_size_D" Orientation="Horizontal"/>
+                        <controls:ViewTextLabel LabelText="E" TextBinding="side_size_E" Orientation="Horizontal"/>
+                        <controls:ViewTextLabel LabelText="F" TextBinding="side_size_F" Orientation="Horizontal"/>
+                        <controls:ViewTextLabel LabelText="G" TextBinding="side_size_G" Orientation="Horizontal"/>
+                        <Label Text="Timber"/>
+                        <controls:ViewTextLabel LabelText="1" TextBinding="side_timber_1" Orientation="Horizontal"/>
+                        <controls:ViewTextLabel LabelText="2" TextBinding="side_timber_2" Orientation="Horizontal"/>
+                    </StackLayout>
+                </StackLayout>
+                <StackLayout HeightRequest="45"/>
+                <StackLayout Orientation="Horizontal">
+                    <Image Source="garageplan.jpg" VerticalOptions="Start"/>
+                    <StackLayout>
+                        <controls:ViewTextLabel LabelText="A" TextBinding="plan_size_A" Orientation="Horizontal"/>
+                        <controls:ViewTextLabel LabelText="B" TextBinding="plan_size_B" Orientation="Horizontal"/>
+                        <controls:ViewTextLabel LabelText="C1" TextBinding="plan_size_C1" Orientation="Horizontal"/>
+                        <controls:ViewTextLabel LabelText="C2" TextBinding="plan_size_C2" Orientation="Horizontal"/>
+                        <controls:ViewTextLabel LabelText="D" TextBinding="plan_size_D" Orientation="Horizontal"/>
+                        <Label Text="Timber"/>
+                        <controls:ViewTextLabel LabelText="1" TextBinding="plan_timber_1" Orientation="Horizontal"/>
+                        <controls:ViewTextLabel LabelText="2" TextBinding="plan_timber_2" Orientation="Horizontal"/>
+                    </StackLayout>
+                </StackLayout>
+
+                <controls:ViewTextLabel LabelText="Opening type" TextBinding="opening_type"/>
+                <controls:ViewTextLabel LabelText="Type of roller door" x:Name="roller_door_type_answer" TextBinding="roller_door_type"/>
+                <controls:ViewTextLabel LabelText="Roll box type" x:Name="roller_door_box_answer" TextBinding="roller_box_type"/>
+                <controls:ViewButtonLabel LabelText="Colour match roll box" x:Name="colour_match_answer" button_binding="colour_match_roll_box"/>
+
+                <StackLayout x:Name="additional_drawings_area" Orientation="Horizontal">
+                    <Label x:Name="additional_drawing" Text="Additional drawings" HorizontalOptions="FillAndExpand"/>
+                    <Button Text="View" x:Name="additional_drawing_button" WidthRequest="45" Clicked="additional_drawings_clicked"/>
+                </StackLayout>
+
+                <controls:ViewTextLabel LabelText="Finish" TextBinding="finish"/>
+                <controls:ViewButtonLabel LabelText="Opening direction" x:Name="opening_direction_answer" button_binding="opening_direction"/>
+                <controls:ViewButtonLabel LabelText="Power points" button_binding="power_points"/>
+                <controls:ViewButtonLabel LabelText="Insulated" button_binding="insulated"/>
+                <controls:ViewTextLabel LabelText="Item Summary" TextBinding="long_comments"/>
+                <controls:ViewTextLabel LabelText="Parts to order" TextBinding="parts_to_order"/>
+                <controls:ViewDrawingsAndPhotos x:Name="drawings_and_photos"/>
+                <controls:Copyright/>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

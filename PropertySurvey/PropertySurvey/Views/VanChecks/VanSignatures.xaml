@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:controls="clr-namespace:MartControls"
+             Title="Signatures"
+             x:Class="PropertySurvey.VanSignatures">
+    <ContentPage.Content>
+        <StackLayout HorizontalOptions="Center" VerticalOptions="StartAndExpand">
+            <StackLayout HorizontalOptions="Center" WidthRequest="280" VerticalOptions="CenterAndExpand">
+                <controls:EntryLabel TextBinding="driver_printed" LabelText="Driver Print Name"/>
+                <Button Text="Driver Signature" Clicked="OnDriverPrintNameAsync" HorizontalOptions="FillAndExpand"/>
+            </StackLayout>
+
+            <StackLayout HorizontalOptions="Center" WidthRequest="280" VerticalOptions="CenterAndExpand">
+                <controls:EntryLabel TextBinding="checked_printed" LabelText="Checked by Print Name"/>
+                <Button Text="Checked by Signature" Clicked="OnCheckedByPrintNameAsync" HorizontalOptions="FillAndExpand"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

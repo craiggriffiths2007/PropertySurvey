@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<StackLayout xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MartControls.Copyright">
+    <StackLayout HeightRequest="250">
+        <Label Text="Property Survey" FontSize="8" Margin="20,20,20,20" TextColor="#000000"  HorizontalOptions="EndAndExpand" VerticalOptions="EndAndExpand"/>
+        <!--<Image Source="mts"/>-->
+    </StackLayout>
+</StackLayout>

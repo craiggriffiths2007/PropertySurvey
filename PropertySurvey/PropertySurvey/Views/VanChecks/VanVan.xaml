@@ -1,0 +1,225 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PropertySurvey.VanVan"
+             xmlns:controls="clr-namespace:MartControls"
+             Title="Weekly Van Checks">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Clicked="OnImagesClicked" Icon="images.png"/>
+    </ContentPage.ToolbarItems>
+    
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                <controls:ControlLayout>
+                    <controls:YesNoLabel x:Name="is_complete" button_binding="is_complete" LabelText="Complete the check?" OnSelectionChanged="OnCompleteChanged"/>
+                </controls:ControlLayout>
+                <controls:ControlLayout x:Name="incomplete_area" IsVisible="False">
+                    <Label Text="Please explain why you were not able to complete the check, you do not need to fill in the rest of the sheet."/>
+                    <Entry Text="{Binding not_complete_reason}"/>
+                    <controls:Copyright/>
+                </controls:ControlLayout>
+                    <controls:ControlLayout x:Name="complete_area" IsVisible="True">
+                    <controls:EntryLabel x:Name="branch" TextBinding="branch" LabelText="Branch"/>
+                    <controls:DateLabel x:Name="date" TheDate="{Binding date}" LabelText="Date"/>
+                    <controls:EntryLabel x:Name="vehicle_reg" TextBinding="vehicle_reg" LabelText="Registration"/>
+                    <controls:EntryLabel x:Name="mileage" TextBinding="mileage" LabelText="Mileage" EntryKeyboard="Numeric"/>
+
+                    <controls:YesNoLabelEntryLabel x:Name="loading_storage"     ButtonLabel="Loading/Storage Area Floor in Good Condition" 
+                                                                                button_binding="spare_i_2" TextBinding="spare_s_2" />
+                    <controls:YesNoLabelEntryLabel x:Name="circuit_breaker"     ButtonLabel="Circuit Breaker" 
+                                                                                button_binding="circuit_breaker" TextBinding="circuit_breaker_s" />
+                    <controls:YesNoLabelEntryLabel x:Name="power_breaker"     ButtonLabel="110v Power Breaker" 
+                                                                                button_binding="power_breaker" TextBinding="power_breaker_s" />
+                    <controls:YesNoLabelEntryLabel x:Name="hammer_drill"     ButtonLabel="Hammer Drill" 
+                                                                                button_binding="hammer_drill" TextBinding="hammer_drill_s" />
+                    <controls:YesNoLabelEntryLabel x:Name="ordinary_drill"     ButtonLabel="Ordinary Drill" 
+                                                                                button_binding="ordinary_drill" TextBinding="ordinary_drill_s" />
+                    <controls:YesNoLabelEntryLabel x:Name="cordless_drill"     ButtonLabel="Cordless Drill" 
+                                                                                button_binding="cordless_drill" TextBinding="cordless_drill_s" />
+                    <controls:YesNoLabelEntryLabel x:Name="spare_battery_and_charger"     ButtonLabel="Spare battery and Charger" 
+                                                                                button_binding="spare_battery_and_charger" TextBinding="spare_battery_and_charger_s" />
+                    <controls:YesNoLabelEntryLabel x:Name="circular_saw"     ButtonLabel="Circular Saw / Check Blade" 
+                                                                                button_binding="circular_saw" TextBinding="circular_saw_s" />
+                    <controls:YesNoLabelEntryLabel x:Name="jig_saw"     ButtonLabel="Jig Saw" 
+                                                                                button_binding="jig_saw" TextBinding="jig_saw_s" />
+                    <controls:YesNoLabelEntryLabel x:Name="planer_check_blade"     ButtonLabel="Planner / Check Blade" 
+                                                                                button_binding="planer_check_blade" TextBinding="planer_check_blade_s" />
+                    <controls:YesNoLabelEntryLabel x:Name="heat_gun"     ButtonLabel="Heat Gun" 
+                                                                                button_binding="heat_gun" TextBinding="heat_gun_s" />
+                    <controls:YesNoLabelEntryLabel x:Name="sander"     ButtonLabel="Sander" 
+                                                                                button_binding="sander" TextBinding="sander_s" />
+                    <controls:YesNoLabelEntryLabel x:Name="hoover"     ButtonLabel="Hoover" 
+                                                                                button_binding="hoover" TextBinding="hoover_s" />
+                    <controls:YesNoLabelEntryLabel x:Name="halogen_lamp"     ButtonLabel="Halogen Lamp" 
+                                                                                button_binding="halogen_lamp" TextBinding="halogen_lamp_s" />
+                    <controls:YesNoLabelEntryLabel x:Name="extension_lead"     ButtonLabel="Extension lead" 
+                                                                                button_binding="extension_lead" TextBinding="extension_lead_s" />
+                    <controls:YesNoLabelEntryLabel x:Name="router"     ButtonLabel="Router" 
+                                                                                button_binding="router" TextBinding="router_s" />
+                    <controls:YesNoLabelEntryLabel x:Name="letterboxjig"     ButtonLabel="Letterbox Jig" 
+                                                                                button_binding="new_ispare1" TextBinding="new_sspare1" />
+                    <controls:YesNoLabelEntryLabel x:Name="industrial_ladders"     ButtonLabel="Industrial Ladders in Good Condition" 
+                                                                                button_binding="industrial_ladders" TextBinding="industrial_ladders_s" />
+                    <controls:YesNoLabelEntryLabel x:Name="ladder_clamps"     ButtonLabel="Ladder Clamps / Padlock" 
+                                                                                button_binding="ladder_clamps" TextBinding="ladder_clamps_s" />
+                    <controls:YesNoLabelEntryLabel x:Name="step_ladders"     ButtonLabel="Step Ladders" 
+                                                                                button_binding="step_ladders" TextBinding="step_ladders_s" />
+                    <controls:YesNoLabelEntryLabel x:Name="ladder_stopper"     ButtonLabel="Ladder Stopper" 
+                                                                                button_binding="ladder_stopper" TextBinding="ladder_stopper_s" />
+                    <controls:YesNoLabelEntryLabel x:Name="philips_bit"     ButtonLabel="Philips Bit / Star Bit" 
+                                                                                button_binding="philips_bit" TextBinding="philips_bit_s" />
+                    <controls:YesNoLabelEntryLabel x:Name="screw_box"     ButtonLabel="Screw Box" 
+                                                                                button_binding="screw_box" TextBinding="screw_box_s" />
+                    <controls:YesNoLabelEntryLabel x:Name="tresles_x2"     ButtonLabel="Tresles (x2)" 
+                                                                                button_binding="tresles_x2" TextBinding="tresles_x2_s" />
+                    <controls:YesNoLabelEntryLabel x:Name="torch_working"     ButtonLabel="Torch working" 
+                                                                                button_binding="torch_working" TextBinding="torch_working_s" />
+                    <controls:YesNoLabelEntryLabel x:Name="ratchett_straps_x4"     ButtonLabel="Ratchet Straps (x4)" 
+                                                                                button_binding="ratchett_straps_x4" TextBinding="ratchett_straps_x4_s" />
+                    <controls:YesNoLabelEntryLabel x:Name="spare_wheel"     ButtonLabel="Spare Wheel" 
+                                                                                button_binding="spare_wheel" TextBinding="spare_wheel_s" />
+                    <controls:YesNoLabelEntryLabel x:Name="blue_external_dust_sheet"     ButtonLabel="Blue External Dust Sheet" 
+                                                                                button_binding="blue_external_dust_sheet" TextBinding="blue_external_dust_sheet_s" />
+                    <controls:YesNoLabelEntryLabel x:Name="internal_dust_sheets_x3"     ButtonLabel="Internal Dust Sheets (x3)" 
+                                                                                button_binding="internal_dust_sheets_x3" TextBinding="internal_dust_sheets_x3_s" />
+                    <controls:YesNoLabelEntryLabel x:Name="brush_and_shovel"     ButtonLabel="Brush and Shovel" 
+                                                                                button_binding="brush_and_shovel" TextBinding="brush_and_shovel_s" />
+                    <controls:YesNoLabelEntryLabel x:Name="cleaner_bottle"     ButtonLabel="Cleaner Bottle" 
+                                                                                button_binding="cleaner_bottle" TextBinding="cleaner_bottle_s" />
+                    <controls:YesNoLabelEntryLabel x:Name="ecloth"     ButtonLabel="E-Cloth" 
+                                                                                button_binding="ecloth" TextBinding="ecloth_s" />
+                    <controls:YesNoLabelEntryLabel x:Name="mastic_guns"     ButtonLabel="Mastic Guns (x2)" 
+                                                                                button_binding="mastic_guns" TextBinding="mastic_guns_s" />
+                    <controls:YesNoLabelEntryLabel x:Name="glass_suckers"     ButtonLabel="Glass Suckers (x2)" 
+                                                                                button_binding="glass_suckers" TextBinding="glass_suckers_s" />
+
+                    <controls:AddMinusLabel x:Name="safety_helmets" Val="{Binding safety_helmets}" Min="0" Max="10" OnSelectionChanged="OnSafetyChanged" LabelText="Safety helmets"/>
+                    <!-- safety helmets-->
+                    <controls:DateLabel x:Name="ManufactureDateOnHelmet" TheDate="{Binding ManufactureDateOnHelmet}" LabelText="Manufacture Date on Helmet 1"/>
+                    <controls:DateLabel x:Name="ManufactureDateOnHelmet2" TheDate="{Binding ManufactureDateOnHelmet2}" LabelText="Manufacture Date on Helmet 2"/>
+                    <controls:DateLabel x:Name="ManufactureDateOnHelmet3" TheDate="{Binding ManufactureDateOnHelmet3}" LabelText="Manufacture Date on Helmet 3"/>
+                    <controls:DateLabel x:Name="ManufactureDateOnHelmet4" TheDate="{Binding ManufactureDateOnHelmet4}" LabelText="Manufacture Date on Helmet 4"/>
+                    <controls:DateLabel x:Name="ManufactureDateOnHelmet5" TheDate="{Binding ManufactureDateOnHelmet5}" LabelText="Manufacture Date on Helmet 5"/>
+                    <controls:DateLabel x:Name="ManufactureDateOnHelmet6" TheDate="{Binding ManufactureDateOnHelmet6}" LabelText="Manufacture Date on Helmet 6"/>
+                    <controls:DateLabel x:Name="ManufactureDateOnHelmet7" TheDate="{Binding ManufactureDateOnHelmet7}" LabelText="Manufacture Date on Helmet 7"/>
+                    <controls:DateLabel x:Name="ManufactureDateOnHelmet8" TheDate="{Binding ManufactureDateOnHelmet8}" LabelText="Manufacture Date on Helmet 8"/>
+                    <controls:DateLabel x:Name="ManufactureDateOnHelmet9" TheDate="{Binding ManufactureDateOnHelmet9}" LabelText="Manufacture Date on Helmet 9"/>
+                    <controls:DateLabel x:Name="ManufactureDateOnHelmet10" TheDate="{Binding ManufactureDateOnHelmet10}" LabelText="Manufacture Date on Helmet 10"/>
+
+                    <controls:AddMinusLabel x:Name="gloves" Val="{Binding gloves}" Min="0" Max="10" OnSelectionChanged="OnGlovesChanged" LabelText="Gloves"/>
+                    <controls:EntryLabel LabelText="Please give a reason" TextBinding="gloves_s" x:Name="gloves_s"/>
+                    <controls:AddMinusLabel x:Name="wrist_guards" Val="{Binding wrist_guards}" Min="0" Max="10" OnSelectionChanged="OnWristChanged" LabelText="Wrist Guards"/>
+                    <controls:EntryLabel LabelText="Please give a reason" TextBinding="wrist_guards_s" x:Name="wrist_guards_s"/>
+                    <controls:AddMinusLabel x:Name="goggles" Val="{Binding goggles}" Min="0" Max="10" OnSelectionChanged="OnGogglesChanged" LabelText="Goggles"/>
+                    <controls:EntryLabel LabelText="Please give a reason" TextBinding="goggles_s" x:Name="goggles_s"/>
+                    <controls:AddMinusLabel x:Name="ear_defenders" Val="{Binding ear_defenders}" Min="0" Max="10" OnSelectionChanged="OnEarChanged" LabelText="Ear Defenders"/>
+                    <controls:EntryLabel LabelText="Please give a reason" TextBinding="ear_defenders_s" x:Name="ear_defenders_s"/>
+                    <controls:AddMinusLabel x:Name="dust_masks" Val="{Binding dust_masks}" Min="0" Max="10" OnSelectionChanged="OnDustChanged" LabelText="Dust Masks"/>
+                    <controls:EntryLabel LabelText="Please give a reason" TextBinding="dust_masks_s" x:Name="dust_masks_s"/>
+
+                    <!--
+                    <controls:YesNoLabelEntryLabel x:Name="gloves"     ButtonLabel="Gloves (qty)" 
+                                                                                button_binding="gloves" TextBinding="gloves_s" />
+                    <controls:YesNoLabelEntryLabel x:Name="wrist_guards"     ButtonLabel="Wrist Guards (qty)" 
+                                                                                button_binding="wrist_guards" TextBinding="wrist_guards_s" />
+                    <controls:YesNoLabelEntryLabel x:Name="goggles"     ButtonLabel="Goggles (qty)" 
+                                                                                button_binding="goggles" TextBinding="goggles_s" />
+                    <controls:YesNoLabelEntryLabel x:Name="ear_defenders"     ButtonLabel="Ear Defenders (qty)" 
+                                                                                button_binding="ear_defenders" TextBinding="ear_defenders_s" />
+                    <controls:YesNoLabelEntryLabel x:Name="dust_masks"     ButtonLabel="Dust Masks (qty)" 
+                                                                                button_binding="dust_masks" TextBinding="dust_masks_s" />
+                        -->
+                    <controls:YesNoLabelEntryLabel x:Name="customer_care_cards"     ButtonLabel="Customer Care Cards" 
+                                                                                button_binding="customer_care_cards" TextBinding="customer_care_cards_s" />
+                    <controls:YesNoLabelEntryLabel x:Name="completion_forms"     ButtonLabel="Excess payment forms" 
+                                                                                button_binding="completion_forms" TextBinding="completion_forms_s" />
+                    <controls:YesNoLabelEntryLabel x:Name="freepost_envelopes"     ButtonLabel="Envelopes" 
+                                                                                button_binding="freepost_envelopes" TextBinding="freepost_envelopes_s" />
+                    <controls:YesNoLabelEntryLabel x:Name="mandate_forms"     ButtonLabel="Mandate Forms" 
+                                                                                button_binding="mandate_forms" TextBinding="mandate_forms_s" />
+                    <controls:YesNoLabelEntryLabel x:Name="quality_manuals"     ButtonLabel="COSHH Sheets" 
+                                                                                button_binding="quality_manuals" TextBinding="quality_manuals_s" />
+                    <controls:YesNoLabelEntryLabel x:Name="stapler"     ButtonLabel="Stapler" 
+                                                                                button_binding="stapler" TextBinding="stapler_s" />
+                    <controls:YesNoLabelEntryLabel x:Name="worksheets"     ButtonLabel="Stock Usage Sheets" 
+                                                                                button_binding="worksheets" TextBinding="worksheets_s" />
+                    <controls:YesNoLabelEntryLabel x:Name="plasters"     ButtonLabel="First Aid Kit: Plasters" 
+                                                                                button_binding="plasters" TextBinding="plasters_s" />
+                    <controls:YesNoLabelEntryLabel x:Name="dressing"     ButtonLabel="First Aid Kit: Dressing" 
+                                                                                button_binding="dressing" TextBinding="dressing_s" />
+                    <controls:YesNoLabelEntryLabel x:Name="eyewashers"     ButtonLabel="First Aid Kit: Eyewashes" 
+                                                                                button_binding="eyewashers" TextBinding="eyewashers_s" />
+                    <controls:YesNoLabelEntryLabel x:Name="steri_wipes"     ButtonLabel="First Aid Kit: Steri Whipes" 
+                                                                                button_binding="steri_wipes" TextBinding="steri_wipes_s" />
+                    <controls:YesNoLabelEntryLabel x:Name="bag"     ButtonLabel="Surveyor Kit: Bag" 
+                                                                                button_binding="bag" TextBinding="bag_s" />
+                    <controls:YesNoLabelEntryLabel x:Name="flexi_meter"     ButtonLabel="Surveyor Kit: Flexi Meter" 
+                                                                                button_binding="flexi_meter" TextBinding="flexi_meter_s" />
+                    <controls:YesNoLabelEntryLabel x:Name="merlin_low_e_detector"     ButtonLabel="Surveyor Kit: Merlin low-E detector" 
+                                                                                button_binding="merlin_low_e_detector" TextBinding="merlin_low_e_detector_s" />
+                    <controls:YesNoLabelEntryLabel x:Name="cabin_condition"     ButtonLabel="Cabin Condition" 
+                                                                                button_binding="cabin_condition" TextBinding="cabin_condition_s" />
+                    <controls:YesNoLabelEntryLabel x:Name="national_tyres_card"     ButtonLabel="National Tyres Card" 
+                                                                                button_binding="national_tyres_card" TextBinding="national_tyres_card_s" />
+                    <controls:YesNoLabelEntryLabel x:Name="breakdown_card"     ButtonLabel="Breakdown Card" 
+                                                                                button_binding="breakdown_card" TextBinding="breakdown_card_s" />
+                    <controls:YesNoLabelEntryLabel x:Name="fuel_card"     ButtonLabel="UK Fuel Card" 
+                                                                                button_binding="fuel_card" TextBinding="fuel_card_s" />
+                    <controls:YesNoLabelEntryLabel x:Name="shell_fuel_card"     ButtonLabel="Shell fuel Card" 
+                                                                                button_binding="spare_i_1" TextBinding="spare_s_1" />
+                    <controls:YesNoLabelEntryLabel x:Name="shell_points_card"     ButtonLabel="Shell Points Card" 
+                                                                                button_binding="shell_points_card" TextBinding="shell_points_card_s" />
+                    <controls:YesNoLabelEntryLabel x:Name="fire_extinguisher"     ButtonLabel="Fire Extinguisher" 
+                                                                                button_binding="fire_extinguisher" TextBinding="fire_extinguisher_s" />
+                    <controls:YesNoLabelEntryLabel x:Name="jack"     ButtonLabel="Jack" 
+                                                                                button_binding="jack" TextBinding="jack_s" />
+                    <controls:YesNoLabelEntryLabel x:Name="wheelbrace"     ButtonLabel="Wheelbrace" 
+                                                                                button_binding="wheelbrace" TextBinding="wheelbrace_s" />
+                    <controls:YesNoLabelEntryLabel x:Name="jump_leads"     ButtonLabel="Jump Lead" 
+                                                                                button_binding="jump_leads" TextBinding="jump_leads_s" />
+                    <controls:YesNoLabelEntryLabel x:Name="fan_belt"     ButtonLabel="Fan Belt" 
+                                                                                button_binding="fan_belt" TextBinding="fan_belt_s" />
+                    <controls:YesNoLabelEntryLabel x:Name="tow_ropes"     ButtonLabel="Tow Ropes" 
+                                                                                button_binding="tow_ropes" TextBinding="tow_ropes_s" />
+                    <controls:YesNoLabelEntryLabel x:Name="spare_oil"     ButtonLabel="Spare Oil" 
+                                                                                button_binding="spare_oil" TextBinding="spare_oil_s" />
+                    <controls:YesNoLabelEntryLabel x:Name="coolant_anti_freeze"     ButtonLabel="Coolant / Anti freeze mix" 
+                                                                                button_binding="coolant_anti_freeze" TextBinding="coolant_anti_freeze_s" />
+                    <controls:YesNoLabelEntryLabel x:Name="van_height_sticker"     ButtonLabel="Van Height Sticker" 
+                                                                                button_binding="van_height_sticker" TextBinding="van_height_sticker_s" />
+                    <controls:YesNoLabelEntryLabel x:Name="wheel_nut_check_sticker"     ButtonLabel="Wheel Nut Check Sticker" 
+                                                                                button_binding="wheel_nut_check_sticker" TextBinding="wheel_nut_check_sticker_s" />
+                    <controls:YesNoLabelEntryLabel x:Name="no_smoking_sticker"     ButtonLabel="''No Smoking'' Sticker" 
+                                                                                button_binding="no_smoking_sticker" TextBinding="no_smoking_sticker_s" />
+                    <controls:YesNoLabelEntryLabel x:Name="racks_and_poles"     ButtonLabel="Racks and Poles" 
+                                                                                button_binding="racks_and_poles" TextBinding="racks_and_poles_s" />
+                    <controls:YesNoLabelEntryLabel x:Name="tyre_conditions"     ButtonLabel="Tyre Conditions" 
+                                                                                button_binding="tyre_conditions" TextBinding="tyre_conditions_s" />
+                    <controls:YesNoLabelEntryLabel x:Name="van_locks"     ButtonLabel="Van Locks" 
+                                                                                button_binding="van_locks" TextBinding="van_locks_s" />
+                    <controls:YesNoLabelEntryLabel x:Name="oil_and_water_checked"     ButtonLabel="Oil and Water Checked" 
+                                                                                button_binding="oil_and_water_checked" TextBinding="oil_and_water_checked_s" />
+                    <controls:YesNoLabelEntryLabel x:Name="hows_my_driving_sticker"     ButtonLabel="''Hows My Driving'' Sticker" 
+                                                                                button_binding="hows_my_driving_sticker" TextBinding="hows_my_driving_sticker_s" />
+                    <controls:YesNoLabelEntryLabel x:Name="windscreen_good_condition"     ButtonLabel="Windscreen Good Condition" 
+                                                                                button_binding="windscreen_good_contidion" TextBinding="windscreen_good_contidion_s" />
+                    <controls:DateLabel x:Name="PDASetup" LabelText="PDA Setup Date (must be set)" TheDate="{Binding PDASetupDate}"/>
+
+                    <controls:YesNoLabelEntryLabel x:Name="accident_pack_on_pda"     ButtonLabel="Accident Pack On PDA" 
+                                                                                button_binding="accident_pack_on_pda" TextBinding="accident_pack_on_pda_s" />
+                    <controls:YesNoLabelEntryLabel x:Name="hi_vis_vests"     ButtonLabel="Hi Viz Vest" 
+                                                                                button_binding="hi_vis_vests" TextBinding="hi_vis_vests_s" />
+                    <controls:YesNoLabelEntryLabel x:Name="grinder"     ButtonLabel="Grinder" 
+                                                                        button_binding="grinder" TextBinding="grinder_s" />
+                    <controls:EntryLabel x:Name="out_of_ten" TextBinding="marks_out_of_10" LabelText="Marks out of ten" EntryKeyboard="Numeric"/>
+                    <controls:Copyright/>
+                </controls:ControlLayout>
+            </StackLayout>
+            
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
+    
+    

@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PropertySurvey.WindowLock"
+             Title="Window Locking Mechanism"
+             xmlns:views="clr-namespace:SkiaSharp.Views.Forms;assembly=SkiaSharp.Views.Forms"
+             xmlns:controls="clr-namespace:MartControls">
+    <ContentPage.Content>
+        <Grid>
+            <StackLayout x:Name="stack_size" Orientation="Vertical">
+                <views:SKCanvasView x:Name="SkCanvasView" PaintSurface="OnPainting" EnableTouchEvents="True" Touch="OnTouch" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand"/>
+            </StackLayout>
+
+            <StackLayout Orientation="Vertical" HorizontalOptions="End" VerticalOptions="Start">
+                <Label Text="Dist" x:Name="distance_text"/>
+                <StackLayout Orientation="Horizontal" HorizontalOptions="End" VerticalOptions="Start">
+                    <Button Image = "left.png" Clicked="dist_left_click" WidthRequest="50"/>
+                    <Entry x:Name="value_entry" WidthRequest="50" Keyboard="Numeric"/>
+                    <Label Text="mm" VerticalOptions="End"/>
+                    <Button Image = "right.png" Clicked="dist_right_click" WidthRequest="50"/>
+                </StackLayout>
+            </StackLayout>
+
+            <StackLayout Orientation="Vertical" HorizontalOptions="End" VerticalOptions="End">
+                <StackLayout Orientation="Horizontal" HorizontalOptions="End" VerticalOptions="Start">
+                    <controls:YesNoLabel x:Name="gearbox_button" button_binding="GearBox" LabelText="Gearbox "/>
+                </StackLayout>
+            </StackLayout>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

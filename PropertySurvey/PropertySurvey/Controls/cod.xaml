@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<StackLayout xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="MartControls.CauseOfDamage" Orientation="Vertical"
+    xmlns:controls="clr-namespace:MartControls"
+    LayoutChanged="layout_changed">
+
+    <Label Text="Cause of damage" HorizontalOptions="FillAndExpand"/>
+    <controls:EditPicker x:Name="cause_of_damage_picker" picker_title="Cause of damage" max_text_length="30" OnTextChangedEvent="cause_of_damage_changed"/>
+
+    <controls:WarningMessage x:Name="cod_warning_message" Text="Please take a minimum of 10 photographs to support your findings.&#13;&#10;- Close up and distant&#13;&#10;- Inside and outside"/>
+
+    <StackLayout Orientation="Vertical" x:Name="damage_different_area">
+        <Label Text="" x:Name="diff_label"/>
+        <controls:EditorGrows x:Name="reason_different"/>
+    </StackLayout>
+
+    <StackLayout Orientation="Horizontal" x:Name="ss_area" IsVisible="False">
+        <controls:YesNoLabel x:Name="ss_req" button_binding="ss_bIsSecuritySurvey" OnSelectionChanged="selection_changed"/>
+        <Button Text="" WidthRequest="45" HeightRequest="45" Clicked="OnSSButton" VerticalOptions="EndAndExpand" x:Name="ss_button"/>
+        
+        <!--<controls:TickButtonLabel ButtonState="{Binding bSSTicked}" x:Name="ss_button" LabelText="" HorizontalOptions="FillAndExpand" Clicked="TickButtonLabel_Clicked"/>-->
+    </StackLayout>
+
+    <StackLayout x:Name="point_of_entry_area" Orientation="Vertical" HorizontalOptions="FillAndExpand">
+        <controls:YesNoLabel x:Name="point_of_entry_button" LabelText="Entry gained through this item" HorizontalOptions="FillAndExpand"/>
+        <StackLayout HeightRequest="3"/>
+        <controls:YesNoLabel x:Name="was_it_locked_button" LabelText="Was it locked" HorizontalOptions="FillAndExpand"/>
+        <Label Text="What locks were on this item?"  HorizontalOptions="FillAndExpand"/>
+        <controls:EditPicker x:Name="type_of_lock_picker"/>
+    </StackLayout>
+</StackLayout>

@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:controls="clr-namespace:MartControls"
+             x:Class="PropertySurvey.ViewPanel"
+             Title="Panel">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Margin="3">
+                <controls:ViewTextLabel LabelText="Cause of damage" x:Name="cause_of_damage_answer" TextBinding="cause_of_damage"/>
+                <controls:ViewTextLabel LabelText="Why is cause different to contract" x:Name="cause_different_answer" TextBinding="cause_of_damage_reason_different"/>
+                <controls:ViewButtonLabel LabelText="Entry gained through this item" x:Name="point_of_entry_answer" button_binding="point_of_entry"/>
+                <controls:ViewButtonLabel LabelText="Was it locked" x:Name="was_it_locked_answer" button_binding="was_it_locked"/>
+                <controls:ViewTextLabel LabelText="What locks were on this item" x:Name="type_of_locking_system_answer" TextBinding="type_of_lockng_system_required"/>
+                <controls:ViewTextLabel LabelText="Knocker required" TextBinding="knockedit"/>
+                <controls:ViewTextLabel LabelText="Knocker colour?" x:Name="knocker_colour_answer" TextBinding="knocoledit"/>
+                <controls:ViewTextLabel LabelText="Panel width" TextBinding="wedit"/>
+                <controls:ViewTextLabel LabelText="Panel height" TextBinding="hedit"/>
+                <controls:ViewTextLabel LabelText="Letter box" x:Name="letter_box_answer" TextBinding="letteredit"/>
+                <controls:ViewTextLabel LabelText="Letter box position" x:Name="letter_box_position_answer" TextBinding="letter_box_pos"/>
+                <controls:ViewTextLabel LabelText="Pet flap" x:Name="pet_flap_size_answer" TextBinding="pet_flap"/>
+                <controls:ViewTextLabel LabelText="Pet flap type" x:Name="pet_flap_type_answer" TextBinding="pet_type"/>
+                <controls:ViewButtonLabel LabelText="Magnetic" x:Name="pet_flap_magnetic_answer" button_binding="pet_magnetic"/>
+                <controls:ViewTextLabel LabelText="Panel type" TextBinding="typeedit"/>
+                <controls:ViewTextLabel LabelText="Panel thickness" TextBinding="thickedit"/>
+                <controls:ViewTextLabel LabelText="Backing glass" TextBinding="backgedit"/>
+                <controls:ViewTextLabel LabelText="Panel colour" TextBinding="coledit"/>
+                <controls:ViewTextLabel LabelText="Glass design" x:Name="glass_design_answer" TextBinding="gltext"/>
+                <controls:ViewTextLabel LabelText="Spacer bar colour" x:Name="spacer_colour_answer" TextBinding="spaccoloedit"/>
+                <controls:ViewTextLabel LabelText="Room location" x:Name="room_location_answer" TextBinding="room_location"/>
+                <controls:ViewTextLabel LabelText="Item Summary" x:Name="item_summary_answer" TextBinding="long_sptext"/>
+                <controls:ViewTextLabel LabelText="Parts to order" x:Name="parts_to_order_answer" TextBinding="parts_to_order"/>
+                <controls:ViewDrawingsAndPhotos x:Name="drawings_and_photos"/>
+                <controls:Copyright/>
+        </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

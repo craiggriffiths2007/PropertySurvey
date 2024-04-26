@@ -1,0 +1,365 @@
+﻿@model IEnumerable<PropertySurveyService.Models.LockingTable>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.HeaderId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.udi_cont)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.item_number)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.isComplete)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.comments)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.point_of_entry)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.type_of_lockng_system_required)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.was_it_locked)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.no_of_pics)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.no_of_photos)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.bMulti)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.item)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.locking_make)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.locking_codes)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.bDoorComplete)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.bWindowComplete)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.lock_colour)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.pagenum)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.bDifferentFromOriginal)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ChangeItemTo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.print_name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.COD_Code)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.cause_of_damage)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.cause_of_damage_reason_different)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.GearBox)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.no_of_vids)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.left_bolt)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.right_bolt)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.parts_to_order)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.bLockComplete)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.l_size1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.l_size2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.l_sizeA)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.l_sizeB)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.l_sizeC)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.l_sizeD)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.l_sizeE)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.l_sizeF)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.l_sizeG)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.l_num)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.l_fpos1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.l_fpos2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.l_fpos3)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.l_fpos4)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.l_fpos5)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.l_fpos6)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.l_fpos7)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.lock_position)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.l_itype1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.l_itype2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.l_itype3)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.l_itype4)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.l_itype5)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.l_itype6)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.l_itype7)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.long_comments)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.HeaderId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.udi_cont)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.item_number)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.isComplete)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.comments)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.point_of_entry)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.type_of_lockng_system_required)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.was_it_locked)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.no_of_pics)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.no_of_photos)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.bMulti)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.item)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.locking_make)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.locking_codes)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.bDoorComplete)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.bWindowComplete)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.lock_colour)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.pagenum)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.bDifferentFromOriginal)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ChangeItemTo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.print_name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.COD_Code)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.cause_of_damage)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.cause_of_damage_reason_different)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.GearBox)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.no_of_vids)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.left_bolt)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.right_bolt)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.parts_to_order)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.bLockComplete)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.l_size1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.l_size2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.l_sizeA)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.l_sizeB)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.l_sizeC)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.l_sizeD)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.l_sizeE)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.l_sizeF)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.l_sizeG)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.l_num)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.l_fpos1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.l_fpos2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.l_fpos3)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.l_fpos4)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.l_fpos5)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.l_fpos6)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.l_fpos7)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.lock_position)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.l_itype1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.l_itype2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.l_itype3)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.l_itype4)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.l_itype5)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.l_itype6)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.l_itype7)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.long_comments)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

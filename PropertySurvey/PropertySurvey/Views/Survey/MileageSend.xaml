@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PropertySurvey.MileageSend"
+             xmlns:controls="clr-namespace:MartControls"
+             Title="Sending Mileage">
+    <ContentPage.Content>
+        <Grid>
+            <StackLayout>
+                <Label Text="" IsVisible="False" x:Name="complete_label"/>
+            </StackLayout>
+            <StackLayout HorizontalOptions="Center" VerticalOptions="Center" HeightRequest="60" WidthRequest="60">
+                <ActivityIndicator x:Name="act_ind" Color="DodgerBlue" IsRunning="false" WidthRequest="60" HeightRequest="60"/>
+            </StackLayout>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
+
+    

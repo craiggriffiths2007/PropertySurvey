@@ -1,0 +1,341 @@
+﻿@model IEnumerable<PropertySurveyService.Models.BifoldTable>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.HeaderId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.udi_cont)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.item_number)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ernal_width)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ernal_height)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.overall_width)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.overall_height)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.opens)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.trickle_vents)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.hardware)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.color_ernal)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.color_external)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.threshold_type)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.no_of_pics)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.no_of_photos)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.no_of_vids)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.isComplete)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.comments)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.bifold_signed)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.number_of_doors)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.cause_of_damage)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.cause_of_damage_reason_different)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.door_type)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.glazing_options)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.number_of_doors_text)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.colour_of_doors)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.handle_colour)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.cill_type)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.knock_on)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ernal_door_colour)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.s_spare12)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.parts_to_order)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.type_of_lockng_system_required)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.was_it_locked)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.point_of_entry)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ChangeItemTo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.pr_name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.bDifferentFromOriginal)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.glass_complete)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.replace_glass)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.reason_not_repaired)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.bRepair)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.fensa)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.WER_rating)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.gaskets)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.gaskets_text)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.handles_req)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.bHandleDrawingComplete)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.handles_text)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.addons)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.addon_width)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.addon_height)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.HeaderId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.udi_cont)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.item_number)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ernal_width)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ernal_height)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.overall_width)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.overall_height)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.opens)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.trickle_vents)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.hardware)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.color_ernal)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.color_external)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.threshold_type)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.no_of_pics)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.no_of_photos)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.no_of_vids)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.isComplete)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.comments)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.bifold_signed)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.number_of_doors)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.cause_of_damage)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.cause_of_damage_reason_different)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.door_type)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.glazing_options)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.number_of_doors_text)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.colour_of_doors)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.handle_colour)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.cill_type)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.knock_on)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ernal_door_colour)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.s_spare12)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.parts_to_order)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.type_of_lockng_system_required)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.was_it_locked)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.point_of_entry)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ChangeItemTo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.pr_name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.bDifferentFromOriginal)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.glass_complete)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.replace_glass)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.reason_not_repaired)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.bRepair)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.fensa)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.WER_rating)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.gaskets)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.gaskets_text)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.handles_req)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.bHandleDrawingComplete)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.handles_text)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.addons)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.addon_width)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.addon_height)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

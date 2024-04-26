@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<StackLayout xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="MartControls.EditPicker" Orientation="Horizontal" HorizontalOptions="FillAndExpand"
+            xmlns:controls="clr-namespace:MartControls">
+    <Entry x:Name="enter"  HorizontalOptions="FillAndExpand" />
+    <controls:CustomPicker x:Name="pick" WidthRequest="20" SelectedIndex="0" HorizontalOptions="End" SelectedIndexChanged="SelectedIndexChanged" IsVisible="False"/>
+    <Button Text="" WidthRequest="45" FontSize="Micro" HeightRequest="20" Clicked="OnButton" HorizontalOptions="End" x:Name="the_button"/>
+    <!--BackgroundColor="LightGray"-->
+</StackLayout>
+
+

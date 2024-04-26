@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PropertySurvey.Diagram"
+             NavigationPage.HasNavigationBar="False"
+             xmlns:views="clr-namespace:SkiaSharp.Views.Forms;assembly=SkiaSharp.Views.Forms"
+             xmlns:controls="clr-namespace:MartControls">
+    <ContentPage.Content>
+        <Grid>
+            <StackLayout>
+                <views:SKCanvasView x:Name="SkCanvasView" PaintSurface="OnPainting" EnableTouchEvents="True" Touch="OnTouch" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand"/>
+            </StackLayout>
+            <StackLayout Orientation="Vertical" VerticalOptions="End">
+                <Label Text="Please explain any damage inducated" VerticalOptions="EndAndExpand"/>
+                <Entry VerticalOptions="EndAndExpand" WidthRequest="450" x:Name="damage_desc_text" Unfocused="Damage_desc_text_Unfocused"/>
+            </StackLayout>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
+    

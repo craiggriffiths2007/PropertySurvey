@@ -1,0 +1,128 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PropertySurvey.FitterHeader"
+             xmlns:controls="clr-namespace:MartControls"
+             Title="Fitting">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem x:Name="directive" Clicked="OnDirectiveClicked" Icon=""/>
+        <ToolbarItem x:Name="del_ins" Clicked="OnDelIns" Icon="del_instructions_complete.png"/>
+    </ContentPage.ToolbarItems>
+    <StackLayout Orientation="Vertical">
+
+        <ScrollView VerticalOptions="FillAndExpand">
+
+            <StackLayout Margin="3" VerticalOptions="StartAndExpand" Spacing="0">
+                <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" >
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="StartAndExpand" >
+                        <Label Text="Contract" FontAttributes="Bold" FontSize="Medium" WidthRequest="90" HorizontalOptions="Start"/>
+                        <Label FontSize="Medium" Text="{Binding udi_cont}" WidthRequest="100" HorizontalOptions="StartAndExpand"/>
+                    </StackLayout>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" >
+                    <Label Text="Company" FontSize="Medium" FontAttributes="Bold" WidthRequest="90" HorizontalOptions="Start" VerticalOptions="Start"/>
+                    <Label FontSize="Medium" Text="" x:Name="inf_company"  WidthRequest="260" HorizontalOptions="FillAndExpand"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" >
+                    <Label Text="Dele Auth" FontSize="Medium" FontAttributes="Bold" WidthRequest="90" HorizontalOptions="Start"/>
+                    <Label FontSize="Medium" Text="{Binding uc_laname}" WidthRequest="260" HorizontalOptions="StartAndExpand"/>
+                </StackLayout>
+
+
+                <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" >
+                    <Label Text="Name" FontSize="Medium" FontAttributes="Bold" WidthRequest="90" HorizontalOptions="Start" VerticalOptions="Start"/>
+                    <Label FontSize="Medium" Text="{Binding uc_name}" WidthRequest="260" HorizontalOptions="StartAndExpand" LineBreakMode="WordWrap"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" >
+                    <Label Text="Address" FontSize="Medium" FontAttributes="Bold" WidthRequest="90" HorizontalOptions="Start" VerticalOptions="Start"/>
+                    <Label FontSize="Medium" Text="{Binding add_long}" WidthRequest="260" HorizontalOptions="StartAndExpand" LineBreakMode="WordWrap"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" >
+                    <Label Text=" " FontSize="Medium" WidthRequest="90" HorizontalOptions="Start"/>
+                    <Label FontSize="Medium" Text="{Binding uc_add1}" WidthRequest="260" HorizontalOptions="StartAndExpand"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" >
+                    <Label Text=" " FontSize="Medium" WidthRequest="90" HorizontalOptions="Start"/>
+                    <Label FontSize="Medium" Text="{Binding uc_add2}" WidthRequest="260" HorizontalOptions="StartAndExpand"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" >
+                    <Label Text=" " FontSize="Medium" WidthRequest="90" HorizontalOptions="Start"/>
+                    <Label FontSize="Medium" Text="{Binding uc_add3}" WidthRequest="260" HorizontalOptions="StartAndExpand"/>
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" Spacing="0">
+
+                </StackLayout>
+
+                <!--<StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" >
+                    <Label FontSize="Medium" Text="Telephone" FontAttributes="Bold" WidthRequest="90" HorizontalOptions="Start"/>
+                    <Button Text="View" WidthRequest="110" FontSize="Small" HeightRequest="26"  Clicked="OnTelephone" HorizontalOptions="StartAndExpand"/>
+                </StackLayout>-->
+
+                <StackLayout Orientation="Horizontal">
+                    <StackLayout Orientation="Vertical">
+                        <StackLayout Orientation="Horizontal">
+                            <Label FontSize="Medium" Text="Postcode" FontAttributes="Bold" WidthRequest="90" HorizontalOptions="Start"/>
+                            <Label FontSize="Medium" Text="{Binding uc_postcode}" WidthRequest="120" HorizontalOptions="StartAndExpand"/>
+                        </StackLayout>
+
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" HeightRequest="26">
+                            <Label HeightRequest="26" FontSize="Medium" Text="Incident" FontAttributes="Bold" WidthRequest="90" HorizontalOptions="Start"/>
+                            <Label HeightRequest="26" FontSize="Medium" Text="" x:Name="uc_inciden" WidthRequest="150" HorizontalOptions="StartAndExpand"/>
+                        </StackLayout>
+                        <!--<StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" HeightRequest="26">
+                            <Label HeightRequest="26" FontSize="Medium" Text="Damage" FontAttributes="Bold" WidthRequest="90" HorizontalOptions="Start"/>
+                            <Button Text="View" WidthRequest="110" FontSize="Small" HeightRequest="26" Clicked="OnDamage" HorizontalOptions="StartAndExpand"/>
+                        </StackLayout>-->
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" HeightRequest="26">
+                            <Label HeightRequest="26" FontSize="Medium" Text="Excess" FontAttributes="Bold" WidthRequest="90" HorizontalOptions="Start"/>
+                            <Label HeightRequest="26" FontSize="Medium" Text="" x:Name="uc_excess" WidthRequest="150" HorizontalOptions="StartAndExpand"/>
+                        </StackLayout>
+                        <!--<StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" HeightRequest="26">
+                            <Label HeightRequest="26" FontSize="Medium" Text="Damage" FontAttributes="Bold" WidthRequest="90" HorizontalOptions="Start"/>
+                            <Button HeightRequest="26" Text="{Binding COD_String}" x:Name="COD_String" WidthRequest="150" HorizontalOptions="StartAndExpand"/>
+                        </StackLayout>-->
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" >
+
+
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" >
+
+
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" >
+                            <!--<Label FontSize="Medium" Text="En Route" FontAttributes="Bold" WidthRequest="90" HorizontalOptions="Start"/>-->
+
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" >
+
+                        </StackLayout>
+                    </StackLayout>
+                    <StackLayout Orientation="Vertical" HorizontalOptions="StartAndExpand">
+                        <StackLayout HeightRequest="26"/>
+                        <StackLayout HeightRequest="26"/>
+                        <Image x:Name="gmap" Source="gmaps.png" HorizontalOptions="StartAndExpand" HeightRequest="26"/>
+
+                    </StackLayout>
+                </StackLayout>
+
+            </StackLayout>
+        </ScrollView>
+
+
+        <StackLayout Orientation="Horizontal" VerticalOptions="End" HorizontalOptions="FillAndExpand">
+            <Button x:Name="EnRouteButton" Text="En Route" Clicked="OnSetOnRoute" HorizontalOptions="FillAndExpand"/>
+            <Button x:Name="stock" Text="Stock" Clicked="OnStock" HorizontalOptions="FillAndExpand"/>
+            <Button x:Name="photos" Text="Photo - 0" Clicked="OnPhotos" HorizontalOptions="FillAndExpand"/>
+            <Button x:Name="comments_button" Text="Comment" Clicked="OnComments" HorizontalOptions="FillAndExpand"/>
+        </StackLayout>
+        <StackLayout Orientation="Horizontal" VerticalOptions="End" HorizontalOptions="FillAndExpand">
+            <Button x:Name="survey" Text="Survey" Clicked="OnSurvey" HorizontalOptions="FillAndExpand"/>
+            <Button x:Name="mandate" Text="Mandate" Clicked="OnMandate" HorizontalOptions="FillAndExpand"/>
+            <Button x:Name="completion" Text="Complete" Clicked="OnCompletion" HorizontalOptions="FillAndExpand"/>
+            <Button x:Name="phone" Text="Phone" Clicked="OnPhone" HorizontalOptions="FillAndExpand"/>
+        </StackLayout>
+        
+    </StackLayout>
+</ContentPage>

@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PropertySurvey.VanChecks"
+             Title="Vehicle Checks"
+             xmlns:controls="clr-namespace:MartControls">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Clicked="OnMenuClicked" Icon="menu_button.png"/>
+    </ContentPage.ToolbarItems>
+
+    <ContentPage.Content>
+        <StackLayout Orientation="Vertical">
+            <controls:MenuOptions x:Name="menu_pick" WidthRequest="20" SelectedIndex="0" HorizontalOptions="End" SelectedIndexChanged="OnMenuChanged" IsVisible="False"/>
+            <ListView HasUnevenRows="True" x:Name="listView" ItemTapped="OnItemTapped">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout BackgroundColor="{Binding back_colour}"  Margin="3" Padding="3" >
+                                <Label Text="{Binding jtitle}" />
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="{Binding sdate}" WidthRequest="130" />
+                                    <Label Text="{Binding spcode}" WidthRequest="100" />
+                                    <Label Text="{Binding smiles}" WidthRequest="100" />
+                                </StackLayout>
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="{Binding bcode}" WidthRequest="130" />
+                                    <Label Text="{Binding fpcode}" WidthRequest="100" />
+                                    <Label Text="{Binding fmiles}" WidthRequest="100" />
+                                </StackLayout>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                <Button Text="Receive" Clicked="OnReceive" HorizontalOptions="FillAndExpand"/>
+                <Button Text="Send" Clicked="OnSendReceive" HorizontalOptions="FillAndExpand"/>
+                <!--<Button Text="Select" Clicked="OnSelect" HorizontalOptions="FillAndExpand"/>-->
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

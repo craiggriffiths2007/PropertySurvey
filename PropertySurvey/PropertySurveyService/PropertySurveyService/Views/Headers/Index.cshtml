@@ -1,0 +1,2579 @@
+﻿@model IEnumerable<PropertySurveyService.Models.Header>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.RecID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.bDone)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.bSent)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.iRecordType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.typeA)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.typeB)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.fit_diary)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.fitters_instructions)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.fit_start)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.fit_fin)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.fitter_work)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.parts_used)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.claim_ref)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.fitter_comments)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.udi_cont)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.sn_name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.uc_laname)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.uc_name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.uc_add1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.uc_add2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.uc_add3)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.uc_add4)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.uc_postcode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.uc_h_phone)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.uc_goahead)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.uc_inceden)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.spare2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.uc_excess)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.bExcessCollected)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.udi_tlight)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.si_numitem)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.udi_inst)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.alarm_cont)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ladder_req)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.height_res)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.sand_cemen)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.plaster)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.doorbell)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.genreq)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.architreq)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.acroreq)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.acrosboy)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.acc_text)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.obs_wires)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.obs_wires_text)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.loose_brick)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.loose_brick_text)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.easy_park)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.access_rear)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.rep_text)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.mop)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.card_cheq)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.expiry)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.issue_no)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.reason_excess_not_collected)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.paych)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.summ_text)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.code_text)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.imchup)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.job_grade)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.njs)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.photo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.booked)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.nsn)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.udi_start)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.udi_fin)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.si_done)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.udi_date)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.si_bday1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.si_mpay)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.si_cnum)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.si_inum)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.udi_jobtext)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.udi_staff)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.type)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.sub_type)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.old_date)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.cover_instructions)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.old_start)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.old_finish)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.add_comm)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.udi_estrem)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.r_fault)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.r_excess)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.rexcedit)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.r_comp)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.rno_hours)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.r_work_txt)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.readditimage)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.readdtxt)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.r_sigimage)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.f_add_txt)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.fmclrf)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.fmdate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.funfincode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.funfinoth)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.freuntxt)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.fpartreq)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.fjobfin)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.fname1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.fname2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.fexcess)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.fexcessoth)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.fmand)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.fmandoth)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ftimearr)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ftimeleft)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.faddpaid)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.faddmuch)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.commtxt)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.wkcartxt)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.parttxt)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.faddimage)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.fmanimage)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.fsigimage)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.bWorkInside)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.inst_height)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.bBothHands)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ground_surface)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.type_of_equipment)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.risks_and_dangers)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.uc_desc)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.work_at_height)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.no_ladders)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.funfinished_code)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.freason_unfinished)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.fparts_required)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ffitter_name1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ffitter_name2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.fbexcess_paid)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.freason_excess_not_paid)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.fbmandate_signed)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.freason_mandate_not_signed)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ftime_arrived)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ftime_left)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.fbadditional_paid)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.fhow_mutch_additional_paid)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.bfitter_complete)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.fitter_info_done)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.fbunfinother)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.bcompletion_signed)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.bad_image_complete)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.remedial_number)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.r_bsigned)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.r_bcomp)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.r_sign_date)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.stimea)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.f1_or_s2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.f_sign_date)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.distance)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.duration)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.no_of_photos)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.bClosest)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Group)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.bProcessed)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ind)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.inevitable_damage)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.fbstockusagecomplete)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.uc_h_phone2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.uc_h_phone3)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.bSecuring)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ins_board)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ins_lock)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ins_temp)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ins_perm)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.int_num_of_locks)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.int_type_of_lock)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.parking_at_rear)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.work_on_public_footpath)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.add_long)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.b_mrk)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.bSurvey)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.items_above_roof)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.added_to_otherrisks)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.bMSFJob)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.securing_surveyor_required)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.policy_number)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.photo_front_of_house)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.asbestos_visible)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.asvizex)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.refmessage)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.uspot_fitter)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.uspot_trainee)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.uspot_date)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.uspot_customer)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.uspot_postcode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.uspot_insuranceco)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.uspot_branch)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.uspot_repair)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.uspot_repair_arrived)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.uspot_repair_setup)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.uspot_repair_ongoing)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.uspot_repair_completed)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.uspot_replace)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.uspot_replace_arrived)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.uspot_replace_setup)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.uspot_replace_unitmoved)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.uspot_replace_completed)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.uspot_rev_door)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.uspot_rev_window)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.uspot_rev_garagedoor)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.uspot_rev_glass)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.uspot_rev_locks)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.uspot_rev_other)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.uspot_revb_upvc)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.uspot_revb_ali)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.uspot_revb_timber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.uspot_revb_other)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.uspot_appearence)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.doc_l_compliant_reason)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.lintel_present)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.lintel_present_text)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.uspot_customersatisfaction)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.uspot_customersatisfaction_improvementsOld)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.uspot_otherobservationsOld)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.uspot_signed)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.uspot_signeddate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.bSpotCheck)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.uspot_replace_fit)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.uspot_p1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.uspot_p2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.uspot_p3)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.uspot_p4)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.uspot_appearence_improvements)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.uspot_qualityofworks_improvements)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.uspot_customersatisfaction_improvements)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.uspot_otherobservations)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.idampassword_entered)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.fit_no_of_videos)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.doc_l_compliant)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.shop_front_work)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.fitter_videos)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.is_halifax)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.messagetoinsurer)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.COD_Code)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.COD_String)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.bDamTicked)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.bSSTicked)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SSRequired)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.old_cover_instructions)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.rcodchanged)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.bcodchanged)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.goaheadstr)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.b_subcontract)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.subcontracttext)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.truecomm)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.truecommconf)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.reason_not_booked_in)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.bSurveyRequiredOnSecuring)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.requiring_load_bearing_jacks)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.bSRFin)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.bMOPFin)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.bRepFin)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.bSumFin)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.bHazFin)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.bAllPictures)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.bSubFin)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.total_upvc)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.total_panels)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.total_glass)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.total_alum)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.total_garage)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.total_timber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.total_cons)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.total_lock)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.total_comp)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.total_green)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.total_bifold)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.incomplete_upvc)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.incomplete_panels)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.incomplete_glass)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.incomplete_alum)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.incomplete_garage)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.incomplete_timber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.incomplete_cons)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.incomplete_lock)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.incomplete_comp)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.incomplete_green)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.incomplete_bifold)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.front_house_photos)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.time_to_complete)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.current_item_number)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.survey_complete)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.reason_not_complete)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.add_phone_1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.add_phone_2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.no_of_fitters)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.fname3)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.fname4)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.fname5)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.fname6)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.fname7)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.fname8)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ownquote)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.survey_on_fit)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.i_spare1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.i_spare2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.i_spare3)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.s_spare1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.s_spare2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.s_spare3)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.new_ispare1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.new_ispare2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.new_ispare3)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.new_ispare4)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.new_ispare5)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.new_ispare6)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.new_ispare7)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.new_ispare8)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.new_ispare9)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.is_messagetoinsurer)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.new_sspare1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.new_sspare2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.new_sspare3)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.new_sspare4)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.new_sspare5)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.new_sspare6)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.new_sspare7)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.new_sspare8)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.new_sspare9)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.new_sspare10)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.bInfoSeen)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ss_bIsSecuritySurvey)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ss_bIsComplete)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ss_nowindows)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ss_nodoors)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ss_gencondition)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ss_gencondition_other)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ss_matwindows)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ss_matwindows_other)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ss_matdoors)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ss_matdoors_other)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ss_lockwindows)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ss_lockwindows_other)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ss_lockdoors)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ss_lockdoors_other)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ss_add_window_security)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ss_location_windows_other)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ss_secwindows_other)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ss_add_door_security)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ss_location_doors_other)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ss_secdoors_other)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ss_time_required)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ss_no_of_photos)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.door_type)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.model_type)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.unique_serial)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.door_size)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.door_manufacturer)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.powerered_operator_type)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.operator_manufacturer)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.site_address)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.decleration_by)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.on_behalf_of_person)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.on_behalf_of_company)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.decleration_received_by)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.date)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.print_name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.date_cust)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.i_signed)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.i_signed_cust)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.directive_complete)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.branch)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.job)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.name1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.safety_boots_worn1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.safety_gloves_worn1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.safety_googles_worn1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.safety_helmet_worn1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.wristguards_worn1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.uniform_worn_complete1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.id_card_available1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.name2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.safety_boots_worn2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.safety_gloves_worn2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.safety_googles_worn2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.safety_helmet_worn2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.wristguards_worn2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.uniform_worn_complete2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.id_card_available2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.chemicals_stored_correctly)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.are_sheets_available)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.area_above_been_checked)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.obstructions_checked)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.lintel_ok)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ladders_secure)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.safe_work_at_height)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.condition_of_ladders)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.tools_set_out_safely)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.fire_extinguisher_on_van)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.first_aid_kit_on_van)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.electrical_equipment_tested)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.safety_boots_worn1_s)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.safety_gloves_worn1_s)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.safety_googles_worn1_s)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.safety_helmet_worn1_s)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.wristguards_worn1_s)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.uniform_worn_complete1_s)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.id_card_available1_s)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.safety_boots_worn2_s)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.safety_gloves_worn2_s)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.safety_googles_worn2_s)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.safety_helmet_worn2_s)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.wristguards_worn2_s)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.uniform_worn_complete2_s)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.id_card_available2_s)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.chemicals_stored_correctly_s)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.are_sheets_available_s)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.area_above_been_checked_s)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.obstructions_checked_s)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.lintel_ok_s)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ladders_secure_s)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.safe_work_at_height_s)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.condition_of_ladders_s)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.tools_set_out_safely_s)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.fire_extinguisher_on_van_s)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.first_aid_kit_on_van_s)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.electrical_equipment_tested_s)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.comments)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.uspot_qualityofworks)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.current_summary_num)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.uspot_replacement)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.garage_door_motor)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.isTowerScaff)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.RecID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.bDone)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.bSent)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.iRecordType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.typeA)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.typeB)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.fit_diary)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.fitters_instructions)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.fit_start)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.fit_fin)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.fitter_work)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.parts_used)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.claim_ref)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.fitter_comments)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.udi_cont)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.sn_name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.uc_laname)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.uc_name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.uc_add1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.uc_add2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.uc_add3)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.uc_add4)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.uc_postcode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.uc_h_phone)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.uc_goahead)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.uc_inceden)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.spare2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.uc_excess)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.bExcessCollected)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.udi_tlight)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.si_numitem)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.udi_inst)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.alarm_cont)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ladder_req)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.height_res)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.sand_cemen)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.plaster)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.doorbell)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.genreq)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.architreq)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.acroreq)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.acrosboy)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.acc_text)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.obs_wires)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.obs_wires_text)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.loose_brick)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.loose_brick_text)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.easy_park)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.access_rear)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.rep_text)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.mop)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.card_cheq)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.expiry)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.issue_no)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.reason_excess_not_collected)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.paych)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.summ_text)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.code_text)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.imchup)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.job_grade)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.njs)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.photo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.booked)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.nsn)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.udi_start)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.udi_fin)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.si_done)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.udi_date)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.si_bday1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.si_mpay)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.si_cnum)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.si_inum)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.udi_jobtext)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.udi_staff)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.type)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.sub_type)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.old_date)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.cover_instructions)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.old_start)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.old_finish)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.add_comm)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.udi_estrem)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.r_fault)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.r_excess)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.rexcedit)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.r_comp)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.rno_hours)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.r_work_txt)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.readditimage)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.readdtxt)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.r_sigimage)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.f_add_txt)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.fmclrf)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.fmdate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.funfincode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.funfinoth)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.freuntxt)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.fpartreq)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.fjobfin)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.fname1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.fname2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.fexcess)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.fexcessoth)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.fmand)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.fmandoth)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ftimearr)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ftimeleft)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.faddpaid)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.faddmuch)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.commtxt)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.wkcartxt)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.parttxt)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.faddimage)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.fmanimage)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.fsigimage)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.bWorkInside)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.inst_height)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.bBothHands)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ground_surface)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.type_of_equipment)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.risks_and_dangers)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.uc_desc)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.work_at_height)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.no_ladders)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.funfinished_code)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.freason_unfinished)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.fparts_required)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ffitter_name1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ffitter_name2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.fbexcess_paid)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.freason_excess_not_paid)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.fbmandate_signed)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.freason_mandate_not_signed)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ftime_arrived)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ftime_left)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.fbadditional_paid)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.fhow_mutch_additional_paid)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.bfitter_complete)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.fitter_info_done)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.fbunfinother)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.bcompletion_signed)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.bad_image_complete)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.remedial_number)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.r_bsigned)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.r_bcomp)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.r_sign_date)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.stimea)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.f1_or_s2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.f_sign_date)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.distance)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.duration)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.no_of_photos)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.bClosest)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Group)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.bProcessed)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ind)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.inevitable_damage)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.fbstockusagecomplete)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.uc_h_phone2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.uc_h_phone3)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.bSecuring)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ins_board)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ins_lock)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ins_temp)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ins_perm)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.int_num_of_locks)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.int_type_of_lock)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.parking_at_rear)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.work_on_public_footpath)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.add_long)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.b_mrk)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.bSurvey)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.items_above_roof)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.added_to_otherrisks)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.bMSFJob)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.securing_surveyor_required)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.policy_number)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.photo_front_of_house)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.asbestos_visible)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.asvizex)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.refmessage)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.uspot_fitter)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.uspot_trainee)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.uspot_date)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.uspot_customer)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.uspot_postcode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.uspot_insuranceco)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.uspot_branch)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.uspot_repair)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.uspot_repair_arrived)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.uspot_repair_setup)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.uspot_repair_ongoing)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.uspot_repair_completed)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.uspot_replace)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.uspot_replace_arrived)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.uspot_replace_setup)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.uspot_replace_unitmoved)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.uspot_replace_completed)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.uspot_rev_door)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.uspot_rev_window)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.uspot_rev_garagedoor)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.uspot_rev_glass)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.uspot_rev_locks)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.uspot_rev_other)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.uspot_revb_upvc)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.uspot_revb_ali)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.uspot_revb_timber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.uspot_revb_other)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.uspot_appearence)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.doc_l_compliant_reason)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.lintel_present)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.lintel_present_text)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.uspot_customersatisfaction)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.uspot_customersatisfaction_improvementsOld)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.uspot_otherobservationsOld)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.uspot_signed)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.uspot_signeddate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.bSpotCheck)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.uspot_replace_fit)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.uspot_p1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.uspot_p2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.uspot_p3)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.uspot_p4)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.uspot_appearence_improvements)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.uspot_qualityofworks_improvements)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.uspot_customersatisfaction_improvements)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.uspot_otherobservations)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.idampassword_entered)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.fit_no_of_videos)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.doc_l_compliant)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.shop_front_work)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.fitter_videos)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.is_halifax)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.messagetoinsurer)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.COD_Code)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.COD_String)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.bDamTicked)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.bSSTicked)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SSRequired)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.old_cover_instructions)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.rcodchanged)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.bcodchanged)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.goaheadstr)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.b_subcontract)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.subcontracttext)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.truecomm)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.truecommconf)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.reason_not_booked_in)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.bSurveyRequiredOnSecuring)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.requiring_load_bearing_jacks)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.bSRFin)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.bMOPFin)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.bRepFin)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.bSumFin)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.bHazFin)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.bAllPictures)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.bSubFin)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.total_upvc)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.total_panels)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.total_glass)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.total_alum)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.total_garage)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.total_timber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.total_cons)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.total_lock)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.total_comp)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.total_green)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.total_bifold)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.incomplete_upvc)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.incomplete_panels)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.incomplete_glass)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.incomplete_alum)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.incomplete_garage)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.incomplete_timber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.incomplete_cons)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.incomplete_lock)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.incomplete_comp)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.incomplete_green)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.incomplete_bifold)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.front_house_photos)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.time_to_complete)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.current_item_number)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.survey_complete)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.reason_not_complete)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.add_phone_1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.add_phone_2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.no_of_fitters)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.fname3)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.fname4)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.fname5)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.fname6)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.fname7)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.fname8)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ownquote)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.survey_on_fit)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.i_spare1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.i_spare2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.i_spare3)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.s_spare1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.s_spare2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.s_spare3)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.new_ispare1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.new_ispare2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.new_ispare3)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.new_ispare4)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.new_ispare5)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.new_ispare6)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.new_ispare7)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.new_ispare8)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.new_ispare9)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.is_messagetoinsurer)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.new_sspare1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.new_sspare2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.new_sspare3)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.new_sspare4)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.new_sspare5)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.new_sspare6)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.new_sspare7)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.new_sspare8)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.new_sspare9)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.new_sspare10)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.bInfoSeen)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ss_bIsSecuritySurvey)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ss_bIsComplete)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ss_nowindows)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ss_nodoors)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ss_gencondition)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ss_gencondition_other)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ss_matwindows)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ss_matwindows_other)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ss_matdoors)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ss_matdoors_other)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ss_lockwindows)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ss_lockwindows_other)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ss_lockdoors)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ss_lockdoors_other)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ss_add_window_security)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ss_location_windows_other)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ss_secwindows_other)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ss_add_door_security)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ss_location_doors_other)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ss_secdoors_other)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ss_time_required)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ss_no_of_photos)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.door_type)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.model_type)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.unique_serial)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.door_size)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.door_manufacturer)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.powerered_operator_type)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.operator_manufacturer)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.site_address)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.decleration_by)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.on_behalf_of_person)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.on_behalf_of_company)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.decleration_received_by)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.date)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.print_name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.date_cust)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.i_signed)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.i_signed_cust)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.directive_complete)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.branch)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.job)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.name1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.safety_boots_worn1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.safety_gloves_worn1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.safety_googles_worn1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.safety_helmet_worn1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.wristguards_worn1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.uniform_worn_complete1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.id_card_available1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.name2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.safety_boots_worn2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.safety_gloves_worn2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.safety_googles_worn2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.safety_helmet_worn2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.wristguards_worn2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.uniform_worn_complete2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.id_card_available2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.chemicals_stored_correctly)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.are_sheets_available)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.area_above_been_checked)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.obstructions_checked)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.lintel_ok)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ladders_secure)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.safe_work_at_height)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.condition_of_ladders)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.tools_set_out_safely)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.fire_extinguisher_on_van)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.first_aid_kit_on_van)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.electrical_equipment_tested)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.safety_boots_worn1_s)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.safety_gloves_worn1_s)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.safety_googles_worn1_s)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.safety_helmet_worn1_s)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.wristguards_worn1_s)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.uniform_worn_complete1_s)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.id_card_available1_s)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.safety_boots_worn2_s)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.safety_gloves_worn2_s)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.safety_googles_worn2_s)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.safety_helmet_worn2_s)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.wristguards_worn2_s)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.uniform_worn_complete2_s)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.id_card_available2_s)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.chemicals_stored_correctly_s)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.are_sheets_available_s)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.area_above_been_checked_s)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.obstructions_checked_s)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.lintel_ok_s)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ladders_secure_s)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.safe_work_at_height_s)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.condition_of_ladders_s)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.tools_set_out_safely_s)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.fire_extinguisher_on_van_s)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.first_aid_kit_on_van_s)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.electrical_equipment_tested_s)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.comments)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.uspot_qualityofworks)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.current_summary_num)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.uspot_replacement)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.garage_door_motor)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.isTowerScaff)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

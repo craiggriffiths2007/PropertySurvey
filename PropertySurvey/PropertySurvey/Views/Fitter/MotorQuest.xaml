@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PropertySurvey.MotorQuest"
+             xmlns:controls="clr-namespace:MartControls"
+             Title="Machine Directive">
+
+        <ScrollView>
+            <controls:ControlLayout>
+                <Label Text="Decleration of Conformity" TextColor="Black"/>
+            <controls:EntryLabel x:Name="door_type" TextBinding="door_type" LabelText="Garage door type (Complete Assembly)"/>
+            <controls:EntryLabel x:Name="model_type" TextBinding="model_type" LabelText="Model Type"/>
+            <controls:EntryLabel x:Name="unique_serial" TextBinding="unique_serial" LabelText="Unique Serial No. (Complete Assembly)"/>
+            <controls:EntryLabel x:Name="door_size" TextBinding="door_size" LabelText="Door Size"/>
+            <controls:EntryLabel x:Name="door_manufacturer" TextBinding="door_manufacturer" LabelText="Manufactured By"/>
+            <controls:EntryLabel x:Name="powerered_operator_type" TextBinding="powerered_operator_type" LabelText="Manufactured By"/>
+            <controls:EntryLabel x:Name="operator_manufacturer" TextBinding="operator_manufacturer" LabelText="Door Operator Type"/>
+            <controls:EntryLabel x:Name="decleration_by" TextBinding="decleration_by" LabelText="Operator Manufactured By"/>
+            <controls:EntryLabel x:Name="manufactured_by" TextBinding="manufactured_by" LabelText="Operator Manufactured By"/>
+                <Label Text="The above garage door and operator have been assembled, installed, connected and tested in accordance with the manufacturers installation instructions at the following site address and accordingly is in conformity with the provisions of the Machinery Directive (89/392/EEC as amended by 91/368/EEC,93/44/EEC,93/68/EEC and 2006/42/EEC), the Low Voltage Directive (73/23/EEC) and the E.M.C. Directive (89/336/EEC)."/>
+
+                <controls:EntryLabel LabelText="Site Address"/>
+                <controls:EntryLabel LabelText="Decleration made by"/>
+                <controls:EntryLabel LabelText="Decleration date"/>
+                <controls:EntryLabel LabelText="Declared on behalf of"/>
+
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Fitter Signature" HorizontalOptions="StartAndExpand"/>
+                    <Button x:Name="fitter_button" HorizontalOptions="End" WidthRequest="45" Clicked="OnFitterSign"/>
+                </StackLayout>
+
+            <controls:EntryLabel x:Name="uc_name" TextBinding="uc_name" LabelText="Customer Name"/>
+                <controls:DateLabel x:Name="date_customer" LabelText="Date"/>
+
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Customer Signature" HorizontalOptions="StartAndExpand"/>
+                    <Button x:Name="cust_button" HorizontalOptions="End" WidthRequest="45" Clicked="OnCustomerSign"/>
+                </StackLayout>
+            <controls:Copyright/>
+        </controls:ControlLayout>
+        </ScrollView>
+
+</ContentPage>

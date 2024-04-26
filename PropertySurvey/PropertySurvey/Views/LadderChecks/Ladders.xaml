@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PropertySurvey.Ladders"
+             Title="Ladder Checks"
+             xmlns:controls="clr-namespace:MartControls">
+
+    <!--
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Clicked="OnMenuClicked" Icon="menu_button.png"/>
+    </ContentPage.ToolbarItems>-->
+
+    <ContentPage.Content>
+        <StackLayout Orientation="Vertical">
+            <ListView HasUnevenRows="True" x:Name="listView" ItemTapped="OnItemTapped">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout BackgroundColor="{Binding back_colour}"  Margin="3" Padding="3" HorizontalOptions="FillAndExpand">
+                                <StackLayout Orientation="Horizontal" HorizontalOptions="StartAndExpand">
+                                    <Label Text="{Binding uid}" WidthRequest="0" HorizontalOptions="StartAndExpand"/>
+                                    <Label Text="{Binding sdate}" WidthRequest="110" HorizontalOptions="StartAndExpand"/>
+                                    <Label Text="{Binding spcode}" WidthRequest="110" HorizontalOptions="StartAndExpand" />
+                                    <Label Text="{Binding smiles}" WidthRequest="110" HorizontalOptions="StartAndExpand" />
+                                </StackLayout>
+                                <StackLayout Orientation="Horizontal" HorizontalOptions="StartAndExpand">
+                                    <Label Text="" WidthRequest="110" HorizontalOptions="StartAndExpand" />
+                                    <Label Text="{Binding fpcode}" WidthRequest="110" HorizontalOptions="StartAndExpand" />
+                                    <Label Text="{Binding fmiles}" WidthRequest="110" HorizontalOptions="StartAndExpand" />
+                                </StackLayout>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <StackLayout Orientation="Horizontal" VerticalOptions="End" >
+
+                <Button Text="Add" Clicked="OnAdd" HorizontalOptions="FillAndExpand"/>
+                <Button Text="Delete" Clicked="OnDelete" HorizontalOptions="FillAndExpand"/>
+                <!--<Button Text="Select" Clicked="OnSelect" HorizontalOptions="FillAndExpand"/>-->
+
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

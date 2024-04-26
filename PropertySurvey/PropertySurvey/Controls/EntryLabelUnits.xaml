@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<StackLayout xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="MartControls.EntryLabelUnits">
+    <StackLayout Orientation="Horizontal" HeightRequest="45">
+        <Label x:Name="the_label" HorizontalOptions="StartAndExpand" VerticalOptions="Center"/>
+        <Entry x:Name="the_entry" MaxLength="9" WidthRequest="60" VerticalOptions="End" Keyboard="Numeric" HorizontalOptions="End" TextChanged="OnTextChanged"/>
+        <Label x:Name="the_units" Text="mm" HorizontalOptions="Fill" VerticalOptions="End" />
+    </StackLayout>
+</StackLayout>

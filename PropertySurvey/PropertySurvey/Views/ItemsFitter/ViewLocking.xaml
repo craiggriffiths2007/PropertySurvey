@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:controls="clr-namespace:MartControls"
+             x:Class="PropertySurvey.ViewLocking"
+             Title="Lock">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Margin="3">
+                <controls:ViewTextLabel LabelText="Cause of damage" TextBinding="cause_of_damage"/>
+                <controls:ViewTextLabel LabelText="Why is cause different to contract" x:Name="cause_different_answer" TextBinding="cause_of_damage_reason_different"/>
+                <controls:ViewButtonLabel LabelText="Entry gained through this item" x:Name="point_of_entry_answer" button_binding="point_of_entry"/>
+                <controls:ViewButtonLabel LabelText="Was it locked" x:Name="was_it_locked_answer" button_binding="was_it_locked"/>
+                <controls:ViewTextLabel LabelText="What locks were on this item" x:Name="type_of_locking_system_answer" TextBinding="type_of_lockng_system_required"/>
+                <controls:ViewTextLabel LabelText="Page number" x:Name="page_number_answer" TextBinding="pagenum"/>
+                <controls:ViewTextLabel LabelText="Item" x:Name="item_answer" TextBinding="item"/>
+
+                <StackLayout x:Name="locking_mechanism_area" Orientation="Horizontal">
+                    <Label x:Name="locking_mechanism" Text="Locking mechanism" HorizontalOptions="FillAndExpand"/>
+                    <Button x:Name="locking_mechanism_button" WidthRequest="45" Clicked="locking_mechanism_button_clicked"/>
+                </StackLayout>
+
+                <controls:ViewTextLabel LabelText="Lock make" x:Name="lock_make_answer" TextBinding="locking_make"/>
+                <controls:ViewTextLabel LabelText="Lock codes" TextBinding="locking_codes"/>
+                <controls:ViewTextLabel LabelText="Lock colour" x:Name="lock_colour_answer" TextBinding="lock_colour"/>
+                <controls:ViewTextLabel LabelText="Supplier/Brochure" TextBinding="COD_Code"/>
+                <controls:ViewTextLabel LabelText="Item Summary" TextBinding="long_comments"/>
+                <controls:ViewTextLabel LabelText="Parts to order" TextBinding="parts_to_order"/>
+                <controls:ViewDrawingsAndPhotos x:Name="drawings_and_photos"/>
+                <controls:Copyright/>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

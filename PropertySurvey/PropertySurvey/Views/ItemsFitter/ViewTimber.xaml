@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:controls="clr-namespace:MartControls"
+             x:Class="PropertySurvey.ViewTimber"
+             Title="Timber">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Margin="3">
+                <controls:ViewTextLabel LabelText="Timber Item" TextBinding="timber_item"/>
+                <controls:ViewButtonLabel LabelText="Is the property a flat" x:Name="flat_answer" button_binding="is_a_flat"/>
+                <controls:ViewTextLabel LabelText="Reason for replacement" x:Name="replacement_reason_answer" TextBinding="replace_reason"/>
+                <controls:ViewButtonLabel LabelText="Cosmetic Damage" x:Name="cosmetic_damage_answer" button_binding="cosmetic_damage"/>
+                <controls:ViewButtonLabel LabelText="Collect and Copy" button_binding="collect_and_copy"/>
+                <controls:ViewButtonLabel LabelText="Temporary" x:Name="temporary_answer" button_binding="temporary"/>
+                <controls:ViewButtonLabel LabelText="Preglazed Door" x:Name="preglazed_door_answer" button_binding="pre_glazed_door"/>
+                <controls:ViewTextLabel LabelText="Additional locks" x:Name="additional_locks_answer" TextBinding="additional_locks"/>
+                <controls:ViewSubItem LabelText="New locking mechanism required" x:Name="new_locking_mechanism_answer" button_binding="bNewLockingMech" OnViewClickedEvent="view_locking_mechanism_clicked"/>
+                <controls:ViewTextLabel LabelText="Lock make" x:Name="new_make_answer" TextBinding="lock_codes"/>
+                <controls:ViewTextLabel LabelText="Lock codes" x:Name="lock_code_answer" TextBinding="lock_codes"/>
+                <controls:ViewSubItem LabelText="Handles required" x:Name="handles_required_answer" button_binding="handles_req" OnViewClickedEvent="view_handles_clicked"/>
+                <controls:ViewTextLabel LabelText="Handles detail" x:Name="handles_detail_answer" TextBinding="handles_text"/>
+                <controls:ViewSubItem LabelText="Replace glass" x:Name="replace_glass_answer" button_binding="replace_glass" OnViewClickedEvent="view_replace_glass_clicked"/>
+                <controls:ViewTextLabel LabelText="WER Rating" x:Name="wer_rating_answer" TextBinding="WER_rating"/>
+                <controls:ViewTextLabel LabelText="Mouldings" TextBinding="moulding"/>
+                <controls:ViewTextLabel LabelText="Why cannot item be repaired" x:Name="reason_not_repaired_answer" TextBinding="replace_explain"/>
+                <controls:ViewButtonLabel LabelText="Gaskets" x:Name="gaskets_answer" button_binding="gaskets"/>
+                <controls:ViewTextLabel LabelText="Gaskets detail" x:Name="gasket_detail_answer" TextBinding="gaskets_text"/>
+                <controls:ViewTextLabel LabelText="Cause of damage" TextBinding="cause_of_damage"/>
+                <controls:ViewTextLabel LabelText="Why is cause different to contract" x:Name="cause_different_answer" TextBinding="cause_of_damage_reason_different"/>
+                <controls:ViewButtonLabel LabelText="Entry gained through this item" x:Name="point_of_entry_answer" button_binding="point_of_entry"/>
+                <controls:ViewButtonLabel LabelText="Was it locked" x:Name="was_it_locked_answer" button_binding="was_it_locked"/>
+                <controls:ViewTextLabel LabelText="What locks were on this item" x:Name="type_of_locking_system_answer" TextBinding="type_of_lockng_system_required"/>
+                <controls:ViewTextLabel LabelText="Door wood" TextBinding="timber_wood"/>
+                <controls:ViewTextLabel LabelText="Frame" TextBinding="timber_frame_wood"/>
+                <controls:ViewButtonLabel LabelText="New frame" button_binding="timber_new_frame_req"/>
+                <controls:ViewButtonLabel LabelText="Weather bar required" x:Name="weather_bar_answer" button_binding="weather_bar"/>
+                <controls:ViewTextLabel LabelText="Room location" TextBinding="room_location"/>
+                <controls:ViewTextLabel LabelText="Hinge type" x:Name="hinge_type_answer" TextBinding="hinge_type"/>
+                <controls:ViewButtonLabel LabelText="Document 'L'" button_binding="doc_l_compliant"/>
+                <controls:ViewTextLabel LabelText="Reason not Document 'L' Compliant" x:Name="reason_not_docL_answer" TextBinding="doc_l_compliant_reason"/>
+                <controls:ViewTextLabel LabelText="Letter box" x:Name="letter_box_answer" TextBinding="letter_box"/>
+                <controls:ViewTextLabel LabelText="Letter box position" x:Name="letter_box_position_answer" TextBinding="letter_box_pos"/>
+                <controls:ViewTextLabel LabelText="Pet flap" x:Name="pet_flap_size_answer" TextBinding="pet_flap"/>
+                <controls:ViewTextLabel LabelText="Pet flap type" x:Name="pet_flap_type_answer" TextBinding="pet_type"/>
+                <controls:ViewButtonLabel LabelText="Magnetic" x:Name="pet_flap_magnetic_answer" button_binding="pet_magnetic"/>
+                <controls:ViewButtonLabel LabelText="Repair frame" button_binding="repair_frame"/>
+                <controls:ViewTextLabel LabelText="Door thickness - mm" x:Name="door_thickness_answer" TextBinding="door_thickness"/>
+                <controls:ViewTextLabel LabelText="Door size" x:Name="door_size_answer" TextBinding="standard_sizes"/>
+                <controls:ViewTextLabel LabelText="Reason not standard" x:Name="door_size_reason_non_standard_answer" TextBinding="reasonnonstandard"/>
+                <controls:ViewTextLabel LabelText="Door width" x:Name="door_width_answer" TextBinding="door_width"/>
+                <controls:ViewTextLabel LabelText="Door height" x:Name="door_height_answer" TextBinding="door_height"/>
+                <controls:ViewButtonLabel LabelText="Glazed" x:Name="glazed_answer" button_binding="timber_glazed"/>
+                <controls:ViewButtonLabel LabelText="Opens" x:Name="opens_answer" button_binding="opens"/>
+                <controls:ViewButtonLabel LabelText="New sash req" button_binding="new_sash_required"/>
+                <controls:ViewButtonLabel LabelText="Head drip" button_binding="head_drip"/>
+                <controls:ViewButtonLabel LabelText="Draught strip" button_binding="draught_strip"/>
+                <controls:ViewTextLabel LabelText="Cills" TextBinding="cills"/>
+                <controls:ViewButtonLabel LabelText="Thresher" x:Name="thresher_answer" button_binding="thresher"/>
+                <controls:ViewTextLabel LabelText="Glass pattern" TextBinding="glass_pattern"/>
+                <controls:ViewButtonLabel LabelText="Single or double" x:Name="single_double_answer" button_binding="single_double"/>
+                <controls:ViewTextLabel LabelText="Trickle vents" TextBinding="trickle_vents"/>
+                <controls:ViewTextLabel LabelText="Hardware colour" TextBinding="hardware_color"/>
+                <controls:ViewButtonLabel LabelText="Door slides on the" x:Name="door_slides_answer" button_binding="slide_position"/>
+                <controls:ViewTextLabel LabelText="Spacer thickness" x:Name="spacer_thickness_answer" TextBinding="spacer_thickness"/>
+                <controls:ViewTextLabel LabelText="Spacer colour" x:Name="spacer_colour_answer" TextBinding="spacer_color"/>
+                <controls:ViewTextLabel LabelText="Locks" TextBinding="locks"/>
+                <controls:ViewTextLabel LabelText="Brick width" TextBinding="brick_width"/>
+                <controls:ViewTextLabel LabelText="Brick height" TextBinding="brick_height"/>
+                <controls:ViewTextLabel LabelText="Internal width" TextBinding="internal_width"/>
+                <controls:ViewTextLabel LabelText="Internal height" TextBinding="internal_height"/>
+                <controls:ViewButtonLabel LabelText="Does this door need fire rated glass" x:Name="fire_rated_answer" button_binding="beading_type"/>
+                <controls:ViewTextLabel LabelText="Inside door colour" x:Name="inside_door_colour_answer" TextBinding="door_color"/>
+                <controls:ViewTextLabel LabelText="Inside door code/colour" x:Name="inside_door_code_answer" TextBinding="door_color_code"/>
+                <controls:ViewTextLabel LabelText="Outside door colour" x:Name="outside_door_colour_answer" TextBinding="door_color_out"/>
+                <controls:ViewTextLabel LabelText="Outside door code/colour" x:Name="outside_door_code_answer" TextBinding="door_color_code_out"/>
+                <controls:ViewTextLabel LabelText="Inside frame colour" TextBinding="frame_color"/>
+                <controls:ViewTextLabel LabelText="Inside frame code/colour" x:Name="inside_frame_code_answer" TextBinding="frame_color_code"/>
+                <controls:ViewTextLabel LabelText="Outside frame colour" TextBinding="frame_color_out"/>
+                <controls:ViewTextLabel LabelText="Outside frame code/colour" x:Name="outside_frame_code_answer" TextBinding="frame_color_code_out"/>
+                <controls:ViewTextLabel LabelText="Glass type" x:Name="glass_type_answer" TextBinding="glass_type"/>
+                <controls:ViewSpecialGlassControl LabelText="Special glass" x:Name="special_glass_answer" special_glass_binding="special_glass"/>
+                <controls:ViewTextLabel LabelText="Document 'L'" x:Name="document_L_answer" TextBinding="docl"/>
+                <controls:ViewTextLabel LabelText="Item Summary" TextBinding="long_timber_comments"/>
+                <controls:ViewTextLabel LabelText="Parts to order" TextBinding="parts_to_order"/>
+                <controls:ViewDrawingsAndPhotos x:Name="drawings_and_photos"/>
+                <StackLayout Orientation="Horizontal">
+                    <Label x:Name="section_label" HorizontalOptions="FillAndExpand"/>
+                    <Button Text="View" x:Name="view_section_button" IsVisible="False" Clicked="view_section_clicked"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label x:Name="beading_label" HorizontalOptions="FillAndExpand"/>
+                    <Button Text="View" x:Name="view_beading_button" IsVisible="False" Clicked="view_beading_clicked"/>
+                </StackLayout>
+                <StackLayout x:Name="view_sash_area" Orientation="Horizontal">
+                    <Label x:Name="sash_label" HorizontalOptions="FillAndExpand"/>
+                    <Button Text="View" x:Name="view_sash_button" IsVisible="False" Clicked="view_sash_clicked"/>
+                </StackLayout>
+                <controls:Copyright/>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

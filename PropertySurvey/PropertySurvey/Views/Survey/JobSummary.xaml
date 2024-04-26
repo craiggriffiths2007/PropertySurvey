@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PropertySurvey.JobSummary"
+             xmlns:controls="clr-namespace:MartControls"
+             Title="Additional Summary Information" >
+    <ContentPage.Content>
+        <ScrollView>
+            <controls:ControlLayout x:Name="page1">
+
+                <controls:YesNoLabel x:Name="yes_or_no" LabelText="Do you want to add additional summary information?" button_binding="new_ispare9" HorizontalOptions="FillAndExpand" OnSelectionChanged="Yes_or_no_OnSelectionChanged"/>
+
+
+                <StackLayout x:Name="sum_area">
+                    <StackLayout Margin="10">
+                        <Label TextColor="Black" Text="All item summaries are added automatically. This is for any additional summary information only. Do not add item summary's here."/>
+                    </StackLayout>
+                    <controls:EditorGrows Text="{Binding summ_text}" x:Name="summary_area"/>
+                </StackLayout>
+
+                <controls:TimeLabel LabelText="Time Arrived" TheTime="{Binding stimea}"/>
+
+                <!--<StackLayout Orientation="Horizontal">
+                    <Label Text="Time Arrived" />
+                    <TimePicker x:Name="timePicker1" WidthRequest="120" HorizontalOptions="EndAndExpand"/>
+                </StackLayout>-->
+                <controls:EntryLabel x:Name="srv" LabelText="Surveyor" TextBinding="nsn" max_text_length="29"/>
+
+                <controls:EditPickerLabel x:Name="est_job_time" LabelText="Estimated time to complete job"  TextBinding="time_to_complete" />
+
+                <!--<controls:YesNoLabel x:Name="items_matching_up" button_binding="imchup" LabelText="Items matching up" HorizontalOptions="FillAndExpand"/>-->
+                <controls:YesNoLabel x:Name="job_grade" LabelText="Job grade" HorizontalOptions="FillAndExpand"/>
+                <controls:YesNoLabel x:Name="njs" LabelText="Job size" HorizontalOptions="FillAndExpand"/>
+                <controls:YesNoLabel x:Name="booked" button_binding="booked" LabelText="Booked on day 1" HorizontalOptions="FillAndExpand" OnSelectionChanged="Booked_OnSelectionChanged"/>
+                <StackLayout Orientation="Vertical" IsVisible="False" x:Name="ReasonArea">
+                    <Label Text="Reason not booked on day 1"/>
+                    <Entry Text="{Binding reason_not_booked_in}" x:Name="reason_not_booked"/>
+                </StackLayout>
+                <controls:YesNoLabel x:Name="survey_complete" button_binding="survey_complete" LabelText="Survey complete" OnSelectionChanged="Survey_complete_OnSelectionChanged" HorizontalOptions="FillAndExpand"/>
+
+                <StackLayout x:Name="ReasonSurveyIncompleteArea" IsVisible="False">
+
+                    <controls:EditPickerLabel x:Name="reason_not_complete" LabelText="Reson survey not complete"  TextBinding="reason_not_complete" />
+                    <StackLayout Margin="10">
+                        <Label Text="SURVEY NOT COMPLETED" TextColor="Black" FontAttributes="Bold"/>
+                        <Label Text=" " TextColor="Black"/>
+                        <Label Text="To register your attendance, fill in:" TextColor="Black"/>
+                        <Label Text=" " TextColor="Black"/>
+                        <Label Text="a) the reason why the survey cannot be completed" TextColor="Black"/>
+                        <Label Text="b) set time of arrival" TextColor="Black"/>
+                        <Label Text="c) a photo of the front of the property" TextColor="Black"/>
+                        <Label Text=" " TextColor="Black"/>
+                        <Label Text="there is no need to fill in any other fields" TextColor="Black"/>
+                    </StackLayout>
+
+                </StackLayout>
+
+                <controls:Copyright/>
+            </controls:ControlLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

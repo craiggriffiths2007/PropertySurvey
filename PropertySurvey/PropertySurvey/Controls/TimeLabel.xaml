@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<StackLayout xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MartControls.TimeLabel"
+             LayoutChanged="layout_changed">
+    <StackLayout Orientation="Horizontal" HeightRequest="45">
+        <Label x:Name="TheLabel" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand"/>
+        <TimePicker x:Name="TheTimeControl" HorizontalOptions="End" PropertyChanged="OnTimechanged" />
+    </StackLayout>
+</StackLayout>

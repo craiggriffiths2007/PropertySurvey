@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<s:CarouselValidate 
+            xmlns="http://xamarin.com/schemas/2014/forms"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            x:Class="PropertySurvey.CompositeDoor" 
+            Title="Composite Door"
+            xmlns:controls="clr-namespace:MartControls"
+            xmlns:s="clr-namespace:PropertySurvey">
+
+    <ScrollView>
+        <controls:ControlLayout>
+            <controls:EntryLabel x:Name="no_repair_reason_entry" TextBinding="reason_not_repaired" LabelText="Reason cannot be repaired"/>
+
+            <StackLayout x:Name="replace_glass_area" Orientation="Horizontal">
+                <Label Text="Replace glass" HorizontalOptions="FillAndExpand"/>
+                <controls:YesNo x:Name="replace_glass_button" ButtonState="{Binding replace_glass}" OnSelectionChanged="replace_glass_changed"/>
+                <StackLayout Orientation="Horizontal" WidthRequest="3"/>
+                <Button x:Name="do_replace_glass_button" WidthRequest="45" Clicked="replace_glass_clicked"/>
+            </StackLayout>
+
+            <StackLayout x:Name="handles_area" Orientation="Horizontal">
+                <Label Text="Handles required" HorizontalOptions="FillAndExpand"/>
+                <controls:YesNo x:Name="handles_required_button" ButtonState="{Binding handles_req}" OnSelectionChanged="handles_required_changed"/>
+                <StackLayout Orientation="Horizontal" WidthRequest="3"/>
+                <Button x:Name="handles_button" WidthRequest="45" Clicked="handles_clicked"></Button>
+            </StackLayout>
+
+            <Entry x:Name="handles_entry" Text="{Binding handles_text}" MaxLength="30"/>
+            <controls:YesNoLabel x:Name="gaskets_button" button_binding="gaskets" LabelText="Gaskets" OnSelectionChanged="gaskets_changed"/>
+            <Entry x:Name="gasket_text" Text="{Binding gaskets_text}" HorizontalOptions="FillAndExpand" MaxLength="30"/>
+            <controls:EditPickerLabel x:Name="door_make_picker" LabelText="Door make" TextBinding="door_make"  OnTextChangedEvent="door_make_changed"/>
+            <controls:YesNoLabel x:Name="fire_door_button" button_binding="fire_door" LabelText="Fire door" OnSelectionChanged="fire_door_button_click"/>
+            <controls:WarningMessage x:Name="please_survey_text" Text="Please survey for low aluminium thresher"/>
+            <controls:YesNoLabel x:Name="flat_button" button_binding="is_a_flat" LabelText="Is the property a flat" OnSelectionChanged="flat_button_click"/>
+            <controls:WarningMessage x:Name="flat_warning_text" Text="Thumb turn locks must be used."/>
+
+            <controls:CauseOfDamage x:Name="cause_of_damage_area"
+                cause_of_damage_binding      = "cause_of_damage"
+                reason_different_binding     = "cause_of_damage_reason_different"
+                point_of_entry_binding       = "point_of_entry"
+                was_it_locked_button_binding = "was_it_locked"
+                type_of_lock_picker_binding  = "type_of_lockng_system_required"/>
+
+            <controls:EditPickerLabel x:Name="WER_rating_picker" LabelText="WER rating" TextBinding="WER_rating"/>
+            <controls:EditPickerLabel x:Name="frame_picker" LabelText="Frame" TextBinding="door_wood"/>
+            <controls:YesNoLabel x:Name="is_lock_button" button_binding="is_lock" LabelText="Lock" OnSelectionChanged="is_lock_button_click" ButtonWidth="120"/>
+            <Entry x:Name="lock_other_text" Text="{Binding lock_other_text}" HorizontalOptions="FillAndExpand"/>
+            <controls:YesNoLabel x:Name="opens_button" button_binding="opens" LabelText="Opens"/>
+            <controls:YesNoLabel x:Name="hinged_on_button" button_binding="hinged_on" LabelText="Hinged on (viewed from outside)"/>
+            <controls:EditPickerLabel x:Name="trickle_vents_picker" LabelText="Trickle vents" TextBinding="trickle_vents"/>
+            <controls:EditPickerLabel x:Name="frame_colour_inside_picker" LabelText="Frame colour inside" TextBinding="frame_colour_inside"/>
+            <controls:EditPickerLabel x:Name="frame_colour_outside_picker" LabelText="Frame colour outside" TextBinding="frame_colour_outside"/>
+            <controls:EditPickerLabel x:Name="door_colour_inside_picker" LabelText="Door colour inside" TextBinding="door_colour_inside"/>
+            <controls:EditPickerLabel x:Name="door_colour_outside_picker" LabelText="Door colour outside" TextBinding="door_colour_outside"/>
+                    
+            <controls:YesNoLabel x:Name="head_drip_button" button_binding="head_drip" LabelText="Head drip"/>
+            <controls:EntryLabel x:Name="door_design_entry" TextBinding="door_design" LabelText="Door design"/>
+            <controls:EntryLabel x:Name="glass_design_entry" TextBinding="glass_design" LabelText="Glass design"/>
+            <controls:Letterbox
+                x:Name="letter_box_area"
+                letter_box_binding="letteredit"
+                letter_box_position_binding="letter_box_pos"/>
+
+            <controls:PetFlap
+                x:Name="pet_flap_area"
+                pet_flap_binding  = "pet_flap"
+                flap_type_binding = "pet_type"
+                magnetic_binding  = "pet_magnetic"/>
+
+            <controls:WidthHeight
+                x:Name="brick_dimensions"
+                width_label_text="Brick width"
+                width_binding="brick_width"
+                height_label_text="Brick height"
+                height_binding="brick_height"/>
+
+            <controls:WidthHeight
+                x:Name="internal_dimensions"
+                width_label_text="Internal width"
+                width_binding="internal_width"
+                height_label_text="Internal height"
+                height_binding="internal_height"/>
+
+            <controls:YesNoLabel x:Name="addons_button" button_binding="addons" LabelText="Addons" OnSelectionChanged="addons_button_click"/>
+            <controls:EntryLabel x:Name="addons_width_entry" TextBinding="addons_width" LabelText="Width" max_text_length="40"/>
+            <controls:EntryLabel x:Name="addons_height_entry" TextBinding="addons_height" LabelText="Height" max_text_length="40"/>
+            <controls:EditPickerLabel x:Name="handle_colour_picker" LabelText="Handle colour" TextBinding="handle_colour"/>
+            <controls:EditPickerLabel x:Name="threshold_type_picker" LabelText="Threshold type" TextBinding="threshold_type"/>
+            <controls:YesNoLabel x:Name="handle_operation_button" LabelText="Handle operation" button_binding="lever_pad_handles" ButtonWidth="160"/>
+            <controls:EditPickerLabel x:Name="glass_pattern_picker" LabelText="Glass pattern" TextBinding="glass_pattern" OnTextChangedEvent="glass_pattern_changed"/>
+
+            <controls:SpecialGlass x:Name="special_glass_area"
+                special_glass_binding="special_glass"
+                diamond_lead_complete_binding="lead_bDiamondComplete"
+                georgian_lead_complete_binding="lead_bGeorgianComplete"
+                back_to_back_complete_binding="lead_bGeorgianComplete"
+                georgian_bar_complete_binding="lead_bBarComplete"/>
+
+            <controls:EditPickerLabel x:Name="glass_type_picker" LabelText="Glass type" TextBinding="glass_type"/>
+            <controls:EditPickerLabel x:Name="spacer_thickness_picker" LabelText="Spacer thickness" TextBinding="spacer_thickness"/>
+            <controls:EditPickerLabel x:Name="spacer_colour_picker" LabelText="Spacer colour" TextBinding="spacer_colour"/>
+            <controls:EditPickerLabel x:Name="document_L_picker" LabelText="Document L" TextBinding="docl"/>
+            <controls:YesNoLabel x:Name="profile_type_button" LabelText="Profile type" button_binding="profile_type" ButtonWidth="200"/>
+            <controls:EditPickerLabel x:Name="room_location_picker" LabelText="Room location" TextBinding="room_location"/>
+            <controls:YesNoLabel x:Name="glaze_button" button_binding="glaze" LabelText="Glaze" ButtonWidth="100"/>
+            <controls:EditPickerLabel x:Name="cills_picker" LabelText="Cills" TextBinding="cills"/>
+            <controls:ItemSummary_PTO x:Name="summary_pto_area" summary_binding="comments" PTO_binding="parts_to_order"/>
+            <controls:Copyright/>
+        </controls:ControlLayout>
+    </ScrollView>
+</s:CarouselValidate>

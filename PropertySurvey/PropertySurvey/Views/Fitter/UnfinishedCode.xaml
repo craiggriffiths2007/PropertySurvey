@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:controls="clr-namespace:MartControls"
+             x:Class="PropertySurvey.UnfinishedCode">
+    <ContentPage.Content>
+        <controls:ControlLayout>
+            <Label Text="Please enter Unfinshed code"/>
+            <Label x:Name="cont_num"/>
+            <Entry x:Name="unfin_code"/>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="End">
+                <Button Text="Cancel" Clicked="OnCancel"/>
+                <Button Text="Done" Clicked="OnDone"/>
+
+            </StackLayout>
+
+        </controls:ControlLayout>
+    </ContentPage.Content>
+</ContentPage>

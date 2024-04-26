@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<s:CarouselValidateNoImage
+            xmlns="http://xamarin.com/schemas/2014/forms"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            x:Class="PropertySurvey.PersonInCharge"
+            xmlns:controls="clr-namespace:MartControls"
+            xmlns:s="clr-namespace:PropertySurvey"
+            Title="Person in charge">
+    <ContentPage x:Name="Page0" TabIndex="0">
+        <ScrollView>
+            <controls:ControlLayout x:Name="page1">
+                <StackLayout>
+                    <Label Text="Your vehicle" FontAttributes="Bold"/>
+                    <controls:EntryLabel x:Name="make_entry" LabelText="Make" TextBinding="y_make"/>
+                    <controls:EntryLabel x:Name="model_entry" LabelText="Model" TextBinding="y_model"/>
+                    <controls:EntryLabel x:Name="registration_entry" LabelText="Registration" TextBinding="y_reg"/>
+                    <controls:EntryLabel x:Name="used_for_entry" LabelText="What is the vehicle used for" TextBinding="y_used_for"/>
+                    <Label Text="Driver or person last in charge" FontAttributes="Bold"/>
+                    <controls:EntryLabel x:Name="name_entry" LabelText="Full name" TextBinding="y_driver_full_name"/>
+                    <controls:DateLabel x:Name="date_of_birth_control" LabelText="Date of birth" TheDate="{Binding y_driver_dob}"/>
+                    <controls:EntryLabel x:Name="address1_entry" LabelText="Address" TextBinding="y_address1"/>
+                    <Entry x:Name="address2_entry" Text="{Binding y_address2}"/>
+                    <Entry x:Name="address3_entry" Text="{Binding y_address3}"/>
+                    <controls:EntryLabel x:Name="postcode_entry" LabelText="Postcode" TextBinding="y_pcode" Orientation="Horizontal"/>
+                    <controls:EntryLabel x:Name="occupation_entry" LabelText="Occupation" TextBinding="y_occupation"/>
+                </StackLayout>
+                <controls:Copyright/>
+            </controls:ControlLayout>
+        </ScrollView>
+    </ContentPage>
+    <ContentPage x:Name="Page1" TabIndex="0">
+        <ScrollView>
+            <controls:ControlLayout x:Name="page2">
+                <StackLayout>
+                    <Label Text="Driver or person last in charge" FontAttributes="Bold"/>
+                    <Label Text="How long have you been employed by the company"/>
+                    <StackLayout Orientation="Horizontal">
+                        <controls:EntryLabel x:Name="years_entry" LabelText="Years" TextBinding="y_years_employed" Orientation="Horizontal" EntryKeyboard="Numeric"/>
+                        <controls:EntryLabel x:Name="months_entry" LabelText="Months" TextBinding="y_months_employed" Orientation="Horizontal" EntryKeyboard="Numeric"/>
+                    </StackLayout>
+                    <controls:EntryLabel x:Name="involved_entry" LabelText="Have you been involved in any accidents in the past three years, if so, give brief details" TextBinding="y_any_other_accidents"/>
+                    <controls:EntryLabel x:Name="convictions_entry" LabelText="Have you any convictions or prosecutions pending for motoring offences, if so, give brief details" TextBinding="y_prosecution"/>
+                    <controls:EntryLabel x:Name="infirmity_entry" LabelText="Have you any infirmity or disability, if so give brief details" TextBinding="y_infirmity"/>
+                    <Label Text="Your vehicle damage" FontAttributes="Bold"/>
+                    <controls:EntryLabel x:Name="vehicle_damaged_entry" LabelText="Is the vehicle damaged, is so, what is the area of damage" TextBinding="y_vehicle_damage"/>
+                    <controls:YesNoLabel x:Name="drivable_button" button_binding="y_driveable" LabelText="Is the vehicle driveable"/>
+                    <controls:EntryLabel x:Name="property_damaged_entry" LabelText="Was there damage to any other property? (walls/fances, road signs, barriers, etc)" TextBinding="y_damage_to_property"/>
+                    <controls:EntryLabel x:Name="injuries_entry" LabelText="Where any injuries sustained by any other person" TextBinding="y_injuries_sustained"/>
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                        <Button Text="Signature" Clicked="signature_clicked" WidthRequest="250" HeightRequest="40" Margin="20,2"/>
+                        <Image x:Name="signature_tick" Source="green_tick.png" HorizontalOptions="End" IsVisible="False"/>
+                    </StackLayout>
+                </StackLayout>
+                <controls:Copyright/>
+            </controls:ControlLayout>
+        </ScrollView>
+    </ContentPage>
+</s:CarouselValidateNoImage>

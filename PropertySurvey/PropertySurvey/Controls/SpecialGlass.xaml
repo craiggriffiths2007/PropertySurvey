@@ -1,0 +1,14 @@
+﻿<StackLayout xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="MartControls.SpecialGlass"
+    xmlns:controls="clr-namespace:MartControls"
+    Orientation="Vertical"
+    LayoutChanged="layout_changed">
+
+    <Label Text="Special glass"/>
+    <StackLayout Orientation="Horizontal">
+        <controls:EditPicker x:Name="special_glass_picker" max_text_length="30" picker_title="Special glass" OnTextChangedEvent="special_glass_changed"/>
+        <StackLayout Orientation="Horizontal" WidthRequest="3"/>
+        <Button x:Name="special_glass_button" Clicked="special_glass_clicked" WidthRequest="45"/>
+    </StackLayout>
+</StackLayout>

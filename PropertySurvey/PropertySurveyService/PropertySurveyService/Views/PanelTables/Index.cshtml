@@ -1,0 +1,239 @@
+﻿@model IEnumerable<PropertySurveyService.Models.PanelTable>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.HeaderId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.udi_cont)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.item_number)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.isComplete)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.cause_of_damage)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.cause_of_damage_reason_different)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.knockedit)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.knocoledit)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.letteredit)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.letter_box_pos)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.wedit)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.hedit)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.typeedit)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.thickedit)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.backgedit)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.coledit)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.gltext)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.spaccoloedit)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.pet_flap)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.pet_type)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.pet_magnetic)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.no_of_pics)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.no_of_photos)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.no_of_vids)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.room_location)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.bDifferentFromOriginal)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ChangeItemTo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.print_name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.long_sptext)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.upvc_item_number)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.alum_item_number)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.parts_to_order)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.point_of_entry)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.type_of_lockng_system_required)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.was_it_locked)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.HeaderId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.udi_cont)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.item_number)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.isComplete)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.cause_of_damage)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.cause_of_damage_reason_different)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.knockedit)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.knocoledit)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.letteredit)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.letter_box_pos)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.wedit)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.hedit)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.typeedit)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.thickedit)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.backgedit)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.coledit)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.gltext)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.spaccoloedit)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.pet_flap)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.pet_type)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.pet_magnetic)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.no_of_pics)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.no_of_photos)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.no_of_vids)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.room_location)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.bDifferentFromOriginal)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ChangeItemTo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.print_name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.long_sptext)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.upvc_item_number)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.alum_item_number)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.parts_to_order)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.point_of_entry)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.type_of_lockng_system_required)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.was_it_locked)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

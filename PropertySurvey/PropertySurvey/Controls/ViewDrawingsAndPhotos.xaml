@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<StackLayout xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MartControls.ViewDrawingsAndPhotos"
+             HorizontalOptions="FillAndExpand">
+    <StackLayout Orientation="Horizontal">
+        <Label x:Name="drawings_label" HorizontalOptions="FillAndExpand"/>
+        <Button Text="View" x:Name="view_draings_button" IsVisible="False" Clicked="view_drawings_clicked"/>
+    </StackLayout>
+    <StackLayout Orientation="Horizontal">
+        <Label x:Name="photo_label" HorizontalOptions="FillAndExpand"/>
+        <Button Text="View" x:Name="view_photos_button" IsVisible="False" Clicked="view_photos_clicked"/>
+    </StackLayout>
+</StackLayout>

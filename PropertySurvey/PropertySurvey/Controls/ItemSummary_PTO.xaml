@@ -1,0 +1,10 @@
+﻿<StackLayout xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="MartControls.ItemSummary_PTO" Orientation="Vertical"
+    xmlns:controls="clr-namespace:MartControls">
+    
+    <Label Text="Item Summary"  HorizontalOptions="FillAndExpand"/>
+    <controls:EditorGrows x:Name="item_summary" HorizontalOptions="FillAndExpand" MaxLength="254"/>
+    <Label Text="Parts to order"  HorizontalOptions="FillAndExpand"/>
+    <controls:EditorGrows x:Name="parts_to_order" HorizontalOptions="FillAndExpand" MaxLength="240"/>
+</StackLayout>

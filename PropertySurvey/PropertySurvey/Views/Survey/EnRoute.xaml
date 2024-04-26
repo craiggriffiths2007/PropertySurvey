@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PropertySurvey.EnRoute"
+             xmlns:controls="clr-namespace:MartControls"
+             Title="En Route">
+    <ContentPage.Content>
+        <Grid>
+            <controls:ControlLayout>
+                <StackLayout>
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                        <Label Text="Job Time"  HorizontalOptions="FillAndExpand"/>
+                        <Entry Text="" x:Name="job_times" WidthRequest="180" IsEnabled="False" HorizontalOptions="EndAndExpand"/>
+                    </StackLayout>
+
+                    <Label Text="Will you be there within the allocated time slot?"  HorizontalOptions="FillAndExpand"/>
+
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" HeightRequest="40">
+                        <Button x:Name="yes_button" Text="Yes" HeightRequest="35" FontSize="Small" Clicked="OnYes" HorizontalOptions="FillAndExpand"/>
+                        <Button x:Name="no_button" Text="No" HeightRequest="35" FontSize="Small" Clicked="OnNo" HorizontalOptions="FillAndExpand"/>
+                    </StackLayout>
+
+                    <Label x:Name="cust_informed" IsVisible="False" Text="The customer has been informed that you will be there within the allocated time slot."/>
+
+                    <controls:WarningMessage x:Name="contact_branch" IsVisible="False" Text="You must inform your branch manager immediately so that they can inform the customer."/>
+                    <controls:WarningMessage x:Name="contact_customer" IsVisible="False" Text="You must call the customer immediately to let them know you will not be there within the allocated time slot."/>
+                    <controls:WarningMessage x:Name="error_server" IsVisible="False" Text="Cannot contact the server at this time. Please try again later."/>
+
+                </StackLayout>
+                <StackLayout HorizontalOptions="Center" VerticalOptions="Center" HeightRequest="60" WidthRequest="60">
+                    <ActivityIndicator x:Name="act_ind" Color="DodgerBlue" IsRunning="false" WidthRequest="60" HeightRequest="60"/>
+                </StackLayout>
+                <controls:Copyright/>
+            </controls:ControlLayout>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

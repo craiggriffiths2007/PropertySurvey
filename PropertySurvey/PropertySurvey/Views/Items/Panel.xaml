@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<s:CarouselValidate
+            xmlns="http://xamarin.com/schemas/2014/forms"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            x:Class="PropertySurvey.Panel" 
+            Title="Panel"
+            xmlns:controls="clr-namespace:MartControls"
+            xmlns:s="clr-namespace:PropertySurvey">
+
+    <ScrollView>
+        <controls:ControlLayout>
+            <controls:CauseOfDamage x:Name="cause_of_damage_area"
+                cause_of_damage_binding      = "cause_of_damage"
+                reason_different_binding     = "cause_of_damage_reason_different"
+                point_of_entry_binding       = "point_of_entry"
+                was_it_locked_button_binding = "was_it_locked"
+                type_of_lock_picker_binding  = "type_of_lockng_system_required"/>
+
+            <controls:EditPickerLabel x:Name="knocker_required_picker" LabelText="Knocker required" TextBinding="knockedit" OnTextChangedEvent="knocker_required_changed" picker_title="Knocker required" max_text_length="30"/>
+            <controls:EditPickerLabel x:Name="knocker_colour_picker" LabelText="Knocker colour?" TextBinding="knocoledit" picker_title="Knocker colour" max_text_length="30"/>
+
+            <controls:WidthHeight x:Name="width_height_area"
+                width_label_text="Panel width"
+                width_binding="wedit"
+                height_label_text="Panel height"
+                height_binding="hedit"/>
+
+            <controls:Letterbox x:Name="letter_box_area"
+                letter_box_binding="letteredit"
+                letter_box_position_binding="letter_box_pos"/>
+
+            <controls:PetFlap
+                x:Name="pet_flap_area"
+                pet_flap_binding  = "pet_flap"
+                flap_type_binding = "pet_type"
+                magnetic_binding  = "pet_magnetic"/>
+
+            <controls:EntryLabel x:Name="panel_type_entry" TextBinding="typeedit" LabelText="Panel type"/>
+            <controls:EditPickerLabel x:Name="thickness_picker" LabelText="Panel thickness" TextBinding="thickedit" picker_title="Panel thickness" max_text_length="30"/>
+            <controls:EditPickerLabel x:Name="backing_glass_picker" LabelText="Backing glass" TextBinding="backgedit" OnTextChangedEvent="backing_glass_changed" picker_title="Backing glass" max_text_length="30"/>
+            <controls:EditPickerLabel x:Name="panel_colour_picker" LabelText="Panel colour" TextBinding="coledit" OnTextChangedEvent="panel_colour_changed" picker_title="Panel colour" max_text_length="30"/>
+            <controls:WarningMessage x:Name="profile_colour_warning" Text="Please specify in comments which white and which profile if available" IsVisible="False"/>
+            <StackLayout x:Name="glass_design_area">
+                <Label Text="Glass design"/>
+                <controls:EditorGrows Text="{Binding gltext}" MaxLength="250"/>
+            </StackLayout>
+                
+            <controls:EditPickerLabel x:Name="spacer_colour_picker" LabelText="Spacer bar colour" TextBinding="spaccoloedit" picker_title="Spacer bar colour" max_text_length="30"/>
+            <controls:EditPickerLabel x:Name="room_location_picker" LabelText="Room location" TextBinding="room_location" picker_title="Room location" max_text_length="50"/>
+
+            <controls:ItemSummary_PTO
+                x:Name="summary_pto_area"
+                summary_binding="long_sptext"
+                PTO_binding="parts_to_order"/>
+
+            <controls:Copyright/>
+        </controls:ControlLayout>
+    </ScrollView>
+</s:CarouselValidate>

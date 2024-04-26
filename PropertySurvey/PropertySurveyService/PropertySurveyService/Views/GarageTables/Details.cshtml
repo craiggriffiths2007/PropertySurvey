@@ -1,0 +1,436 @@
+﻿@model PropertySurveyService.ViewModels.ItemIndexViewModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+
+                <table class="table">
+    <tbody>
+        <tr>
+            <td style="width:50%">
+
+    <h4>GarageTable</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Garage.HeaderId)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Garage.HeaderId)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Garage.udi_cont)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Garage.udi_cont)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Garage.item_number)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Garage.item_number)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Garage.opening_direction)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Garage.opening_direction)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Garage.cause_of_damage)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Garage.cause_of_damage)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Garage.cause_of_damage_reason_different)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Garage.cause_of_damage_reason_different)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Garage.door_fits_into)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Garage.door_fits_into)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Garage.new_subframe_req)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Garage.new_subframe_req)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Garage.obstruction_outside_b)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Garage.obstruction_outside_b)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Garage.obstruction_outside)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Garage.obstruction_outside)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Garage.obstruction_inside_b)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Garage.obstruction_inside_b)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Garage.obstruction_inside)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Garage.obstruction_inside)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Garage.actual_door_width)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Garage.actual_door_width)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Garage.actual_door_height)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Garage.actual_door_height)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Garage.frame_fix_type)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Garage.frame_fix_type)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Garage.type_of_garage)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Garage.type_of_garage)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Garage.new_electric_operator_req)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Garage.new_electric_operator_req)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Garage.side_size_A)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Garage.side_size_A)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Garage.side_size_B)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Garage.side_size_B)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Garage.side_size_C)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Garage.side_size_C)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Garage.side_size_D)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Garage.side_size_D)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Garage.side_size_E)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Garage.side_size_E)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Garage.side_size_F)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Garage.side_size_F)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Garage.side_size_G)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Garage.side_size_G)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Garage.side_timber_1)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Garage.side_timber_1)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Garage.side_timber_2)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Garage.side_timber_2)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Garage.plan_size_A)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Garage.plan_size_A)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Garage.plan_size_B)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Garage.plan_size_B)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Garage.plan_size_C1)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Garage.plan_size_C1)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Garage.plan_size_C2)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Garage.plan_size_C2)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Garage.plan_size_D)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Garage.plan_size_D)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Garage.plan_timber_1)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Garage.plan_timber_1)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Garage.plan_timber_2)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Garage.plan_timber_2)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Garage.color)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Garage.color)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Garage.opening_type)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Garage.opening_type)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Garage.finish)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Garage.finish)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Garage.power_points)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Garage.power_points)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Garage.electric_door)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Garage.electric_door)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Garage.handle_outside)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Garage.handle_outside)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Garage.other_access)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Garage.other_access)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Garage.need_safety_release)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Garage.need_safety_release)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Garage.no_of_pics)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Garage.no_of_pics)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Garage.no_of_photos)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Garage.no_of_photos)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Garage.insulated)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Garage.insulated)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Garage.door_stuck_shut)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Garage.door_stuck_shut)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Garage.motor_position)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Garage.motor_position)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Garage.no_of_vids)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Garage.no_of_vids)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Garage.bDifferentFromOriginal)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Garage.bDifferentFromOriginal)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Garage.ChangeItemTo)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Garage.ChangeItemTo)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Garage.print_name)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Garage.print_name)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Garage.long_comments)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Garage.long_comments)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Garage.isComplete)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Garage.isComplete)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Garage.door_within_perimeter)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Garage.door_within_perimeter)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Garage.socket_within_1m)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Garage.socket_within_1m)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Garage.wire_type)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Garage.wire_type)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Garage.colour_match_roll_box)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Garage.colour_match_roll_box)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Garage.additional_drawn)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Garage.additional_drawn)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Garage.roller_door_type)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Garage.roller_door_type)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Garage.roller_box_type)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Garage.roller_box_type)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Garage.parts_to_order)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Garage.parts_to_order)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Garage.point_of_entry)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Garage.point_of_entry)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Garage.type_of_lockng_system_required)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Garage.type_of_lockng_system_required)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Garage.was_it_locked)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Garage.was_it_locked)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Garage.where_is_garage)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Garage.where_is_garage)
+        </dd>
+                    </dl>
+                <td style="width:50%">
+                    <h4>Photos</h4>
+                    <hr />
+
+                    <table class="table">
+                        <tbody>
+
+
+                                @if (Model.Images != null)
+                                {
+                                    @foreach (var item in Model.Images)
+                                    {
+                                    <tr>
+                                        <td>
+                                            <img src="data:image/png;base64,@item.Data" style='height: 100%; width: 100%; object-fit: contain' />
+
+                                        </td>
+                                    </tr>
+
+                                    }
+                                }
+
+                        </tbody>
+                    </table>
+
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+
+</div>
+

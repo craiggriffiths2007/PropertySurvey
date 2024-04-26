@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PropertySurvey.FitterComments"
+             xmlns:controls="clr-namespace:MartControls"
+             Title="Comment">
+    <ContentPage.Content>
+        <controls:ControlLayout>
+            <ScrollView>
+                <StackLayout>
+                    <StackLayout Orientation="Vertical">
+                        <controls:EditorGrows Text="{Binding fitter_comments}" x:Name="fitter_comments"/>
+
+                    </StackLayout>
+                    <controls:Copyright/>
+                </StackLayout>
+            </ScrollView>
+
+        </controls:ControlLayout>
+    </ContentPage.Content>
+</ContentPage>

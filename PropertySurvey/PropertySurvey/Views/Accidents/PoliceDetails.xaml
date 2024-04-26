@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<s:CarouselValidateNoImage
+            xmlns="http://xamarin.com/schemas/2014/forms"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            x:Class="PropertySurvey.PoliceDetails"
+            xmlns:controls="clr-namespace:MartControls"
+            xmlns:s="clr-namespace:PropertySurvey"
+            Title="police details">
+    <ContentPage TabIndex="0">
+        <ScrollView>
+            <controls:ControlLayout x:Name="page1">
+                <StackLayout>
+                    <controls:EntryLabel x:Name="officers_name_entry" LabelText="Officer's name" TextBinding="d_officers_name"/>
+                    <controls:EntryLabel x:Name="officers_number_entry" LabelText="Number" TextBinding="d_officers_number"/>
+                    <controls:EntryLabel x:Name="officers_station_entry" LabelText="Station" TextBinding="d_station"/>
+                </StackLayout>
+                <controls:Copyright/>
+            </controls:ControlLayout>
+        </ScrollView>
+    </ContentPage>
+</s:CarouselValidateNoImage>

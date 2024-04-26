@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<s:CarouselValidateNoImage
+            xmlns="http://xamarin.com/schemas/2014/forms"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            x:Class="PropertySurvey.Witness"
+            xmlns:controls="clr-namespace:MartControls"
+            xmlns:s="clr-namespace:PropertySurvey"
+    Title="Witness">
+    <ContentPage TabIndex="0">
+        <ScrollView>
+            <controls:ControlLayout x:Name="page1">
+                <StackLayout>
+                    <controls:EntryLabel x:Name="name_entry" LabelText="Full name" TextBinding="p_name"/>
+                    <controls:EntryLabel x:Name="address1_entry" LabelText="Address" TextBinding="p_add1"/>
+                    <Entry x:Name="address2_entry" Text="{Binding p_add2}"/>
+                    <Entry x:Name="address3_entry" Text="{Binding p_add3}"/>
+                    <controls:EntryLabel x:Name="postcode_entry" LabelText="Postcode" TextBinding="p_pcode" Orientation="Horizontal"/>
+                    <controls:EntryLabel x:Name="telephone_entry" LabelText="Telephone" TextBinding="p_wittel" EntryKeyboard="Numeric"/>
+                </StackLayout>
+                <controls:Copyright/>
+            </controls:ControlLayout>
+        </ScrollView>
+    </ContentPage>
+</s:CarouselValidateNoImage>

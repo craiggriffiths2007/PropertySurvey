@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage 
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PropertySurvey.GeorgianBarInfo"
+             Title="Georgian Bar Design"
+             xmlns:controls="clr-namespace:MartControls">
+    <ContentPage.Content>
+      <controls:ControlLayout>
+        <ScrollView>
+          <StackLayout>
+            <controls:EditPickerLabel x:Name="georgian_bar" LabelText="Georgian Bar" picker_title="Georgian Bar" TextBinding="lead_thickness"/>
+
+            <controls:EntryLabelUnits x:Name="width_spacing" LabelText="Width Spaceing" TextBinding="lead_CWidths"/>
+            <controls:EntryLabelUnits x:Name="height_spacing" LabelText="Height Spaceing" TextBinding="lead_CHeights"/>
+
+            <StackLayout x:Name="anti_zone" IsVisible="True">
+              <controls:YesNoLabel x:Name="gb_anti_rattle" LabelText="Anti Rattle" button_binding="lead_anti_rattle"/>
+            </StackLayout>
+
+            <StackLayout x:Name="trim_zone" IsVisible="True">
+              <controls:YesNoLabel LabelText="Trim 30 mm" button_binding="gb_trim"/>
+            </StackLayout>
+
+            <controls:EntryLabel x:Name="comments" LabelText="Additional Comments" TextBinding="lead_comments"/>
+
+            <controls:Copyright/>
+          </StackLayout>
+        </ScrollView>
+        <StackLayout Orientation="Horizontal" VerticalOptions="End" x:Name="glass_next">
+          <Button Text="Next" Clicked="OnNext" HorizontalOptions="EndAndExpand"/>
+        </StackLayout>
+      </controls:ControlLayout>
+    </ContentPage.Content>
+</ContentPage>
+    
+    

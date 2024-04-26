@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<s:CarouselValidate
+            xmlns="http://xamarin.com/schemas/2014/forms"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            x:Class="PropertySurvey.BifoldItem" 
+            Title="Bifold Door"
+            xmlns:controls="clr-namespace:MartControls"
+            xmlns:s="clr-namespace:PropertySurvey">
+
+    <ScrollView>
+        <controls:ControlLayout>
+            <controls:EntryLabel x:Name="no_repair_reason_entry" TextBinding="reason_not_repaired" LabelText="Reason cannot be repaired" IsVisible="False"/>
+
+            <StackLayout x:Name="replace_glass_area" Orientation="Horizontal">
+                <Label Text="Replace glass" HorizontalOptions="FillAndExpand"/>
+                <controls:YesNo x:Name="replace_glass_button" ButtonState="{Binding replace_glass}" OnSelectionChanged="replace_glass_changed"/>
+                <StackLayout Orientation="Horizontal" WidthRequest="3"/>
+                <Button x:Name="do_replace_glass_button" WidthRequest="45" Clicked="replace_glass_clicked"/>
+            </StackLayout>
+
+            <StackLayout x:Name="handles_area" Orientation="Horizontal">
+                <Label Text="Handles required" HorizontalOptions="FillAndExpand"/>
+                <controls:YesNo x:Name="handles_required_button" ButtonState="{Binding handles_req}" OnSelectionChanged="handles_required_changed"/>
+                <StackLayout Orientation="Horizontal" WidthRequest="3"/>
+                <Button x:Name="handles_button" WidthRequest="45" Clicked="handles_clicked"></Button>
+            </StackLayout>
+
+            <Entry x:Name="handles_entry" Text="{Binding handles_text}" MaxLength="30"/>
+            <controls:YesNoLabel x:Name="gaskets_button" button_binding="gaskets" LabelText="Gaskets" OnSelectionChanged="gaskets_changed"/>
+            <Entry x:Name="gasket_text" Text="{Binding gaskets_text}" HorizontalOptions="FillAndExpand" MaxLength="30"/>
+
+            <controls:CauseOfDamage x:Name="cause_of_damage_area"
+                cause_of_damage_binding      = "cause_of_damage"
+                reason_different_binding     = "cause_of_damage_reason_different"
+                point_of_entry_binding       = "point_of_entry"
+                was_it_locked_button_binding = "was_it_locked"
+                type_of_lock_picker_binding  = "type_of_lockng_system_required"/>
+
+            <controls:EditPickerLabel x:Name="door_type_picker" LabelText="Door type" TextBinding="door_type" OnTextChangedEvent="door_type_changed"/>
+
+            <Image x:Name="diagonal_check_image" Source="aperture.jpg"/>
+            <Label Text="Check that the aperture is square by comparing the cross-corner dimensions." Margin="3"/>
+
+            <controls:WidthHeight
+                x:Name="overall_dimensions"
+                width_label_text="Overall Width (maximum 6000)"
+                width_binding="overall_width"
+                height_label_text="Overall Height (maximum 2400)"
+                height_binding="overall_height"/>
+
+            <controls:WidthHeight
+                x:Name="internal_dimensions"
+                width_label_text="Internal width"
+                width_binding="internal_width"
+                height_label_text="Internal height"
+                height_binding="internal_height"/>
+
+            <controls:YesNoLabel x:Name="addons_button" button_binding="addons" LabelText="Addons" OnSelectionChanged="addons_button_clicked"/>
+            <controls:EntryLabel x:Name="addon_width_edit" LabelText="Width" TextBinding="addon_width" Orientation="Horizontal"  IsVisible="False"/>
+            <controls:EntryLabel x:Name="addon_height_edit" LabelText="Height" TextBinding="addon_height" Orientation="Horizontal" IsVisible="False"/>
+            <controls:EditPickerLabel x:Name="WER_rating_picker" LabelText="WER rating" TextBinding="WER_rating"/>
+            <controls:YesNoLabel x:Name="opens_button" button_binding="opens" LabelText="Opens"/>
+            <controls:YesNoLabel x:Name="trickle_vents_button" button_binding="trickle_vents" LabelText="Trickle vents"/>
+            <controls:EditPickerLabel IsVisible="False" x:Name="hardware_picker" LabelText="Hardware" TextBinding="hardware"/>
+            <controls:EditPickerLabel IsVisible="False" x:Name="knock_on_picker" LabelText="Knock on" TextBinding="knock_on"/>
+            <controls:EditPickerLabel IsVisible="False" x:Name="handle_colour_picker" LabelText="Handle colour" TextBinding="handle_colour"/>
+            <controls:EditPickerLabel IsVisible="False" x:Name="external_colour_picker" LabelText="External frame colour" TextBinding="color_external"/>
+            <controls:EditPickerLabel IsVisible="False" x:Name="internal_colour_picker" LabelText="Internal frame colour" TextBinding="color_internal"/>
+            <controls:EditPickerLabel x:Name="threshold_picker" LabelText="Threshold" TextBinding="threshold_type" OnTextChangedEvent="threshold_changed"/>
+            <Image x:Name="cill_image" IsVisible="False" Margin="3"/>
+            <controls:EditPickerLabel x:Name="cill_picker" LabelText="Cill" TextBinding="cill_type"/>
+            <controls:AddMinusLabel Val="{Binding number_of_doors}" Min="1" Max="7" OnSelectionChanged="OnNumChanged" LabelText="Number of doors"/>
+
+            <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                <Label Text="Type of doors" HorizontalOptions="FillAndExpand"/>
+                <Button x:Name="bifold_type_button" WidthRequest="45" Clicked="OnTypeOfDoorsClicked"/>
+            </StackLayout>
+
+            <Label x:Name="no_of_doors_text"/>
+            <Image x:Name="type_image"/>
+            <controls:EditPickerLabel IsVisible="False" x:Name="door_colour_picker" LabelText="Colour of doors" TextBinding="colour_of_doors" HorizontalOptions="FillAndExpand"/>
+            <controls:EditPickerLabel x:Name="internal_door_colour_picker" LabelText="Internal colour of doors" TextBinding="internal_door_colour" HorizontalOptions="FillAndExpand"/>
+            <controls:EditPickerLabel IsVisible="False" x:Name="glazing_options_picker" LabelText="Glazing options" TextBinding="glazing_options" HorizontalOptions="FillAndExpand"/>
+
+            <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                <Label Text="Customer signature" HorizontalOptions="FillAndExpand"/>
+                <Button x:Name="signature_button" WidthRequest="45" Clicked="Signature_button_Clicked"/>
+            </StackLayout>
+
+            <controls:ItemSummary_PTO
+                x:Name="summary_pto_area"
+                summary_binding="comments"
+                PTO_binding="parts_to_order"/>
+
+            <controls:Copyright/>
+        </controls:ControlLayout>
+    </ScrollView>
+</s:CarouselValidate>

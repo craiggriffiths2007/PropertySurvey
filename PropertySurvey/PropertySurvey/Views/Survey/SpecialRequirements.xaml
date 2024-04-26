@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PropertySurvey.SpecialRequirements" Title="Special Requirements" 
+             xmlns:controls="clr-namespace:MartControls" >
+    
+    <ContentPage.Content>
+
+        <ScrollView>
+            <controls:ControlLayout x:Name="page1">
+                <controls:YesNoLabel x:Name="a" button_binding="doorbell" LabelText="Doorbell" ></controls:YesNoLabel>
+                <controls:YesNoLabel x:Name="b" button_binding="alarm_cont" LabelText="Alarm Contacts" ></controls:YesNoLabel>
+                <controls:YesNoLabel x:Name="c" button_binding="acroreq" LabelText="Acrow prop req" ></controls:YesNoLabel>
+                <controls:YesNoLabel x:Name="d" button_binding="acrosboy" LabelText="Acrow with Strongboy" ></controls:YesNoLabel>
+                <controls:YesNoLabel x:Name="e" button_binding="sand_cemen" LabelText="Sand and Cement" ></controls:YesNoLabel>
+                <controls:YesNoLabel x:Name="f" button_binding="plaster" LabelText="Plaster Required" ></controls:YesNoLabel>
+                <controls:YesNoLabel x:Name="g" button_binding="genreq" LabelText="Generator Required" ></controls:YesNoLabel>
+                <controls:YesNoLabel x:Name="h" button_binding="architreq" LabelText="Architraves" ></controls:YesNoLabel>
+                <Label Text="Comments" />
+                <controls:EditorGrows Text="{Binding acc_text}" />
+                <controls:Copyright/>
+            </controls:ControlLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

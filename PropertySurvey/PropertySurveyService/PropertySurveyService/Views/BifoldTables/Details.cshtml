@@ -1,0 +1,364 @@
+﻿@model PropertySurveyService.ViewModels.ItemIndexViewModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+
+                <table class="table">
+    <tbody>
+        <tr>
+            <td style="width:50%">
+
+    <h4>BifoldTable</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Bifold.HeaderId)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Bifold.HeaderId)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Bifold.udi_cont)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Bifold.udi_cont)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Bifold.item_number)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Bifold.item_number)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Bifold.ernal_width)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Bifold.ernal_width)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Bifold.ernal_height)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Bifold.ernal_height)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Bifold.overall_width)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Bifold.overall_width)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Bifold.overall_height)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Bifold.overall_height)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Bifold.opens)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Bifold.opens)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Bifold.trickle_vents)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Bifold.trickle_vents)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Bifold.hardware)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Bifold.hardware)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Bifold.color_ernal)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Bifold.color_ernal)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Bifold.color_external)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Bifold.color_external)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Bifold.threshold_type)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Bifold.threshold_type)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Bifold.no_of_pics)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Bifold.no_of_pics)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Bifold.no_of_photos)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Bifold.no_of_photos)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Bifold.no_of_vids)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Bifold.no_of_vids)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Bifold.isComplete)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Bifold.isComplete)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Bifold.comments)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Bifold.comments)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Bifold.bifold_signed)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Bifold.bifold_signed)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Bifold.number_of_doors)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Bifold.number_of_doors)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Bifold.cause_of_damage)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Bifold.cause_of_damage)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Bifold.cause_of_damage_reason_different)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Bifold.cause_of_damage_reason_different)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Bifold.door_type)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Bifold.door_type)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Bifold.glazing_options)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Bifold.glazing_options)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Bifold.number_of_doors_text)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Bifold.number_of_doors_text)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Bifold.colour_of_doors)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Bifold.colour_of_doors)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Bifold.handle_colour)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Bifold.handle_colour)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Bifold.cill_type)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Bifold.cill_type)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Bifold.knock_on)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Bifold.knock_on)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Bifold.ernal_door_colour)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Bifold.ernal_door_colour)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Bifold.s_spare12)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Bifold.s_spare12)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Bifold.parts_to_order)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Bifold.parts_to_order)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Bifold.type_of_lockng_system_required)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Bifold.type_of_lockng_system_required)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Bifold.was_it_locked)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Bifold.was_it_locked)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Bifold.point_of_entry)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Bifold.point_of_entry)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Bifold.ChangeItemTo)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Bifold.ChangeItemTo)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Bifold.pr_name)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Bifold.pr_name)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Bifold.bDifferentFromOriginal)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Bifold.bDifferentFromOriginal)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Bifold.glass_complete)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Bifold.glass_complete)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Bifold.replace_glass)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Bifold.replace_glass)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Bifold.reason_not_repaired)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Bifold.reason_not_repaired)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Bifold.bRepair)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Bifold.bRepair)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Bifold.fensa)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Bifold.fensa)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Bifold.WER_rating)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Bifold.WER_rating)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Bifold.gaskets)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Bifold.gaskets)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Bifold.gaskets_text)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Bifold.gaskets_text)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Bifold.handles_req)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Bifold.handles_req)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Bifold.bHandleDrawingComplete)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Bifold.bHandleDrawingComplete)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Bifold.handles_text)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Bifold.handles_text)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Bifold.addons)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Bifold.addons)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Bifold.addon_width)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Bifold.addon_width)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Bifold.addon_height)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Bifold.addon_height)
+        </dd>
+                    </dl>
+                <td style="width:50%">
+                    <h4>Photos</h4>
+                    <hr />
+
+                    <table class="table">
+                        <tbody>
+
+
+                                @if (Model.Images != null)
+                                {
+                                    @foreach (var item in Model.Images)
+                                    {
+                                    <tr>
+                                        <td>
+                                            <img src="data:image/png;base64,@item.Data" style='height: 100%; width: 100%; object-fit: contain' />
+
+                                        </td>
+                                    </tr>
+
+                                    }
+                                }
+
+                        </tbody>
+                    </table>
+
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+
+</div>
+

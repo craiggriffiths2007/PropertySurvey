@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PropertySurvey.Items" Title="Item"
+             xmlns:controls="clr-namespace:MartControls">
+    <ContentPage.Content>
+        <ScrollView>
+            <controls:ControlLayout>
+
+                <Button x:Name="i1" Text="UPVC" WidthRequest="230" HeightRequest="40" Margin="0,0,0,0" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" Clicked="OnUPVC"/>
+                <Button x:Name="i2" Text="Panel Only" WidthRequest="230" HeightRequest="40" Margin="0,0,0,0" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" Clicked="OnPanel"/>
+                <Button x:Name="i3" Text="Glass only" WidthRequest="230" HeightRequest="40" Margin="0,0,0,0" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" Clicked="OnGlass"/>
+                <Button x:Name="i4" Text="Aluminium" WidthRequest="230" HeightRequest="40" Margin="0,0,0,0" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" Clicked="OnAlum"/>
+                <Button x:Name="i5" Text="Garage" WidthRequest="230" HeightRequest="40" Margin="0,0,0,0" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" Clicked="OnGarage"/>
+                <Button x:Name="i6" Text="Timber" WidthRequest="230" HeightRequest="40" Margin="0,0,0,0" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" Clicked="OnTimber"/>
+                <Button x:Name="i6a" Text="Bifolding Door" WidthRequest="230" HeightRequest="40" Margin="0,0,0,0" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" Clicked="OnBifold"/>
+                <Button x:Name="i7" Text="Conservatory Roof" WidthRequest="230" HeightRequest="40" Margin="0,0,0,0" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" Clicked="OnConservatory"/>
+                <Button x:Name="i8" Text="Locking System" WidthRequest="230" HeightRequest="40" Margin="0,0,0,0" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" Clicked="OnLocking"/>
+                <Button x:Name="i9" Text="Composite Door" WidthRequest="230" HeightRequest="40" Margin="0,0,0,0" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" Clicked="OnCompositeDoor"/>
+                <Button x:Name="i10" Text="Greenhouse/Sheds" WidthRequest="230" HeightRequest="40" Margin="0,0,0,0" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" Clicked="OnGreen"/>
+
+            </controls:ControlLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
+

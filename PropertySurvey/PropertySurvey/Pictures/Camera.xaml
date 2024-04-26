@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage x:Class="PropertySurvey.Camera"
+        xmlns="http://xamarin.com/schemas/2014/forms"
+        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+        xmlns:views="clr-namespace:SkiaSharp.Views.Forms;assembly=SkiaSharp.Views.Forms"
+             xmlns:tt="clr-namespace:TouchTracking"
+        xmlns:controls="clr-namespace:MartControls"
+        Title="Photo">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Clicked="OnDel" x:Name="del_button"  Icon="garbage.png"/>
+        <ToolbarItem Clicked="OnLib" x:Name="lib_button"  Icon="library.png"/>
+
+        <ToolbarItem Clicked="OnClick" x:Name="add_button"  Icon="camera.png"/>
+        <ToolbarItem Clicked="OnLeftClick" Icon="left.png"/>
+        <ToolbarItem x:Name="picnum" Clicked="OnNumClick"/>
+        <ToolbarItem Clicked="OnRightClick" Icon="right.png"/>
+    </ContentPage.ToolbarItems>
+
+    <Grid>
+
+        <Grid BackgroundColor="White">
+
+            <views:SKCanvasView x:Name="canvasView"
+                           VerticalOptions="FillAndExpand"
+                           PaintSurface="OnCanvasViewPaintSurface" EnableTouchEvents="False" IsVisible="True"/>
+            <Grid.Effects>
+                <tt:TouchEffect x:Name="touch" Capture="True"
+                                TouchAction="OnTouchEffectAction" />
+            </Grid.Effects>
+            <!--<Image Aspect="AspectFit" x:Name="image" Scale="1.80" IsVisible="False"/>-->
+            
+            <!--<controls:PinchToZoomContainer>
+            <controls:PinchToZoomContainer.Content>
+                <Image x:Name="pinch_image" Source="" />
+            </controls:PinchToZoomContainer.Content>
+        </controls:PinchToZoomContainer>-->
+        </Grid>
+        <StackLayout Orientation="Vertical" VerticalOptions="Center">
+            <Label x:Name="land_message" IsVisible="False" Text="Make sure auto-rotate is enabled" VerticalOptions="Center" HorizontalOptions="Center" TextColor="LightGray"/>
+            <Label x:Name="land_message2" IsVisible="False" Text="to take landscape photos" VerticalOptions="Center" HorizontalOptions="Center" TextColor="LightGray"/>
+            <Button x:Name="land_message3" IsVisible="False" Text="Start" Clicked="OnOK" VerticalOptions="Center" HorizontalOptions="CenterAndExpand"/>
+
+        </StackLayout>
+    </Grid>
+    
+</ContentPage>

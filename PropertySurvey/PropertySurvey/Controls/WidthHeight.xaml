@@ -1,0 +1,21 @@
+﻿<StackLayout xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="MartControls.WidthHeight" Orientation="Vertical"
+    xmlns:controls="clr-namespace:MartControls"
+             LayoutChanged="layout_changed">
+
+    <StackLayout Orientation="Horizontal">
+        <Label x:Name="width_label" HorizontalOptions="StartAndExpand" VerticalOptions="Center"/>
+        <Entry x:Name="width_entry" MaxLength="9" WidthRequest="60" Unfocused="width_height_changed" Keyboard="Numeric" HorizontalOptions="End" />
+        <Label x:Name="width_units" Text="mm"  HorizontalOptions="End" VerticalOptions="End"/>
+    </StackLayout>
+
+    <StackLayout Orientation="Horizontal">
+        <Label x:Name="height_label" HorizontalOptions="StartAndExpand" VerticalOptions="Center"/>
+        <Entry x:Name="height_entry" MaxLength="9" WidthRequest="60" Unfocused="width_height_changed" Keyboard="Numeric" HorizontalOptions="End"/>
+        <Label x:Name="height_units" Text="mm" HorizontalOptions="End" VerticalOptions="End"/>
+    </StackLayout>
+
+    <controls:WarningMessage x:Name="width_height_warning" Text="" HorizontalOptions="StartAndExpand" VerticalOptions="Center" IsVisible="False"/>
+  
+</StackLayout>

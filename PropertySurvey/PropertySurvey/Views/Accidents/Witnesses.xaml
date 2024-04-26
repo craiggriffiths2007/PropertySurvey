@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PropertySurvey.Witnesses"
+             xmlns:controls="clr-namespace:MartControls"
+             Title="Witnesses">
+    <ContentPage.Content>
+        <StackLayout>
+            <ListView HasUnevenRows="True" x:Name="listView" ItemTapped="OnItemTapped">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout BackgroundColor="{Binding back_colour}"  Margin="3" Padding="3" >
+                                <Label Text="{Binding name}" HorizontalOptions="StartAndExpand" />
+                                <Label Text="{Binding telephone}" HorizontalOptions="StartAndExpand" />
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <StackLayout Orientation="Horizontal" VerticalOptions="End">
+                <Button Text="Add" Clicked="OnAdd" HorizontalOptions="FillAndExpand"/>
+                <Button Text="Delete" Clicked="OnDelete" HorizontalOptions="FillAndExpand"/>
+                <!--<Button Text="Select" Clicked="OnSelect" HorizontalOptions="FillAndExpand"/>-->
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

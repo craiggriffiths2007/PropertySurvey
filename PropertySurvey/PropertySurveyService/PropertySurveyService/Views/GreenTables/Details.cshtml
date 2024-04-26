@@ -1,0 +1,249 @@
+﻿@model PropertySurveyService.ViewModels.ItemIndexViewModel
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+
+                <table class="table">
+    <tbody>
+        <tr>
+            <td style="width:50%">
+
+    <h4>GreenTable</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Green.HeaderId)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Green.HeaderId)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Green.udi_cont)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Green.udi_cont)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Green.item_number)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Green.item_number)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Green.isComplete)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Green.isComplete)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Green.bDifferentFromOriginal)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Green.bDifferentFromOriginal)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Green.cause_of_damage)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Green.cause_of_damage)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Green.cause_of_damage_reason_different)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Green.cause_of_damage_reason_different)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Green.rep_reason)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Green.rep_reason)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Green.material_type)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Green.material_type)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Green.colour)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Green.colour)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Green.glaze_type)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Green.glaze_type)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Green.base_size)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Green.base_size)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Green.base_size_x)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Green.base_size_x)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Green.base_size_y)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Green.base_size_y)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Green.type_of_glass)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Green.type_of_glass)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Green.door_opening_type)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Green.door_opening_type)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Green.window_opening_type)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Green.window_opening_type)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Green.roof_opening_lights)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Green.roof_opening_lights)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Green.auto_or_manual)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Green.auto_or_manual)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Green.overall_height)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Green.overall_height)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Green.summary)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Green.summary)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Green.no_of_pics)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Green.no_of_pics)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Green.no_of_photos)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Green.no_of_photos)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Green.no_of_vids)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Green.no_of_vids)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Green.parts_to_order)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Green.parts_to_order)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Green.point_of_entry)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Green.point_of_entry)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Green.type_of_lockng_system_required)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Green.type_of_lockng_system_required)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Green.was_it_locked)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Green.was_it_locked)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Green.ChangeItemTo)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Green.ChangeItemTo)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Green.print_name)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Green.print_name)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Green.glass_complete)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Green.glass_complete)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Green.replace_glass)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Green.replace_glass)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Green.repair_or_replace)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Green.repair_or_replace)
+        </dd>
+                    </dl>
+                <td style="width:50%">
+                    <h4>Photos</h4>
+                    <hr />
+
+                    <table class="table">
+                        <tbody>
+
+
+                                @if (Model.Images != null)
+                                {
+                                    @foreach (var item in Model.Images)
+                                    {
+                                    <tr>
+                                        <td>
+                                            <img src="data:image/png;base64,@item.Data" style='height: 100%; width: 100%; object-fit: contain' />
+
+                                        </td>
+                                    </tr>
+
+                                    }
+                                }
+
+                        </tbody>
+                    </table>
+
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+
+</div>
+

@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PropertySurvey.Repudiation"
+             xmlns:controls="clr-namespace:MartControls"
+             Title="Repudiation">
+    <ContentPage.Content>
+        <controls:ControlLayout>
+            <ScrollView>
+                <StackLayout>
+                    <controls:WarningMessage x:Name="mess" Text="We do not repudiate for this insurance company" IsVisible="False"/>
+                    <Label Text="Insurance Company"/>
+                    <StackLayout Margin="10">
+                        <Label TextColor="Black" Text="{Binding sn_name}"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" Margin="0,10,0,10">
+                        <Label Text="Dele Auth?"  HorizontalOptions="FillAndExpand"/>
+                        <Label Text="{Binding uc_laname}" TextColor="Black" x:Name="inst_height" WidthRequest="80" HorizontalOptions="EndAndExpand"/>
+                    </StackLayout>
+                    <controls:YesNoLabel x:Name="r_rep_on_site" LabelText="Have you repudiated on site?" button_binding="i_spare2" OnSelectionChanged="R_rep_on_site_OnSelectionChanged"/>
+                    <controls:EditPickerLabel x:Name="r_not_rep_on_site" LabelText="Please explain why you have not repudiated on site" TextBinding="s_spare3" OnTextChangedEvent="R_not_rep_on_site_OnTextChangedEvent"/>
+                    <Label Text="Reported cause of damage"/>
+                    <StackLayout Margin="10">
+                        <Label TextColor="Black" Text="{Binding COD_String}"/>
+                    </StackLayout>
+                    <Label Text="Actual cause of damage"/>
+                    <StackLayout Margin="10">
+                        <Label TextColor="Black" Text="{Binding funfinoth}"/>
+                    </StackLayout>
+                    <Label Text="Detailed explanation and resons:"/>
+                    <controls:EditorGrows Text="{Binding s_spare1}"/>
+                    <Label Text="Other relevant information:"/>
+                    <controls:EditorGrows Text="{Binding s_spare2}"/>
+                    <controls:Copyright/>
+                </StackLayout>
+            </ScrollView>
+        </controls:ControlLayout>
+    </ContentPage.Content>
+</ContentPage>

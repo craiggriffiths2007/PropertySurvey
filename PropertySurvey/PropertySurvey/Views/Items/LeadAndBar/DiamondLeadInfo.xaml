@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage 
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PropertySurvey.DiamindLeadInfo"
+             Title="Diamond Lead Design"
+             xmlns:controls="clr-namespace:MartControls">
+    <ContentPage.Content>
+      <controls:ControlLayout>
+        <ScrollView>
+          <StackLayout>
+
+            <controls:EditPickerLabel x:Name="lead_thickness" LabelText="Lead Thickness" picker_title="Lead Thickness" TextBinding="lead_thickness"/>
+            <controls:EditPickerLabel x:Name="single_or_double" LabelText="Single or Double" picker_title="Single or Double" TextBinding="lead_sod"/>
+            <controls:EditPickerLabel x:Name="type_of_lead" LabelText="Type of Lead" picker_title="Type of Lead" TextBinding="lead_type"/>
+
+            <controls:EntryLabelUnits x:Name="width_spacing" LabelText="Diamond Width" TextBinding="lead_CWidths"/>
+            <controls:EntryLabelUnits x:Name="height_spacing" LabelText="Diamond Height" TextBinding="lead_CHeights"/>
+
+                    <controls:EntryLabel x:Name="comments" LabelText="Additional Comments" TextBinding="lead_comments"/>
+
+            <controls:Copyright/>
+          </StackLayout>
+        </ScrollView>
+        <StackLayout Orientation="Horizontal" VerticalOptions="End" x:Name="glass_next">
+          <Button Text="Next" Clicked="OnNext" HorizontalOptions="EndAndExpand"/>
+        </StackLayout>
+      </controls:ControlLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:controls="clr-namespace:MartControls"
+             x:Class="PropertySurvey.Messages"
+             Title="Mail">
+    <ContentPage.Content>
+        <Grid VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30*" />
+                <RowDefinition Height="70*" />
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="100*" />
+            </Grid.ColumnDefinitions>
+
+            <StackLayout Grid.Row="0" Grid.Column="0">
+                <ListView HasUnevenRows="True" x:Name="listView" ItemTapped="OnItemTapped" HeightRequest="140" >
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <StackLayout Orientation="Vertical"  VerticalOptions="Start" BackgroundColor="{Binding back_colour}"  Margin="3" Padding="3">
+                                    <StackLayout Orientation="Horizontal" VerticalOptions="Start" HorizontalOptions="FillAndExpand" BackgroundColor="{Binding back_colour}">
+                                        <Label Text="{Binding date}" WidthRequest="110" HorizontalOptions="StartAndExpand" VerticalOptions="StartAndExpand"/>
+                                        <Label Text="{Binding fromname}" WidthRequest="250" HorizontalOptions="StartAndExpand" />
+                                    </StackLayout>
+                                    <StackLayout Orientation="Horizontal" VerticalOptions="Start" HorizontalOptions="FillAndExpand" BackgroundColor="{Binding back_colour}">
+                                        <Label Text="{Binding subject}" HorizontalOptions="StartAndExpand" />
+
+                                    </StackLayout>
+                                </StackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
+            <StackLayout Grid.Row="1" Grid.Column="0">
+                <ScrollView Margin="3">
+                    <StackLayout>
+                        <Label x:Name="message_text"/>
+
+                        <Image Aspect="AspectFit" x:Name="image1" IsVisible="False" HeightRequest="500"/>
+                        <Image Aspect="AspectFit" x:Name="image2" IsVisible="False"/>
+                        <Image Aspect="AspectFit" x:Name="image3" IsVisible="False"/>
+                        <Image Aspect="AspectFit" x:Name="image4" IsVisible="False"/>
+                        <Image Aspect="AspectFit" x:Name="image5" IsVisible="False"/>
+
+                    </StackLayout>
+                </ScrollView>
+            </StackLayout>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

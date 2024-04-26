@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<s:CarouselValidate
+            xmlns="http://xamarin.com/schemas/2014/forms"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            x:Class="PropertySurvey.LockItem" 
+            Title="Lock Item"
+            xmlns:controls="clr-namespace:MartControls"
+            xmlns:s="clr-namespace:PropertySurvey">
+
+    <ScrollView>
+        <controls:ControlLayout>
+            <controls:CauseOfDamage x:Name="cause_of_damage_area"
+                cause_of_damage_binding      = "cause_of_damage"
+                reason_different_binding     = "cause_of_damage_reason_different"
+                point_of_entry_binding       = "point_of_entry"
+                was_it_locked_button_binding = "was_it_locked"
+                type_of_lock_picker_binding  = "type_of_lockng_system_required"/>
+
+            <controls:EntryLabel x:Name="page_number_entry" TextBinding="pagenum" LabelText="Page number" EntryKeyboard="Numeric" Orientation="Horizontal" IsVisible="false"/>
+
+            <StackLayout x:Name="multi_lock_area" IsVisible="False">
+                <controls:EditPickerLabel x:Name="item_picker" LabelText="Item" TextBinding="item" max_text_length="30" OnTextChangedEvent="item_picker_changed"/>
+
+                <StackLayout Orientation="Horizontal">
+                    <Label x:Name="locking_mechanism" Text="Locking mechanism" HorizontalOptions="FillAndExpand"/>
+                    <Button x:Name="locking_mechanism_button" WidthRequest="45" Clicked="locking_mechanism_button_clicked"/>
+                </StackLayout>
+
+                <controls:EditPickerLabel x:Name="lock_make_picker" LabelText="Lock make" TextBinding="locking_make" max_text_length="30"/>
+            </StackLayout>
+
+            <controls:EntryLabel x:Name="lock_codes_entry" TextBinding="locking_codes" LabelText="Lock codes"/>
+            <controls:EditPickerLabel x:Name="lock_colour_picker" IsVisible="False" LabelText="Lock colour" TextBinding="lock_colour" max_text_length="30" HorizontalOptions="FillAndExpand"/>
+            <controls:EntryLabel x:Name="supplier_entry" TextBinding="COD_Code" LabelText="Supplier/Brochure"/>
+            <controls:ItemSummary_PTO x:Name="summary_pto_area" summary_binding="long_comments" PTO_binding="parts_to_order"/>
+            <controls:Copyright/>
+        </controls:ControlLayout>
+    </ScrollView>
+</s:CarouselValidate>

@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PropertySurvey.ContractCommentsAdd"
+             xmlns:controls="clr-namespace:MartControls"
+             Title="Contract Comments">
+    <ContentPage.Content>
+        <ScrollView>
+            <controls:ControlLayout>
+                <controls:EditorGrows x:Name="add_comment"/>
+                <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                    <Button Text="Clear" Clicked="OnClearComment" HorizontalOptions="FillAndExpand"/>
+                    <Button Text="Add Comment" Clicked="OnAddComment" HorizontalOptions="FillAndExpand"/>
+                </StackLayout>
+            </controls:ControlLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

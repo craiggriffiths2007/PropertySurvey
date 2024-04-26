@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PropertySurvey.Hnds"
+             xmlns:controls="clr-namespace:MartControls"
+             Title="Health and Safety"
+              x:Name="main_page">
+ 
+    <ContentPage.ToolbarItems>
+        <ToolbarItem x:Name="page_num" Text=""/>
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        
+            <ScrollView>
+            <StackLayout x:Name="page1">
+                <controls:ControlLayout >
+                    <controls:YesNoLabel button_binding="easy_park" LabelText="Easy Parking?" ></controls:YesNoLabel>
+                    <controls:YesNoLabel button_binding="access_rear" LabelText="Safe accesss to rear or working area?" ></controls:YesNoLabel>
+                    <controls:YesNoLabel button_binding="obs_wires" OnSelectionChanged="OnLayout" LabelText="Obstructive or bare electrical wires?" ></controls:YesNoLabel>
+                    <Entry Text="{Binding obs_wires_text}" x:Name="obs_wires_text" />
+                    <controls:YesNoLabel button_binding="loose_brick" OnSelectionChanged="OnLayout" LabelText="Is there loose brickwork?" ></controls:YesNoLabel>
+                    <Entry Text="{Binding loose_brick_text}" x:Name="loose_brick_text" />
+                    <controls:YesNoLabel x:Name="lintel_question" OnSelectionChanged="OnLayout" button_binding="lintel_present" LabelText="Is there a lintel present?" ></controls:YesNoLabel>
+                    <controls:WarningMessage  IsVisible="False" x:Name="lintel_warning" Text="You must inform the customer immediately that a lintel is required."/>
+                    <Label x:Name="lintel_comment" IsVisible="True" Text="Please comment on the condition of the lintel"/>
+                    <Entry Text="{Binding lintel_present_text}" x:Name="lintel_present_text" />
+                    <controls:YesNoLabel button_binding="work_at_height" LabelText="Working at height?" OnSelectionChanged="WorkAtHeight_OnSelectionChanged"></controls:YesNoLabel>
+
+                    <StackLayout x:Name="height_area" IsVisible="False">
+
+                        <controls:EntryLabelUnits LabelText="At what height is the&#13;&#10;installation taking place?" TextBinding="inst_height"/>
+                        <controls:YesNoLabel button_binding="bWorkInside" LabelText="Can the work be carried out from inside i.e. new window fitted from inside?" ></controls:YesNoLabel>
+                        <controls:YesNoLabel button_binding="no_ladders" LabelText="Can we remove the need for ladders?" ></controls:YesNoLabel>
+
+
+
+                        <controls:EditPickerLabel x:Name="ground_surface" LabelText="What is the ground surface made of (where work at height is being carried out)?" TextBinding="ground_surface"/>
+                        <controls:EditPickerLabel OnTextChangedEvent="OnLayout" x:Name="type_of_equipment" LabelText="What type of equipment is needed to gain height?" TextBinding="type_of_equipment"/>
+                        <controls:YesNoLabel x:Name="tower_scaffolding_button" IsVisible="False" button_binding="no_of_fitters" LabelText="Pre constructed scaffolding?" ></controls:YesNoLabel>
+
+                    </StackLayout>
+
+                    <controls:YesNoLabel x:Name="asbestos_button" button_binding="asbestos_visible" LabelText="Is there asbestos visible?" OnSelectionChanged="Asbestos_button_OnSelectionChanged"></controls:YesNoLabel>
+                    <Entry IsVisible="false" Text="{Binding asvizex}" x:Name="asvizex"/>
+                    <controls:YesNoLabel button_binding="items_above_roof" LabelText="Is there any items above a roof?" ></controls:YesNoLabel>
+                    <Label Text="Are there any other Risks and/or Dangers faced when carrying out the work?" HorizontalOptions="FillAndExpand"/>
+                    <Entry Text="{Binding risks_and_dangers}" x:Name="risks_and_dangers"/>
+
+                    <controls:YesNoLabel button_binding="shop_front_work" LabelText="Commercial Property Survey?" OnSelectionChanged="OnLayout"></controls:YesNoLabel>
+                    <StackLayout Orientation="Vertical" x:Name="barriers_area" IsVisible="False">
+                        <controls:WarningMessage x:Name="barriers_used_message" Text="Barriers must be used and working area cordoned off."/>
+                        <controls:YesNoLabel button_binding="parking_at_rear" LabelText="Parking at the rear of property?" ></controls:YesNoLabel>
+                        <controls:YesNoLabel OnSelectionChanged="OnLayout" button_binding="work_on_public_footpath" LabelText="Will fitters need to work on public footpath?" ></controls:YesNoLabel>
+                        <controls:WarningMessage IsVisible="false" x:Name="footpath_warning" Text="Double Barriers needed if, pedestrians are made to walk onto Road."/>
+                        <controls:EditPickerLabel x:Name="size_of_barriers_required" LabelText="Size of working area/barrier size required?" TextBinding="fbunfinother"/>
+                    </StackLayout>
+
+                    <controls:Copyright/>
+                </controls:ControlLayout>
+            </StackLayout>
+        </ScrollView>
+        
+    </ContentPage.Content>
+</ContentPage>
+                    

@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PropertySurvey.GetMessages"
+             Title="Mail">
+    <ContentPage.Content>
+        <Grid>
+            <StackLayout Margin="3">
+                <Label Text="Receiving Surveys" IsVisible="False" x:Name="receive_label"/>
+                <Label Text="Complete" IsVisible="False" x:Name="complete_label"/>
+            </StackLayout>
+            <StackLayout HorizontalOptions="Center" VerticalOptions="Center" HeightRequest="60" WidthRequest="60">
+                <ActivityIndicator x:Name="act_ind" Color="DodgerBlue" IsRunning="True" WidthRequest="60" HeightRequest="60"/>
+            </StackLayout>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

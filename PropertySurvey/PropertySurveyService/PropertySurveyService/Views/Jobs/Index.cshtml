@@ -1,0 +1,92 @@
+﻿@model PropertySurveyService.ViewModels.JobIndexViewModel;
+
+@{
+    ViewData["Title"] = "Jobs";
+}
+
+<h1>Jobs</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Contract Code</th>
+            <th>Date</th>
+            <th>Time</th>
+            <th>Damage</th>
+            <th>Surveyor</th>
+            <th>Customer</th>
+
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Jobs)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ContractCode)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Date)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Time)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DamageDesc)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Surveyor.SurveyorCode)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Customer.Name)
+                </td>
+                <td>
+                    <a asp-action="Index" asp-route-id="@item.Id">Select</a> |
+                    <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+
+
+@if (Model.Headers != null)
+{
+    <h3>Surveys Completed</h3>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Report</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+
+            @foreach (var item in Model.Headers)
+            {
+                <tr>
+                    <td>
+                        @item.rep_text
+                    </td>
+                    <td>
+                        <a asp-controller="Headers" asp-action="Details" asp-route-id="@item.Id">View</a>
+
+                    </td>
+                </tr>
+            }
+
+        </tbody>
+    </table>
+
+}
+
+
+

@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<s:DoorLockShared xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:controls="clr-namespace:MartControls"
+             xmlns:views="clr-namespace:SkiaSharp.Views.Forms;assembly=SkiaSharp.Views.Forms"
+             xmlns:s="clr-namespace:PropertySurvey"
+             x:Class="PropertySurvey.ViewLock"
+                  Title="Lock">
+    <ContentPage.Content>
+        <Grid>
+            <StackLayout x:Name="stack_size" Orientation="Vertical">
+                <views:SKCanvasView x:Name="SkCanvasView" PaintSurface="OnPainting" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand"/>
+            </StackLayout>
+
+            <StackLayout Orientation="Vertical" HorizontalOptions="End" VerticalOptions="Start" Margin="3">
+                <Label Text="Distance 1"/>
+                <Label x:Name="distance_1_answer"/>
+                <Label Text="Distance 2" x:Name="distance2_label" IsVisible="False"/>
+                <Label x:Name="distance_2_answer" IsVisible="False"/>
+                <Label Text="Distance A" x:Name="distance_A_label" IsVisible="False"/>
+                <Label x:Name="distance_A_answer" IsVisible="False"/>
+                <Label Text="Distance B" x:Name="distance_B_label" IsVisible="False"/>
+                <Label x:Name="distance_B_answer" IsVisible="False"/>
+                <Label Text="Distance C" x:Name="distance_C_label" IsVisible="False"/>
+                <Label x:Name="distance_C_answer" IsVisible="False"/>
+                <Label Text="Distance D" x:Name="distance_D_label" IsVisible="False"/>
+                <Label x:Name="distance_D_answer" IsVisible="False"/>
+                <Label Text="Distance E" x:Name="distance_E_label" IsVisible="False"/>
+                <Label x:Name="distance_E_answer" IsVisible="False"/>
+                <Label Text="Distance F" x:Name="distance_F_label" IsVisible="False"/>
+                <Label x:Name="distance_F_answer" IsVisible="False"/>
+                <Label Text="Distance G" x:Name="distance_G_label" IsVisible="False"/>
+                <Label x:Name="distance_G_answer" IsVisible="False"/>
+            </StackLayout>
+        </Grid>
+    </ContentPage.Content>
+</s:DoorLockShared>

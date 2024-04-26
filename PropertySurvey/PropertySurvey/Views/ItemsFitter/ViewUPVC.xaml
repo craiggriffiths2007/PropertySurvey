@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                          xmlns:controls="clr-namespace:MartControls"
+             x:Class="PropertySurvey.ViewUPVC"
+             Title="UPVC">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Margin="3">
+                <controls:ViewTextLabel LabelText="UPVC item" TextBinding="upvc_item"/>
+                <controls:ViewButtonLabel LabelText="Is the property a flat" x:Name="flat_answer" button_binding="is_a_flat"/>
+                <controls:ViewButtonLabel LabelText="Collect and copy" button_binding="collect_and_copy"/>
+                <controls:ViewButtonLabel LabelText="Temporary" x:Name="temporary_answer" button_binding="temporary"/>
+                <controls:ViewTextLabel LabelText="Additional locks" x:Name="additional_locks_answer" TextBinding="additional_locks"/>
+                <controls:ViewSubItem LabelText="New locking mechanism required" x:Name="new_lock_answer" button_binding="bNewLockingMech" OnViewClickedEvent="view_new_lock_clicked"/>
+                <controls:ViewTextLabel LabelText="Lock make" x:Name="lock_make_answer" TextBinding="lock_make"/>
+                <controls:ViewTextLabel LabelText="Lock codes" x:Name="lock_codes_answer" TextBinding="lock_codes"/>
+                <controls:ViewSubItem LabelText="Handles required" x:Name="handles_required_answer" button_binding="handles_req" OnViewClickedEvent="view_handles_required_clicked"/>
+                <controls:ViewTextLabel LabelText="Handles" x:Name="handles_text_answer" TextBinding="handles_text"/>
+                <controls:ViewSubItem LabelText="Replace panel" x:Name="replace_panel_answer" button_binding="replace_panel" OnViewClickedEvent="view_replace_panel_clicked"/>
+                <controls:ViewSubItem LabelText="Replace glass" x:Name="replace_glass_answer" button_binding="replace_glass" OnViewClickedEvent="view_replace_glass_clicked"/>
+                <controls:ViewTextLabel LabelText="Cause of damage" TextBinding="cause_of_damage"/>
+                <controls:ViewTextLabel LabelText="Why is cause different to contract" x:Name="cause_different_answer" TextBinding="cause_of_damage_reason_different"/>
+                <controls:ViewButtonLabel LabelText="Entry gained through this item" x:Name="point_of_entry_answer" button_binding="point_of_entry"/>
+                <controls:ViewButtonLabel LabelText="Was it locked" x:Name="was_it_locked_answer" button_binding="was_it_locked"/>
+                <controls:ViewTextLabel LabelText="What locks were on this item" x:Name="type_of_locking_system_answer" TextBinding="type_of_lockng_system_required"/>
+                <controls:ViewButtonLabel LabelText="Cosmetic damage" x:Name="cosmetic_damage_answer" button_binding="cosmetic_damage"/>
+                <controls:ViewButtonLabel LabelText="Gaskets" x:Name="gaskets_answer" button_binding="gaskets"/>
+                <controls:ViewTextLabel LabelText="Gasket detail" x:Name="gasket_detail_answer" TextBinding="gaskets_text"/>
+                <controls:ViewTextLabel LabelText="Room location" TextBinding="room_location"/>
+                <controls:ViewTextLabel LabelText="Hinge colour" x:Name="hinge_colour_answer" TextBinding="hinge_colour"/>
+                <controls:ViewTextLabel LabelText="WER rating" x:Name="WER_rating_answer" TextBinding="WER_Rating"/>
+                <controls:ViewTextLabel LabelText="Reason for replacement" x:Name="replacement_reason_answer" TextBinding="replace_reason"/>
+                <controls:ViewTextLabel LabelText="Why cannot item be repaired" x:Name="replace_explain_answer" TextBinding="replace_explain"/>
+                <controls:ViewTextLabel LabelText="Cills" TextBinding="cills"/>
+                <controls:ViewTextLabel LabelText="Handle colour" TextBinding="handle_colour"/>
+                <controls:ViewButtonLabel LabelText="Handle operation" x:Name="handle_operation_answer" button_binding="LPHandles"/>
+                <controls:ViewTextLabel LabelText="Outer section size" TextBinding="outer_section_size"/>
+                <controls:ViewTextLabel LabelText="Frame depth in and out" TextBinding="frame_depth"/>
+                <controls:ViewTextLabel LabelText="Colour" TextBinding="colour"/>
+                <controls:ViewTextLabel LabelText="Brick width" TextBinding="brick_width"/>
+                <controls:ViewTextLabel LabelText="Brick height" TextBinding="brick_height"/>
+                <controls:ViewTextLabel LabelText="Internal width" TextBinding="internal_width"/>
+                <controls:ViewTextLabel LabelText="Internal height" TextBinding="internal_height"/>
+                <controls:ViewButtonLabel LabelText="Addons" button_binding="addons"/>
+                <controls:ViewTextLabel LabelText="Width" x:Name="addon_width_answer" TextBinding="addon_width"/>
+                <controls:ViewTextLabel LabelText="Height" x:Name="addon_height_answer" TextBinding="addon_height"/>
+                <controls:ViewButtonLabel LabelText="Midrail" x:Name="midrail_answer" button_binding="midrail"/>
+                <controls:ViewTextLabel LabelText="Height" x:Name="midrail_height_answer" TextBinding="midrail_height"/>
+                <controls:ViewButtonLabel LabelText="Head drip" button_binding="head_drip"/>
+                <controls:ViewTextLabel LabelText="Locking type" x:Name="locking_type_answer" TextBinding="locking_type"/>
+                <controls:ViewTextLabel LabelText="Letter box" x:Name="letter_box_answer" TextBinding="letter_box"/>
+                <controls:ViewTextLabel LabelText="Letter box position" x:Name="letter_box_position_answer" TextBinding="letter_box_pos"/>
+                <controls:ViewTextLabel LabelText="Pet flap" x:Name="pet_flap_size_answer" TextBinding="pet_flap"/>
+                <controls:ViewTextLabel LabelText="Pet flap type" x:Name="pet_flap_type_answer" TextBinding="pet_type"/>
+                <controls:ViewButtonLabel LabelText="Magnetic" x:Name="pet_flap_magnetic_answer" button_binding="pet_magnetic"/>
+                <controls:ViewTextLabel LabelText="Bead type" TextBinding="bead_type"/>
+                <controls:ViewTextLabel LabelText="Glass pattern" TextBinding="glass_pattern"/>
+                <controls:ViewButtonLabel LabelText="Double or triple" x:Name="double_or_triple_answer" button_binding="double_tripple"/>
+                <controls:ViewTextLabel LabelText="Glass type" x:Name="glass_type_answer" TextBinding="glass_type"/>
+                <controls:ViewSpecialGlassControl LabelText="Special glass" x:Name="special_glass_answer" special_glass_binding="special_glass"/>
+                <controls:ViewTextLabel LabelText="Document L" x:Name="document_L_answer" TextBinding="docl"/>
+                <controls:ViewButtonLabel LabelText="Opens" x:Name="opens_answer" button_binding="opens"/>
+                <controls:ViewButtonLabel LabelText="Glaze" x:Name="glaze_answer" button_binding="glaze"/>
+                <controls:ViewButtonLabel LabelText="Trickle vents" x:Name="trickle_vents_answer" button_binding="trickle_vents"/>
+                <controls:ViewTextLabel LabelText="Threshold type" x:Name="threshold_type_answer" TextBinding="threshold_type"/>
+                <controls:ViewTextLabel LabelText="Spacer thickness" x:Name="spacer_thickness_answer" TextBinding="spacer_thickness"/>
+                <controls:ViewTextLabel LabelText="Spacer colour" x:Name="spacer_colour_answer" TextBinding="spacer_colour"/>
+                <controls:ViewButtonLabel LabelText="Lock type" x:Name="lock_type_answer" button_binding="internal_lock"/>
+                <controls:ViewButtonLabel LabelText="Slide position" x:Name="slide_position_answer" button_binding="slide_position"/>
+                <controls:ViewButtonLabel LabelText="Profile type" x:Name="profile_type_answer" button_binding="profile_type"/>
+                <controls:ViewTextLabel LabelText="Item Summary" TextBinding="long_comments"/>
+                <controls:ViewTextLabel LabelText="Parts to order" TextBinding="parts_to_order"/>
+                <controls:ViewDrawingsAndPhotos x:Name="drawings_and_photos"/>
+                <controls:Copyright/>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

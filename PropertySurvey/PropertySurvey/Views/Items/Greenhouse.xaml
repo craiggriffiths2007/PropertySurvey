@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<s:CarouselValidate
+            xmlns="http://xamarin.com/schemas/2014/forms"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            x:Class="PropertySurvey.Greenhouse"
+            Title="Greenhouse"
+            xmlns:controls="clr-namespace:MartControls"
+            xmlns:s="clr-namespace:PropertySurvey">
+
+    <ScrollView>
+        <StackLayout Margin="3">
+            <controls:YesNoLabel x:Name="repair_replace_button" button_binding="repair_or_replace" LabelText="Repair/replace" OnSelectionChanged="replace_repair_button_click"/>
+            <controls:EntryLabel x:Name="reason_for_replacement_entry" TextBinding="rep_reason" LabelText="Reason for replacement"/>
+
+            <StackLayout x:Name="replace_glass_area" Orientation="Horizontal">
+                <Label Text="Replace glass" HorizontalOptions="FillAndExpand"/>
+                <controls:YesNo x:Name="replace_glass_button" ButtonState="{Binding replace_glass}" OnSelectionChanged="replace_glass_changed"/>
+                <StackLayout Orientation="Horizontal" WidthRequest="3"/>
+                <Button x:Name="do_replace_glass_button" WidthRequest="45" Clicked="replace_glass_clicked"/>
+            </StackLayout>
+
+            <controls:CauseOfDamage x:Name="cause_of_damage_area"
+                cause_of_damage_binding      = "cause_of_damage"
+                reason_different_binding     = "cause_of_damage_reason_different"
+                point_of_entry_binding       = "point_of_entry"
+                was_it_locked_button_binding = "was_it_locked"
+                type_of_lock_picker_binding  = "type_of_lockng_system_required"/>
+
+            <controls:EditPickerLabel x:Name="item_material_picker" LabelText="Item material"  TextBinding="material_type" OnTextChangedEvent="material_changed"/>
+            <controls:EditPickerLabel x:Name="item_colour_picker" LabelText="Item colour (enter for non standard)" TextBinding="colour"/>
+            <controls:EditPickerLabel x:Name="glazing_type_picker" LabelText="Glazing type" OnTextChangedEvent="glazing_type_changed" TextBinding="glaze_type"/>
+            <controls:EditPickerLabel x:Name="type_of_glass_picker" LabelText="Type of glass" TextBinding="type_of_glass"/>
+            <controls:EditPickerLabel x:Name="base_sizes_picker" LabelText="Base sizes" OnTextChangedEvent="base_size_changed" TextBinding="base_size"/>
+
+            <controls:WidthHeight x:Name="width_height_area"
+                width_label_text="Base width"
+                width_binding="base_size_x"
+                height_label_text="Base length"
+                height_binding="base_size_y"/>
+
+            <controls:EditPickerLabel x:Name="doors_open_picker" LabelText="Doors open" TextBinding="door_opening_type"/>
+            <controls:EditPickerLabel x:Name="window_opener_picker" LabelText="Window openers" TextBinding="window_opening_type"/>
+            <controls:YesNoLabel x:Name="roof_opening_button" button_binding="roof_opening_lights" LabelText="Roof opening lights" OnSelectionChanged="roof_opening_changed" ButtonWidth="120"/>
+            <controls:YesNoLabel x:Name="type_of_opening_button" button_binding="auto_or_manual" LabelText="Type of opening" ButtonWidth="120"/>
+            <controls:EntryLabelUnits x:Name="overall_height_entry" LabelText="Overall height" TextBinding="overall_height"/>
+
+            <controls:ItemSummary_PTO
+                x:Name="summary_pto_area"
+                summary_binding="summary"
+                PTO_binding="parts_to_order"/>
+
+            <controls:Copyright/>
+        </StackLayout>
+    </ScrollView>
+</s:CarouselValidate>

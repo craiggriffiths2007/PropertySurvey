@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:controls="clr-namespace:MartControls"
+             x:Class="PropertySurvey.ViewConservatory"
+             Title="Conservatory">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Margin="3">
+                <controls:ViewTextLabel LabelText="Reason cannot be repaired" x:Name="no_repair_reason_answer" TextBinding="reason_not_repaired"/>
+                <controls:ViewSubItem LabelText="Replace glass" x:Name="replace_glass_answer" button_binding="replace_glass" OnViewClickedEvent="view_replace_glass_clicked"/>
+                <controls:ViewTextLabel LabelText="Cause of damage" TextBinding="cause_of_damage"/>
+                <controls:ViewTextLabel LabelText="Why is cause different to contract" x:Name="cause_different_answer" TextBinding="cause_of_damage_reason_different"/>
+                <controls:ViewButtonLabel LabelText="Entry gained through this item" x:Name="point_of_entry_answer" button_binding="point_of_entry"/>
+                <controls:ViewButtonLabel LabelText="Was it locked" x:Name="was_it_locked_answer" button_binding="was_it_locked"/>
+                <controls:ViewTextLabel LabelText="What locks were on this item" x:Name="type_of_locking_system_answer" TextBinding="type_of_lockng_system_required"/>
+                <controls:ViewTextLabel LabelText="WER rating" x:Name="WER_rating_answer" TextBinding="WER_rating"/>
+                <controls:ViewTextLabel LabelText="Type of roof" TextBinding="type"/>
+                <controls:ViewButtonLabel LabelText="Do the spars line through with the window mullions" x:Name="spars_lineup_answer" button_binding="spars_line_up"/>
+                <controls:ViewButtonLabel LabelText="Is the conservatory roof in good condition" button_binding="good_conditions"/>
+                <controls:ViewButtonLabel LabelText="Material type" x:Name="material_type_answer" button_binding="material_type"/>
+                <controls:ViewTextLabel LabelText="Ridge length" x:Name="ridge_length_answer" TextBinding="ridge_length"/>
+                <controls:ViewTextLabel LabelText="Wall position" x:Name="wall_position_answer" TextBinding="wall_pos"/>
+                <controls:ViewButtonLabel LabelText="Does the roof fit on or underneath soffit" button_binding="does_roof_fit_under"/>
+
+                <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                    <Label Text="Additional drawings" HorizontalOptions="FillAndExpand"/>
+                    <Button Text="View" Clicked="view_additional_drawings_clicked"/>
+                </StackLayout>
+
+                <controls:ViewButtonLabel LabelText="Use preset diagrams" button_binding="bDrawingsOnly"/>
+
+                <StackLayout Orientation="Horizontal">
+                    <Image x:Name="dimensions_image"/>
+                    <ScrollView>
+                        <controls:ControlLayout x:Name="Page1_inner">
+                            <controls:ViewTextLabel LabelText="A" x:Name="size_A" TextBinding="sizeA"/>
+                            <controls:ViewTextLabel LabelText="B" x:Name="size_B" TextBinding="sizeB"/>
+                            <controls:ViewTextLabel LabelText="C" x:Name="size_C" TextBinding="sizeC"/>
+                            <controls:ViewTextLabel LabelText="D" x:Name="size_D" TextBinding="sizeD"/>
+                            <controls:ViewTextLabel LabelText="E" x:Name="size_E" TextBinding="sizeE"/>
+                            <controls:ViewTextLabel LabelText="F" x:Name="size_F" TextBinding="sizeF"/>
+                            <controls:ViewTextLabel LabelText="G" x:Name="size_G" TextBinding="sizeG"/>
+                            <controls:ViewTextLabel LabelText="1" x:Name="angle_1" TextBinding="angle1"/>
+                            <controls:ViewTextLabel LabelText="2" x:Name="angle_2" TextBinding="angle2"/>
+                            <controls:ViewTextLabel LabelText="3" x:Name="angle_3" TextBinding="angle3"/>
+                            <controls:ViewTextLabel LabelText="4" x:Name="angle_4" TextBinding="angle4"/>
+                        </controls:ControlLayout>
+                    </ScrollView>
+                </StackLayout>
+                
+                <controls:ViewTextLabel LabelText="Pitch height" TextBinding="pitch_height"/>
+                <controls:ViewTextLabel LabelText="Profile section size" TextBinding="profile_section_size"/>
+                <controls:ViewTextLabel LabelText="Pitch degree" TextBinding="pitch_degree"/>
+                <controls:ViewTextLabel LabelText="Overall length of sheet" TextBinding="overall_length_of_sheet"/>
+                <controls:ViewTextLabel LabelText="Roof Sheets 1" x:Name="roof_sheets_answer" TextBinding="roof_sheets_quantity_1"/>
+                <controls:ViewTextLabel LabelText="Width 1" x:Name="roof_sheets_width1_answer" TextBinding="sheet_width_1"/>
+                <controls:ViewTextLabel LabelText="Height 1" x:Name="roof_sheets_height1_answer" TextBinding="sheet_height_1"/>
+                <controls:ViewTextLabel LabelText="Roof Sheets 2" x:Name="roof_sheets_units2_answer" TextBinding="roof_sheets_quantity_2"/>
+                <controls:ViewTextLabel LabelText="Width 2" x:Name="roof_sheets_width2_answer" TextBinding="sheet_width_2"/>
+                <controls:ViewTextLabel LabelText="Height 2" x:Name="roof_sheets_height2_answer" TextBinding="sheet_height_2"/>
+                <controls:ViewTextLabel LabelText="Roof Sheets 3" x:Name="roof_sheets_units3_answer" TextBinding="roof_sheets_quantity_3"/>
+                <controls:ViewTextLabel LabelText="Width 3" x:Name="roof_sheets_width3_answer" TextBinding="sheet_width_3"/>
+                <controls:ViewTextLabel LabelText="Height 3" x:Name="roof_sheets_height3_answer" TextBinding="sheet_height_3"/>
+                <controls:ViewTextLabel LabelText="Roof Sheets 4" x:Name="roof_sheets_units4_answer" TextBinding="roof_sheets_quantity_4"/>
+                <controls:ViewTextLabel LabelText="Width 4" x:Name="roof_sheets_width4_answer" TextBinding="sheet_width_4"/>
+                <controls:ViewTextLabel LabelText="Height 4" x:Name="roof_sheets_height4_answer" TextBinding="sheet_height_4"/>
+                <controls:ViewTextLabel LabelText="Roof Sheets 5" x:Name="roof_sheets_units5_answer" TextBinding="roof_sheets_quantity_5"/>
+                <controls:ViewTextLabel LabelText="Width 5" x:Name="roof_sheets_width5_answer" TextBinding="sheet_width_5"/>
+                <controls:ViewTextLabel LabelText="Height 5" x:Name="roof_sheets_height5_answer" TextBinding="sheet_height_5"/>
+                <controls:ViewTextLabel LabelText="Roof Sheets 6" x:Name="roof_sheets_units6_answer" TextBinding="roof_sheets_quantity_6"/>
+                <controls:ViewTextLabel LabelText="Width 6" x:Name="roof_sheets_width6_answer" TextBinding="sheet_width_6"/>
+                <controls:ViewTextLabel LabelText="Height 6" x:Name="roof_sheets_height6_answer" TextBinding="sheet_height_6"/>
+                <controls:ViewTextLabel LabelText="Roof Sheets 7" x:Name="roof_sheets_units7_answer" TextBinding="roof_sheets_quantity_7"/>
+                <controls:ViewTextLabel LabelText="Width 7" x:Name="roof_sheets_width7_answer" TextBinding="sheet_width_7"/>
+                <controls:ViewTextLabel LabelText="Height 7" x:Name="roof_sheets_height7_answer" TextBinding="sheet_height_7"/>
+                <controls:ViewTextLabel LabelText="Roof Sheets 8" x:Name="roof_sheets_units8_answer" TextBinding="roof_sheets_quantity_8"/>
+                <controls:ViewTextLabel LabelText="Width 8" x:Name="roof_sheets_width8_answer" TextBinding="sheet_width_8"/>
+                <controls:ViewTextLabel LabelText="Height 8" x:Name="roof_sheets_height8_answer" TextBinding="sheet_height_8"/>
+                <controls:ViewTextLabel LabelText="Roof Sheets 9" x:Name="roof_sheets_units9_answer" TextBinding="roof_sheets_quantity_9"/>
+                <controls:ViewTextLabel LabelText="Width 9" x:Name="roof_sheets_width9_answer" TextBinding="sheet_width_9"/>
+                <controls:ViewTextLabel LabelText="Height 0" x:Name="roof_sheets_height9_answer" TextBinding="sheet_height_9"/>
+                <controls:ViewTextLabel LabelText="Roof Sheets 10" x:Name="roof_sheets_units10_answer" TextBinding="roof_sheets_quantity_10"/>
+                <controls:ViewTextLabel LabelText="Width 10" x:Name="roof_sheets_width10_answer" TextBinding="sheet_width_10"/>
+                <controls:ViewTextLabel LabelText="Height 10" x:Name="roof_sheets_height10_answer" TextBinding="sheet_height_10"/>
+                <controls:ViewTextLabel LabelText="Roof glazing thickness" x:Name="roof_glazing_thickness_answer" TextBinding="roof_glazing_thickness"/>
+                <controls:ViewTextLabel LabelText="Sheet colour" x:Name="sheet_colour_answer" TextBinding="color"/>
+                <controls:ViewTextLabel LabelText="Roof colour" TextBinding="roof_color"/>
+                <controls:ViewTextLabel LabelText="Flute size (chamber distance)" x:Name="flute_size_answer" TextBinding="flute_size"/>
+                <controls:ViewButtonLabel LabelText="New firrings req." button_binding="new_firrings_req"/>
+                <controls:ViewButtonLabel LabelText="New gutters req." button_binding="new_gutters_req"/>
+                <controls:ViewTextLabel LabelText="Item Summary" TextBinding="long_comments"/>
+                <controls:ViewTextLabel LabelText="Parts to order" TextBinding="parts_to_order"/>
+                <controls:ViewDrawingsAndPhotos x:Name="drawings_and_photos"/>
+                <controls:Copyright/>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

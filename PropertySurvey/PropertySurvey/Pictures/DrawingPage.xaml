@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             
+             xmlns:views="clr-namespace:SkiaSharp.Views.Forms;assembly=SkiaSharp.Views.Forms"
+          
+             Title="Drawing"
+             x:Class="PropertySurvey.DrawingPage"
+             
+             NavigationPage.HasNavigationBar="False"
+             >
+
+    <!--
+    <ContentPage.ToolbarItems>
+        <ToolbarItem x:Name="update_icon" Clicked="squiggle_button_Click" Icon="update_icon.png"/>
+        <ToolbarItem Clicked="line_button_Click" Icon="update_history.png"/>
+        <ToolbarItem Clicked="rectangle_button_Click" Icon="update_history.png"/>
+        <ToolbarItem Clicked="ellipse_button_Click" Icon="update_history.png"/>
+        <ToolbarItem Clicked="text_button_Click" Icon="update_history.png"/>
+        <ToolbarItem Clicked="erase_button_Click" Icon="update_history.png"/>
+        <ToolbarItem Clicked="undo_button_Click" Icon="update_history.png"/>
+        <ToolbarItem Clicked="exit_button_Click" Icon="update_history.png"/>
+    </ContentPage.ToolbarItems>
+    -->
+    <ContentPage.Content>
+        <StackLayout x:Name="stack_size" Orientation="Vertical">
+            <StackLayout Orientation="Horizontal" VerticalOptions="End" HeightRequest="45" HorizontalOptions="FillAndExpand">
+                <Image x:Name="squiggle_button" Source="squig_out.jpg" HorizontalOptions="FillAndExpand">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer
+                    Tapped="squiggle_button_Click"
+                    NumberOfTapsRequired="1" />
+                    </Image.GestureRecognizers>
+                </Image>
+                <Image x:Name="line_button" Source="line_out.jpg" HorizontalOptions="FillAndExpand">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer
+                    Tapped="line_button_Click"
+                    NumberOfTapsRequired="1" />
+                    </Image.GestureRecognizers>
+
+                </Image>
+                <Image x:Name="rectangle_button" Source="square_out.jpg" HorizontalOptions="FillAndExpand">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer
+                    Tapped="rectangle_button_Click"
+                    NumberOfTapsRequired="1" />
+                    </Image.GestureRecognizers>
+
+                </Image>
+                <Image x:Name="ellipse_button" Source="circ_out.jpg" HorizontalOptions="FillAndExpand">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer
+                    Tapped="ellipse_button_Click"
+                    NumberOfTapsRequired="1" />
+                    </Image.GestureRecognizers>
+
+                </Image>
+                <Image x:Name="text_button" Source="ay_out.jpg" HorizontalOptions="FillAndExpand">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer
+                    Tapped="text_button_Click"
+                    NumberOfTapsRequired="1" />
+                    </Image.GestureRecognizers>
+
+                </Image>
+                <Image x:Name="erase_button" Source="rubber_out.jpg" HorizontalOptions="FillAndExpand">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer
+                    Tapped="erase_button_Click"
+                    NumberOfTapsRequired="1" />
+                    </Image.GestureRecognizers>
+
+                </Image>
+                <Image x:Name="undo_button" Source="undo_out.jpg" HorizontalOptions="FillAndExpand">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer
+                    Tapped="undo_button_Click"
+                    NumberOfTapsRequired="1" />
+                    </Image.GestureRecognizers>
+
+                </Image>
+                <Image x:Name="exit_button" Source="zap_out.jpg" HorizontalOptions="FillAndExpand">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer
+                    Tapped="exit_button_Click"
+                    NumberOfTapsRequired="1" />
+                    </Image.GestureRecognizers>
+
+                </Image>
+            </StackLayout>
+            <views:SKCanvasView x:Name="SkCanvasView" PaintSurface="OnPainting" EnableTouchEvents="True" Touch="OnTouch" VerticalOptions="FillAndExpand"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

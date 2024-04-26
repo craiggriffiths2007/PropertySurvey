@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                          xmlns:controls="clr-namespace:MartControls"
+             x:Class="PropertySurvey.ViewLeaded">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Margin="3">
+                <controls:ViewTextLabel LabelText="Lead Thickness" x:Name="lead_thickness_answer" TextBinding="lead_thickness"/>
+                <controls:ViewTextLabel LabelText="Single or Double" x:Name="single_or_double_answer" TextBinding="lead_sod" IsVisible="False"/>
+                <controls:ViewTextLabel LabelText="Type of Lead" x:Name="type_of_lead_answer" TextBinding="lead_type" IsVisible="False"/>
+                <controls:ViewTextLabel LabelText="Spacer Thickness" x:Name="spacer_thickness_answer" TextBinding="back_to_back_spacer_width" IsVisible="False"/>
+                <controls:ViewTextLabel LabelText="Overall Spacer Width" x:Name="overall_spacer_width_answer" TextBinding="back_to_back_spacer_height" IsVisible="False"/>
+                <controls:ViewTextLabel LabelText="Diamond Width" x:Name="diamond_width_answer" TextBinding="lead_CWidth"/>
+                <controls:ViewTextLabel LabelText="Diamond Height" x:Name="diamond_height_answer" TextBinding="lead_CHeight"/>
+                <controls:ViewButtonLabel LabelText="Anti Rattle" x:Name="anti_rattle_answer" button_binding="lead_anti_rattle" IsVisible="False"/>
+                <controls:ViewButtonLabel LabelText="Trim 30 mm" x:Name="trim_30mm_answer" IsVisible="False"/>
+                <controls:ViewTextLabel LabelText="Additional Comments" TextBinding="lead_comments"/>
+                <controls:Copyright/>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

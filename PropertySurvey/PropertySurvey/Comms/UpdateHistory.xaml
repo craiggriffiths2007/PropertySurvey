@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PropertySurvey.UpdateHistory"
+             xmlns:controls="clr-namespace:MartControls"
+             Title="Update History">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Margin="20">
+                <StackLayout HeightRequest="20"/>
+
+                <Label Text="07/03/2019 - Version 1.0" FontAttributes="Bold"/>
+                <Label Text="Surveys completed and version 1.0 released."/>
+                <StackLayout HeightRequest="30"/>
+                <Label Text="15/02/2019" FontAttributes="Bold"/>
+                <Label Text="Aluminium Validation Completed. Surveys are sending. Save Points added."/>
+                <StackLayout HeightRequest="30"/>
+                <Label Text="12/02/2019" FontAttributes="Bold"/>
+                <Label Text="Added update history page."/>
+
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

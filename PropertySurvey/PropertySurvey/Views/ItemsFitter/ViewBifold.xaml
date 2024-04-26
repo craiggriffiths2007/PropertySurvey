@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:controls="clr-namespace:MartControls"
+             x:Class="PropertySurvey.ViewBifold"
+             Title="Bifolding Door">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Margin="3">
+                <controls:ViewTextLabel LabelText="Reason cannot be repaired" x:Name="reason_not_repaired_answer" TextBinding="reason_not_repaired"/>
+                <controls:ViewSubItem LabelText="Replace glass" x:Name="replace_glass_answer" button_binding="replace_glass" OnViewClickedEvent="view_replace_glass_clicked"/>
+                <controls:ViewSubItem LabelText="Handles required" x:Name="handles_required_answer" button_binding="handles_req" OnViewClickedEvent="view_handles_required_clicked"/>
+                <controls:ViewTextLabel LabelText="Handles" x:Name="handles_text_answer" TextBinding="handles_text"/>
+                <controls:ViewButtonLabel LabelText="Gaskets" x:Name="gaskets_answer" button_binding="gaskets"/>
+                <controls:ViewTextLabel LabelText="Gasket detail" x:Name="gasket_detail_answer" TextBinding="gaskets_text"/>
+                <controls:ViewTextLabel LabelText="Cause of damage" TextBinding="cause_of_damage"/>
+                <controls:ViewTextLabel LabelText="Why is cause different to contract" x:Name="cause_different_answer" TextBinding="cause_of_damage_reason_different"/>
+                <controls:ViewButtonLabel LabelText="Entry gained through this item" x:Name="point_of_entry_answer" button_binding="point_of_entry"/>
+                <controls:ViewButtonLabel LabelText="Was it locked" x:Name="was_it_locked_answer" button_binding="was_it_locked"/>
+                <controls:ViewTextLabel LabelText="What locks were on this item" x:Name="type_of_locking_system_answer" TextBinding="type_of_lockng_system_required"/>
+                <controls:ViewTextLabel LabelText="Door type" TextBinding="door_type"/>
+                <controls:ViewTextLabel LabelText="Overall Width" TextBinding="overall_width"/>
+                <controls:ViewTextLabel LabelText="Overall Height" TextBinding="overall_height"/>
+                <controls:ViewTextLabel LabelText="Internal width" TextBinding="internal_width"/>
+                <controls:ViewTextLabel LabelText="Internal height" TextBinding="internal_height"/>
+                <controls:ViewButtonLabel LabelText="Addons" button_binding="addons"/>
+                <controls:ViewTextLabel LabelText="Width" x:Name="addon_width_answer" TextBinding="addon_width"/>
+                <controls:ViewTextLabel LabelText="Height" x:Name="addon_height_answer" TextBinding="addon_height"/>
+                <controls:ViewTextLabel LabelText="WER rating" x:Name="WER_rating_answer" TextBinding="WER_rating"/>
+                <controls:ViewButtonLabel LabelText="Opens" x:Name="opens_answer" button_binding="opens"/>
+                <controls:ViewButtonLabel LabelText="Trickle vents" button_binding="trickle_vents"/>
+                <controls:ViewTextLabel LabelText="Hardware" x:Name="hardware_answer" TextBinding="hardware"/>
+                <controls:ViewTextLabel LabelText="Knock on" x:Name="knock_on_answer" TextBinding="knock_on"/>
+                <controls:ViewTextLabel LabelText="Handle colour" x:Name="handle_colour_answer" TextBinding="handle_colour"/>
+                <controls:ViewTextLabel LabelText="External frame colour" x:Name="external_frame_colour_answer" TextBinding="color_external"/>
+                <controls:ViewTextLabel LabelText="Internal frame colour" x:Name="internal_frame_colour_answer" TextBinding="color_internal"/>
+                <controls:ViewTextLabel LabelText="Threshold" TextBinding="threshold_type"/>
+                <Image x:Name="cill_image" IsVisible="False" Margin="3"/>
+                <controls:ViewTextLabel LabelText="Cill" TextBinding="cill_type"/>
+                <controls:ViewTextLabel LabelText="Number of doors" TextBinding="number_of_doors"/>
+                <Label x:Name="no_of_doors_text"/>
+                <Image x:Name="type_image"/>
+                <controls:ViewTextLabel LabelText="Colour of doors" x:Name="door_colour_answer" TextBinding="colour_of_doors"/>
+                <controls:ViewTextLabel LabelText="Internal colour of doors" x:Name="internal_door_colour_answer" TextBinding="internal_door_colour"/>
+                <controls:ViewTextLabel LabelText="Glazing options" x:Name="glazing_options_answer" TextBinding="glazing_options"/>
+                <controls:ViewTextLabel LabelText="Item Summary" TextBinding="comments"/>
+                <controls:ViewTextLabel LabelText="Parts to order" TextBinding="parts_to_order"/>
+                <controls:ViewDrawingsAndPhotos x:Name="drawings_and_photos"/>
+                <controls:Copyright/>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

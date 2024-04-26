@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             Title="Instructions"
+             xmlns:controls="clr-namespace:MartControls"
+             x:Class="PropertySurvey.SurveyInstructions">
+    <ContentPage.Content>
+        <controls:ControlLayout>
+            <ScrollView>
+                <StackLayout>
+                    <Label Text="Job"  HorizontalOptions="FillAndExpand"/>
+
+                    <StackLayout Margin="10">
+                        <Label Text="{Binding udi_jobtext}" TextColor="Black"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" Margin="0,10,0,10">
+                        <Label Text="Policy number"  HorizontalOptions="FillAndExpand"/>
+                        <Label Text="{Binding policy_number}" x:Name="inst_height" WidthRequest="80" TextColor="Black" HorizontalOptions="EndAndExpand"/>
+                    </StackLayout>
+
+                    <Label Text="Instructions"  HorizontalOptions="FillAndExpand"/>
+
+                    <StackLayout Margin="10">
+                        <Label Text="{Binding udi_inst}" TextColor="Black"/>
+                    </StackLayout>
+                    <controls:Copyright/>
+
+                </StackLayout>
+            </ScrollView>
+        </controls:ControlLayout>
+    </ContentPage.Content>
+</ContentPage>

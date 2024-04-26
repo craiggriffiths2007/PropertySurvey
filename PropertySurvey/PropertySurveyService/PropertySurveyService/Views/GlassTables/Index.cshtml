@@ -1,0 +1,509 @@
+﻿@model IEnumerable<PropertySurveyService.Models.GlassTable>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.HeaderId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.udi_cont)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.item_number)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.isComplete)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.cause_of_damage)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.cause_of_damage_reason_different)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.units_required)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.glass_width)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.glass_height)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.glass_width2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.glass_height2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.glass_width3)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.glass_height3)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.glass_width4)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.glass_height4)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.glass_width5)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.glass_height5)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.glass_width6)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.glass_height6)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.glass_width7)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.glass_height7)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.glass_width8)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.glass_height8)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.stepped_unit)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.int_width)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.int_height)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.single_or_double)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.glass_type)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.sizeA)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.sizeB)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.sizeC)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.sizeD)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.lead_CWidth)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.lead_CHeight)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.lead_anti_rattle)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.lead_thickness)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.lead_sod)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.lead_type)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.lead_bDiamondComplete)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.lead_bGeorgianComplete)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.lead_bBarComplete)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.glass_pattern)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.spacer_color)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.spacer_thickness)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.special_glass)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.no_of_pics)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.docl_old)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.no_of_photos)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.gb_trim)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.docl)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.room_location)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.no_of_vids)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.bDifferentFromOriginal)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ChangeItemTo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.print_name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ProductInto)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.glazing_type)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.long_comments)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.lead_posX)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.lead_posY)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TapeorGasket)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.glaze)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.lead_comments)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.collect_and_copy)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.temporary)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.parts_to_order)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.point_of_entry)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.type_of_lockng_system_required)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.was_it_locked)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.back_to_back_spacer_width)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.back_to_back_spacer_height)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.lead_CWidthf)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.lead_CHeightf)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.sizeAf)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.sizeBf)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.sizeCf)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.sizeDf)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.lead_CWidths)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.lead_CHeights)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.parent_item)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.HeaderId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.udi_cont)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.item_number)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.isComplete)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.cause_of_damage)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.cause_of_damage_reason_different)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.units_required)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.glass_width)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.glass_height)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.glass_width2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.glass_height2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.glass_width3)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.glass_height3)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.glass_width4)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.glass_height4)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.glass_width5)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.glass_height5)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.glass_width6)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.glass_height6)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.glass_width7)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.glass_height7)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.glass_width8)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.glass_height8)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.stepped_unit)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.int_width)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.int_height)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.single_or_double)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.glass_type)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.sizeA)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.sizeB)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.sizeC)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.sizeD)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.lead_CWidth)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.lead_CHeight)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.lead_anti_rattle)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.lead_thickness)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.lead_sod)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.lead_type)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.lead_bDiamondComplete)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.lead_bGeorgianComplete)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.lead_bBarComplete)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.glass_pattern)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.spacer_color)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.spacer_thickness)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.special_glass)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.no_of_pics)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.docl_old)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.no_of_photos)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.gb_trim)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.docl)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.room_location)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.no_of_vids)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.bDifferentFromOriginal)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ChangeItemTo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.print_name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProductInto)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.glazing_type)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.long_comments)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.lead_posX)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.lead_posY)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TapeorGasket)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.glaze)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.lead_comments)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.collect_and_copy)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.temporary)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.parts_to_order)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.point_of_entry)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.type_of_lockng_system_required)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.was_it_locked)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.back_to_back_spacer_width)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.back_to_back_spacer_height)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.lead_CWidthf)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.lead_CHeightf)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.sizeAf)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.sizeBf)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.sizeCf)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.sizeDf)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.lead_CWidths)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.lead_CHeights)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.parent_item)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

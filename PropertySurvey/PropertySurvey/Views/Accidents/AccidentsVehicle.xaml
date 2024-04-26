@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PropertySurvey.AccidentsVehicle"
+             xmlns:controls="clr-namespace:MartControls"
+            Title="Vehicle Accident">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Clicked="OnMenuClicked" Icon="menu_button.png"/>
+    </ContentPage.ToolbarItems>
+    
+    <StackLayout Orientation="Vertical">
+        <controls:MenuOptions x:Name="menu_pick" WidthRequest="20" SelectedIndex="0" HorizontalOptions="End" SelectedIndexChanged="OnMenuChanged" IsVisible="False"/>
+        <ListView HasUnevenRows="True" x:Name="listView" ItemTapped="OnItemTapped">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout BackgroundColor="{Binding back_colour}"  Margin="3" Padding="3" HorizontalOptions="FillAndExpand">
+                            <Label Text="{Binding name}" HorizontalOptions="StartAndExpand"/>
+                            <Label Text="{Binding uid}" HorizontalOptions="StartAndExpand" />
+                            <Label Text="{Binding otherinfo}" HorizontalOptions="StartAndExpand" />
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <StackLayout Orientation="Horizontal" VerticalOptions="End">
+            <Button Text="Add" Clicked="OnAdd" HorizontalOptions="FillAndExpand"/>
+            <Button Text="Delete" Clicked="OnDelete" HorizontalOptions="FillAndExpand"/>
+            <Button Text="Send" Clicked="OnSelect" HorizontalOptions="FillAndExpand"/>
+        </StackLayout>
+    </StackLayout>
+</ContentPage>

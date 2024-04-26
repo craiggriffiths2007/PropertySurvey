@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage 
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PropertySurvey.BackToBackInfo"
+             Title="Back to Back Spacer"
+             xmlns:controls="clr-namespace:MartControls">
+    <ContentPage.Content>
+      <controls:ControlLayout>
+        <ScrollView>
+          <StackLayout>
+            <Label Text="Information:"/>
+            <Label Text="This relates to the Georgian Bar back to back spacer not the outer edge spacer. Check: The back to back spacer may be thinner than the outer edge spacer."/>
+            <controls:EditPickerLabel x:Name="spacer_thickness" LabelText="Spacer Depth" picker_title="Spacer Thickness" TextBinding="back_to_back_spacer_width"/>
+            <controls:EditPickerLabel x:Name="spacer_width" LabelText="Overall Spacer Width" picker_title="Overall Spacer Width" TextBinding="back_to_back_spacer_height"/>
+
+            <controls:EntryLabelUnits x:Name="width_spacing" LabelText="Width Spacing" TextBinding="lead_CWidths"/>
+            <controls:EntryLabelUnits x:Name="height_spacing" LabelText="Height Spacing" TextBinding="lead_CHeights"/>
+
+            <StackLayout x:Name="trim_zone" IsVisible="False">
+              <controls:YesNoLabel LabelText="Trim 30 mm" button_binding="gb_trim"/>
+            </StackLayout>
+
+            <controls:EntryLabel x:Name="comments" LabelText="Additional Comments" TextBinding="lead_comments"/>
+
+            <controls:Copyright/>
+          </StackLayout>
+        </ScrollView>
+        <StackLayout Orientation="Horizontal" VerticalOptions="End" x:Name="glass_next">
+          <Button Text="Next" Clicked="OnNext" HorizontalOptions="EndAndExpand"/>
+        </StackLayout>
+      </controls:ControlLayout>
+    </ContentPage.Content>
+</ContentPage>

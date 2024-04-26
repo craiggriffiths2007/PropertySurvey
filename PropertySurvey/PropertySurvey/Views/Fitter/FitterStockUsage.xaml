@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PropertySurvey.FitterStockUsage"
+             xmlns:controls="clr-namespace:MartControls"
+             Title="Stock Usage">
+    <ContentPage.Content>
+        <ScrollView>
+            <controls:ControlLayout x:Name="page1">
+                <Label Text="Work carried out"  HorizontalOptions="FillAndExpand"/>
+                <controls:EditorGrows x:Name="fitter_work" HorizontalOptions="FillAndExpand" Text="{Binding fitter_work}" MaxLength="254"/>
+                <Label Text="Parts used"  HorizontalOptions="FillAndExpand"/>
+                <controls:EditorGrows x:Name="parts_used" HorizontalOptions="FillAndExpand" Text="{Binding parts_used}" MaxLength="254"/>
+                
+                <!--<controls:EntryLabel x:Name="fitter_work" TextBinding="fitter_work" LabelText="Work carried out"/>-->
+                <!--<controls:EntryLabel x:Name="parts_used" TextBinding="parts_used" LabelText="Parts used"/>-->
+                <controls:YesNoLabel x:Name="branch_or_hired" button_binding="i_spare3" LabelText="Access equipment used" OnSelectionChanged="ExcessYesNoLabel_OnSelectionChanged"/>
+                <controls:YesNoLabel x:Name="hireequipment" button_binding="i_spare2" LabelText="Branch or hired" OnSelectionChanged="HiredYesNoLabel_OnSelectionChanged"/>
+                <controls:EditPicker x:Name="listPicker1" picker_title="" TextBinding="s_spare3" OnTextChangedEvent="hire_into_picker_changed"/>
+                <controls:YesNoLabel x:Name="inevitabledamage" button_binding="id" LabelText="Inevitable damage" OnSelectionChanged="InevitableYesNoLabel_OnSelectionChanged"/>
+                <controls:EntryLabel x:Name="inevitableexplain" TextBinding="inevitable_damage" LabelText="Please explain inevitable damage"/>
+                <controls:WarningMessage x:Name="inevitablewarning" Text="An authorization Code is required from your Manager and photos must be taken before you leave site."/>
+                <controls:Copyright/>
+            </controls:ControlLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

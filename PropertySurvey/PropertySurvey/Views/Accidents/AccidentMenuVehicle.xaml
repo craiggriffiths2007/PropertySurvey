@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PropertySurvey.AccidentMenuVehicle"
+             xmlns:controls="clr-namespace:MartControls"
+            Title="Vehicle Accident">
+    
+        <ScrollView>
+            <controls:ControlLayout x:Name="page1">
+                <Label Text="This section is unfinished. Any information you enter here will not be saved."/>
+                <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" Margin="0,10">
+                    <Button Text="Instructions" WidthRequest="250" HeightRequest="40" Margin="20,2"/>
+                    <Image x:Name="instructions_tick" HorizontalOptions="End" Source="green_tick.png"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                    <Button Text="Details" Clicked="details_clicked" WidthRequest="250" HeightRequest="40" Margin="20,2"/>
+                    <Image x:Name="details_tick" Source="green_tick.png" HorizontalOptions="End" IsVisible="False"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                    <Button Text="Person in charge" Clicked="person_clicked" WidthRequest="250" HeightRequest="40" Margin="20,2"/>
+                    <Image x:Name="person_in_charge_tick" Source="green_tick.png" HorizontalOptions="End" IsVisible="False"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                    <Button Text="Other person" Clicked="other_person_clicked" WidthRequest="250" HeightRequest="40" Margin="20,2"/>
+                    <Image x:Name="other_person_tick" Source="green_tick.png" HorizontalOptions="End" IsVisible="False"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                    <Button Text="Police" Clicked="police_clicked" WidthRequest="250" HeightRequest="40" Margin="20,2"/>
+                    <Image x:Name="police_tick" Source="green_tick.png" HorizontalOptions="End" IsVisible="False"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                    <Button Text="Witness" Clicked="witness_clicked" WidthRequest="250" HeightRequest="40" Margin="20,2"/>
+                    <Image x:Name="witness_tick" Source="green_tick.png" HorizontalOptions="End" IsVisible="False"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                    <Button Text="Photographs" Clicked="photos_clicked" WidthRequest="250" HeightRequest="40" Margin="20,2"/>
+                    <Image x:Name="photographs_tick" Source="green_tick.png" HorizontalOptions="End" IsVisible="False"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                    <Button Text="Drawings" Clicked="drawings_clicked" WidthRequest="250" HeightRequest="40" Margin="20,2"/>
+                    <Image x:Name="drawings_tick" Source="green_tick.png" HorizontalOptions="End" IsVisible="False"/>
+                </StackLayout>
+            </controls:ControlLayout>
+        </ScrollView>
+
+</ContentPage>

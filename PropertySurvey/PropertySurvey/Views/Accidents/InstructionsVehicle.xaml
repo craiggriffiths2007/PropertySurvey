@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<CarouselPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PropertySurvey.InstructionsVehicle"
+              xmlns:controls="clr-namespace:MartControls"
+              Title="Instructions">
+    <CarouselPage.ToolbarItems>
+        <ToolbarItem x:Name="page_num" Text=""/>
+    </CarouselPage.ToolbarItems>
+    <ContentPage TabIndex="0">
+        <ScrollView>
+            <controls:ControlLayout x:Name="page1">
+                <StackLayout>
+                    <Label x:Name="Text0"/>
+                    <!--<Button Text="Skip instructions for testing" Clicked="accept_button_clicked"/>-->
+                </StackLayout>
+                <controls:Copyright/>
+            </controls:ControlLayout>
+        </ScrollView>
+    </ContentPage>
+    <ContentPage TabIndex="1">
+        <ScrollView>
+            <controls:ControlLayout x:Name="page2">
+                <StackLayout>
+                    <Label x:Name="Text1"/>
+                    <controls:Copyright/>
+                </StackLayout>
+            </controls:ControlLayout>
+        </ScrollView>
+    </ContentPage>
+    <ContentPage TabIndex="2">
+        <ScrollView>
+            <controls:ControlLayout x:Name="page3">
+                <StackLayout>
+                    <Label x:Name="Text2"/>
+                </StackLayout>
+                <controls:Copyright/>
+            </controls:ControlLayout>
+        </ScrollView>
+    </ContentPage>
+    <ContentPage TabIndex="3">
+        <ScrollView>
+            <controls:ControlLayout x:Name="page4">
+                <StackLayout>
+                    <Label x:Name="Text3"/>
+                </StackLayout>
+                <controls:Copyright/>
+            </controls:ControlLayout>
+        </ScrollView>
+    </ContentPage>
+    <ContentPage TabIndex="4">
+        <ScrollView>
+            <controls:ControlLayout x:Name="page5">
+                <StackLayout>
+                    <Label x:Name="Text4"/>
+                </StackLayout>
+                <controls:Copyright/>
+            </controls:ControlLayout>
+        </ScrollView>
+    </ContentPage>
+    <ContentPage TabIndex="5">
+        <ScrollView>
+            <controls:ControlLayout x:Name="page6">
+                <StackLayout>
+                    <Label x:Name="Text5"/>
+                </StackLayout>
+                <controls:Copyright/>
+            </controls:ControlLayout>
+        </ScrollView>
+    </ContentPage>
+    <ContentPage TabIndex="6">
+        <ScrollView>
+            <controls:ControlLayout x:Name="page7">
+                <StackLayout>
+                    <Label x:Name="Text6"/>
+                </StackLayout>
+                <controls:Copyright/>
+            </controls:ControlLayout>
+        </ScrollView>
+    </ContentPage>
+    <ContentPage TabIndex="7">
+        <ScrollView>
+            <controls:ControlLayout x:Name="page8">
+                <StackLayout>
+                    <Label x:Name="Text7"/>
+                </StackLayout>
+                <controls:Copyright/>
+            </controls:ControlLayout>
+        </ScrollView>
+    </ContentPage>
+    <ContentPage TabIndex="8">
+        <ScrollView>
+            <controls:ControlLayout x:Name="page9">
+                <StackLayout>
+                    <Label x:Name="Text8"/>
+                </StackLayout>
+                <controls:Copyright/>
+            </controls:ControlLayout>
+        </ScrollView>
+    </ContentPage>
+    <ContentPage TabIndex="9">
+        <ScrollView>
+            <controls:ControlLayout x:Name="page10">
+                <StackLayout>
+                    <Label x:Name="Text9"/>
+                    <Button Text="Accept and continue" Clicked="accept_button_clicked"/>
+                </StackLayout>
+                <controls:Copyright/>
+            </controls:ControlLayout>
+        </ScrollView>
+    </ContentPage>
+</CarouselPage>

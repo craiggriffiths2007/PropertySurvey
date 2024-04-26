@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:PropertySurvey"
+             Title="Diary"
+             xmlns:controls="clr-namespace:MartControls"
+             x:Class="PropertySurvey.MainPage">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Clicked="OnUpdate" Icon="" x:Name="UpdateAvailableIcon"/>
+        <ToolbarItem Clicked="OnTools" Icon="" x:Name="ToolChecksIcon"/>
+        <ToolbarItem Clicked="OnVanChecks" Icon="" x:Name="VanChecksIcon"/>
+        <ToolbarItem Clicked="OnMileageClicked" Icon="mileage.png"/>
+        <ToolbarItem Clicked="OnSettingsClicked" Icon="settings.png"/>
+        <ToolbarItem Clicked="OnMenuClicked" Icon="menu_button.png"/>
+    </ContentPage.ToolbarItems>
+
+    <StackLayout Orientation="Vertical" >
+        <controls:MenuOptions x:Name="menu_pick" WidthRequest="20" SelectedIndex="0" HorizontalOptions="End" SelectedIndexChanged="OnMenuChanged" IsVisible="False"/>
+        <ListView HasUnevenRows="True" x:Name="listView" ItemTapped="OnItemTapped" >
+            <ListView.ItemTemplate>
+
+                <DataTemplate>
+                    <ViewCell>
+
+                        <StackLayout Orientation="Vertical"  VerticalOptions="Start" BackgroundColor="{Binding back_colour}"  Margin="3" Padding="3">
+                            <StackLayout Orientation="Horizontal" VerticalOptions="Start" HorizontalOptions="FillAndExpand" BackgroundColor="{Binding back_colour}">
+                                <Label TextColor="{Binding text_colour}" Text="{Binding contract}" WidthRequest="120" HorizontalOptions="StartAndExpand" VerticalOptions="StartAndExpand"/>
+                                <Label TextColor="{Binding text_colour}" Text="{Binding Name}" WidthRequest="240" HorizontalOptions="StartAndExpand" />
+                            </StackLayout>
+                            <StackLayout Orientation="Horizontal" VerticalOptions="Start" HorizontalOptions="FillAndExpand" BackgroundColor="{Binding back_colour}">
+                                <Label TextColor="{Binding text_colour}" Text="{Binding Postcode}" WidthRequest="120" HorizontalOptions="StartAndExpand" />
+                                <Label TextColor="{Binding text_colour}" Text="{Binding jobtime}" WidthRequest="240" HorizontalOptions="StartAndExpand" />
+                            </StackLayout>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+        <StackLayout x:Name="diagnostics_area" VerticalOptions="End" IsVisible="False">
+            <Button Text="Diagnostics" Clicked="diagnostics_click"/>
+        </StackLayout>
+
+        <StackLayout Orientation="Horizontal" VerticalOptions="End"  Spacing="0" HorizontalOptions="FillAndExpand">
+            <Button Image = "left.png" x:Name="back_button" WidthRequest="70" Clicked="OnBack" HorizontalOptions="FillAndExpand"  />
+            <DatePicker x:Name="datepicker1" VerticalOptions="CenterAndExpand" Date="01/01/2017" DateSelected="OnDateSelected"/>
+
+            <Button Image = "right.png" x:Name="next_button" WidthRequest="70" Clicked="OnNext" HorizontalOptions="FillAndExpand"/>
+            <Button Text="Today" Clicked="OnToday"/>
+        </StackLayout>
+
+        <StackLayout Orientation="Horizontal" VerticalOptions="End"  Spacing="0" HorizontalOptions="FillAndExpand">
+            <Button x:Name="ReceiveButton" Text="Receive" Clicked="OnReceiveClicked" HorizontalOptions="FillAndExpand"/>
+            <Button  x:Name="mail_button"  Image = "Envelope1.png" Clicked="OnMess" WidthRequest="55"/>
+            
+            <Button x:Name="SendButton" Text="Send" Clicked="OnSendClicked" HorizontalOptions="FillAndExpand"/>
+            <!--<Button Text="Select" Clicked="OnSel"/>-->
+        </StackLayout>
+    </StackLayout>
+</ContentPage>

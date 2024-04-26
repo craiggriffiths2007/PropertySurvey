@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             Title=""
+             xmlns:controls="clr-namespace:MartControls"
+             x:Class="PropertySurvey.Damage">
+
+    <!--<ContentPage.ToolbarItems>
+        <ToolbarItem Clicked="OnSpeak" Icon="speech.png"/>
+    </ContentPage.ToolbarItems>-->
+
+
+    <ContentPage.Content>
+
+        <controls:ControlLayout>
+            <ScrollView VerticalOptions="FillAndExpand">
+
+                <StackLayout>
+                    <StackLayout Margin="10">
+                        <Label x:Name="damage_desc"  TextColor="Black"  Text="{Binding uc_desc}"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" Margin="0,10,0,10">
+                        <Label Text="Dele Auth?"  HorizontalOptions="FillAndExpand"/>
+                        <Label Text="{Binding uc_laname}" TextColor="Black" x:Name="inst_height" WidthRequest="80" HorizontalOptions="EndAndExpand"/>
+                    </StackLayout>
+
+                    <Label Text="Cover instructions"  HorizontalOptions="FillAndExpand"/>
+
+                    <StackLayout Margin="10">
+                        <Label TextColor="Black" Text="{Binding cover_instructions}"/>
+                    </StackLayout>
+
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Repudiate if WnT or bad workmanship"/>
+                        <StackLayout Margin="10" HorizontalOptions="End">
+                            <Label x:Name="repude"  TextColor="Black" Text=""/>
+                        </StackLayout>
+                    </StackLayout>
+                    <!--
+                    <Label Text="Reported cause of damage"  HorizontalOptions="FillAndExpand"/>
+
+                    <StackLayout Margin="10">
+                        <Label TextColor="Black" Text="{Binding COD_String}"/>
+                    </StackLayout>
+                    -->
+                    <StackLayout HeightRequest="45"/>
+                    
+                    <controls:TickButtonLabel x:Name="confirm_tick" ButtonState="{Binding bDamTicked}" LabelText="I confirm that I have read the reported cause of damage." HorizontalOptions="FillAndExpand" Clicked="TickButtonLabel_Clicked"/>
+                    <StackLayout Orientation="Vertical" HeightRequest="45"/>
+                    <Button x:Name="next_button" Text="Next" Clicked="OnNext" HorizontalOptions="EndAndExpand"/>
+                    <controls:Copyright/>
+                </StackLayout>
+
+            </ScrollView>
+            
+
+        </controls:ControlLayout>
+
+    </ContentPage.Content>
+</ContentPage>

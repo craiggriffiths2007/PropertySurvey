@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PropertySurvey.Login"
+             Title="Login">
+    <ContentPage.Content>
+        <Grid>
+            <StackLayout HorizontalOptions="Center" VerticalOptions="CenterAndExpand">
+                <StackLayout HorizontalOptions="Center" WidthRequest="280" VerticalOptions="CenterAndExpand">
+                    <StackLayout HorizontalOptions="Center" Margin="10" WidthRequest="280" VerticalOptions="CenterAndExpand">
+                        <Label Text="Username"/>
+                        <Entry x:Name="username"/>
+                        <Button x:Name="button2" Text="Login" Clicked="OnLogin" HorizontalOptions="FillAndExpand"/>
+                    </StackLayout>
+                    <StackLayout HorizontalOptions="Center" WidthRequest="280" VerticalOptions="CenterAndExpand">
+                        <Label x:Name="serial" Margin="10" Text="" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+                    </StackLayout>
+                    <Label x:Name="_vers" Text=""  HorizontalOptions="End" Margin="10"/>
+                </StackLayout>
+                <StackLayout HeightRequest="200"></StackLayout>
+            </StackLayout>
+            <StackLayout HorizontalOptions="Center" VerticalOptions="Center" HeightRequest="60" WidthRequest="60">
+                <ActivityIndicator x:Name="act_ind" Color="DodgerBlue" IsRunning="false" WidthRequest="60" HeightRequest="60"/>
+            </StackLayout>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

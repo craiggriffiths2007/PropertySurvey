@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PropertySurvey.BifoldDoorType"
+             Title="Type of doors"
+             xmlns:controls="clr-namespace:MartControls">
+    <ContentPage.Content>
+        <ScrollView>
+            <controls:ControlLayout>
+                <Label x:Name="label1" Text=""/>
+                <Button x:Name="button1" HorizontalOptions="FillAndExpand" HeightRequest="140" Clicked="button1clicked"/>
+                <Label x:Name="label2" Text=""/>
+                <Button x:Name="button2" HorizontalOptions="FillAndExpand" HeightRequest="140" Clicked="button2clicked"/>
+                <Label x:Name="label3" Text=""/>
+                <Button x:Name="button3" HorizontalOptions="FillAndExpand" HeightRequest="140" Clicked="button3clicked"/>
+                <Label x:Name="label4" Text=""/>
+                <Button x:Name="button4" HorizontalOptions="FillAndExpand" HeightRequest="140" Clicked="button4clicked"/>
+                <Label x:Name="label5" Text=""/>
+                <Button x:Name="button5" HorizontalOptions="FillAndExpand" HeightRequest="140" Clicked="button5clicked"/>
+                <Label x:Name="label6" Text=""/>
+                <Button x:Name="button6" HorizontalOptions="FillAndExpand" HeightRequest="140" Clicked="button6clicked"/>
+                <Label x:Name="label7" Text=""/>
+                <Button x:Name="button7" HorizontalOptions="FillAndExpand" HeightRequest="140" Clicked="button7clicked"/>
+                <Label x:Name="label8" Text=""/>
+                <Button x:Name="button8" HorizontalOptions="FillAndExpand" HeightRequest="140" Clicked="button8clicked"/>
+                <controls:Copyright/>
+            </controls:ControlLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

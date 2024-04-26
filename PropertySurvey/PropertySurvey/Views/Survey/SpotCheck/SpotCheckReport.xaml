@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<CarouselPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:controls="clr-namespace:MartControls"
+             x:Class="PropertySurvey.SpotCheckReport"
+             Title="Spot Check">
+
+    <CarouselPage.ToolbarItems>
+        <ToolbarItem x:Name="page_num" Text=""/>
+        <ToolbarItem x:Name="sign" Icon="signature.png" Clicked="OnSignature"/>
+    </CarouselPage.ToolbarItems>
+
+    <ContentPage>
+        <ScrollView>
+            <controls:ControlLayout>
+                <controls:TickButtonLabel x:Name="uspot_repair" ButtonState="{Binding uspot_repair}" LabelText="Repair" HorizontalOptions="FillAndExpand"/>
+                <Label Text="Progress when reviewed:"/>
+                <controls:TickButtonLabel x:Name="uspot_repair_arrived" ButtonState="{Binding uspot_repair_arrived}" LabelText="Arrived" HorizontalOptions="FillAndExpand"/>
+                <controls:TickButtonLabel x:Name="uspot_repair_setup" ButtonState="{Binding uspot_repair_setup}" LabelText="Set Up" HorizontalOptions="FillAndExpand"/>
+                <controls:TickButtonLabel x:Name="uspot_repair_ongoing" ButtonState="{Binding uspot_repair_ongoing}" LabelText="Ongoing" HorizontalOptions="FillAndExpand"/>
+                <controls:TickButtonLabel x:Name="uspot_repair_completed" ButtonState="{Binding uspot_repair_completed}" LabelText="Completed" HorizontalOptions="FillAndExpand"/>
+                <controls:TickButtonLabel x:Name="Replacement" ButtonState="{Binding uspot_replace}" LabelText="Replacement" HorizontalOptions="FillAndExpand"/>
+                <Label Text="Progress when reviewed:"/>
+                <controls:TickButtonLabel x:Name="uspot_replace_arrived" ButtonState="{Binding uspot_replace_arrived}" LabelText="Arrived" HorizontalOptions="FillAndExpand"/>
+                <controls:TickButtonLabel x:Name="uspot_replace_setup" ButtonState="{Binding uspot_replace_setup}" LabelText="Set Up" HorizontalOptions="FillAndExpand"/>
+                <controls:TickButtonLabel x:Name="uspot_replace_unitmoved" ButtonState="{Binding uspot_replace_unitmoved}" LabelText="Unit removed" HorizontalOptions="FillAndExpand"/>
+                <controls:TickButtonLabel x:Name="uspot_replace_fit" ButtonState="{Binding uspot_replace_fit}" LabelText="Fitted" HorizontalOptions="FillAndExpand"/>
+                <controls:TickButtonLabel x:Name="uspot_replace_completed" ButtonState="{Binding uspot_replace_completed}" LabelText="Completed" HorizontalOptions="FillAndExpand"/>
+                <controls:Copyright/>
+            </controls:ControlLayout>
+        </ScrollView>
+    </ContentPage>
+
+    <ContentPage>
+        <ScrollView>
+            <controls:ControlLayout>
+                <Label Text="Work reviewed:"/>
+                <Label Text="Items"/>
+                <controls:TickButtonLabel x:Name="uspot_rev_door" ButtonState="{Binding uspot_rev_door}" LabelText="Door" HorizontalOptions="FillAndExpand"/>
+                <controls:TickButtonLabel x:Name="uspot_rev_window" ButtonState="{Binding uspot_rev_window}" LabelText="Window" HorizontalOptions="FillAndExpand"/>
+                <controls:TickButtonLabel x:Name="uspot_rev_garagedoor" ButtonState="{Binding uspot_rev_garagedoor}" LabelText="Garage Door" HorizontalOptions="FillAndExpand"/>
+                <controls:TickButtonLabel x:Name="uspot_rev_glass" ButtonState="{Binding uspot_rev_glass}" LabelText="Glass" HorizontalOptions="FillAndExpand"/>
+                <controls:TickButtonLabel x:Name="uspot_rev_locks" ButtonState="{Binding uspot_rev_locks}" LabelText="Locks" HorizontalOptions="FillAndExpand"/>
+                <controls:TickButtonLabel x:Name="uspot_rev_other" ButtonState="{Binding uspot_rev_other}" LabelText="Other" HorizontalOptions="FillAndExpand"/>
+                <Label Text="Materials"/>
+                <controls:TickButtonLabel x:Name="uspot_revb_upvc" ButtonState="{Binding uspot_revb_upvc}" LabelText="uPVC" HorizontalOptions="FillAndExpand"/>
+                <controls:TickButtonLabel x:Name="uspot_revb_timber" ButtonState="{Binding uspot_revb_timber}" LabelText="Timber" HorizontalOptions="FillAndExpand"/>
+                <controls:TickButtonLabel x:Name="uspot_revb_ali" ButtonState="{Binding uspot_revb_ali}" LabelText="Ali" HorizontalOptions="FillAndExpand"/>
+                <controls:TickButtonLabel x:Name="uspot_revb_other" ButtonState="{Binding uspot_revb_other}" LabelText="Other" HorizontalOptions="FillAndExpand"/>
+                <controls:Copyright/>
+            </controls:ControlLayout>
+        </ScrollView>
+    </ContentPage>
+
+    <ContentPage>
+        <ScrollView>
+            <controls:ControlLayout>
+                <Label Text="Assesment ( 1=unacceptable, 2=poor quality, 3=acceptable, 4=high quality, 5=exceptional )"/>
+                <controls:YesNoLabel x:Name="uspot_appearence" button_binding="uspot_appearence" LabelText="Appearence" />
+                <Label Text="Areas for improvement (including uniforms, ID on show, van tidiness, dust shees used , PPE used, work area tidiness, etc)"/>
+                <Entry Text="{Binding uspot_appearence_improvements}"/>
+                <controls:Copyright/>
+            </controls:ControlLayout>
+        </ScrollView>
+    </ContentPage>
+
+    <ContentPage>
+        <ScrollView>
+            <controls:ControlLayout>
+                <controls:YesNoLabel x:Name="uspot_qualityofworks" button_binding="uspot_qualityofworks" LabelText="Quality of works" />
+                <controls:EntryLabel TextBinding="uspot_qualityofworks_improvements" LabelText="Areas for improvement: (for works completed so far)"/>
+                <controls:EntryLabel TextBinding="uspot_fitter" LabelText="Fitter"/>
+                <controls:EntryLabel TextBinding="uspot_trainee" LabelText="Trainee"/>
+                <controls:Copyright/>
+            </controls:ControlLayout>
+        </ScrollView>
+    </ContentPage>
+
+    <ContentPage>
+        <ScrollView>
+            <controls:ControlLayout>
+                <controls:YesNoLabel x:Name="uspot_customersatisfaction" button_binding="uspot_customersatisfaction" LabelText="Customer satisfaction" />
+                <controls:EntryLabel TextBinding="uspot_customersatisfaction_improvements" LabelText="Areas for improvement: (including staff attitude, explanation of works, noise, smoking on time?, etc.)"/>
+                <controls:EntryLabel TextBinding="uspot_otherobservations" LabelText="Other observations"/>
+                <controls:YesNoLabel x:Name="bfitter_complete" button_binding="bfitter_complete" LabelText="Fitters still on site" />
+                <controls:Copyright/>
+            </controls:ControlLayout>
+        </ScrollView>
+    </ContentPage>
+
+    <ContentPage>
+        <ScrollView>
+            <controls:ControlLayout>
+                <Label Text="FITTERS ON SITE HEALTH and SAFETY CHECK SHEET"/>
+                <Label Text="Fitters P.P.E. Items" TextColor="Black"/>
+                <controls:EntryLabel TextBinding="name1" LabelText="Name 1"/>
+                <controls:YesNoLabelEntryLabel x:Name="safety_boots_worn1"     ButtonLabel="Safety boots worn" 
+                                                                            button_binding="safety_boots_worn1" TextBinding="safety_boots_worn1_s" />
+                <controls:YesNoLabelEntryLabel x:Name="safety_gloves_worn1"     ButtonLabel="Safety gloves worn" 
+                                                                            button_binding="safety_gloves_worn1" TextBinding="safety_gloves_worn1_s" />
+                <controls:YesNoLabelEntryLabel x:Name="safety_googles_worn1"     ButtonLabel="Safety goggles worn" 
+                                                                            button_binding="safety_googles_worn1" TextBinding="safety_googles_worn1_s" />
+                <controls:YesNoLabelEntryLabel x:Name="safety_helmet_worn1"     ButtonLabel="Safety helmet worn" 
+                                                                            button_binding="safety_helmet_worn1" TextBinding="safety_helmet_worn1_s" />
+                <controls:YesNoLabelEntryLabel x:Name="wristguards_worn1"     ButtonLabel="Wristguards worn" 
+                                                                            button_binding="wristguards_worn1" TextBinding="wristguards_worn1_s" />
+                <controls:YesNoLabelEntryLabel x:Name="uniform_worn_complete1"     ButtonLabel="Uniform worn complete" 
+                                                                            button_binding="uniform_worn_complete1" TextBinding="uniform_worn_complete1_s" />
+                <controls:YesNoLabelEntryLabel x:Name="id_card_available1"     ButtonLabel="ID card available" 
+                                                                            button_binding="id_card_available1" TextBinding="id_card_available1_s" />
+
+                <controls:EntryLabel TextBinding="name2" LabelText="Name 2"/>
+                <controls:YesNoLabelEntryLabel x:Name="safety_boots_worn2"     ButtonLabel="Safety boots worn" 
+                                                                            button_binding="safety_boots_worn2" TextBinding="safety_boots_worn2_s" />
+                <controls:YesNoLabelEntryLabel x:Name="safety_gloves_worn2"     ButtonLabel="Safety gloves worn" 
+                                                                            button_binding="safety_gloves_worn2" TextBinding="safety_gloves_worn2_s" />
+                <controls:YesNoLabelEntryLabel x:Name="safety_googles_worn2"     ButtonLabel="Safety goggles worn" 
+                                                                            button_binding="safety_googles_worn2" TextBinding="safety_googles_worn2_s" />
+                <controls:YesNoLabelEntryLabel x:Name="safety_helmet_worn2"     ButtonLabel="Safety helmet worn" 
+                                                                            button_binding="safety_helmet_worn2" TextBinding="safety_helmet_worn2_s" />
+                <controls:YesNoLabelEntryLabel x:Name="wristguards_worn2"     ButtonLabel="Wristguards worn" 
+                                                                            button_binding="wristguards_worn2" TextBinding="wristguards_worn2_s" />
+                <controls:YesNoLabelEntryLabel x:Name="uniform_worn_complete2"     ButtonLabel="Uniform worn complete" 
+                                                                            button_binding="uniform_worn_complete2" TextBinding="uniform_worn_complete2_s" />
+                <controls:YesNoLabelEntryLabel x:Name="id_card_available2"     ButtonLabel="ID card available" 
+                                                                            button_binding="id_card_available2" TextBinding="id_card_available2_s" />
+
+
+                <controls:Copyright/>
+            </controls:ControlLayout>
+        </ScrollView>
+    </ContentPage>
+    
+    
+</CarouselPage>

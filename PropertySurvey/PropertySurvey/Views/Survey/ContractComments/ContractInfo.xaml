@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PropertySurvey.ContractInfo"
+             xmlns:controls="clr-namespace:MartControls"
+             Title="Contract Information">
+    <StackLayout Orientation="Vertical">
+
+        <ScrollView VerticalOptions="FillAndExpand">
+
+            <StackLayout Margin="3" VerticalOptions="StartAndExpand" Spacing="0">
+                <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" >
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="StartAndExpand" >
+                        <Label Text="Contract" FontAttributes="Bold" FontSize="Medium" WidthRequest="90" HorizontalOptions="Start"/>
+                        <Label FontSize="Medium" Text="{Binding Contractnumber}" WidthRequest="100" HorizontalOptions="StartAndExpand"/>
+                    </StackLayout>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" >
+                    <Label Text="Name" FontSize="Medium" FontAttributes="Bold" WidthRequest="90" HorizontalOptions="Start" VerticalOptions="Start"/>
+                    <Label FontSize="Medium" Text="{Binding ContractName}" WidthRequest="260" HorizontalOptions="StartAndExpand" LineBreakMode="WordWrap"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" >
+                    <Label Text="Address" FontSize="Medium" FontAttributes="Bold" WidthRequest="90" HorizontalOptions="Start" VerticalOptions="Start"/>
+                    <Label FontSize="Medium" Text="{Binding ContractAdd1}" WidthRequest="260" HorizontalOptions="StartAndExpand" LineBreakMode="WordWrap"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" >
+                    <Label Text=" " FontSize="Medium" WidthRequest="90" HorizontalOptions="Start"/>
+                    <Label FontSize="Medium" Text="{Binding ContractAdd2}" WidthRequest="260" HorizontalOptions="StartAndExpand"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" >
+                    <Label Text=" " FontSize="Medium" WidthRequest="90" HorizontalOptions="Start"/>
+                    <Label FontSize="Medium" Text="{Binding ContractAdd3}" WidthRequest="260" HorizontalOptions="StartAndExpand"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" >
+                    <Label Text=" " FontSize="Medium" WidthRequest="90" HorizontalOptions="Start"/>
+                    <Label FontSize="Medium" Text="{Binding ContractAdd4}" WidthRequest="260" HorizontalOptions="StartAndExpand"/>
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal">
+                    <Label FontSize="Medium" Text="Postcode" FontAttributes="Bold" WidthRequest="90" HorizontalOptions="Start"/>
+                    <Label FontSize="Medium" Text="{Binding ContractPCode}" WidthRequest="120" HorizontalOptions="StartAndExpand"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label FontSize="Medium" Text="Telephone" FontAttributes="Bold" WidthRequest="90" HorizontalOptions="Start"/>
+                    <Button Text="View" Clicked="OnContractTelephone"/>
+                </StackLayout>
+                <controls:Copyright/>
+            </StackLayout>
+        </ScrollView>
+    </StackLayout>
+</ContentPage>

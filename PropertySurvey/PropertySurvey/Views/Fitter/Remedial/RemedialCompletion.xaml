@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<CarouselPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PropertySurvey.RemedialCompletion"
+             xmlns:controls="clr-namespace:MartControls"
+             Title="Completion">
+
+    <CarouselPage.ToolbarItems>
+        <ToolbarItem x:Name="page_num" Text=""/>
+    </CarouselPage.ToolbarItems>
+
+    <ContentPage x:Name="content1">
+        <ScrollView>
+            <controls:ControlLayout x:Name="page1">
+                <controls:EditPickerLabel x:Name="fault" LabelText="Fault" TextBinding="r_fault"/>
+                <controls:YesNoLabel button_binding="fbexcess_paid" LabelText="Excess Paid" OnSelectionChanged="ExcessYesNoLabel_OnSelectionChanged"/>
+                <controls:EntryLabel x:Name="excesspd" TextBinding="freason_excess_not_paid" LabelText="Reason excess not paid"/>
+
+                <controls:EditPickerLabel x:Name="est_job_time" LabelText="Estimated time to complete job"  TextBinding="rno_hours" />
+
+                <controls:YesNoLabel button_binding="r_comp" LabelText="Completed"/>
+
+                <controls:EntryLabel x:Name="work_carrried_out" TextBinding="r_work_txt" LabelText="Work carried out"/>
+
+                <controls:EntryLabel x:Name="reason_work_carrried_out" TextBinding="doc_l_compliant_reason" LabelText="Reason for work carried out"/>
+
+                <controls:AddMinusLabel Val="{Binding no_of_fitters}" Min="1" Max="8" OnSelectionChanged="OnFittersChanged" LabelText="No. of Fitters"/>
+                <!--OnSelectionChanged="OnFittersChanged"-->
+                <controls:EntryLabel x:Name="fname1" TextBinding="fname1" LabelText="Fitter Name 1"/>
+                <controls:EntryLabel x:Name="fname2" TextBinding="fname2" LabelText="Fitter Name 2"/>
+                <controls:EntryLabel x:Name="fname3" TextBinding="fname3" LabelText="Fitter Name 3"/>
+                <controls:EntryLabel x:Name="fname4" TextBinding="fname4" LabelText="Fitter Name 4"/>
+                <controls:EntryLabel x:Name="fname5" TextBinding="fname5" LabelText="Fitter Name 5"/>
+                <controls:EntryLabel x:Name="fname6" TextBinding="fname6" LabelText="Fitter Name 6"/>
+                <controls:EntryLabel x:Name="fname7" TextBinding="fname7" LabelText="Fitter Name 7"/>
+                <controls:EntryLabel x:Name="fname8" TextBinding="fname8" LabelText="Fitter Name 8"/>
+
+                <controls:Copyright/>
+            </controls:ControlLayout>
+        </ScrollView>
+    </ContentPage>
+    <ContentPage x:Name="content2">
+        <ScrollView>
+            <controls:ControlLayout x:Name="page2">
+                <Label Text="Additional"/>
+                <controls:EditorGrows Text="{Binding readdtxt}"/>
+
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Additional Drawing" HorizontalOptions="FillAndExpand"/>
+                    <Button x:Name="add_drawing_button" WidthRequest="45" Clicked="OnAdditionalDrawing"/>
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Customer Signature" HorizontalOptions="FillAndExpand"/>
+                    <Button WidthRequest="45" Clicked="OnCustomerSignature" x:Name="cust_sign"/>
+                </StackLayout>
+
+            </controls:ControlLayout>
+        </ScrollView>
+    </ContentPage>
+    
+</CarouselPage>

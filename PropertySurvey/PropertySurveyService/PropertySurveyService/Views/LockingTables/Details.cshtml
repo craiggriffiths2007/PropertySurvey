@@ -1,0 +1,388 @@
+﻿@model PropertySurveyService.ViewModels.ItemIndexViewModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+
+                <table class="table">
+    <tbody>
+        <tr>
+            <td style="width:50%">
+
+    <h4>LockingTable</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Lockin.HeaderId)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Lockin.HeaderId)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Lockin.udi_cont)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Lockin.udi_cont)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Lockin.item_number)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Lockin.item_number)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Lockin.isComplete)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Lockin.isComplete)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Lockin.comments)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Lockin.comments)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Lockin.point_of_entry)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Lockin.point_of_entry)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Lockin.type_of_lockng_system_required)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Lockin.type_of_lockng_system_required)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Lockin.was_it_locked)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Lockin.was_it_locked)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Lockin.no_of_pics)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Lockin.no_of_pics)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Lockin.no_of_photos)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Lockin.no_of_photos)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Lockin.bMulti)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Lockin.bMulti)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Lockin.item)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Lockin.item)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Lockin.locking_make)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Lockin.locking_make)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Lockin.locking_codes)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Lockin.locking_codes)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Lockin.bDoorComplete)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Lockin.bDoorComplete)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Lockin.bWindowComplete)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Lockin.bWindowComplete)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Lockin.lock_colour)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Lockin.lock_colour)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Lockin.pagenum)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Lockin.pagenum)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Lockin.bDifferentFromOriginal)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Lockin.bDifferentFromOriginal)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Lockin.ChangeItemTo)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Lockin.ChangeItemTo)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Lockin.print_name)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Lockin.print_name)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Lockin.COD_Code)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Lockin.COD_Code)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Lockin.cause_of_damage)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Lockin.cause_of_damage)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Lockin.cause_of_damage_reason_different)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Lockin.cause_of_damage_reason_different)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Lockin.GearBox)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Lockin.GearBox)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Lockin.no_of_vids)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Lockin.no_of_vids)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Lockin.left_bolt)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Lockin.left_bolt)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Lockin.right_bolt)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Lockin.right_bolt)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Lockin.parts_to_order)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Lockin.parts_to_order)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Lockin.bLockComplete)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Lockin.bLockComplete)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Lockin.l_size1)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Lockin.l_size1)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Lockin.l_size2)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Lockin.l_size2)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Lockin.l_sizeA)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Lockin.l_sizeA)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Lockin.l_sizeB)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Lockin.l_sizeB)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Lockin.l_sizeC)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Lockin.l_sizeC)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Lockin.l_sizeD)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Lockin.l_sizeD)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Lockin.l_sizeE)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Lockin.l_sizeE)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Lockin.l_sizeF)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Lockin.l_sizeF)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Lockin.l_sizeG)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Lockin.l_sizeG)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Lockin.l_num)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Lockin.l_num)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Lockin.l_fpos1)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Lockin.l_fpos1)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Lockin.l_fpos2)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Lockin.l_fpos2)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Lockin.l_fpos3)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Lockin.l_fpos3)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Lockin.l_fpos4)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Lockin.l_fpos4)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Lockin.l_fpos5)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Lockin.l_fpos5)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Lockin.l_fpos6)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Lockin.l_fpos6)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Lockin.l_fpos7)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Lockin.l_fpos7)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Lockin.lock_position)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Lockin.lock_position)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Lockin.l_itype1)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Lockin.l_itype1)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Lockin.l_itype2)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Lockin.l_itype2)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Lockin.l_itype3)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Lockin.l_itype3)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Lockin.l_itype4)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Lockin.l_itype4)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Lockin.l_itype5)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Lockin.l_itype5)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Lockin.l_itype6)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Lockin.l_itype6)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Lockin.l_itype7)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Lockin.l_itype7)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Lockin.long_comments)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Lockin.long_comments)
+        </dd>
+                    </dl>
+                <td style="width:50%">
+                    <h4>Photos</h4>
+                    <hr />
+
+                    <table class="table">
+                        <tbody>
+
+
+                                @if (Model.Images != null)
+                                {
+                                    @foreach (var item in Model.Images)
+                                    {
+                                    <tr>
+                                        <td>
+                                            <img src="data:image/png;base64,@item.Data" style='height: 100%; width: 100%; object-fit: contain' />
+
+                                        </td>
+                                    </tr>
+
+                                    }
+                                }
+
+                        </tbody>
+                    </table>
+
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+
+</div>
+

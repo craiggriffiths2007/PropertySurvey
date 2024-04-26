@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PropertySurvey.LockTypeChoose">
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="Center" Spacing="20">
+            <Button Text="General" Clicked="general_button_clicked" HorizontalOptions="Center" WidthRequest="230" />
+            <Button Text="Multipoint" Clicked="multi_button_clicked" HorizontalOptions="Center" WidthRequest="230" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

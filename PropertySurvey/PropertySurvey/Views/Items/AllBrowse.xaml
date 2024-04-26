@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PropertySurvey.AllBrowse"  Title="">
+
+    <ContentPage.ToolbarItems>
+        <!--<ToolbarItem Clicked="OnAdd" Text="ADD"/>
+        <ToolbarItem Clicked="OnDelete" Text="DEL"/>
+        <ToolbarItem Clicked="OnCopy" Text="COPY"/>-->
+    </ContentPage.ToolbarItems>
+    
+    <ContentPage.Content>
+        <StackLayout Orientation="Vertical">
+            <ListView HasUnevenRows="True" x:Name="listView" ItemTapped="OnItemTapped">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout BackgroundColor="{Binding back_colour}"  Margin="3" Padding="3" >
+
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="{Binding item_type}" HorizontalOptions="StartAndExpand"/>
+                                </StackLayout>
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="{Binding other_info}" HorizontalOptions="StartAndExpand" />
+                                </StackLayout>
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="{Binding commnts}" HorizontalOptions="StartAndExpand" />
+                                </StackLayout>
+                            </StackLayout>
+
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <StackLayout Orientation="Horizontal" VerticalOptions="End">
+                <Button x:Name="add_button" Text="Add" Clicked="OnAdd" HorizontalOptions="FillAndExpand"/>
+                <Button x:Name="edit_button" Text="Edit" Clicked="OnSelect" HorizontalOptions="FillAndExpand"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                <Button Text="View" Clicked="OnView" HorizontalOptions="FillAndExpand"/>
+                <Button x:Name="delete_button" Text="Delete" Clicked="OnDelete" HorizontalOptions="FillAndExpand"/>
+                <Button x:Name="copy_button" Text="Copy" Clicked="OnCopy" HorizontalOptions="FillAndExpand"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

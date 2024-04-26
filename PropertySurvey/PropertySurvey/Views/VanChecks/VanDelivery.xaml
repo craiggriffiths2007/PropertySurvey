@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PropertySurvey.VanDelivery"             
+             xmlns:controls="clr-namespace:MartControls"
+             Title="Delivery Van Vehicle Checks">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Clicked="OnImagesClicked" Icon="images.png"/>
+    </ContentPage.ToolbarItems>
+
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                <controls:ControlLayout>
+                    <controls:YesNoLabel x:Name="is_complete" button_binding="is_complete" LabelText="Complete the check?" OnSelectionChanged="OnCompleteChanged"/>
+                </controls:ControlLayout>
+                <controls:ControlLayout x:Name="incomplete_area" IsVisible="False">
+                    <Label Text="Please explain why you were not able to complete the check, you do not need to fill in the rest of the sheet."/>
+                    <Entry Text="{Binding not_complete_reason}"/>
+                    <controls:Copyright/>
+                </controls:ControlLayout>
+                <controls:ControlLayout x:Name="complete_area" IsVisible="True">
+                    <!--<controls:EntryLabel x:Name="branch" TextBinding="branch" LabelText="Branch"/>-->
+                    <!--<controls:DateLabel x:Name="date" TheDate="{Binding date}" LabelText="Date"/>-->
+                    <controls:EntryLabel x:Name="name" TextBinding="name" LabelText="Name"/>
+                    <controls:EntryLabel x:Name="destination" TextBinding="destination" LabelText="Destination"/>
+                    <controls:EntryLabel x:Name="vehicle_reg" TextBinding="vehicle_registration" LabelText="Registration"/>
+                    <controls:EntryLabel x:Name="mileage" TextBinding="mileage" LabelText="Mileage" EntryKeyboard="Numeric"/>
+
+                    <controls:YesNoLabel button_binding="spare_i_2" LabelText="Loading/Storage Area Floor in Good Condition" OnSelectionChanged="OnFloorSelectionChanged"></controls:YesNoLabel>
+                    <StackLayout Orientation="Vertical" IsVisible="False" x:Name="floor_area">
+                        <Label Text="Please give a reason"/>
+                        <controls:EditorGrows Text="{Binding spare_s_2}" HorizontalOptions="FillAndExpand"/>
+                    </StackLayout>
+
+                    <controls:YesNoLabel button_binding="fmg_support_sticker" LabelText="FMG Support Sticker"></controls:YesNoLabel>
+                    <controls:YesNoLabel button_binding="fuel_card" LabelText="Uk Fuel Card"></controls:YesNoLabel>
+                    <controls:YesNoLabel button_binding="spare_i_1" LabelText="Shell Fuel Card"></controls:YesNoLabel>
+                    <controls:YesNoLabel button_binding="clean_external" LabelText="Clean External"></controls:YesNoLabel>
+                    <controls:YesNoLabel button_binding="clean_internal" LabelText="Clean Internal"></controls:YesNoLabel>
+                    <controls:YesNoLabel button_binding="fire_extinguisher" LabelText="Fire Extinguisher"></controls:YesNoLabel>
+                    <controls:YesNoLabel button_binding="first_aid_box" LabelText="First Aid Box"></controls:YesNoLabel>
+                    <controls:YesNoLabel button_binding="horn" LabelText="Horn"></controls:YesNoLabel>
+                    <controls:YesNoLabel button_binding="oil_and_water_checked" LabelText="Oil &amp; Water"></controls:YesNoLabel>
+                    <controls:YesNoLabel button_binding="accident_pack" LabelText="Accident Pack"></controls:YesNoLabel>
+                    <controls:YesNoLabel button_binding="portable_lighting" LabelText="Portable Lighting"></controls:YesNoLabel>
+                    <controls:YesNoLabel button_binding="ad_blue_level_check" LabelText="AD Blue Level Check"></controls:YesNoLabel>
+                    <controls:YesNoLabel button_binding="racks_and_poles" LabelText="Racks And Poles"></controls:YesNoLabel>
+                    <controls:YesNoLabel button_binding="ratchet_straps" LabelText="Ratchet Straps"></controls:YesNoLabel>
+                    <controls:YesNoLabel button_binding="service_due_sticker" LabelText="Service Due Sticker"></controls:YesNoLabel>
+                    <controls:YesNoLabel button_binding="no_smoking_sticker" LabelText="No Smoking Sticker"></controls:YesNoLabel>
+                    <controls:YesNoLabel button_binding="spare_oil" LabelText="Spare Oil"></controls:YesNoLabel>
+                    <controls:YesNoLabel button_binding="coolant_anti_freez" LabelText="Cooland/Anti Freeze Mix"></controls:YesNoLabel>
+                    <controls:YesNoLabel button_binding="tyre_pressure" LabelText="Tyre Pressude"></controls:YesNoLabel>
+                    <controls:YesNoLabel button_binding="van_height_sticker" LabelText="Height Sticker"></controls:YesNoLabel>
+                    <controls:YesNoLabel button_binding="van_locks" LabelText="Locks"></controls:YesNoLabel>
+                    <controls:YesNoLabel button_binding="wheel_nut_check_sticker" LabelText="Wheel Nut Check Sticker"></controls:YesNoLabel>
+                    <controls:YesNoLabel button_binding="windscreen_washer" LabelText="Windscreen Washer"></controls:YesNoLabel>
+                    <controls:YesNoLabel button_binding="fuel_oil_leaks" LabelText="Fuel/Oil Leaks"></controls:YesNoLabel>
+                    <controls:YesNoLabel button_binding="battery_security_condition" LabelText="Battery Security Condition"></controls:YesNoLabel>
+                    <controls:YesNoLabel button_binding="tyres_and_wheel_fixing" LabelText="Tyres And Wheel Fixing"></controls:YesNoLabel>
+                    <controls:YesNoLabel button_binding="spray_suppression" LabelText="Spray Suppression"></controls:YesNoLabel>
+                    <controls:YesNoLabel button_binding="steering" LabelText="Steering"></controls:YesNoLabel>
+                    <controls:YesNoLabel button_binding="security_of_load" LabelText="Security Of Load"></controls:YesNoLabel>
+                    <controls:YesNoLabel button_binding="mirrors" LabelText="Mirrors"></controls:YesNoLabel>
+                    <controls:YesNoLabel button_binding="lights" LabelText="Lights"></controls:YesNoLabel>
+
+                    <controls:YesNoLabel button_binding="reflectors" LabelText="Reflectors"></controls:YesNoLabel>
+                    <controls:YesNoLabel button_binding="inducators" LabelText="Inducators"></controls:YesNoLabel>
+                    <controls:YesNoLabel button_binding="wipers" LabelText="Whipers"></controls:YesNoLabel>
+                    <controls:YesNoLabel button_binding="washers" LabelText="Washers"></controls:YesNoLabel>
+                    <controls:YesNoLabel button_binding="excessive_exhaust_smoke" LabelText="Excessive Exhaust Smoke"></controls:YesNoLabel>
+                    <controls:YesNoLabel button_binding="brakes" LabelText="Brakes"></controls:YesNoLabel>
+                    <controls:YesNoLabel button_binding="security_of_body" LabelText="Security of Body/Wings"></controls:YesNoLabel>
+                    <controls:YesNoLabel button_binding="markers" LabelText="Markers"></controls:YesNoLabel>
+                    <controls:YesNoLabel button_binding="glass_windscreen" LabelText="Glass/Windscreen (Clear View)"></controls:YesNoLabel>
+                    <controls:YesNoLabel button_binding="receipt_book" LabelText="Receipt Book"></controls:YesNoLabel>
+                    <controls:YesNoLabel button_binding="keys_for_branches_sat" LabelText="Keys for Branches + Sat"></controls:YesNoLabel>
+                    <controls:YesNoLabel button_binding="pda_phone_accident_pack" LabelText="PDA Phone / Accident Pack"></controls:YesNoLabel>
+                    <controls:YesNoLabel button_binding="trade_invoices" LabelText="Trade Invoices"></controls:YesNoLabel>
+                    <controls:YesNoLabel button_binding="blue_bags" LabelText="Blue Bags"></controls:YesNoLabel>
+                    <controls:YesNoLabel button_binding="delivery_lists" LabelText="Delivery List(s)"></controls:YesNoLabel>
+                    <controls:YesNoLabel button_binding="collection_lists" LabelText="Collection List(s)"></controls:YesNoLabel>
+                    <controls:YesNoLabel button_binding="trade_delivery_notes" LabelText="Trade Delivery Note(s)"></controls:YesNoLabel>
+
+                    <Label Text="Report defects and actions taken"/>
+                    <controls:EditorGrows Text="{Binding report_defects}" HorizontalOptions="FillAndExpand"/>
+
+                    <Label Text="Safety helmets must be replaced every 4 years."/>
+                    <Label Text="I certify, I have checked this vehicle and all its contents."/>
+                    <Label Text="I have reported and defects, damage or missing items to my supervisor."/>
+                    <Label Text="I acknowledge that the information above is correct."/>
+
+                    <StackLayout HeightRequest="50"/>
+                    
+                    <controls:Copyright/>
+                </controls:ControlLayout>
+            </StackLayout>
+
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
+    
+    

@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PropertySurvey.Excess"
+             xmlns:controls="clr-namespace:MartControls"
+             Title="Excess">
+    <ContentPage.Content>
+        <controls:ControlLayout x:Name="page1">
+
+            <controls:YesNoLabel x:Name="testyesno" button_binding="bExcessCollected" OnSelectionChanged="OnButton"  LabelText="Has the excess been collected?"></controls:YesNoLabel>
+
+            <controls:EditPickerLabel x:Name="PayMeth" LabelText="Payment method" picker_title="Payment method" TextBinding="mop"/>
+            <controls:EditPickerLabel x:Name="NoPayReas" LabelText="Reason excess not paid" picker_title="Reason excess not paid" TextBinding="reason_excess_not_collected"/>
+            <!--
+            <StackLayout Orientation="Vertical" x:Name="PayMeth">
+                <Label Text="Payment method" />
+                <Entry Text="{Binding mop}" x:Name="pay_meth" IsEnabled="false"/>
+            </StackLayout>
+            <StackLayout Orientation="Vertical" x:Name="NoPayReas">
+                <Label Text="Reason excess not paid" />
+                <Entry Text="{Binding reason_excess_not_collected}" x:Name="reas_no" IsEnabled="false"/>
+            </StackLayout>-->
+            <Label Text="Additional" HorizontalOptions="FillAndExpand"/>
+            <Entry Text="{Binding new_sspare9}" x:Name="typeedit" HorizontalOptions="FillAndExpand" Keyboard="Numeric"/>
+            <controls:Copyright/>
+        </controls:ControlLayout>
+    </ContentPage.Content>
+</ContentPage>

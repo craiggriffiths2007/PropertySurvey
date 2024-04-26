@@ -1,0 +1,227 @@
+﻿@model IEnumerable<PropertySurveyService.Models.GreenTable>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.HeaderId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.udi_cont)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.item_number)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.isComplete)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.bDifferentFromOriginal)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.cause_of_damage)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.cause_of_damage_reason_different)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.rep_reason)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.material_type)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.colour)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.glaze_type)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.base_size)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.base_size_x)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.base_size_y)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.type_of_glass)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.door_opening_type)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.window_opening_type)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.roof_opening_lights)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.auto_or_manual)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.overall_height)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.summary)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.no_of_pics)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.no_of_photos)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.no_of_vids)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.parts_to_order)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.point_of_entry)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.type_of_lockng_system_required)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.was_it_locked)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ChangeItemTo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.print_name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.glass_complete)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.replace_glass)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.repair_or_replace)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.HeaderId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.udi_cont)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.item_number)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.isComplete)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.bDifferentFromOriginal)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.cause_of_damage)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.cause_of_damage_reason_different)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.rep_reason)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.material_type)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.colour)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.glaze_type)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.base_size)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.base_size_x)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.base_size_y)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.type_of_glass)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.door_opening_type)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.window_opening_type)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.roof_opening_lights)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.auto_or_manual)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.overall_height)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.summary)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.no_of_pics)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.no_of_photos)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.no_of_vids)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.parts_to_order)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.point_of_entry)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.type_of_lockng_system_required)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.was_it_locked)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ChangeItemTo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.print_name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.glass_complete)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.replace_glass)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.repair_or_replace)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

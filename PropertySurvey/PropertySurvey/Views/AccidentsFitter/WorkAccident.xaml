@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<s:CarouselValidateNoImage
+            xmlns="http://xamarin.com/schemas/2014/forms"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            x:Class="PropertySurvey.WorkAccident"
+            xmlns:controls="clr-namespace:MartControls"
+            xmlns:s="clr-namespace:PropertySurvey"
+            Title="Accident Report">
+    <ContentPage TabIndex="0">
+        <ScrollView>
+            <controls:ControlLayout>
+                <StackLayout x:Name="accident_area" IsVisible="False">
+                    <StackLayout HorizontalOptions="FillAndExpand" Orientation="Horizontal">
+                        <Label Text="Date" HorizontalOptions="FillAndExpand"/>
+                        <DatePicker x:Name="date_picker" WidthRequest="160" Date="{Binding date_time}"/>
+                    </StackLayout>
+
+                    <Label Text="About the person who had the accident"/>
+                    <controls:EntryLabel x:Name="name_entry" LabelText="Full name" TextBinding="full_name"/>
+                    <controls:EntryLabel x:Name="address1_entry" LabelText="Address" TextBinding="add1"/>
+                    <Entry x:Name="address2_entry" Text="{Binding add2}"/>
+                    <Entry x:Name="address3_entry" Text="{Binding add3}"/>
+                    <controls:EntryLabel x:Name="postcode_entry" LabelText="Postcode" TextBinding="pcode" Orientation="Horizontal"/>
+                    <controls:EntryLabel x:Name="occupation_entry" LabelText="Occupation" TextBinding="occupation"/>
+                    <Label Text="About you, the person filling in this record"/>
+                    <controls:EntryLabel x:Name="filer_name_entry" LabelText="Full name" TextBinding="filer_full_name"/>
+                    <controls:EntryLabel x:Name="filer_address1_entry" LabelText="Address" TextBinding="filer_add1"/>
+                    <Entry x:Name="filer_address2_entry" Text="{Binding filer_add2}"/>
+                    <Entry x:Name="filer_address3_entry" Text="{Binding filer_add3}"/>
+                    <controls:EntryLabel x:Name="filer_postcode_entry" LabelText="Postcode" TextBinding="filer_pcode" Orientation="Horizontal"/>
+                    <controls:EntryLabel x:Name="filer_occupation_entry" LabelText="Occupation" TextBinding="filer_occupation"/>
+
+                    <controls:DateLabel x:Name="date_happened_picker" TheDate="{Binding date_happened}" LabelText="Date happened"/>
+                    
+                    <!--
+                    <StackLayout HorizontalOptions="FillAndExpand" Orientation="Horizontal">
+                        <Label Text="Date happened" HorizontalOptions="FillAndExpand"/>
+                        <DatePicker x:Name="date_happened_picker" WidthRequest="160" Date="{Binding date_happened}"/>
+                    </StackLayout>
+                    -->
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Time" HorizontalOptions="FillAndExpand"/>
+                        <TimePicker x:Name="time_happened_picker" WidthRequest="160" Time="{Binding time_happened}"/>
+                    </StackLayout>
+
+                    <controls:EntryLabel x:Name="how_did_it_happen_entry" LabelText="How did the accident happen" TextBinding="how_did_accident_happen"/>
+                    <controls:EntryLabel x:Name="where_did_it_happen_entry" LabelText="Where did the accident happen" TextBinding="spare9"/>
+                    <controls:EntryLabel x:Name="materials_for_treatment_entry" LabelText="Materials used in treatment" TextBinding="materials_used_in_treatment"/>
+                    <controls:EntryLabel x:Name="injuries_entry" LabelText="What Injuries, if any, were sustained" TextBinding="spare4"/>
+
+                    <Label Text="Person who had the accident"/>
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                        <Button Text="Signature" Clicked="signature_clicked1" WidthRequest="250" HeightRequest="40" Margin="20,2"/>
+                        <Image x:Name="signature_tick1" Source="green_tick.png" HorizontalOptions="End" IsVisible="False"/>
+                    </StackLayout>
+
+                    <Label Text="Person reporting the accident"/>
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                        <Button Text="Signature" Clicked="signature_clicked2" WidthRequest="250" HeightRequest="40" Margin="20,2"/>
+                        <Image x:Name="signature_tick2" Source="green_tick.png" HorizontalOptions="End" IsVisible="False"/>
+                    </StackLayout>
+
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                        <Label Text="Please take photographs" HorizontalOptions="FillAndExpand"/>
+                        <Button Text="Photos" Clicked="photos_clicked"/>
+                    </StackLayout>
+
+                    <Button Text="Send" Clicked="send_clicked" HorizontalOptions="End"/>
+                    
+                    <controls:Copyright/>
+                </StackLayout>
+                <StackLayout x:Name="near_miss_area" IsVisible="False">
+                    <Label Text="Near miss reporting"/>
+                    <Label Text="We will investigate this for you to prevent potential accidents-its in everyones interests to find out what happened and why so we can do something about it." FontAttributes="Italic"/>
+                    <Label Text="A near miss is a potential hazard or incident that has not resulted in a personal injury." TextColor="DarkRed"/>
+                    <Label Text="Please complete this form as a means to report these newar miss situations-Martindales Ltd/MTF Lt."/>
+                    <controls:EntryLabel x:Name="what_happened_entry" LabelText="What happened" TextBinding="spare11"/>
+                    <controls:EntryLabel x:Name="where_did_near_miss_happen_entry" LabelText="Where did it happen" TextBinding="spare12"/>
+
+                    <controls:DateLabel x:Name="near_miss_date__picker" TheDate="{Binding spare13}" LabelText="Date happened"/>
+
+                    <!--
+                    <StackLayout HorizontalOptions="FillAndExpand" Orientation="Horizontal">
+                        <Label Text="Date happened" HorizontalOptions="FillAndExpand"/>
+                        <DatePicker x:Name="near_miss_date__picker" WidthRequest="160" Date="{Binding spare13}"/>
+                    </StackLayout>
+                    -->
+                    <controls:EntryLabel x:Name="anon_or_name_entry" LabelText="Anonymous or name" TextBinding="spare14"/>
+
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                        <Label Text="Please take photographs" HorizontalOptions="FillAndExpand"/>
+                        <Button Text="Photos" Clicked="photos_clicked"/>
+                    </StackLayout>
+                    
+                    <Button Text="Send" Clicked="send_clicked" HorizontalOptions="End"/>
+                    <controls:Copyright/>
+                </StackLayout>
+            </controls:ControlLayout>
+        </ScrollView>
+    </ContentPage>
+</s:CarouselValidateNoImage>

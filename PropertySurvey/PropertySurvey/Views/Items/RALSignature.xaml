@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:controls="clr-namespace:MartControls"
+             x:Class="PropertySurvey.RALSignature"
+             Title="Customer Signature">
+    <ContentPage.Content>
+        <StackLayout Orientation="Vertical" VerticalOptions="FillAndExpand" >
+            <StackLayout Orientation="Vertical" VerticalOptions="FillAndExpand">
+                <StackLayout Orientation="Horizontal">
+                    <StackLayout Orientation="Vertical" HorizontalOptions="StartAndExpand">
+                        <Label Text="Door Colour"/>
+                        <Label x:Name="door_inside" Text="Inside - " TextColor="Black"/>
+                        <Label x:Name="door_outside" Text="Outside - " TextColor="Black"/>
+
+                        <Label Text="Frame Colour"/>
+                        <Label x:Name="frame_inside" Text="Inside - " TextColor="Black"/>
+                        <Label x:Name="frame_outside" Text="Outside - " TextColor="Black"/>
+                    </StackLayout>
+                </StackLayout>
+                <Grid xmlns:signature="clr-namespace:SignaturePad.Forms;assembly=SignaturePad.Forms" VerticalOptions="FillAndExpand">
+                    <signature:SignaturePadView x:Name="signaturePad"  StrokeCompleted="SignatureChanged" Cleared="SignatureChanged"/>
+                </Grid>
+            </StackLayout>
+            <Button x:Name="save_button" Text="Save" IsEnabled="False" VerticalOptions="End" HorizontalOptions="EndAndExpand" Clicked="SaveButton_Clicked"/>
+            <StackLayout HeightRequest="50"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

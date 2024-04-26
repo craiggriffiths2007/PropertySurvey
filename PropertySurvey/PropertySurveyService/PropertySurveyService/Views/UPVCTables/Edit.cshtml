@@ -1,0 +1,684 @@
+﻿@model PropertySurveyService.Models.UPVCTable
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>UPVCTable</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <label asp-for="HeaderId" class="control-label"></label>
+                <input asp-for="HeaderId" class="form-control" />
+                <span asp-validation-for="HeaderId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="udi_cont" class="control-label"></label>
+                <input asp-for="udi_cont" class="form-control" />
+                <span asp-validation-for="udi_cont" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="item_number" class="control-label"></label>
+                <input asp-for="item_number" class="form-control" />
+                <span asp-validation-for="item_number" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="isComplete" class="control-label"></label>
+                <input asp-for="isComplete" class="form-control" />
+                <span asp-validation-for="isComplete" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="bRepair" /> @Html.DisplayNameFor(model => model.bRepair)
+                </label>
+            </div>
+            <div class="form-group">
+                <label asp-for="cosmetic_damage" class="control-label"></label>
+                <input asp-for="cosmetic_damage" class="form-control" />
+                <span asp-validation-for="cosmetic_damage" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="additional_locks" class="control-label"></label>
+                <input asp-for="additional_locks" class="form-control" />
+                <span asp-validation-for="additional_locks" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="gaskets" class="control-label"></label>
+                <input asp-for="gaskets" class="form-control" />
+                <span asp-validation-for="gaskets" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="gaskets_text" class="control-label"></label>
+                <input asp-for="gaskets_text" class="form-control" />
+                <span asp-validation-for="gaskets_text" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="handles_req" class="control-label"></label>
+                <input asp-for="handles_req" class="form-control" />
+                <span asp-validation-for="handles_req" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="handles_text" class="control-label"></label>
+                <input asp-for="handles_text" class="form-control" />
+                <span asp-validation-for="handles_text" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="replace_panel" class="control-label"></label>
+                <input asp-for="replace_panel" class="form-control" />
+                <span asp-validation-for="replace_panel" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="replace_reason" class="control-label"></label>
+                <input asp-for="replace_reason" class="form-control" />
+                <span asp-validation-for="replace_reason" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="replace_explain" class="control-label"></label>
+                <input asp-for="replace_explain" class="form-control" />
+                <span asp-validation-for="replace_explain" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="upvc_item" class="control-label"></label>
+                <input asp-for="upvc_item" class="form-control" />
+                <span asp-validation-for="upvc_item" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="cause_of_damage" class="control-label"></label>
+                <input asp-for="cause_of_damage" class="form-control" />
+                <span asp-validation-for="cause_of_damage" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="cause_of_damage_reason_different" class="control-label"></label>
+                <input asp-for="cause_of_damage_reason_different" class="form-control" />
+                <span asp-validation-for="cause_of_damage_reason_different" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="colour" class="control-label"></label>
+                <input asp-for="colour" class="form-control" />
+                <span asp-validation-for="colour" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="cills" class="control-label"></label>
+                <input asp-for="cills" class="form-control" />
+                <span asp-validation-for="cills" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="outer_section_size" class="control-label"></label>
+                <input asp-for="outer_section_size" class="form-control" />
+                <span asp-validation-for="outer_section_size" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="internal_width" class="control-label"></label>
+                <input asp-for="internal_width" class="form-control" />
+                <span asp-validation-for="internal_width" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="internal_height" class="control-label"></label>
+                <input asp-for="internal_height" class="form-control" />
+                <span asp-validation-for="internal_height" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="brick_width" class="control-label"></label>
+                <input asp-for="brick_width" class="form-control" />
+                <span asp-validation-for="brick_width" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="brick_height" class="control-label"></label>
+                <input asp-for="brick_height" class="form-control" />
+                <span asp-validation-for="brick_height" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="midrail" class="control-label"></label>
+                <input asp-for="midrail" class="form-control" />
+                <span asp-validation-for="midrail" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="addons" class="control-label"></label>
+                <input asp-for="addons" class="form-control" />
+                <span asp-validation-for="addons" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="addon_width" class="control-label"></label>
+                <input asp-for="addon_width" class="form-control" />
+                <span asp-validation-for="addon_width" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="addon_height" class="control-label"></label>
+                <input asp-for="addon_height" class="form-control" />
+                <span asp-validation-for="addon_height" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="head_drip" class="control-label"></label>
+                <input asp-for="head_drip" class="form-control" />
+                <span asp-validation-for="head_drip" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="handle_colour" class="control-label"></label>
+                <input asp-for="handle_colour" class="form-control" />
+                <span asp-validation-for="handle_colour" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="locking_type" class="control-label"></label>
+                <input asp-for="locking_type" class="form-control" />
+                <span asp-validation-for="locking_type" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="letter_box" class="control-label"></label>
+                <input asp-for="letter_box" class="form-control" />
+                <span asp-validation-for="letter_box" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="letter_box_pos" class="control-label"></label>
+                <input asp-for="letter_box_pos" class="form-control" />
+                <span asp-validation-for="letter_box_pos" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="pet_flap" class="control-label"></label>
+                <input asp-for="pet_flap" class="form-control" />
+                <span asp-validation-for="pet_flap" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="pet_type" class="control-label"></label>
+                <input asp-for="pet_type" class="form-control" />
+                <span asp-validation-for="pet_type" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="pet_magnetic" class="control-label"></label>
+                <input asp-for="pet_magnetic" class="form-control" />
+                <span asp-validation-for="pet_magnetic" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="bead_type" class="control-label"></label>
+                <input asp-for="bead_type" class="form-control" />
+                <span asp-validation-for="bead_type" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="opens" class="control-label"></label>
+                <input asp-for="opens" class="form-control" />
+                <span asp-validation-for="opens" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="glaze" class="control-label"></label>
+                <input asp-for="glaze" class="form-control" />
+                <span asp-validation-for="glaze" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="trickle_vents" class="control-label"></label>
+                <input asp-for="trickle_vents" class="form-control" />
+                <span asp-validation-for="trickle_vents" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="spacer_thickness" class="control-label"></label>
+                <input asp-for="spacer_thickness" class="form-control" />
+                <span asp-validation-for="spacer_thickness" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="spacer_colour" class="control-label"></label>
+                <input asp-for="spacer_colour" class="form-control" />
+                <span asp-validation-for="spacer_colour" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="glass_type" class="control-label"></label>
+                <input asp-for="glass_type" class="form-control" />
+                <span asp-validation-for="glass_type" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="glass_pattern" class="control-label"></label>
+                <input asp-for="glass_pattern" class="form-control" />
+                <span asp-validation-for="glass_pattern" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="special_glass" class="control-label"></label>
+                <input asp-for="special_glass" class="form-control" />
+                <span asp-validation-for="special_glass" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="double_tripple" class="control-label"></label>
+                <input asp-for="double_tripple" class="form-control" />
+                <span asp-validation-for="double_tripple" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="internal_lock" class="control-label"></label>
+                <input asp-for="internal_lock" class="form-control" />
+                <span asp-validation-for="internal_lock" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="bNewLockingMech" class="control-label"></label>
+                <input asp-for="bNewLockingMech" class="form-control" />
+                <span asp-validation-for="bNewLockingMech" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="bLockComplete" /> @Html.DisplayNameFor(model => model.bLockComplete)
+                </label>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="bHandleDrawingComplete" /> @Html.DisplayNameFor(model => model.bHandleDrawingComplete)
+                </label>
+            </div>
+            <div class="form-group">
+                <label asp-for="no_of_pics" class="control-label"></label>
+                <input asp-for="no_of_pics" class="form-control" />
+                <span asp-validation-for="no_of_pics" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="midrail_height" class="control-label"></label>
+                <input asp-for="midrail_height" class="form-control" />
+                <span asp-validation-for="midrail_height" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="no_of_photos" class="control-label"></label>
+                <input asp-for="no_of_photos" class="form-control" />
+                <span asp-validation-for="no_of_photos" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="frame_depth" class="control-label"></label>
+                <input asp-for="frame_depth" class="form-control" />
+                <span asp-validation-for="frame_depth" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="docl" class="control-label"></label>
+                <input asp-for="docl" class="form-control" />
+                <span asp-validation-for="docl" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="profile_type" class="control-label"></label>
+                <input asp-for="profile_type" class="form-control" />
+                <span asp-validation-for="profile_type" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="room_location" class="control-label"></label>
+                <input asp-for="room_location" class="form-control" />
+                <span asp-validation-for="room_location" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="no_of_vids" class="control-label"></label>
+                <input asp-for="no_of_vids" class="form-control" />
+                <span asp-validation-for="no_of_vids" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="LPHandles" class="control-label"></label>
+                <input asp-for="LPHandles" class="form-control" />
+                <span asp-validation-for="LPHandles" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="slide_position" class="control-label"></label>
+                <input asp-for="slide_position" class="form-control" />
+                <span asp-validation-for="slide_position" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="threshold_type" class="control-label"></label>
+                <input asp-for="threshold_type" class="form-control" />
+                <span asp-validation-for="threshold_type" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="bDifferentFromOriginal" /> @Html.DisplayNameFor(model => model.bDifferentFromOriginal)
+                </label>
+            </div>
+            <div class="form-group">
+                <label asp-for="ChangeItemTo" class="control-label"></label>
+                <input asp-for="ChangeItemTo" class="form-control" />
+                <span asp-validation-for="ChangeItemTo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="print_name" class="control-label"></label>
+                <input asp-for="print_name" class="form-control" />
+                <span asp-validation-for="print_name" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="fensa" /> @Html.DisplayNameFor(model => model.fensa)
+                </label>
+            </div>
+            <div class="form-group">
+                <label asp-for="WER_Rating" class="control-label"></label>
+                <input asp-for="WER_Rating" class="form-control" />
+                <span asp-validation-for="WER_Rating" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="long_comments" class="control-label"></label>
+                <input asp-for="long_comments" class="form-control" />
+                <span asp-validation-for="long_comments" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="bDoorComplete" /> @Html.DisplayNameFor(model => model.bDoorComplete)
+                </label>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="bWindowComplete" /> @Html.DisplayNameFor(model => model.bWindowComplete)
+                </label>
+            </div>
+            <div class="form-group">
+                <label asp-for="lead_sizeA" class="control-label"></label>
+                <input asp-for="lead_sizeA" class="form-control" />
+                <span asp-validation-for="lead_sizeA" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="lead_sizeB" class="control-label"></label>
+                <input asp-for="lead_sizeB" class="form-control" />
+                <span asp-validation-for="lead_sizeB" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="lead_sizeC" class="control-label"></label>
+                <input asp-for="lead_sizeC" class="form-control" />
+                <span asp-validation-for="lead_sizeC" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="lead_sizeD" class="control-label"></label>
+                <input asp-for="lead_sizeD" class="form-control" />
+                <span asp-validation-for="lead_sizeD" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="lead_CWidth" class="control-label"></label>
+                <input asp-for="lead_CWidth" class="form-control" />
+                <span asp-validation-for="lead_CWidth" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="lead_CHeight" class="control-label"></label>
+                <input asp-for="lead_CHeight" class="form-control" />
+                <span asp-validation-for="lead_CHeight" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="lead_anti_rattle" class="control-label"></label>
+                <input asp-for="lead_anti_rattle" class="form-control" />
+                <span asp-validation-for="lead_anti_rattle" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="lead_thickness" class="control-label"></label>
+                <input asp-for="lead_thickness" class="form-control" />
+                <span asp-validation-for="lead_thickness" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="lead_sod" class="control-label"></label>
+                <input asp-for="lead_sod" class="form-control" />
+                <span asp-validation-for="lead_sod" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="lead_type" class="control-label"></label>
+                <input asp-for="lead_type" class="form-control" />
+                <span asp-validation-for="lead_type" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="lead_bDiamondComplete" /> @Html.DisplayNameFor(model => model.lead_bDiamondComplete)
+                </label>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="lead_bGeorgianComplete" /> @Html.DisplayNameFor(model => model.lead_bGeorgianComplete)
+                </label>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="lead_bBarComplete" /> @Html.DisplayNameFor(model => model.lead_bBarComplete)
+                </label>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="lead_bSGDesignComplete" /> @Html.DisplayNameFor(model => model.lead_bSGDesignComplete)
+                </label>
+            </div>
+            <div class="form-group">
+                <label asp-for="lock_make" class="control-label"></label>
+                <input asp-for="lock_make" class="form-control" />
+                <span asp-validation-for="lock_make" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="lock_codes" class="control-label"></label>
+                <input asp-for="lock_codes" class="form-control" />
+                <span asp-validation-for="lock_codes" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="bPanelComplete" /> @Html.DisplayNameFor(model => model.bPanelComplete)
+                </label>
+            </div>
+            <div class="form-group">
+                <label asp-for="left_bolt" class="control-label"></label>
+                <input asp-for="left_bolt" class="form-control" />
+                <span asp-validation-for="left_bolt" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="right_bolt" class="control-label"></label>
+                <input asp-for="right_bolt" class="form-control" />
+                <span asp-validation-for="right_bolt" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="GearBox" class="control-label"></label>
+                <input asp-for="GearBox" class="form-control" />
+                <span asp-validation-for="GearBox" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="hinge_colour" class="control-label"></label>
+                <input asp-for="hinge_colour" class="form-control" />
+                <span asp-validation-for="hinge_colour" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="lead_comments" class="control-label"></label>
+                <input asp-for="lead_comments" class="form-control" />
+                <span asp-validation-for="lead_comments" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="collect_and_copy" class="control-label"></label>
+                <input asp-for="collect_and_copy" class="form-control" />
+                <span asp-validation-for="collect_and_copy" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="temporary" class="control-label"></label>
+                <input asp-for="temporary" class="form-control" />
+                <span asp-validation-for="temporary" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="parts_to_order" class="control-label"></label>
+                <input asp-for="parts_to_order" class="form-control" />
+                <span asp-validation-for="parts_to_order" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="is_a_flat" class="control-label"></label>
+                <input asp-for="is_a_flat" class="form-control" />
+                <span asp-validation-for="is_a_flat" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="point_of_entry" class="control-label"></label>
+                <input asp-for="point_of_entry" class="form-control" />
+                <span asp-validation-for="point_of_entry" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="type_of_lockng_system_required" class="control-label"></label>
+                <input asp-for="type_of_lockng_system_required" class="form-control" />
+                <span asp-validation-for="type_of_lockng_system_required" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="was_it_locked" class="control-label"></label>
+                <input asp-for="was_it_locked" class="form-control" />
+                <span asp-validation-for="was_it_locked" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="back_to_back_spacer_width" class="control-label"></label>
+                <input asp-for="back_to_back_spacer_width" class="form-control" />
+                <span asp-validation-for="back_to_back_spacer_width" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="back_to_back_spacer_height" class="control-label"></label>
+                <input asp-for="back_to_back_spacer_height" class="form-control" />
+                <span asp-validation-for="back_to_back_spacer_height" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="l_size1" class="control-label"></label>
+                <input asp-for="l_size1" class="form-control" />
+                <span asp-validation-for="l_size1" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="l_size2" class="control-label"></label>
+                <input asp-for="l_size2" class="form-control" />
+                <span asp-validation-for="l_size2" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="l_sizeA" class="control-label"></label>
+                <input asp-for="l_sizeA" class="form-control" />
+                <span asp-validation-for="l_sizeA" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="l_sizeB" class="control-label"></label>
+                <input asp-for="l_sizeB" class="form-control" />
+                <span asp-validation-for="l_sizeB" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="l_sizeC" class="control-label"></label>
+                <input asp-for="l_sizeC" class="form-control" />
+                <span asp-validation-for="l_sizeC" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="l_sizeD" class="control-label"></label>
+                <input asp-for="l_sizeD" class="form-control" />
+                <span asp-validation-for="l_sizeD" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="l_sizeE" class="control-label"></label>
+                <input asp-for="l_sizeE" class="form-control" />
+                <span asp-validation-for="l_sizeE" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="l_sizeF" class="control-label"></label>
+                <input asp-for="l_sizeF" class="form-control" />
+                <span asp-validation-for="l_sizeF" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="l_sizeG" class="control-label"></label>
+                <input asp-for="l_sizeG" class="form-control" />
+                <span asp-validation-for="l_sizeG" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="l_num" class="control-label"></label>
+                <input asp-for="l_num" class="form-control" />
+                <span asp-validation-for="l_num" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="l_fpos1" class="control-label"></label>
+                <input asp-for="l_fpos1" class="form-control" />
+                <span asp-validation-for="l_fpos1" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="l_fpos2" class="control-label"></label>
+                <input asp-for="l_fpos2" class="form-control" />
+                <span asp-validation-for="l_fpos2" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="l_fpos3" class="control-label"></label>
+                <input asp-for="l_fpos3" class="form-control" />
+                <span asp-validation-for="l_fpos3" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="l_fpos4" class="control-label"></label>
+                <input asp-for="l_fpos4" class="form-control" />
+                <span asp-validation-for="l_fpos4" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="l_fpos5" class="control-label"></label>
+                <input asp-for="l_fpos5" class="form-control" />
+                <span asp-validation-for="l_fpos5" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="l_fpos6" class="control-label"></label>
+                <input asp-for="l_fpos6" class="form-control" />
+                <span asp-validation-for="l_fpos6" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="l_fpos7" class="control-label"></label>
+                <input asp-for="l_fpos7" class="form-control" />
+                <span asp-validation-for="l_fpos7" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="lock_position" class="control-label"></label>
+                <input asp-for="lock_position" class="form-control" />
+                <span asp-validation-for="lock_position" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="l_itype1" class="control-label"></label>
+                <input asp-for="l_itype1" class="form-control" />
+                <span asp-validation-for="l_itype1" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="l_itype2" class="control-label"></label>
+                <input asp-for="l_itype2" class="form-control" />
+                <span asp-validation-for="l_itype2" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="l_itype3" class="control-label"></label>
+                <input asp-for="l_itype3" class="form-control" />
+                <span asp-validation-for="l_itype3" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="l_itype4" class="control-label"></label>
+                <input asp-for="l_itype4" class="form-control" />
+                <span asp-validation-for="l_itype4" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="l_itype5" class="control-label"></label>
+                <input asp-for="l_itype5" class="form-control" />
+                <span asp-validation-for="l_itype5" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="l_itype6" class="control-label"></label>
+                <input asp-for="l_itype6" class="form-control" />
+                <span asp-validation-for="l_itype6" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="l_itype7" class="control-label"></label>
+                <input asp-for="l_itype7" class="form-control" />
+                <span asp-validation-for="l_itype7" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="lead_CWidthf" class="control-label"></label>
+                <input asp-for="lead_CWidthf" class="form-control" />
+                <span asp-validation-for="lead_CWidthf" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="lead_CHeightf" class="control-label"></label>
+                <input asp-for="lead_CHeightf" class="form-control" />
+                <span asp-validation-for="lead_CHeightf" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="lead_CWidths" class="control-label"></label>
+                <input asp-for="lead_CWidths" class="form-control" />
+                <span asp-validation-for="lead_CWidths" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="lead_CHeights" class="control-label"></label>
+                <input asp-for="lead_CHeights" class="form-control" />
+                <span asp-validation-for="lead_CHeights" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="glass_complete" /> @Html.DisplayNameFor(model => model.glass_complete)
+                </label>
+            </div>
+            <div class="form-group">
+                <label asp-for="replace_glass" class="control-label"></label>
+                <input asp-for="replace_glass" class="form-control" />
+                <span asp-validation-for="replace_glass" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

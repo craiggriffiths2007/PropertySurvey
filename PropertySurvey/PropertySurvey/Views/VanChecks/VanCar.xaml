@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PropertySurvey.VanCar"             
+             xmlns:controls="clr-namespace:MartControls"
+             Title="Car">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Clicked="OnImagesClicked" Icon="images.png"/>
+    </ContentPage.ToolbarItems>
+
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                <controls:ControlLayout>
+                    <controls:YesNoLabel x:Name="is_complete" button_binding="is_complete" LabelText="Complete the check?" OnSelectionChanged="OnCompleteChanged"/>
+                </controls:ControlLayout>
+                <controls:ControlLayout x:Name="incomplete_area" IsVisible="False">
+                    <Label Text="Please explain why you were not able to complete the check, you do not need to fill in the rest of the sheet."/>
+                    <Entry Text="{Binding not_complete_reason}"/>
+                    <controls:Copyright/>
+                </controls:ControlLayout>
+                <controls:ControlLayout x:Name="complete_area" IsVisible="True">
+                <controls:EntryLabel x:Name="vehicle_reg" TextBinding="vehicle_reg" LabelText="Registration"/>
+                <controls:EntryLabel x:Name="mileage" TextBinding="mileage" LabelText="Mileage" EntryKeyboard="Numeric"/>
+
+                    <controls:YesNoLabelEntryLabel x:Name="fuel_card"     ButtonLabel="Uk Fuel Card" 
+                                                                            button_binding="fuel_card" TextBinding="fuel_card_s" />
+                    <controls:YesNoLabelEntryLabel x:Name="shell_fuel_card"     ButtonLabel="Shell Fuel Card" 
+                                                                            button_binding="shell_fuel_card" TextBinding="shell_fuel_card_s" />
+                <controls:YesNoLabelEntryLabel x:Name="shell_points_card"     ButtonLabel="Shell Points" 
+                                                                            button_binding="shell_points_card" TextBinding="shell_points_card_s" />
+                <controls:YesNoLabelEntryLabel x:Name="interior_clean"     ButtonLabel="Interior clean" 
+                                                                            button_binding="interior_clean" TextBinding="fuel_card_s" />
+                <controls:YesNoLabelEntryLabel x:Name="oil_level"     ButtonLabel="Oil Level" 
+                                                                            button_binding="oil_level" TextBinding="oil_level_s" />
+                <controls:YesNoLabelEntryLabel x:Name="water_level"     ButtonLabel="Water Level" 
+                                                                            button_binding="water_level" TextBinding="water_level_s" />
+                <controls:YesNoLabelEntryLabel x:Name="windscreen_wash"     ButtonLabel="Windscreen Wash" 
+                                                                            button_binding="windscreen_wash" TextBinding="windscreen_wash_s" />
+                <controls:YesNoLabelEntryLabel x:Name="spare_wheel"     ButtonLabel="Spare Wheel" 
+                                                                            button_binding="spare_wheel" TextBinding="spare_wheel_s" />
+                <controls:YesNoLabelEntryLabel x:Name="jack"     ButtonLabel="Jack" 
+                                                                            button_binding="jack" TextBinding="jack_s" />
+                <controls:YesNoLabelEntryLabel x:Name="wheel_brace"     ButtonLabel="Wheel Brace" 
+                                                                            button_binding="wheel_brace" TextBinding="wheel_brace_s" />
+                <controls:YesNoLabelEntryLabel x:Name="tools"     ButtonLabel="Tools" 
+                                                                            button_binding="tools" TextBinding="tools_s" />
+                <controls:YesNoLabelEntryLabel x:Name="tyre_condition"     ButtonLabel="Tyre Condition" 
+                                                                            button_binding="tyre_condition" TextBinding="tyre_condition_s" />
+                    <controls:YesNoLabelEntryLabel x:Name="pressure_passenger_front"     ButtonLabel="Passenger front pressure" 
+                                                                            button_binding="pressure_passenger_front" TextBinding="pressure_passenger_front_s" />
+                    <controls:YesNoLabelEntryLabel x:Name="pressure_passenger_rear"     ButtonLabel="Passenger rear pressure" 
+                                                                            button_binding="pressure_passenger_rear" TextBinding="pressure_passenger_rear_s" />
+                    <controls:YesNoLabelEntryLabel x:Name="pressure_driver_front"     ButtonLabel="Driver front pressure" 
+                                                                            button_binding="pressure_driver_front" TextBinding="pressure_driver_front_s" />
+                    <controls:YesNoLabelEntryLabel x:Name="pressure_driver_rear"     ButtonLabel="Driver rear pressure" 
+                                                                            button_binding="pressure_driver_rear" TextBinding="pressure_driver_rear_s" />
+                <controls:YesNoLabelEntryLabel x:Name="spare_tyre_pressure"     ButtonLabel="Spare tyre pressure" 
+                                                                            button_binding="spare_tyre_pressure" TextBinding="spare_tyre_pressure_s" />
+                <StackLayout HeightRequest="80"/>
+                <Label Text="Safety helmets must be replaced every 4 years"/>
+
+                <Label Text="I certify, I have checked this vehicle and all its contents,"/>
+
+                <Label Text="I have reported any defects, damage or missing items to my supervisor,"/>
+
+                <Label Text="I acknowledge that the information above is correct."/>
+
+                    <controls:Copyright/>
+                </controls:ControlLayout>
+            </StackLayout>
+
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
+    
+    

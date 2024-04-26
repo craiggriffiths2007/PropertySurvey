@@ -1,0 +1,1716 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>pdbonly</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Martindales\**" />
+    <Compile Remove="ViewModels\**" />
+    <EmbeddedResource Remove="Martindales\**" />
+    <EmbeddedResource Remove="ViewModels\**" />
+    <None Remove="Martindales\**" />
+    <None Remove="ViewModels\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Views\Accidents\WorkAccident.xaml.cs" />
+    <Compile Remove="Comms\SendPictures.xaml.cs" />
+    <Compile Remove="Helpers\ICameraHelper.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Remove="Comms\SendPictures.xaml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Images\152.png" />
+    <None Remove="Images\action-arrow-left.png" />
+    <None Remove="Images\action-arrow-right.png" />
+    <None Remove="Images\all reports.png" />
+    <None Remove="Images\allbackground.jpg" />
+    <None Remove="Images\aperture.jpg" />
+    <None Remove="Images\appbar.feature.settings.rest.png" />
+    <None Remove="Images\ay_in.jpg" />
+    <None Remove="Images\ay_out.jpg" />
+    <None Remove="Images\bead1.jpg" />
+    <None Remove="Images\bead2.jpg" />
+    <None Remove="Images\bead3.jpg" />
+    <None Remove="Images\bead4.jpg" />
+    <None Remove="Images\bead5.jpg" />
+    <None Remove="Images\bead6.jpg" />
+    <None Remove="Images\beada.jpg" />
+    <None Remove="Images\beadb.jpg" />
+    <None Remove="Images\beadc.jpg" />
+    <None Remove="Images\beadd.jpg" />
+    <None Remove="Images\beadquestion.png" />
+    <None Remove="Images\bf1a.jpg" />
+    <None Remove="Images\bf1b.jpg" />
+    <None Remove="Images\bf2a.jpg" />
+    <None Remove="Images\bf2b.jpg" />
+    <None Remove="Images\bf2c.jpg" />
+    <None Remove="Images\bf3a.jpg" />
+    <None Remove="Images\bf3a2.png" />
+    <None Remove="Images\bf3b.jpg" />
+    <None Remove="Images\bf3b2.png" />
+    <None Remove="Images\bf4a.jpg" />
+    <None Remove="Images\bf4b.jpg" />
+    <None Remove="Images\bf4c.jpg" />
+    <None Remove="Images\bf4d.jpg" />
+    <None Remove="Images\bf5a.jpg" />
+    <None Remove="Images\bf5a2.png" />
+    <None Remove="Images\bf5b.jpg" />
+    <None Remove="Images\bf5b2.png" />
+    <None Remove="Images\bf5c.jpg" />
+    <None Remove="Images\bf5d.jpg" />
+    <None Remove="Images\bf6a.jpg" />
+    <None Remove="Images\bf6b.jpg" />
+    <None Remove="Images\bf6c.jpg" />
+    <None Remove="Images\bf6d.jpg" />
+    <None Remove="Images\bf6e.jpg" />
+    <None Remove="Images\bf7a.jpg" />
+    <None Remove="Images\bf7a2.png" />
+    <None Remove="Images\bf7b.jpg" />
+    <None Remove="Images\bf7b2.png" />
+    <None Remove="Images\bf7c.jpg" />
+    <None Remove="Images\bf7d.jpg" />
+    <None Remove="Images\bf7e.jpg" />
+    <None Remove="Images\bf7f.jpg" />
+    <None Remove="Images\camera.png" />
+    <None Remove="Images\car_bak.png" />
+    <None Remove="Images\car_drv.png" />
+    <None Remove="Images\car_fnt.png" />
+    <None Remove="Images\car_pas.png" />
+    <None Remove="Images\check_in.png" />
+    <None Remove="Images\check_out.png" />
+    <None Remove="Images\cill.jpg" />
+    <None Remove="Images\circ_in.jpg" />
+    <None Remove="Images\circ_out.jpg" />
+    <None Remove="Images\comment.png" />
+    <None Remove="Images\complete.png" />
+    <None Remove="Images\complete_sphere.jpg" />
+    <None Remove="Images\complete_tick.png" />
+    <None Remove="Images\cons1.jpg" />
+    <None Remove="Images\cons1.png" />
+    <None Remove="Images\cons10.jpg" />
+    <None Remove="Images\cons10.png" />
+    <None Remove="Images\cons11.jpg" />
+    <None Remove="Images\cons11.png" />
+    <None Remove="Images\cons12.jpg" />
+    <None Remove="Images\cons12.png" />
+    <None Remove="Images\cons13.jpg" />
+    <None Remove="Images\cons13.png" />
+    <None Remove="Images\cons14.jpg" />
+    <None Remove="Images\cons14.png" />
+    <None Remove="Images\cons15.jpg" />
+    <None Remove="Images\cons15.png" />
+    <None Remove="Images\cons16.jpg" />
+    <None Remove="Images\cons16.png" />
+    <None Remove="Images\cons17.jpg" />
+    <None Remove="Images\cons17.png" />
+    <None Remove="Images\cons18.jpg" />
+    <None Remove="Images\cons18.png" />
+    <None Remove="Images\cons19.jpg" />
+    <None Remove="Images\cons19.png" />
+    <None Remove="Images\cons2.jpg" />
+    <None Remove="Images\cons2.png" />
+    <None Remove="Images\cons20.jpg" />
+    <None Remove="Images\cons20.png" />
+    <None Remove="Images\cons21.jpg" />
+    <None Remove="Images\cons21.png" />
+    <None Remove="Images\cons22.jpg" />
+    <None Remove="Images\cons22.png" />
+    <None Remove="Images\cons23.jpg" />
+    <None Remove="Images\cons23.png" />
+    <None Remove="Images\cons24.jpg" />
+    <None Remove="Images\cons24.png" />
+    <None Remove="Images\cons25.jpg" />
+    <None Remove="Images\cons25.png" />
+    <None Remove="Images\cons26.jpg" />
+    <None Remove="Images\cons26.png" />
+    <None Remove="Images\cons27.jpg" />
+    <None Remove="Images\cons27.png" />
+    <None Remove="Images\cons28.jpg" />
+    <None Remove="Images\cons28.png" />
+    <None Remove="Images\cons3.jpg" />
+    <None Remove="Images\cons3.png" />
+    <None Remove="Images\cons4.jpg" />
+    <None Remove="Images\cons4.png" />
+    <None Remove="Images\cons5.jpg" />
+    <None Remove="Images\cons5.png" />
+    <None Remove="Images\cons6.jpg" />
+    <None Remove="Images\cons6.png" />
+    <None Remove="Images\cons7.jpg" />
+    <None Remove="Images\cons7.png" />
+    <None Remove="Images\cons8.jpg" />
+    <None Remove="Images\cons8.png" />
+    <None Remove="Images\cons9.jpg" />
+    <None Remove="Images\cons9.png" />
+    <None Remove="Images\copy of cons1.png" />
+    <None Remove="Images\copy of cons10.png" />
+    <None Remove="Images\copy of cons11.png" />
+    <None Remove="Images\copy of cons12.png" />
+    <None Remove="Images\copy of cons13.png" />
+    <None Remove="Images\copy of cons14.png" />
+    <None Remove="Images\damage_dent.png" />
+    <None Remove="Images\damage_hole.png" />
+    <None Remove="Images\damage_scratch.png" />
+    <None Remove="Images\dection_d.png" />
+    <None Remove="Images\del_instructions.png" />
+    <None Remove="Images\door1.jpg" />
+    <None Remove="Images\door10.jpg" />
+    <None Remove="Images\door11.jpg" />
+    <None Remove="Images\door12.jpg" />
+    <None Remove="Images\door13.jpg" />
+    <None Remove="Images\door14.jpg" />
+    <None Remove="Images\door15.jpg" />
+    <None Remove="Images\door1_b.jpg" />
+    <None Remove="Images\door2.jpg" />
+    <None Remove="Images\door2_b.jpg" />
+    <None Remove="Images\door3.jpg" />
+    <None Remove="Images\door3_b.jpg" />
+    <None Remove="Images\door4.jpg" />
+    <None Remove="Images\door4_b.jpg" />
+    <None Remove="Images\door5.jpg" />
+    <None Remove="Images\door5_b.jpg" />
+    <None Remove="Images\door6.jpg" />
+    <None Remove="Images\door6_b.jpg" />
+    <None Remove="Images\door7.jpg" />
+    <None Remove="Images\door7b.jpg" />
+    <None Remove="Images\door7b_b.jpg" />
+    <None Remove="Images\door7_b.jpg" />
+    <None Remove="Images\door8.jpg" />
+    <None Remove="Images\door9.jpg" />
+    <None Remove="Images\door_b_1.jpg" />
+    <None Remove="Images\door_b_2.jpg" />
+    <None Remove="Images\door_b_3.jpg" />
+    <None Remove="Images\door_b_4.jpg" />
+    <None Remove="Images\door_b_5.jpg" />
+    <None Remove="Images\door_b_6.jpg" />
+    <None Remove="Images\dropdown.png" />
+    <None Remove="Images\edward.jpg" />
+    <None Remove="Images\edward_both.jpg" />
+    <None Remove="Images\edward_wallleft.jpg" />
+    <None Remove="Images\edward_wallright.jpg" />
+    <None Remove="Images\envelope1.png" />
+    <None Remove="Images\envelope2.png" />
+    <None Remove="Images\fittersphotos.png" />
+    <None Remove="Images\fusion.png" />
+    <None Remove="Images\garageplan.jpg" />
+    <None Remove="Images\garageside.jpg" />
+    <None Remove="Images\garage_1a.jpg" />
+    <None Remove="Images\garage_1b.jpg" />
+    <None Remove="Images\garage_2a.jpg" />
+    <None Remove="Images\garage_2b.jpg" />
+    <None Remove="Images\garage_plan.png" />
+    <None Remove="Images\garage_side.png" />
+    <None Remove="Images\globaldoor.png" />
+    <None Remove="Images\green.jpg" />
+    <None Remove="Images\green1.jpg" />
+    <None Remove="Images\green2.jpg" />
+    <None Remove="Images\green3.jpg" />
+    <None Remove="Images\green4.jpg" />
+    <None Remove="Images\green_tick.png" />
+    <None Remove="Images\handcard.jpg" />
+    <None Remove="Images\handle1.jpg" />
+    <None Remove="Images\handle2.jpg" />
+    <None Remove="Images\handle3.jpg" />
+    <None Remove="Images\handle4.jpg" />
+    <None Remove="Images\handle5.jpg" />
+    <None Remove="Images\handle6.jpg" />
+    <None Remove="Images\handle7.jpg" />
+    <None Remove="Images\handle8.jpg" />
+    <None Remove="Images\handle9.jpg" />
+    <None Remove="Images\handle_blank.jpg" />
+    <None Remove="Images\headprotection.jpg" />
+    <None Remove="Images\hgv_bak.png" />
+    <None Remove="Images\hgv_drv.png" />
+    <None Remove="Images\hgv_fnt.png" />
+    <None Remove="Images\hgv_pas.png" />
+    <None Remove="Images\images.png" />
+    <None Remove="Images\incomplete_sphere.jpg" />
+    <None Remove="Images\incomplete_tick.png" />
+    <None Remove="Images\instructions.png" />
+    <None Remove="Images\items.png" />
+    <None Remove="Images\kat_202.png" />
+    <None Remove="Images\kat_202b.png" />
+    <None Remove="Images\kat_321.png" />
+    <None Remove="Images\kat_321b.png" />
+    <None Remove="Images\kat_330.png" />
+    <None Remove="Images\kat_330b.png" />
+    <None Remove="Images\kat_413.png" />
+    <None Remove="Images\kat_413b.png" />
+    <None Remove="Images\kat_422.png" />
+    <None Remove="Images\kat_422b.png" />
+    <None Remove="Images\kat_440.png" />
+    <None Remove="Images\kat_440b.png" />
+    <None Remove="Images\kat_532.png" />
+    <None Remove="Images\kat_532b.png" />
+    <None Remove="Images\kat_541.png" />
+    <None Remove="Images\kat_541b.png" />
+    <None Remove="Images\kat_550.png" />
+    <None Remove="Images\kat_550b.png" />
+    <None Remove="Images\kat_615.png" />
+    <None Remove="Images\kat_615b.png" />
+    <None Remove="Images\kat_624.png" />
+    <None Remove="Images\kat_624b.png" />
+    <None Remove="Images\kat_633.png" />
+    <None Remove="Images\kat_633b.png" />
+    <None Remove="Images\kat_660.png" />
+    <None Remove="Images\kat_660b.png" />
+    <None Remove="Images\kat_770.png" />
+    <None Remove="Images\kat_770b.png" />
+    <None Remove="Images\kat_cill_low.png" />
+    <None Remove="Images\kat_cill_room.png" />
+    <None Remove="Images\kat_cill_standard.png" />
+    <None Remove="Images\line_in.jpg" />
+    <None Remove="Images\line_out.jpg" />
+    <None Remove="Images\listbuttonback.jpg" />
+    <None Remove="Images\lock - copy.png" />
+    <None Remove="Images\lock.jpg" />
+    <None Remove="Images\lock.png" />
+    <None Remove="Images\lock_cam.png" />
+    <None Remove="Images\lock_db.png" />
+    <None Remove="Images\lock_hook.png" />
+    <None Remove="Images\lock_latch.png" />
+    <None Remove="Images\lock_mush.png" />
+    <None Remove="Images\logo.png" />
+    <None Remove="Images\low_threshold.png" />
+    <None Remove="Images\magglass.png" />
+    <None Remove="Images\marker.png" />
+    <None Remove="Images\mart_logo.png" />
+    <None Remove="Images\more.jpg" />
+    <None Remove="Images\moulda.jpg" />
+    <None Remove="Images\mouldb.jpg" />
+    <None Remove="Images\mouldc.jpg" />
+    <None Remove="Images\mouldd.jpg" />
+    <None Remove="Images\moulde.jpg" />
+    <None Remove="Images\na.png" />
+    <None Remove="Images\nocill.jpg" />
+    <None Remove="Images\orange.jpg" />
+    <None Remove="Images\pageleft.png" />
+    <None Remove="Images\pageright.png" />
+    <None Remove="Images\partm.jpg" />
+    <None Remove="Images\pencil.png" />
+    <None Remove="Images\question.png" />
+    <None Remove="Images\rebated_standard.png" />
+    <None Remove="Images\rebate_on_sill.png" />
+    <None Remove="Images\red.jpg" />
+    <None Remove="Images\report.png" />
+    <None Remove="Images\rollergarage.jpg" />
+    <None Remove="Images\round_highlight.png" />
+    <None Remove="Images\rubber_in.jpg" />
+    <None Remove="Images\rubber_out.jpg" />
+    <None Remove="Images\sands.jpg" />
+    <None Remove="Images\schecks.png" />
+    <None Remove="Images\sdoor.png" />
+    <None Remove="Images\section1.jpg" />
+    <None Remove="Images\section10.jpg" />
+    <None Remove="Images\section11.jpg" />
+    <None Remove="Images\section2.jpg" />
+    <None Remove="Images\section3.jpg" />
+    <None Remove="Images\section4.jpg" />
+    <None Remove="Images\section5.jpg" />
+    <None Remove="Images\section6.jpg" />
+    <None Remove="Images\section7.jpg" />
+    <None Remove="Images\section8.jpg" />
+    <None Remove="Images\section9.jpg" />
+    <None Remove="Images\section_a.jpg" />
+    <None Remove="Images\section_a.png" />
+    <None Remove="Images\section_b.jpg" />
+    <None Remove="Images\section_b.png" />
+    <None Remove="Images\section_c.jpg" />
+    <None Remove="Images\section_c.png" />
+    <None Remove="Images\section_d.jpg" />
+    <None Remove="Images\section_d.png" />
+    <None Remove="Images\section_e.jpg" />
+    <None Remove="Images\section_e.png" />
+    <None Remove="Images\section_f.jpg" />
+    <None Remove="Images\section_f.png" />
+    <None Remove="Images\section_g.jpg" />
+    <None Remove="Images\section_g.png" />
+    <None Remove="Images\section_h.jpg" />
+    <None Remove="Images\section_h.png" />
+    <None Remove="Images\section_i.jpg" />
+    <None Remove="Images\section_i.png" />
+    <None Remove="Images\section_j.jpg" />
+    <None Remove="Images\section_k.jpg" />
+    <None Remove="Images\section_l.jpg" />
+    <None Remove="Images\sent_sphere.jpg" />
+    <None Remove="Images\smalllogo.png" />
+    <None Remove="Images\splashscreenimage2.jpg" />
+    <None Remove="Images\splashscreenimage_diary.jpg" />
+    <None Remove="Images\splashscreenimage_diary.png" />
+    <None Remove="Images\square_in.jpg" />
+    <None Remove="Images\square_out.jpg" />
+    <None Remove="Images\squig_in.jpg" />
+    <None Remove="Images\squig_out.jpg" />
+    <None Remove="Images\stock.png" />
+    <None Remove="Images\telephone.jpg" />
+    <None Remove="Images\Thumbnail\152.png" />
+    <None Remove="Images\Thumbnail\allbackground.jpg" />
+    <None Remove="Images\Thumbnail\bead1.jpg" />
+    <None Remove="Images\Thumbnail\bead2.jpg" />
+    <None Remove="Images\Thumbnail\bead3.jpg" />
+    <None Remove="Images\Thumbnail\bead4.jpg" />
+    <None Remove="Images\Thumbnail\bead5.jpg" />
+    <None Remove="Images\Thumbnail\bead6.jpg" />
+    <None Remove="Images\Thumbnail\cons1.jpg" />
+    <None Remove="Images\Thumbnail\cons10.jpg" />
+    <None Remove="Images\Thumbnail\cons10_1.jpg" />
+    <None Remove="Images\Thumbnail\cons11.jpg" />
+    <None Remove="Images\Thumbnail\cons11_1.jpg" />
+    <None Remove="Images\Thumbnail\cons12.jpg" />
+    <None Remove="Images\Thumbnail\cons12_1.jpg" />
+    <None Remove="Images\Thumbnail\cons13.jpg" />
+    <None Remove="Images\Thumbnail\cons13_1.jpg" />
+    <None Remove="Images\Thumbnail\cons14.jpg" />
+    <None Remove="Images\Thumbnail\cons14_1.jpg" />
+    <None Remove="Images\Thumbnail\cons15.jpg" />
+    <None Remove="Images\Thumbnail\cons15_1.jpg" />
+    <None Remove="Images\Thumbnail\cons16.jpg" />
+    <None Remove="Images\Thumbnail\cons16_1.jpg" />
+    <None Remove="Images\Thumbnail\cons17.jpg" />
+    <None Remove="Images\Thumbnail\cons17_1.jpg" />
+    <None Remove="Images\Thumbnail\cons18.jpg" />
+    <None Remove="Images\Thumbnail\cons18_1.jpg" />
+    <None Remove="Images\Thumbnail\cons19.jpg" />
+    <None Remove="Images\Thumbnail\cons19_1.jpg" />
+    <None Remove="Images\Thumbnail\cons1_1.jpg" />
+    <None Remove="Images\Thumbnail\cons2.jpg" />
+    <None Remove="Images\Thumbnail\cons20.jpg" />
+    <None Remove="Images\Thumbnail\cons20_1.jpg" />
+    <None Remove="Images\Thumbnail\cons21.jpg" />
+    <None Remove="Images\Thumbnail\cons21_1.jpg" />
+    <None Remove="Images\Thumbnail\cons22.jpg" />
+    <None Remove="Images\Thumbnail\cons22_1.jpg" />
+    <None Remove="Images\Thumbnail\cons23.jpg" />
+    <None Remove="Images\Thumbnail\cons23_1.jpg" />
+    <None Remove="Images\Thumbnail\cons24.jpg" />
+    <None Remove="Images\Thumbnail\cons24.png" />
+    <None Remove="Images\Thumbnail\cons25.jpg" />
+    <None Remove="Images\Thumbnail\cons26.jpg" />
+    <None Remove="Images\Thumbnail\cons27.jpg" />
+    <None Remove="Images\Thumbnail\cons28.jpg" />
+    <None Remove="Images\Thumbnail\cons2_1.jpg" />
+    <None Remove="Images\Thumbnail\cons3.jpg" />
+    <None Remove="Images\Thumbnail\cons3_1.jpg" />
+    <None Remove="Images\Thumbnail\cons4.jpg" />
+    <None Remove="Images\Thumbnail\cons4_1.jpg" />
+    <None Remove="Images\Thumbnail\cons5.jpg" />
+    <None Remove="Images\Thumbnail\cons5_1.jpg" />
+    <None Remove="Images\Thumbnail\cons6.jpg" />
+    <None Remove="Images\Thumbnail\cons6_1.jpg" />
+    <None Remove="Images\Thumbnail\cons7.jpg" />
+    <None Remove="Images\Thumbnail\cons7_1.jpg" />
+    <None Remove="Images\Thumbnail\cons8.jpg" />
+    <None Remove="Images\Thumbnail\cons8_1.jpg" />
+    <None Remove="Images\Thumbnail\cons9.jpg" />
+    <None Remove="Images\Thumbnail\cons9_1.jpg" />
+    <None Remove="Images\Thumbnail\copy of cons1.jpg" />
+    <None Remove="Images\Thumbnail\copy of cons10.jpg" />
+    <None Remove="Images\Thumbnail\copy of cons11.jpg" />
+    <None Remove="Images\Thumbnail\copy of cons12.jpg" />
+    <None Remove="Images\Thumbnail\copy of cons13.jpg" />
+    <None Remove="Images\Thumbnail\copy of cons14.jpg" />
+    <None Remove="Images\Thumbnail\door1.jpg" />
+    <None Remove="Images\Thumbnail\door10.jpg" />
+    <None Remove="Images\Thumbnail\door11.jpg" />
+    <None Remove="Images\Thumbnail\door12.jpg" />
+    <None Remove="Images\Thumbnail\door13.jpg" />
+    <None Remove="Images\Thumbnail\door14.jpg" />
+    <None Remove="Images\Thumbnail\door15.jpg" />
+    <None Remove="Images\Thumbnail\door1_b.jpg" />
+    <None Remove="Images\Thumbnail\door2.jpg" />
+    <None Remove="Images\Thumbnail\door2_b.jpg" />
+    <None Remove="Images\Thumbnail\door3.jpg" />
+    <None Remove="Images\Thumbnail\door3_b.jpg" />
+    <None Remove="Images\Thumbnail\door4.jpg" />
+    <None Remove="Images\Thumbnail\door4_b.jpg" />
+    <None Remove="Images\Thumbnail\door5.jpg" />
+    <None Remove="Images\Thumbnail\door5_b.jpg" />
+    <None Remove="Images\Thumbnail\door6.jpg" />
+    <None Remove="Images\Thumbnail\door6_b.jpg" />
+    <None Remove="Images\Thumbnail\door7.jpg" />
+    <None Remove="Images\Thumbnail\door7b.jpg" />
+    <None Remove="Images\Thumbnail\door7b_b.jpg" />
+    <None Remove="Images\Thumbnail\door7_b.jpg" />
+    <None Remove="Images\Thumbnail\door8.jpg" />
+    <None Remove="Images\Thumbnail\door9.jpg" />
+    <None Remove="Images\Thumbnail\door_b_1.jpg" />
+    <None Remove="Images\Thumbnail\door_b_2.jpg" />
+    <None Remove="Images\Thumbnail\door_b_3.jpg" />
+    <None Remove="Images\Thumbnail\door_b_4.jpg" />
+    <None Remove="Images\Thumbnail\door_b_5.jpg" />
+    <None Remove="Images\Thumbnail\door_b_6.jpg" />
+    <None Remove="Images\Thumbnail\garage_1a.jpg" />
+    <None Remove="Images\Thumbnail\garage_1b.jpg" />
+    <None Remove="Images\Thumbnail\garage_2a.jpg" />
+    <None Remove="Images\Thumbnail\garage_2b.jpg" />
+    <None Remove="Images\Thumbnail\garage_plan.png" />
+    <None Remove="Images\Thumbnail\garage_side.png" />
+    <None Remove="Images\Thumbnail\green1.jpg" />
+    <None Remove="Images\Thumbnail\green2.jpg" />
+    <None Remove="Images\Thumbnail\green3.jpg" />
+    <None Remove="Images\Thumbnail\green4.jpg" />
+    <None Remove="Images\Thumbnail\handle1.jpg" />
+    <None Remove="Images\Thumbnail\handle2.jpg" />
+    <None Remove="Images\Thumbnail\handle3.jpg" />
+    <None Remove="Images\Thumbnail\handle4.jpg" />
+    <None Remove="Images\Thumbnail\handle5.jpg" />
+    <None Remove="Images\Thumbnail\handle6.jpg" />
+    <None Remove="Images\Thumbnail\handle7.jpg" />
+    <None Remove="Images\Thumbnail\handle8.jpg" />
+    <None Remove="Images\Thumbnail\handle9.jpg" />
+    <None Remove="Images\Thumbnail\handle_blank.jpg" />
+    <None Remove="Images\Thumbnail\rollergarage.jpg" />
+    <None Remove="Images\Thumbnail\sdoor.png" />
+    <None Remove="Images\Thumbnail\section1.jpg" />
+    <None Remove="Images\Thumbnail\section10.jpg" />
+    <None Remove="Images\Thumbnail\section11.jpg" />
+    <None Remove="Images\Thumbnail\section2.jpg" />
+    <None Remove="Images\Thumbnail\section3.jpg" />
+    <None Remove="Images\Thumbnail\section4.jpg" />
+    <None Remove="Images\Thumbnail\section5.jpg" />
+    <None Remove="Images\Thumbnail\section6.jpg" />
+    <None Remove="Images\Thumbnail\section7.jpg" />
+    <None Remove="Images\Thumbnail\section8.jpg" />
+    <None Remove="Images\Thumbnail\section9.jpg" />
+    <None Remove="Images\Thumbnail\section_a.jpg" />
+    <None Remove="Images\Thumbnail\section_a.png" />
+    <None Remove="Images\Thumbnail\section_b.jpg" />
+    <None Remove="Images\Thumbnail\section_b.png" />
+    <None Remove="Images\Thumbnail\section_c.jpg" />
+    <None Remove="Images\Thumbnail\section_c.png" />
+    <None Remove="Images\Thumbnail\section_d.jpg" />
+    <None Remove="Images\Thumbnail\section_d.png" />
+    <None Remove="Images\Thumbnail\section_e.jpg" />
+    <None Remove="Images\Thumbnail\section_e.png" />
+    <None Remove="Images\Thumbnail\section_f.jpg" />
+    <None Remove="Images\Thumbnail\section_f.png" />
+    <None Remove="Images\Thumbnail\section_g.jpg" />
+    <None Remove="Images\Thumbnail\section_g.png" />
+    <None Remove="Images\Thumbnail\section_h.jpg" />
+    <None Remove="Images\Thumbnail\section_h.png" />
+    <None Remove="Images\Thumbnail\section_i.jpg" />
+    <None Remove="Images\Thumbnail\section_i.png" />
+    <None Remove="Images\Thumbnail\section_j.jpg" />
+    <None Remove="Images\Thumbnail\section_k.jpg" />
+    <None Remove="Images\Thumbnail\section_l.jpg" />
+    <None Remove="Images\Thumbnail\t_cons1.jpg" />
+    <None Remove="Images\Thumbnail\t_cons2.jpg" />
+    <None Remove="Images\Thumbnail\t_cons3.jpg" />
+    <None Remove="Images\Thumbnail\window1.jpg" />
+    <None Remove="Images\Thumbnail\window10.jpg" />
+    <None Remove="Images\Thumbnail\window10_1.jpg" />
+    <None Remove="Images\Thumbnail\window11.jpg" />
+    <None Remove="Images\Thumbnail\window11_1.jpg" />
+    <None Remove="Images\Thumbnail\window12.jpg" />
+    <None Remove="Images\Thumbnail\window12_1.jpg" />
+    <None Remove="Images\Thumbnail\window13.jpg" />
+    <None Remove="Images\Thumbnail\window13_1.jpg" />
+    <None Remove="Images\Thumbnail\window14.jpg" />
+    <None Remove="Images\Thumbnail\window15.jpg" />
+    <None Remove="Images\Thumbnail\window16.jpg" />
+    <None Remove="Images\Thumbnail\window16b.jpg" />
+    <None Remove="Images\Thumbnail\window17.jpg" />
+    <None Remove="Images\Thumbnail\window18.jpg" />
+    <None Remove="Images\Thumbnail\window19.jpg" />
+    <None Remove="Images\Thumbnail\window1_1.jpg" />
+    <None Remove="Images\Thumbnail\window2.jpg" />
+    <None Remove="Images\Thumbnail\window20.jpg" />
+    <None Remove="Images\Thumbnail\window2_1.jpg" />
+    <None Remove="Images\Thumbnail\window3.jpg" />
+    <None Remove="Images\Thumbnail\window3_1.jpg" />
+    <None Remove="Images\Thumbnail\window4.jpg" />
+    <None Remove="Images\Thumbnail\window4_1.jpg" />
+    <None Remove="Images\Thumbnail\window5.jpg" />
+    <None Remove="Images\Thumbnail\window5_1.jpg" />
+    <None Remove="Images\Thumbnail\window6.jpg" />
+    <None Remove="Images\Thumbnail\window6_1.jpg" />
+    <None Remove="Images\Thumbnail\window7.jpg" />
+    <None Remove="Images\Thumbnail\window7_1.jpg" />
+    <None Remove="Images\Thumbnail\window8.jpg" />
+    <None Remove="Images\Thumbnail\window8_1.jpg" />
+    <None Remove="Images\Thumbnail\window9.jpg" />
+    <None Remove="Images\Thumbnail\window9_1.jpg" />
+    <None Remove="Images\Thumbnail\wooden_door_1.jpg" />
+    <None Remove="Images\Thumbnail\wooden_door_2.jpg" />
+    <None Remove="Images\Thumbnail\wooden_door_3.jpg" />
+    <None Remove="Images\Thumbnail\wooden_door_4.jpg" />
+    <None Remove="Images\Thumbnail\zap_out.jpg" />
+    <None Remove="Images\timber.jpg" />
+    <None Remove="Images\timber.png" />
+    <None Remove="Images\tlightgreen.png" />
+    <None Remove="Images\tlightorange.png" />
+    <None Remove="Images\tlightred.png" />
+    <None Remove="Images\topfade.jpg" />
+    <None Remove="Images\tophinge.jpg" />
+    <None Remove="Images\trash-can.png" />
+    <None Remove="Images\t_cons1.jpg" />
+    <None Remove="Images\t_cons2.jpg" />
+    <None Remove="Images\t_cons3.jpg" />
+    <None Remove="Images\undo_in.jpg" />
+    <None Remove="Images\undo_out.jpg" />
+    <None Remove="Images\van1.png" />
+    <None Remove="Images\van2.png" />
+    <None Remove="Images\van3.png" />
+    <None Remove="Images\van4.png" />
+    <None Remove="Images\vanoutline1.png" />
+    <None Remove="Images\victorian.jpg" />
+    <None Remove="Images\window1.jpg" />
+    <None Remove="Images\window1.png" />
+    <None Remove="Images\window10.jpg" />
+    <None Remove="Images\window10.png" />
+    <None Remove="Images\window11.jpg" />
+    <None Remove="Images\window11.png" />
+    <None Remove="Images\window12.jpg" />
+    <None Remove="Images\window12.png" />
+    <None Remove="Images\window13.jpg" />
+    <None Remove="Images\window13.png" />
+    <None Remove="Images\window14.jpg" />
+    <None Remove="Images\window14.png" />
+    <None Remove="Images\window15.jpg" />
+    <None Remove="Images\window16.jpg" />
+    <None Remove="Images\window16b.jpg" />
+    <None Remove="Images\window17.jpg" />
+    <None Remove="Images\window18.jpg" />
+    <None Remove="Images\window19.jpg" />
+    <None Remove="Images\window2.jpg" />
+    <None Remove="Images\window2.png" />
+    <None Remove="Images\window20.jpg" />
+    <None Remove="Images\window3.jpg" />
+    <None Remove="Images\window3.png" />
+    <None Remove="Images\window4.jpg" />
+    <None Remove="Images\window4.png" />
+    <None Remove="Images\window5.jpg" />
+    <None Remove="Images\window5.png" />
+    <None Remove="Images\window6.jpg" />
+    <None Remove="Images\window6.png" />
+    <None Remove="Images\window7.jpg" />
+    <None Remove="Images\window7.png" />
+    <None Remove="Images\window8.jpg" />
+    <None Remove="Images\window8.png" />
+    <None Remove="Images\window9.jpg" />
+    <None Remove="Images\window9.png" />
+    <None Remove="Images\windowlock.png" />
+    <None Remove="Images\wooden_door_1.jpg" />
+    <None Remove="Images\wooden_door_2.jpg" />
+    <None Remove="Images\wooden_door_3.jpg" />
+    <None Remove="Images\wooden_door_4.jpg" />
+    <None Remove="Images\xp10lowthresholdandcill.jpg" />
+    <None Remove="Images\xp10rebateandcill.jpg" />
+    <None Remove="Images\xpiolowthreshold.jpg" />
+    <None Remove="Images\xpiorebated.jpg" />
+    <None Remove="Images\xpviewrebateandcill.jpg" />
+    <None Remove="Images\xpviewrebated.jpg" />
+    <None Remove="Images\zap_in.jpg" />
+    <None Remove="Images\zap_out.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Images\152.png" />
+    <EmbeddedResource Include="Images\action-arrow-left.png" />
+    <EmbeddedResource Include="Images\action-arrow-right.png" />
+    <EmbeddedResource Include="Images\all reports.png" />
+    <EmbeddedResource Include="Images\allbackground.jpg" />
+    <EmbeddedResource Include="Images\aperture.jpg" />
+    <EmbeddedResource Include="Images\appbar.feature.settings.rest.png" />
+    <EmbeddedResource Include="Images\ay_in.jpg" />
+    <EmbeddedResource Include="Images\ay_out.jpg" />
+    <EmbeddedResource Include="Images\bead1.jpg" />
+    <EmbeddedResource Include="Images\bead2.jpg" />
+    <EmbeddedResource Include="Images\bead3.jpg" />
+    <EmbeddedResource Include="Images\bead4.jpg" />
+    <EmbeddedResource Include="Images\bead5.jpg" />
+    <EmbeddedResource Include="Images\bead6.jpg" />
+    <EmbeddedResource Include="Images\beada.jpg" />
+    <EmbeddedResource Include="Images\beadb.jpg" />
+    <EmbeddedResource Include="Images\beadc.jpg" />
+    <EmbeddedResource Include="Images\beadd.jpg" />
+    <EmbeddedResource Include="Images\beadquestion.png" />
+    <EmbeddedResource Include="Images\bf1a.jpg" />
+    <EmbeddedResource Include="Images\bf1b.jpg" />
+    <EmbeddedResource Include="Images\bf2a.jpg" />
+    <EmbeddedResource Include="Images\bf2b.jpg" />
+    <EmbeddedResource Include="Images\bf2c.jpg" />
+    <EmbeddedResource Include="Images\bf3a.jpg" />
+    <EmbeddedResource Include="Images\bf3a2.png" />
+    <EmbeddedResource Include="Images\bf3b.jpg" />
+    <EmbeddedResource Include="Images\bf3b2.png" />
+    <EmbeddedResource Include="Images\bf4a.jpg" />
+    <EmbeddedResource Include="Images\bf4b.jpg" />
+    <EmbeddedResource Include="Images\bf4c.jpg" />
+    <EmbeddedResource Include="Images\bf4d.jpg" />
+    <EmbeddedResource Include="Images\bf5a.jpg" />
+    <EmbeddedResource Include="Images\bf5a2.png" />
+    <EmbeddedResource Include="Images\bf5b.jpg" />
+    <EmbeddedResource Include="Images\bf5b2.png" />
+    <EmbeddedResource Include="Images\bf5c.jpg" />
+    <EmbeddedResource Include="Images\bf5d.jpg" />
+    <EmbeddedResource Include="Images\bf6a.jpg" />
+    <EmbeddedResource Include="Images\bf6b.jpg" />
+    <EmbeddedResource Include="Images\bf6c.jpg" />
+    <EmbeddedResource Include="Images\bf6d.jpg" />
+    <EmbeddedResource Include="Images\bf6e.jpg" />
+    <EmbeddedResource Include="Images\bf7a.jpg" />
+    <EmbeddedResource Include="Images\bf7a2.png" />
+    <EmbeddedResource Include="Images\bf7b.jpg" />
+    <EmbeddedResource Include="Images\bf7b2.png" />
+    <EmbeddedResource Include="Images\bf7c.jpg" />
+    <EmbeddedResource Include="Images\bf7d.jpg" />
+    <EmbeddedResource Include="Images\bf7e.jpg" />
+    <EmbeddedResource Include="Images\bf7f.jpg" />
+    <EmbeddedResource Include="Images\camera.png" />
+    <EmbeddedResource Include="Images\car_bak.png" />
+    <EmbeddedResource Include="Images\car_drv.png" />
+    <EmbeddedResource Include="Images\car_fnt.png" />
+    <EmbeddedResource Include="Images\car_pas.png" />
+    <EmbeddedResource Include="Images\check_in.png" />
+    <EmbeddedResource Include="Images\check_out.png" />
+    <EmbeddedResource Include="Images\cill.jpg" />
+    <EmbeddedResource Include="Images\circ_in.jpg" />
+    <EmbeddedResource Include="Images\circ_out.jpg" />
+    <EmbeddedResource Include="Images\comment.png" />
+    <EmbeddedResource Include="Images\complete.png" />
+    <EmbeddedResource Include="Images\complete_sphere.jpg" />
+    <EmbeddedResource Include="Images\complete_tick.png" />
+    <EmbeddedResource Include="Images\cons1.jpg" />
+    <EmbeddedResource Include="Images\cons1.png" />
+    <EmbeddedResource Include="Images\cons10.jpg" />
+    <EmbeddedResource Include="Images\cons10.png" />
+    <EmbeddedResource Include="Images\cons11.jpg" />
+    <EmbeddedResource Include="Images\cons11.png" />
+    <EmbeddedResource Include="Images\cons12.jpg" />
+    <EmbeddedResource Include="Images\cons12.png" />
+    <EmbeddedResource Include="Images\cons13.jpg" />
+    <EmbeddedResource Include="Images\cons13.png" />
+    <EmbeddedResource Include="Images\cons14.jpg" />
+    <EmbeddedResource Include="Images\cons14.png" />
+    <EmbeddedResource Include="Images\cons15.jpg" />
+    <EmbeddedResource Include="Images\cons15.png" />
+    <EmbeddedResource Include="Images\cons16.jpg" />
+    <EmbeddedResource Include="Images\cons16.png" />
+    <EmbeddedResource Include="Images\cons17.jpg" />
+    <EmbeddedResource Include="Images\cons17.png" />
+    <EmbeddedResource Include="Images\cons18.jpg" />
+    <EmbeddedResource Include="Images\cons18.png" />
+    <EmbeddedResource Include="Images\cons19.jpg" />
+    <EmbeddedResource Include="Images\cons19.png" />
+    <EmbeddedResource Include="Images\cons2.jpg" />
+    <EmbeddedResource Include="Images\cons2.png" />
+    <EmbeddedResource Include="Images\cons20.jpg" />
+    <EmbeddedResource Include="Images\cons20.png" />
+    <EmbeddedResource Include="Images\cons21.jpg" />
+    <EmbeddedResource Include="Images\cons21.png" />
+    <EmbeddedResource Include="Images\cons22.jpg" />
+    <EmbeddedResource Include="Images\cons22.png" />
+    <EmbeddedResource Include="Images\cons23.jpg" />
+    <EmbeddedResource Include="Images\cons23.png" />
+    <EmbeddedResource Include="Images\cons24.jpg" />
+    <EmbeddedResource Include="Images\cons24.png" />
+    <EmbeddedResource Include="Images\cons25.jpg" />
+    <EmbeddedResource Include="Images\cons25.png" />
+    <EmbeddedResource Include="Images\cons26.jpg" />
+    <EmbeddedResource Include="Images\cons26.png" />
+    <EmbeddedResource Include="Images\cons27.jpg" />
+    <EmbeddedResource Include="Images\cons27.png" />
+    <EmbeddedResource Include="Images\cons28.jpg" />
+    <EmbeddedResource Include="Images\cons28.png" />
+    <EmbeddedResource Include="Images\cons3.jpg" />
+    <EmbeddedResource Include="Images\cons3.png" />
+    <EmbeddedResource Include="Images\cons4.jpg" />
+    <EmbeddedResource Include="Images\cons4.png" />
+    <EmbeddedResource Include="Images\cons5.jpg" />
+    <EmbeddedResource Include="Images\cons5.png" />
+    <EmbeddedResource Include="Images\cons6.jpg" />
+    <EmbeddedResource Include="Images\cons6.png" />
+    <EmbeddedResource Include="Images\cons7.jpg" />
+    <EmbeddedResource Include="Images\cons7.png" />
+    <EmbeddedResource Include="Images\cons8.jpg" />
+    <EmbeddedResource Include="Images\cons8.png" />
+    <EmbeddedResource Include="Images\cons9.jpg" />
+    <EmbeddedResource Include="Images\cons9.png" />
+    <EmbeddedResource Include="Images\copy of cons1.png" />
+    <EmbeddedResource Include="Images\copy of cons10.png" />
+    <EmbeddedResource Include="Images\copy of cons11.png" />
+    <EmbeddedResource Include="Images\copy of cons12.png" />
+    <EmbeddedResource Include="Images\copy of cons13.png" />
+    <EmbeddedResource Include="Images\copy of cons14.png" />
+    <EmbeddedResource Include="Images\damage_dent.png" />
+    <EmbeddedResource Include="Images\damage_hole.png" />
+    <EmbeddedResource Include="Images\damage_scratch.png" />
+    <EmbeddedResource Include="Images\dection_d.png" />
+    <EmbeddedResource Include="Images\del_instructions.png" />
+    <EmbeddedResource Include="Images\door1.jpg" />
+    <EmbeddedResource Include="Images\door10.jpg" />
+    <EmbeddedResource Include="Images\door11.jpg" />
+    <EmbeddedResource Include="Images\door12.jpg" />
+    <EmbeddedResource Include="Images\door13.jpg" />
+    <EmbeddedResource Include="Images\door14.jpg" />
+    <EmbeddedResource Include="Images\door15.jpg" />
+    <EmbeddedResource Include="Images\door1_b.jpg" />
+    <EmbeddedResource Include="Images\door2.jpg" />
+    <EmbeddedResource Include="Images\door2_b.jpg" />
+    <EmbeddedResource Include="Images\door3.jpg" />
+    <EmbeddedResource Include="Images\door3_b.jpg" />
+    <EmbeddedResource Include="Images\door4.jpg" />
+    <EmbeddedResource Include="Images\door4_b.jpg" />
+    <EmbeddedResource Include="Images\door5.jpg" />
+    <EmbeddedResource Include="Images\door5_b.jpg" />
+    <EmbeddedResource Include="Images\door6.jpg" />
+    <EmbeddedResource Include="Images\door6_b.jpg" />
+    <EmbeddedResource Include="Images\door7.jpg" />
+    <EmbeddedResource Include="Images\door7b.jpg" />
+    <EmbeddedResource Include="Images\door7b_b.jpg" />
+    <EmbeddedResource Include="Images\door7_b.jpg" />
+    <EmbeddedResource Include="Images\door8.jpg" />
+    <EmbeddedResource Include="Images\door9.jpg" />
+    <EmbeddedResource Include="Images\door_b_1.jpg" />
+    <EmbeddedResource Include="Images\door_b_2.jpg" />
+    <EmbeddedResource Include="Images\door_b_3.jpg" />
+    <EmbeddedResource Include="Images\door_b_4.jpg" />
+    <EmbeddedResource Include="Images\door_b_5.jpg" />
+    <EmbeddedResource Include="Images\door_b_6.jpg" />
+    <Content Include="Images\dropdown.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <EmbeddedResource Include="Images\edward.jpg" />
+    <EmbeddedResource Include="Images\edward_both.jpg" />
+    <EmbeddedResource Include="Images\edward_wallleft.jpg" />
+    <EmbeddedResource Include="Images\edward_wallright.jpg" />
+    <EmbeddedResource Include="Images\envelope1.png" />
+    <EmbeddedResource Include="Images\envelope2.png" />
+    <EmbeddedResource Include="Images\fittersphotos.png" />
+    <EmbeddedResource Include="Images\fusion.png" />
+    <EmbeddedResource Include="Images\garageplan.jpg" />
+    <EmbeddedResource Include="Images\garageside.jpg" />
+    <EmbeddedResource Include="Images\garage_1a.jpg" />
+    <EmbeddedResource Include="Images\garage_1b.jpg" />
+    <EmbeddedResource Include="Images\garage_2a.jpg" />
+    <EmbeddedResource Include="Images\garage_2b.jpg" />
+    <EmbeddedResource Include="Images\garage_plan.png" />
+    <EmbeddedResource Include="Images\garage_side.png" />
+    <EmbeddedResource Include="Images\globaldoor.png" />
+    <EmbeddedResource Include="Images\green.jpg" />
+    <EmbeddedResource Include="Images\green1.jpg" />
+    <EmbeddedResource Include="Images\green2.jpg" />
+    <EmbeddedResource Include="Images\green3.jpg" />
+    <EmbeddedResource Include="Images\green4.jpg" />
+    <EmbeddedResource Include="Images\green_tick.png" />
+    <EmbeddedResource Include="Images\handcard.jpg" />
+    <EmbeddedResource Include="Images\handle1.jpg" />
+    <EmbeddedResource Include="Images\handle2.jpg" />
+    <EmbeddedResource Include="Images\handle3.jpg" />
+    <EmbeddedResource Include="Images\handle4.jpg" />
+    <EmbeddedResource Include="Images\handle5.jpg" />
+    <EmbeddedResource Include="Images\handle6.jpg" />
+    <EmbeddedResource Include="Images\handle7.jpg" />
+    <EmbeddedResource Include="Images\handle8.jpg" />
+    <EmbeddedResource Include="Images\handle9.jpg" />
+    <EmbeddedResource Include="Images\handle_blank.jpg" />
+    <EmbeddedResource Include="Images\headprotection.jpg" />
+    <EmbeddedResource Include="Images\hgv_bak.png" />
+    <EmbeddedResource Include="Images\hgv_drv.png" />
+    <EmbeddedResource Include="Images\hgv_fnt.png" />
+    <EmbeddedResource Include="Images\hgv_pas.png" />
+    <EmbeddedResource Include="Images\images.png" />
+    <EmbeddedResource Include="Images\incomplete_sphere.jpg" />
+    <EmbeddedResource Include="Images\incomplete_tick.png" />
+    <EmbeddedResource Include="Images\instructions.png" />
+    <EmbeddedResource Include="Images\items.png" />
+    <EmbeddedResource Include="Images\kat_202.png" />
+    <EmbeddedResource Include="Images\kat_202b.png" />
+    <EmbeddedResource Include="Images\kat_321.png" />
+    <EmbeddedResource Include="Images\kat_321b.png" />
+    <EmbeddedResource Include="Images\kat_330.png" />
+    <EmbeddedResource Include="Images\kat_330b.png" />
+    <EmbeddedResource Include="Images\kat_413.png" />
+    <EmbeddedResource Include="Images\kat_413b.png" />
+    <EmbeddedResource Include="Images\kat_422.png" />
+    <EmbeddedResource Include="Images\kat_422b.png" />
+    <EmbeddedResource Include="Images\kat_440.png" />
+    <EmbeddedResource Include="Images\kat_440b.png" />
+    <EmbeddedResource Include="Images\kat_532.png" />
+    <EmbeddedResource Include="Images\kat_532b.png" />
+    <EmbeddedResource Include="Images\kat_541.png" />
+    <EmbeddedResource Include="Images\kat_541b.png" />
+    <EmbeddedResource Include="Images\kat_550.png" />
+    <EmbeddedResource Include="Images\kat_550b.png" />
+    <EmbeddedResource Include="Images\kat_615.png" />
+    <EmbeddedResource Include="Images\kat_615b.png" />
+    <EmbeddedResource Include="Images\kat_624.png" />
+    <EmbeddedResource Include="Images\kat_624b.png" />
+    <EmbeddedResource Include="Images\kat_633.png" />
+    <EmbeddedResource Include="Images\kat_633b.png" />
+    <EmbeddedResource Include="Images\kat_660.png" />
+    <EmbeddedResource Include="Images\kat_660b.png" />
+    <EmbeddedResource Include="Images\kat_770.png" />
+    <EmbeddedResource Include="Images\kat_770b.png" />
+    <EmbeddedResource Include="Images\kat_cill_low.png" />
+    <EmbeddedResource Include="Images\kat_cill_room.png" />
+    <EmbeddedResource Include="Images\kat_cill_standard.png" />
+    <EmbeddedResource Include="Images\line_in.jpg" />
+    <EmbeddedResource Include="Images\line_out.jpg" />
+    <EmbeddedResource Include="Images\listbuttonback.jpg" />
+    <EmbeddedResource Include="Images\lock - copy.png" />
+    <EmbeddedResource Include="Images\lock.jpg" />
+    <EmbeddedResource Include="Images\lock.png" />
+    <EmbeddedResource Include="Images\lock_cam.png" />
+    <EmbeddedResource Include="Images\lock_db.png" />
+    <EmbeddedResource Include="Images\lock_hook.png" />
+    <EmbeddedResource Include="Images\lock_latch.png" />
+    <EmbeddedResource Include="Images\lock_mush.png" />
+    <EmbeddedResource Include="Images\logo.png" />
+    <EmbeddedResource Include="Images\low_threshold.png" />
+    <EmbeddedResource Include="Images\magglass.png" />
+    <EmbeddedResource Include="Images\marker.png" />
+    <EmbeddedResource Include="Images\mart_logo.png" />
+    <EmbeddedResource Include="Images\more.jpg" />
+    <EmbeddedResource Include="Images\moulda.jpg" />
+    <EmbeddedResource Include="Images\mouldb.jpg" />
+    <EmbeddedResource Include="Images\mouldc.jpg" />
+    <EmbeddedResource Include="Images\mouldd.jpg" />
+    <EmbeddedResource Include="Images\moulde.jpg" />
+    <EmbeddedResource Include="Images\na.png" />
+    <EmbeddedResource Include="Images\nocill.jpg" />
+    <EmbeddedResource Include="Images\orange.jpg" />
+    <EmbeddedResource Include="Images\pageleft.png" />
+    <EmbeddedResource Include="Images\pageright.png" />
+    <EmbeddedResource Include="Images\partm.jpg" />
+    <EmbeddedResource Include="Images\pencil.png" />
+    <EmbeddedResource Include="Images\question.png" />
+    <EmbeddedResource Include="Images\rebated_standard.png" />
+    <EmbeddedResource Include="Images\rebate_on_sill.png" />
+    <EmbeddedResource Include="Images\red.jpg" />
+    <EmbeddedResource Include="Images\report.png" />
+    <EmbeddedResource Include="Images\rollergarage.jpg" />
+    <EmbeddedResource Include="Images\round_highlight.png" />
+    <EmbeddedResource Include="Images\rubber_in.jpg" />
+    <EmbeddedResource Include="Images\rubber_out.jpg" />
+    <EmbeddedResource Include="Images\sands.jpg" />
+    <EmbeddedResource Include="Images\schecks.png" />
+    <EmbeddedResource Include="Images\sdoor.png" />
+    <EmbeddedResource Include="Images\section1.jpg" />
+    <EmbeddedResource Include="Images\section10.jpg" />
+    <EmbeddedResource Include="Images\section11.jpg" />
+    <EmbeddedResource Include="Images\section2.jpg" />
+    <EmbeddedResource Include="Images\section3.jpg" />
+    <EmbeddedResource Include="Images\section4.jpg" />
+    <EmbeddedResource Include="Images\section5.jpg" />
+    <EmbeddedResource Include="Images\section6.jpg" />
+    <EmbeddedResource Include="Images\section7.jpg" />
+    <EmbeddedResource Include="Images\section8.jpg" />
+    <EmbeddedResource Include="Images\section9.jpg" />
+    <EmbeddedResource Include="Images\section_a.jpg" />
+    <EmbeddedResource Include="Images\section_a.png" />
+    <EmbeddedResource Include="Images\section_b.jpg" />
+    <EmbeddedResource Include="Images\section_b.png" />
+    <EmbeddedResource Include="Images\section_c.jpg" />
+    <EmbeddedResource Include="Images\section_c.png" />
+    <EmbeddedResource Include="Images\section_d.jpg" />
+    <EmbeddedResource Include="Images\section_d.png" />
+    <EmbeddedResource Include="Images\section_e.jpg" />
+    <EmbeddedResource Include="Images\section_e.png" />
+    <EmbeddedResource Include="Images\section_f.jpg" />
+    <EmbeddedResource Include="Images\section_f.png" />
+    <EmbeddedResource Include="Images\section_g.jpg" />
+    <EmbeddedResource Include="Images\section_g.png" />
+    <EmbeddedResource Include="Images\section_h.jpg" />
+    <EmbeddedResource Include="Images\section_h.png" />
+    <EmbeddedResource Include="Images\section_i.jpg" />
+    <EmbeddedResource Include="Images\section_i.png" />
+    <EmbeddedResource Include="Images\section_j.jpg" />
+    <EmbeddedResource Include="Images\section_k.jpg" />
+    <EmbeddedResource Include="Images\section_l.jpg" />
+    <EmbeddedResource Include="Images\sent_sphere.jpg" />
+    <EmbeddedResource Include="Images\smalllogo.png" />
+    <EmbeddedResource Include="Images\splashscreenimage2.jpg" />
+    <EmbeddedResource Include="Images\splashscreenimage_diary.jpg" />
+    <EmbeddedResource Include="Images\splashscreenimage_diary.png" />
+    <EmbeddedResource Include="Images\square_in.jpg" />
+    <EmbeddedResource Include="Images\square_out.jpg" />
+    <EmbeddedResource Include="Images\squig_in.jpg" />
+    <EmbeddedResource Include="Images\squig_out.jpg" />
+    <EmbeddedResource Include="Images\stock.png" />
+    <EmbeddedResource Include="Images\telephone.jpg" />
+    <EmbeddedResource Include="Images\Thumbnail\152.png" />
+    <EmbeddedResource Include="Images\Thumbnail\allbackground.jpg" />
+    <EmbeddedResource Include="Images\Thumbnail\bead1.jpg" />
+    <EmbeddedResource Include="Images\Thumbnail\bead2.jpg" />
+    <EmbeddedResource Include="Images\Thumbnail\bead3.jpg" />
+    <EmbeddedResource Include="Images\Thumbnail\bead4.jpg" />
+    <EmbeddedResource Include="Images\Thumbnail\bead5.jpg" />
+    <EmbeddedResource Include="Images\Thumbnail\bead6.jpg" />
+    <EmbeddedResource Include="Images\Thumbnail\cons1.jpg" />
+    <EmbeddedResource Include="Images\Thumbnail\cons10.jpg" />
+    <EmbeddedResource Include="Images\Thumbnail\cons10_1.jpg" />
+    <EmbeddedResource Include="Images\Thumbnail\cons11.jpg" />
+    <EmbeddedResource Include="Images\Thumbnail\cons11_1.jpg" />
+    <EmbeddedResource Include="Images\Thumbnail\cons12.jpg" />
+    <EmbeddedResource Include="Images\Thumbnail\cons12_1.jpg" />
+    <EmbeddedResource Include="Images\Thumbnail\cons13.jpg" />
+    <EmbeddedResource Include="Images\Thumbnail\cons13_1.jpg" />
+    <EmbeddedResource Include="Images\Thumbnail\cons14.jpg" />
+    <EmbeddedResource Include="Images\Thumbnail\cons14_1.jpg" />
+    <EmbeddedResource Include="Images\Thumbnail\cons15.jpg" />
+    <EmbeddedResource Include="Images\Thumbnail\cons15_1.jpg" />
+    <EmbeddedResource Include="Images\Thumbnail\cons16.jpg" />
+    <EmbeddedResource Include="Images\Thumbnail\cons16_1.jpg" />
+    <EmbeddedResource Include="Images\Thumbnail\cons17.jpg" />
+    <EmbeddedResource Include="Images\Thumbnail\cons17_1.jpg" />
+    <EmbeddedResource Include="Images\Thumbnail\cons18.jpg" />
+    <EmbeddedResource Include="Images\Thumbnail\cons18_1.jpg" />
+    <EmbeddedResource Include="Images\Thumbnail\cons19.jpg" />
+    <EmbeddedResource Include="Images\Thumbnail\cons19_1.jpg" />
+    <EmbeddedResource Include="Images\Thumbnail\cons1_1.jpg" />
+    <EmbeddedResource Include="Images\Thumbnail\cons2.jpg" />
+    <EmbeddedResource Include="Images\Thumbnail\cons20.jpg" />
+    <EmbeddedResource Include="Images\Thumbnail\cons20_1.jpg" />
+    <EmbeddedResource Include="Images\Thumbnail\cons21.jpg" />
+    <EmbeddedResource Include="Images\Thumbnail\cons21_1.jpg" />
+    <EmbeddedResource Include="Images\Thumbnail\cons22.jpg" />
+    <EmbeddedResource Include="Images\Thumbnail\cons22_1.jpg" />
+    <EmbeddedResource Include="Images\Thumbnail\cons23.jpg" />
+    <EmbeddedResource Include="Images\Thumbnail\cons23_1.jpg" />
+    <EmbeddedResource Include="Images\Thumbnail\cons24.jpg" />
+    <EmbeddedResource Include="Images\Thumbnail\cons24.png" />
+    <EmbeddedResource Include="Images\Thumbnail\cons25.jpg" />
+    <EmbeddedResource Include="Images\Thumbnail\cons26.jpg" />
+    <EmbeddedResource Include="Images\Thumbnail\cons27.jpg" />
+    <EmbeddedResource Include="Images\Thumbnail\cons28.jpg" />
+    <EmbeddedResource Include="Images\Thumbnail\cons2_1.jpg" />
+    <EmbeddedResource Include="Images\Thumbnail\cons3.jpg" />
+    <EmbeddedResource Include="Images\Thumbnail\cons3_1.jpg" />
+    <EmbeddedResource Include="Images\Thumbnail\cons4.jpg" />
+    <EmbeddedResource Include="Images\Thumbnail\cons4_1.jpg" />
+    <EmbeddedResource Include="Images\Thumbnail\cons5.jpg" />
+    <EmbeddedResource Include="Images\Thumbnail\cons5_1.jpg" />
+    <EmbeddedResource Include="Images\Thumbnail\cons6.jpg" />
+    <EmbeddedResource Include="Images\Thumbnail\cons6_1.jpg" />
+    <EmbeddedResource Include="Images\Thumbnail\cons7.jpg" />
+    <EmbeddedResource Include="Images\Thumbnail\cons7_1.jpg" />
+    <EmbeddedResource Include="Images\Thumbnail\cons8.jpg" />
+    <EmbeddedResource Include="Images\Thumbnail\cons8_1.jpg" />
+    <EmbeddedResource Include="Images\Thumbnail\cons9.jpg" />
+    <EmbeddedResource Include="Images\Thumbnail\cons9_1.jpg" />
+    <EmbeddedResource Include="Images\Thumbnail\copy of cons1.jpg" />
+    <EmbeddedResource Include="Images\Thumbnail\copy of cons10.jpg" />
+    <EmbeddedResource Include="Images\Thumbnail\copy of cons11.jpg" />
+    <EmbeddedResource Include="Images\Thumbnail\copy of cons12.jpg" />
+    <EmbeddedResource Include="Images\Thumbnail\copy of cons13.jpg" />
+    <EmbeddedResource Include="Images\Thumbnail\copy of cons14.jpg" />
+    <EmbeddedResource Include="Images\Thumbnail\door1.jpg" />
+    <EmbeddedResource Include="Images\Thumbnail\door10.jpg" />
+    <EmbeddedResource Include="Images\Thumbnail\door11.jpg" />
+    <EmbeddedResource Include="Images\Thumbnail\door12.jpg" />
+    <EmbeddedResource Include="Images\Thumbnail\door13.jpg" />
+    <EmbeddedResource Include="Images\Thumbnail\door14.jpg" />
+    <EmbeddedResource Include="Images\Thumbnail\door15.jpg" />
+    <EmbeddedResource Include="Images\Thumbnail\door1_b.jpg" />
+    <EmbeddedResource Include="Images\Thumbnail\door2.jpg" />
+    <EmbeddedResource Include="Images\Thumbnail\door2_b.jpg" />
+    <EmbeddedResource Include="Images\Thumbnail\door3.jpg" />
+    <EmbeddedResource Include="Images\Thumbnail\door3_b.jpg" />
+    <EmbeddedResource Include="Images\Thumbnail\door4.jpg" />
+    <EmbeddedResource Include="Images\Thumbnail\door4_b.jpg" />
+    <EmbeddedResource Include="Images\Thumbnail\door5.jpg" />
+    <EmbeddedResource Include="Images\Thumbnail\door5_b.jpg" />
+    <EmbeddedResource Include="Images\Thumbnail\door6.jpg" />
+    <EmbeddedResource Include="Images\Thumbnail\door6_b.jpg" />
+    <EmbeddedResource Include="Images\Thumbnail\door7.jpg" />
+    <EmbeddedResource Include="Images\Thumbnail\door7b.jpg" />
+    <EmbeddedResource Include="Images\Thumbnail\door7b_b.jpg" />
+    <EmbeddedResource Include="Images\Thumbnail\door7_b.jpg" />
+    <EmbeddedResource Include="Images\Thumbnail\door8.jpg" />
+    <EmbeddedResource Include="Images\Thumbnail\door9.jpg" />
+    <EmbeddedResource Include="Images\Thumbnail\door_b_1.jpg" />
+    <EmbeddedResource Include="Images\Thumbnail\door_b_2.jpg" />
+    <EmbeddedResource Include="Images\Thumbnail\door_b_3.jpg" />
+    <EmbeddedResource Include="Images\Thumbnail\door_b_4.jpg" />
+    <EmbeddedResource Include="Images\Thumbnail\door_b_5.jpg" />
+    <EmbeddedResource Include="Images\Thumbnail\door_b_6.jpg" />
+    <EmbeddedResource Include="Images\Thumbnail\garage_1a.jpg" />
+    <EmbeddedResource Include="Images\Thumbnail\garage_1b.jpg" />
+    <EmbeddedResource Include="Images\Thumbnail\garage_2a.jpg" />
+    <EmbeddedResource Include="Images\Thumbnail\garage_2b.jpg" />
+    <EmbeddedResource Include="Images\Thumbnail\garage_plan.png" />
+    <EmbeddedResource Include="Images\Thumbnail\garage_side.png" />
+    <EmbeddedResource Include="Images\Thumbnail\green1.jpg" />
+    <EmbeddedResource Include="Images\Thumbnail\green2.jpg" />
+    <EmbeddedResource Include="Images\Thumbnail\green3.jpg" />
+    <EmbeddedResource Include="Images\Thumbnail\green4.jpg" />
+    <EmbeddedResource Include="Images\Thumbnail\handle1.jpg" />
+    <EmbeddedResource Include="Images\Thumbnail\handle2.jpg" />
+    <EmbeddedResource Include="Images\Thumbnail\handle3.jpg" />
+    <EmbeddedResource Include="Images\Thumbnail\handle4.jpg" />
+    <EmbeddedResource Include="Images\Thumbnail\handle5.jpg" />
+    <EmbeddedResource Include="Images\Thumbnail\handle6.jpg" />
+    <EmbeddedResource Include="Images\Thumbnail\handle7.jpg" />
+    <EmbeddedResource Include="Images\Thumbnail\handle8.jpg" />
+    <EmbeddedResource Include="Images\Thumbnail\handle9.jpg" />
+    <EmbeddedResource Include="Images\Thumbnail\handle_blank.jpg" />
+    <EmbeddedResource Include="Images\Thumbnail\rollergarage.jpg" />
+    <EmbeddedResource Include="Images\Thumbnail\sdoor.png" />
+    <EmbeddedResource Include="Images\Thumbnail\section1.jpg" />
+    <EmbeddedResource Include="Images\Thumbnail\section10.jpg" />
+    <EmbeddedResource Include="Images\Thumbnail\section11.jpg" />
+    <EmbeddedResource Include="Images\Thumbnail\section2.jpg" />
+    <EmbeddedResource Include="Images\Thumbnail\section3.jpg" />
+    <EmbeddedResource Include="Images\Thumbnail\section4.jpg" />
+    <EmbeddedResource Include="Images\Thumbnail\section5.jpg" />
+    <EmbeddedResource Include="Images\Thumbnail\section6.jpg" />
+    <EmbeddedResource Include="Images\Thumbnail\section7.jpg" />
+    <EmbeddedResource Include="Images\Thumbnail\section8.jpg" />
+    <EmbeddedResource Include="Images\Thumbnail\section9.jpg" />
+    <EmbeddedResource Include="Images\Thumbnail\section_a.jpg" />
+    <EmbeddedResource Include="Images\Thumbnail\section_a.png" />
+    <EmbeddedResource Include="Images\Thumbnail\section_b.jpg" />
+    <EmbeddedResource Include="Images\Thumbnail\section_b.png" />
+    <EmbeddedResource Include="Images\Thumbnail\section_c.jpg" />
+    <EmbeddedResource Include="Images\Thumbnail\section_c.png" />
+    <EmbeddedResource Include="Images\Thumbnail\section_d.jpg" />
+    <EmbeddedResource Include="Images\Thumbnail\section_d.png" />
+    <EmbeddedResource Include="Images\Thumbnail\section_e.jpg" />
+    <EmbeddedResource Include="Images\Thumbnail\section_e.png" />
+    <EmbeddedResource Include="Images\Thumbnail\section_f.jpg" />
+    <EmbeddedResource Include="Images\Thumbnail\section_f.png" />
+    <EmbeddedResource Include="Images\Thumbnail\section_g.jpg" />
+    <EmbeddedResource Include="Images\Thumbnail\section_g.png" />
+    <EmbeddedResource Include="Images\Thumbnail\section_h.jpg" />
+    <EmbeddedResource Include="Images\Thumbnail\section_h.png" />
+    <EmbeddedResource Include="Images\Thumbnail\section_i.jpg" />
+    <EmbeddedResource Include="Images\Thumbnail\section_i.png" />
+    <EmbeddedResource Include="Images\Thumbnail\section_j.jpg" />
+    <EmbeddedResource Include="Images\Thumbnail\section_k.jpg" />
+    <EmbeddedResource Include="Images\Thumbnail\section_l.jpg" />
+    <EmbeddedResource Include="Images\Thumbnail\t_cons1.jpg" />
+    <EmbeddedResource Include="Images\Thumbnail\t_cons2.jpg" />
+    <EmbeddedResource Include="Images\Thumbnail\t_cons3.jpg" />
+    <EmbeddedResource Include="Images\Thumbnail\window1.jpg" />
+    <EmbeddedResource Include="Images\Thumbnail\window10.jpg" />
+    <EmbeddedResource Include="Images\Thumbnail\window10_1.jpg" />
+    <EmbeddedResource Include="Images\Thumbnail\window11.jpg" />
+    <EmbeddedResource Include="Images\Thumbnail\window11_1.jpg" />
+    <EmbeddedResource Include="Images\Thumbnail\window12.jpg" />
+    <EmbeddedResource Include="Images\Thumbnail\window12_1.jpg" />
+    <EmbeddedResource Include="Images\Thumbnail\window13.jpg" />
+    <EmbeddedResource Include="Images\Thumbnail\window13_1.jpg" />
+    <EmbeddedResource Include="Images\Thumbnail\window14.jpg" />
+    <EmbeddedResource Include="Images\Thumbnail\window15.jpg" />
+    <EmbeddedResource Include="Images\Thumbnail\window16.jpg" />
+    <EmbeddedResource Include="Images\Thumbnail\window16b.jpg" />
+    <EmbeddedResource Include="Images\Thumbnail\window17.jpg" />
+    <EmbeddedResource Include="Images\Thumbnail\window18.jpg" />
+    <EmbeddedResource Include="Images\Thumbnail\window19.jpg" />
+    <EmbeddedResource Include="Images\Thumbnail\window1_1.jpg" />
+    <EmbeddedResource Include="Images\Thumbnail\window2.jpg" />
+    <EmbeddedResource Include="Images\Thumbnail\window20.jpg" />
+    <EmbeddedResource Include="Images\Thumbnail\window2_1.jpg" />
+    <EmbeddedResource Include="Images\Thumbnail\window3.jpg" />
+    <EmbeddedResource Include="Images\Thumbnail\window3_1.jpg" />
+    <EmbeddedResource Include="Images\Thumbnail\window4.jpg" />
+    <EmbeddedResource Include="Images\Thumbnail\window4_1.jpg" />
+    <EmbeddedResource Include="Images\Thumbnail\window5.jpg" />
+    <EmbeddedResource Include="Images\Thumbnail\window5_1.jpg" />
+    <EmbeddedResource Include="Images\Thumbnail\window6.jpg" />
+    <EmbeddedResource Include="Images\Thumbnail\window6_1.jpg" />
+    <EmbeddedResource Include="Images\Thumbnail\window7.jpg" />
+    <EmbeddedResource Include="Images\Thumbnail\window7_1.jpg" />
+    <EmbeddedResource Include="Images\Thumbnail\window8.jpg" />
+    <EmbeddedResource Include="Images\Thumbnail\window8_1.jpg" />
+    <EmbeddedResource Include="Images\Thumbnail\window9.jpg" />
+    <EmbeddedResource Include="Images\Thumbnail\window9_1.jpg" />
+    <EmbeddedResource Include="Images\Thumbnail\wooden_door_1.jpg" />
+    <EmbeddedResource Include="Images\Thumbnail\wooden_door_2.jpg" />
+    <EmbeddedResource Include="Images\Thumbnail\wooden_door_3.jpg" />
+    <EmbeddedResource Include="Images\Thumbnail\wooden_door_4.jpg" />
+    <EmbeddedResource Include="Images\Thumbnail\zap_out.jpg" />
+    <EmbeddedResource Include="Images\timber.jpg" />
+    <EmbeddedResource Include="Images\timber.png" />
+    <EmbeddedResource Include="Images\tlightgreen.png" />
+    <EmbeddedResource Include="Images\tlightorange.png" />
+    <EmbeddedResource Include="Images\tlightred.png" />
+    <EmbeddedResource Include="Images\topfade.jpg" />
+    <EmbeddedResource Include="Images\tophinge.jpg" />
+    <EmbeddedResource Include="Images\trash-can.png" />
+    <EmbeddedResource Include="Images\t_cons1.jpg" />
+    <EmbeddedResource Include="Images\t_cons2.jpg" />
+    <EmbeddedResource Include="Images\t_cons3.jpg" />
+    <EmbeddedResource Include="Images\undo_in.jpg" />
+    <EmbeddedResource Include="Images\undo_out.jpg" />
+    <EmbeddedResource Include="Images\van1.png" />
+    <EmbeddedResource Include="Images\van2.png" />
+    <EmbeddedResource Include="Images\van3.png" />
+    <EmbeddedResource Include="Images\van4.png" />
+    <EmbeddedResource Include="Images\vanoutline1.png" />
+    <EmbeddedResource Include="Images\victorian.jpg" />
+    <EmbeddedResource Include="Images\window1.jpg" />
+    <EmbeddedResource Include="Images\window1.png" />
+    <EmbeddedResource Include="Images\window10.jpg" />
+    <EmbeddedResource Include="Images\window10.png" />
+    <EmbeddedResource Include="Images\window11.jpg" />
+    <EmbeddedResource Include="Images\window11.png" />
+    <EmbeddedResource Include="Images\window12.jpg" />
+    <EmbeddedResource Include="Images\window12.png" />
+    <EmbeddedResource Include="Images\window13.jpg" />
+    <EmbeddedResource Include="Images\window13.png" />
+    <EmbeddedResource Include="Images\window14.jpg" />
+    <EmbeddedResource Include="Images\window14.png" />
+    <EmbeddedResource Include="Images\window15.jpg" />
+    <EmbeddedResource Include="Images\window16.jpg" />
+    <EmbeddedResource Include="Images\window16b.jpg" />
+    <EmbeddedResource Include="Images\window17.jpg" />
+    <EmbeddedResource Include="Images\window18.jpg" />
+    <EmbeddedResource Include="Images\window19.jpg" />
+    <EmbeddedResource Include="Images\window2.jpg" />
+    <EmbeddedResource Include="Images\window2.png" />
+    <EmbeddedResource Include="Images\window20.jpg" />
+    <EmbeddedResource Include="Images\window3.jpg" />
+    <EmbeddedResource Include="Images\window3.png" />
+    <EmbeddedResource Include="Images\window4.jpg" />
+    <EmbeddedResource Include="Images\window4.png" />
+    <EmbeddedResource Include="Images\window5.jpg" />
+    <EmbeddedResource Include="Images\window5.png" />
+    <EmbeddedResource Include="Images\window6.jpg" />
+    <EmbeddedResource Include="Images\window6.png" />
+    <EmbeddedResource Include="Images\window7.jpg" />
+    <EmbeddedResource Include="Images\window7.png" />
+    <EmbeddedResource Include="Images\window8.jpg" />
+    <EmbeddedResource Include="Images\window8.png" />
+    <EmbeddedResource Include="Images\window9.jpg" />
+    <EmbeddedResource Include="Images\window9.png" />
+    <EmbeddedResource Include="Images\windowlock.png" />
+    <EmbeddedResource Include="Images\wooden_door_1.jpg" />
+    <EmbeddedResource Include="Images\wooden_door_2.jpg" />
+    <EmbeddedResource Include="Images\wooden_door_3.jpg" />
+    <EmbeddedResource Include="Images\wooden_door_4.jpg" />
+    <EmbeddedResource Include="Images\xp10lowthresholdandcill.jpg" />
+    <EmbeddedResource Include="Images\xp10rebateandcill.jpg" />
+    <EmbeddedResource Include="Images\xpiolowthreshold.jpg" />
+    <EmbeddedResource Include="Images\xpiorebated.jpg" />
+    <EmbeddedResource Include="Images\xpviewrebateandcill.jpg" />
+    <EmbeddedResource Include="Images\xpviewrebated.jpg" />
+    <EmbeddedResource Include="Images\zap_in.jpg" />
+    <EmbeddedResource Include="Images\zap_out.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+    <PackageReference Include="SkiaSharp" Version="2.88.1" />
+    <PackageReference Include="SkiaSharp.Views" Version="2.88.1" />
+    <PackageReference Include="SkiaSharp.Views.Forms" Version="2.88.1" />
+    <PackageReference Include="sqlite-net-pcl" Version="1.8.116" />
+    <PackageReference Include="System.Text.Json" Version="6.0.5" />
+    <PackageReference Include="Xam.Plugin.Media" Version="5.0.1" />
+    <PackageReference Include="Xamarin.Controls.SignaturePad.Forms" Version="3.0.0" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.7.3" />
+    <PackageReference Include="Xamarin.Forms" Version="5.0.0.2515" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Views\Accidents\AccidentsVehicle.xaml.cs">
+      <DependentUpon>AccidentsVehicle.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\Accidents\AccidentDetailsVehicle.xaml.cs">
+      <DependentUpon>AccidentDetailsVehicle.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Comms\ReceiveSurveys.xaml.cs">
+      <DependentUpon>ReceiveSurveys.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Comms\SendWorkAccidents.xaml.cs">
+      <DependentUpon>SendWorkAccidents.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\ItemsFitter\ViewLock.xaml.cs">
+      <DependentUpon>ViewLock.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\ItemsFitter\ViewDrawing.xaml.cs">
+      <DependentUpon>ViewDrawing.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\Items\Greenhouse.xaml.cs">
+      <DependentUpon>Greenhouse.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\Items\LeadAndBar\BackToBackInfo.xaml.cs">
+      <DependentUpon>BackToBackInfo.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\Items\LeadAndBar\DiamondLeadInfo.xaml.cs">
+      <DependentUpon>DiamondLeadInfo.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\Items\LeadAndBar\LeadBarPosition.xaml.cs">
+      <DependentUpon>LeadBarPosition.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\Items\LeadAndBar\ViewLeaded.xaml.cs">
+      <DependentUpon>ViewLeaded.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\Items\TimberItem.xaml.cs">
+      <DependentUpon>TimberItem.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="SpotCheck\SpotCheckReport.xaml.cs">
+      <DependentUpon>SpotCheckReport.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="SpotCheck\SpotCheckHeader.xaml.cs">
+      <DependentUpon>SpotCheckHeader.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\Survey\MileageSheetInput.xaml.cs">
+      <DependentUpon>MileageSheetInput.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Pictures\TemplateBeading.xaml.cs">
+      <DependentUpon>TemplateBeading.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\Survey\HealthAndSafety.xaml.cs">
+      <DependentUpon>HealthAndSafety.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\Survey\WebViewView.xaml.cs">
+      <DependentUpon>WebViewView.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\VanChecks\ReceiveVanChecks.xaml.cs">
+      <DependentUpon>ReceiveVanChecks.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Views\AccidentsFitter\WorkAccidents.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Accidents\AccidentMenuVehicle.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Accidents\AccidentSign.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Accidents\AccidentsVehicle.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Accidents\CarouselValidateNoImage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Accidents\InstructionsVehicle.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Accidents\AccidentDetailsVehicle.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Accidents\OtherPersonVehicle.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Accidents\PersonInCharge.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Accidents\PoliceDetails.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Accidents\Witness.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Accidents\Witnesses.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\AccidentsFitter\WorkAccident.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Comms\ReceiveShared.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Controls\ViewButtonLabel.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Controls\ViewDrawingsAndPhotos.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Controls\ViewSpecialGlassControl.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Controls\ViewSubItem.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Controls\ViewTextLabel.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Controls\YesNoLabelEntrylabel.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Data\Context\DiagnosticsPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Fitter\FitterCompletion.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Fitter\FitterInstructions.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Fitter\FitIsComplete.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Fitter\FitterComments.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Fitter\FitterMandate.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Fitter\FitterMandateGlobal.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Fitter\FitterPhotosWarning.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Fitter\FitterSign.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Fitter\FitterSignLintel.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Fitter\FitterStockUsage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Fitter\FitterWarning.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Fitter\FitterHeader.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Fitter\HingeWarning.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\ItemsFitter\ViewAluminium.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\ItemsFitter\ViewBifold.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\ItemsFitter\ViewComposite.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\ItemsFitter\ViewConservatory.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\ItemsFitter\ViewLock.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\ItemsFitter\ViewGarage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\ItemsFitter\ViewGlass.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\ItemsFitter\ViewGreenhouse.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\ItemsFitter\ViewDrawing.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\ItemsFitter\ViewLocking.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\ItemsFitter\ViewPanel.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\ItemsFitter\ViewTimber.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\ItemsFitter\ViewUPVC.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Items\LeadAndBar\ViewLeaded.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Items\Locks\DoorLockShared.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Items\RALSignature.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Comms\ReceiveFitting.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Fitter\MotorQuest.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Fitter\MotorSign.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Fitter\MotorSign2.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Fitter\Remedial\RemReport.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Fitter\ReportMessage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Fitter\TowerScaffoldCheck.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Fitter\TSSign.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Fitter\UnfinishedCode.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Fitter\Remedial\RemedialHeader.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Fitter\Remedial\RemedialSign.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Comms\SendFittings.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Fitter\Remedial\RemedialCompletion.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Comms\SendWorkAccidents.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Pictures\CameraView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="ReceiveSurveysXML.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="SpotCheck\SpotCheckSignature.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="SpotCheck\SpotCheckHeader.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="SpotCheck\SpotCheckReport.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\VanChecks\SendVanChecks.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\VanChecks\ReceiveVanChecks.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\VanChecks\Diagram.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Survey\CustomerCareCard.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Survey\MessageToInsurance.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Survey\ItemChanged.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Items\BifoldSignature.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Items\BifoldDoorType.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Comms\GetMessages.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Controls\AddMinusLabel.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Controls\Copyright.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Controls\EntryLabel.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Controls\ItemSummary_PTO.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Controls\Letterbox.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Controls\PetFlap.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Controls\DateLabel.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Controls\EntryLabelUnits.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Controls\SpecialGlass.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Items\AluminiumItem.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Items\CarouselValidate.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Items\ConservatoryItem.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Items\GarageItem.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Items\LeadAndBar\BackToBackInfo.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Items\LeadAndBar\DiamondLeadInfo.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Items\LeadAndBar\GeorgianBarInfo.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Items\LeadAndBar\GeorgianLeadInfo.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Items\LeadAndBar\LeadBarPosition.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Items\BifoldItem.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Items\LockItem.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Items\Locks\DoorLock.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Items\Locks\WindowLock.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Items\LockTypeChoose.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Items\RepairOrReplace.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Items\TimberItem.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Login.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Comms\SendSurveys.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Survey\Repudiation.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Survey\Messages.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Survey\MileageList.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Survey\MileageSend.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Survey\MileageSheetInput.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Survey\MileageSign.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Pictures\MediaPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Pictures\OrTemplate.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Pictures\Drawings.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Pictures\DrawingText.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Items\Greenhouse.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Items\Panel.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Pictures\DrawingPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Pictures\TemplateType.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Pictures\TemplateWindows.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Pictures\TemplateCons.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Pictures\TemplateDoors.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Pictures\TemplateBeading.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Pictures\TemplateHandles.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Pictures\TemplateGreen.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Controls\YesNo.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Controls\TimeLabel.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Controls\WarningMessage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Controls\YesNoQuestionLabel.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Survey\SecuritySurvey.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Survey\SecuritySurveyMessage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\VanChecks\VanCar.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\VanChecks\VanCheckedSignature.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\VanChecks\VanBrowse.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\VanChecks\VanChecks.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\VanChecks\VanCheckType.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\VanChecks\VanVan.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\VanChecks\VanDriverSignature.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\VanChecks\VanSignatures.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\VanChecks\VanDelivery.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\VanChecks\VanDeliveryVan.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\VanChecks\VanDiagrams.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\VanChecks\VanImages.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\VanChecks\VanPictures.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\VanChecks\VanPictures2.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Survey\WebViewView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+</Project>

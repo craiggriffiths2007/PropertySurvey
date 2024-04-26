@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PropertySurvey.Ladder"
+             xmlns:controls="clr-namespace:MartControls"
+             Title="Ladder Check">
+    <ContentPage.Content>
+        <ScrollView>
+            <controls:ControlLayout x:Name="Page0_inner">
+                <controls:DateLabel x:Name="date_done" TheDate="{Binding date_done}" LabelText="Checked Date"/>
+
+                <controls:EntryLabel x:Name="branch" TextBinding="branch" LabelText="Branch Code"/>
+
+                <controls:EntryLabel x:Name="ladder_number" TextBinding="ladder_number" LabelText="Ladder Number" EntryKeyboard="Numeric"/>
+
+                <controls:EditPickerLabel x:Name="ladder_type" LabelText="Ladder Type" TextBinding="s_spare5" picker_title="Ladder Type" max_text_length="30"/>
+
+                <controls:EntryLabel x:Name="registration" TextBinding="registration" LabelText="Registration"/>
+
+                <controls:YesNoLabel x:Name="in_reasonable_condition" button_binding="in_reasonable_condition" LabelText="Does the ladder look in reasonable condition?" />
+
+                <controls:YesNoLabel x:Name="rungs_missing_or_loose" button_binding="rungs_missing_or_loose" LabelText="Are any rungs missing or loose?" />
+
+                <controls:YesNoLabel x:Name="stiles_damaged_or_bent" button_binding="stiles_damaged_or_bent" LabelText="Are the stiles (outside uprights) damaged or bent?" />
+
+                <controls:YesNoLabel x:Name="any_cracks" button_binding="any_cracks" LabelText="Are there any cracks?" />
+
+                <controls:YesNoLabel x:Name="any_corrosion" button_binding="any_corrosion" LabelText="Is there corrosion to any part of the ladder?" />
+
+                <controls:YesNoLabel x:Name="rubber_plastic_feet" button_binding="rubber_plastic_feet" LabelText="Has the ladder got slip-resistant rubber/plastic feet?" />
+
+                <controls:YesNoLabel x:Name="sharp_or_metal_splinters" button_binding="sharp_or_metal_splinters" LabelText="Are there any sharp edges or metal splinters?" />
+
+                <controls:YesNoLabel x:Name="painted_or_decorated" button_binding="painted_or_decorated" LabelText="Has the ladder been painted or decorated in any way? Other than top 2 steps of small steps for height restrictions. (This can hide any defects or damage)" />
+
+                <controls:YesNoLabel x:Name="hooks_sit_properly" button_binding="hooks_sit_properly" LabelText="On extension ladders, do the hooks sit properly when the ladder is extended?" />
+
+                <controls:YesNoLabel x:Name="ladders_been_repaired" button_binding="ladders_been_repaired" LabelText="Has the ladders been repaired at all? If yes, please list the repairs below." />
+
+                <controls:YesNoLabel x:Name="i_spare4" button_binding="i_spare4" LabelText="ANY DAMAGE?" OnSelectionChanged="I_spare4_OnSelectionChanged"/>
+
+                <StackLayout Orientation="Horizontal" x:Name="photos_button_area">
+                    <Label Text="Please take 5 photographs of the damage"/>
+                    <Button WidthRequest="45" HorizontalOptions="End" Clicked="Photos_Clicked" x:Name="photos_button"/>
+                </StackLayout>
+
+                <controls:EntryLabel x:Name="comments" TextBinding="comments" LabelText="Comments"/>
+
+                <controls:EntryLabel x:Name="fitter_surveyor_name" TextBinding="fitter_surveyor_name" LabelText="Fitter/Surveyors name"/>
+
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Signature"/>
+                    <Button WidthRequest="45" HorizontalOptions="EndAndExpand" Clicked="Sign1_Clicked" x:Name="sign1_button"/>
+                </StackLayout>
+
+                <controls:EntryLabel x:Name="managers_name" TextBinding="managers_name" LabelText="Managers name"/>
+
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Signature"/>
+                    <Button WidthRequest="45" HorizontalOptions="EndAndExpand" Clicked="Sign2_Clicked" x:Name="sign2_button"/>
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal">
+                    <Label HorizontalOptions="StartAndExpand"/>
+                    <Image x:Name="green_tick" HorizontalOptions="End" Source="green_tick.png" IsVisible="False"/>
+                    <Button Text="Send" HorizontalOptions="End" Clicked="Send_Clicked"/>
+                </StackLayout>
+
+                <controls:Copyright/>
+                
+            </controls:ControlLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<s:CarouselValidate 
+              xmlns="http://xamarin.com/schemas/2014/forms"
+              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+              x:Class="PropertySurvey.GlassItem" 
+              Title="Glass"
+              xmlns:controls="clr-namespace:MartControls"
+            xmlns:s="clr-namespace:PropertySurvey">
+
+    <ScrollView>
+        <controls:ControlLayout>
+            <controls:CauseOfDamage
+                x:Name="cause_of_damage_area"
+                cause_of_damage_binding      = "cause_of_damage"
+                reason_different_binding     = "cause_of_damage_reason_different"
+                point_of_entry_binding       = "point_of_entry"
+                was_it_locked_button_binding = "was_it_locked"
+                type_of_lock_picker_binding  = "type_of_lockng_system_required"/>
+
+            <controls:YesNoLabel x:Name="copy_and_collect_button" button_binding="collect_and_copy" LabelText="Collect and copy" OnSelectionChanged="copy_and_collected_changed"/>
+            <controls:YesNoLabel x:Name="temporary_button" button_binding="temporary" LabelText="Temporary:"/>
+            <controls:AddMinusLabel x:Name="units_required_spinner" Val="{Binding units_required}" Min="1" Max="8" OnSelectionChanged="units_clicked" LabelText="Units"/>
+            <controls:WarningMessage x:Name="units_warning" Text="If more than one unit is required they must be in the same window"/>
+
+            <controls:WidthHeight
+                x:Name="width_height_area1"
+                width_label_text="Width"
+                width_binding="glass_width"
+                height_label_text="Height"
+                height_binding="glass_height"/>
+
+            <controls:WidthHeight
+                x:Name="width_height_area2"
+                width_label_text="Width 2"
+                width_binding="glass_width2"
+                height_label_text="Height 2"
+                height_binding="glass_height2"/>
+
+            <controls:WidthHeight
+                x:Name="width_height_area3"
+                width_label_text="Width 3"
+                width_binding="glass_width3"
+                height_label_text="Height 3"
+                height_binding="glass_height3"/>
+
+            <controls:WidthHeight
+                x:Name="width_height_area4"
+                width_label_text="Width 4"
+                width_binding="glass_width4"
+                height_label_text="Height 4"
+                height_binding="glass_height4"/>
+
+            <controls:WidthHeight
+                x:Name="width_height_area5"
+                width_label_text="Width 5"
+                width_binding="glass_width5"
+                height_label_text="Height 5"
+                height_binding="glass_height5"/>
+
+            <controls:WidthHeight
+                x:Name="width_height_area6"
+                width_label_text="Width 6"
+                width_binding="glass_width6"
+                height_label_text="Height 6"
+                height_binding="glass_height6"/>
+
+            <controls:WidthHeight
+                x:Name="width_height_area7"
+                width_label_text="Width 7"
+                width_binding="glass_width7"
+                height_label_text="Height 7"
+                height_binding="glass_height7"/>
+
+            <controls:WidthHeight
+                x:Name="width_height_area8"
+                width_label_text="Width 8"
+                width_binding="glass_width8"
+                height_label_text="Height 8"
+                height_binding="glass_height8"/>
+
+            <controls:YesNoLabel x:Name="stepped_unit_button" button_binding="stepped_unit" LabelText="Stepped Unit" OnSelectionChanged="stepped_unit_click"/>
+
+            <controls:WidthHeight
+                x:Name="internal_width_height_area"
+                width_label_text="Internal width"
+                width_binding="int_width"
+                height_label_text="Internal height"
+                height_binding="int_height"/>
+
+            <controls:YesNoLabel x:Name="glaze_button" button_binding="glaze" LabelText="Glaze" ButtonWidth="160"/>
+            <controls:YesNoLabel x:Name="single_or_double_button" button_binding="single_or_double" LabelText="Single or double" OnSelectionChanged="single_or_double_picker_changed" ButtonWidth="160"/>
+            <controls:EditPickerLabel x:Name="glass_type_picker" LabelText="Glass type" picker_title="Glass type" TextBinding="glass_type" max_text_length ="29" OnTextChangedEvent="glass_type_picker_changed"/>
+            <controls:EntryLabelUnits x:Name="overall_thickness_entry" LabelText="Overall thickness" TextBinding="docl_old" OnEntryChanged="overall_thickness_changed"/>
+            <controls:EditPickerLabel x:Name="installed_into_picker" LabelText="What product is the glass being installed into" picker_title="Glass installed into" TextBinding="ProductInto" OnTextChangedEvent="installed_into_picker_changed"/>
+            <controls:EditPickerLabel x:Name="glazing_type_picker" LabelText="Glazing type" picker_title="Glazing type" TextBinding="glazing_type"/>
+            <controls:EditPickerLabel x:Name="seal_picker" LabelText="Seal" picker_title="Tape or gasket" TextBinding="TapeorGasket"/>
+            <controls:EditPickerLabel x:Name="glass_pattern_picker" LabelText="Glass pattern" TextBinding="glass_pattern" picker_title="Glass pattern" max_text_length="29" OnTextChangedEvent="glass_pattern_picker_changed"/>
+            <controls:EditPickerLabel x:Name="document_L_picker" LabelText="Document L" TextBinding="docl" picker_title="Document L"  OnTextChangedEvent="document_L_picker_changed"/>
+            <controls:EditPickerLabel x:Name="spacer_colour_picker" LabelText="Spacer colour" TextBinding="spacer_color" picker_title="Spacer colour" max_text_length="29"  OnTextChangedEvent="spacer_colour_picker_changed"/>
+            <controls:WarningMessage x:Name="spacer_warning"/>
+            <controls:EditPickerLabel x:Name="spacer_thickness_picker" LabelText="Spacer thickness" TextBinding="spacer_thickness" picker_title="Spacer thickness" max_text_length="29"  OnTextChangedEvent="spacer_thickness_picker_changed"/>
+            <controls:WarningMessage x:Name="spacer_thickness_warning"/>
+
+            <controls:SpecialGlass x:Name="special_glass_area"
+                special_glass_binding="special_glass"
+                diamond_lead_complete_binding="lead_bDiamondComplete"
+                georgian_lead_complete_binding="lead_bGeorgianComplete"
+                back_to_back_complete_binding="lead_bGeorgianComplete"
+                georgian_bar_complete_binding="lead_bBarComplete"/>
+
+            <controls:EditPickerLabel x:Name="room_location_picker" LabelText="Room location" TextBinding="room_location" picker_title="Room location" max_text_length="49"/>
+
+            <controls:ItemSummary_PTO
+                x:Name="summary_pto_area"
+                summary_binding="long_comments"
+                PTO_binding="parts_to_order"/>
+
+            <controls:Copyright/>
+        </controls:ControlLayout>
+    </ScrollView>
+</s:CarouselValidate>

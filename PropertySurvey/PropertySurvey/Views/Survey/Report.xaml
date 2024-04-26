@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+              Title="Report"
+             x:Class="PropertySurvey.Report"
+             xmlns:controls="clr-namespace:MartControls">
+    <!--<ContentPage.ToolbarItems>
+        <ToolbarItem Clicked="OnSpeak" Icon="speech.png"/>
+    </ContentPage.ToolbarItems>-->
+    
+    <ContentPage.Content>
+        <controls:ControlLayout x:Name="page1">
+            <ScrollView>
+                <StackLayout>
+                    <StackLayout Orientation="Vertical">
+                        <controls:EditorGrows Text="{Binding rep_text}" x:Name="report_area"/>
+
+                    </StackLayout>
+                    <controls:Copyright/>
+                </StackLayout>
+            </ScrollView>
+
+        </controls:ControlLayout>
+    </ContentPage.Content>
+</ContentPage>

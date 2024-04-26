@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PropertySurvey.SecuritySurveyMessage"
+             xmlns:controls="clr-namespace:MartControls"
+             Title="Security Survey">
+    <ContentPage.Content>
+        <StackLayout>
+            <ScrollView VerticalOptions="FillAndExpand">
+                <StackLayout Margin="20" Orientation="Vertical">
+                    <Label Text="You must inform the customer about the following:" FontAttributes="Bold" />
+                    <StackLayout Orientation="Vertical" HeightRequest="20"/>
+                    <Label Text="They are only recommendations, not policy requirements"/>
+                    <StackLayout Orientation="Vertical" HeightRequest="20"/>
+                    <Label Text="If they have the work done, it won't necessarily mean it will prevent a break-in"/>
+                    <StackLayout Orientation="Vertical" HeightRequest="20"/>
+                    <Label Text="It won't reduce their premiums, but will give peace of mind"/>
+                    <StackLayout Orientation="Vertical" HeightRequest="20"/>
+
+                    <controls:TickButtonLabel ButtonState="{Binding bSSTicked}" LabelText="I confirm that I have read the reported cause of damage." HorizontalOptions="FillAndExpand" Clicked="TickButtonLabel_Clicked"/>
+                </StackLayout>
+            </ScrollView>
+            <StackLayout Orientation="Horizontal" VerticalOptions="End" Spacing="0">
+                <Button x:Name="next_button" Text="Next" Clicked="OnNext" HorizontalOptions="EndAndExpand"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

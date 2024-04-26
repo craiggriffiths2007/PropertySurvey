@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<StackLayout xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MartControls.PetFlap"
+              xmlns:controls="clr-namespace:MartControls">
+
+    <controls:EditPickerLabel x:Name="pet_flap_picker" LabelText="Pet flap" TextBinding ="pet_flap"  OnTextChangedEvent="pet_flap_changed"/>
+
+    <StackLayout x:Name="pet_flap_info_area" Orientation="Vertical" HorizontalOptions="FillAndExpand">
+        <controls:EditPicker x:Name="pet_flap_type_picker"/>
+        <StackLayout Orientation="Vertical" HeightRequest="3"/>
+        <controls:YesNoLabel x:Name="magnetic_button" LabelText="Microchip/Magnetic" />
+    </StackLayout>
+</StackLayout>

@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PropertySurvey.WorkAccidents"
+             Title="Accidents">
+
+    <StackLayout Orientation="Vertical">
+        <ListView HasUnevenRows="True" x:Name="listView" ItemTapped="OnItemTapped">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout BackgroundColor="{Binding back_colour}"  Margin="3" Padding="3" HorizontalOptions="FillAndExpand">
+                            <Label Text="{Binding uid}" HorizontalOptions="StartAndExpand" />
+                            <Label Text="{Binding sdate}" HorizontalOptions="StartAndExpand" />
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <StackLayout Orientation="Horizontal" VerticalOptions="End">
+            <Button Text="Accident" Clicked="accident_clicked" HorizontalOptions="FillAndExpand"/>
+            <!--<Button Text="Select" Clicked="OnSelect" HorizontalOptions="FillAndExpand"/>-->
+        </StackLayout>
+        <StackLayout Orientation="Horizontal" VerticalOptions="End">
+            <Button Text="Near miss" Clicked="near_miss_clicked" HorizontalOptions="FillAndExpand"/>
+            <Button Text="Delete" Clicked="OnDelete" HorizontalOptions="FillAndExpand"/>
+        </StackLayout>
+    </StackLayout>
+</ContentPage>

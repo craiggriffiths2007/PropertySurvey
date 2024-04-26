@@ -1,0 +1,158 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PropertySurvey.MileageSheetInput"
+             Title="Mileage Sheet"
+             xmlns:controls="clr-namespace:MartControls">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Margin="3">
+
+                <!--
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Sheet Date" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand"/>
+                    <DatePicker x:Name="datepicker1" HorizontalOptions="End" DateSelected="Datepicker1_DateSelected"/>
+                </StackLayout>
+                -->
+                <controls:DateLabel x:Name="sheet_date" TheDate="{Binding sheet_date}" LabelText="Sheet Date"/>
+                
+                <controls:EntryLabel x:Name="registration" TextBinding="registration" LabelText="Registration"/>
+
+                <StackLayout x:Name="postcode_stack_panel">
+                    <controls:EntryLabel TextBinding="start_postcode" LabelText="Start Postcode"/>
+                    <controls:EntryLabel TextBinding="finish_postcode" LabelText="Finish Postcode"/>
+                </StackLayout>
+
+                <StackLayout x:Name="time_stack_panel">
+                    <controls:TimeLabel x:Name="start_time" TheTime="{Binding start_time}" LabelText="Start Time"/>
+                    <controls:TimeLabel x:Name="end_time" TheTime="{Binding end_time}" LabelText="End Time"/>
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Start Mileage" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand"/>
+                    <Label Text="Dashboard :" HorizontalOptions="End" VerticalOptions="CenterAndExpand"/>
+                    <Button x:Name="startmileButton" WidthRequest="45" HorizontalOptions="End" Clicked="SMButton_Clicked"/>
+                </StackLayout>
+                <Entry Text="{Binding start_mileage}" HorizontalOptions="FillAndExpand" Keyboard="Numeric"/>
+
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Finish Mileage" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand"/>
+                    <Label Text="Dashboard :" HorizontalOptions="End" VerticalOptions="CenterAndExpand"/>
+                    <Button x:Name="endmileButton" WidthRequest="45" HorizontalOptions="End" Clicked="EMButton_Clicked"/>
+                </StackLayout>
+                <Entry Text="{Binding end_mileage}" HorizontalOptions="FillAndExpand" Keyboard="Numeric"/>
+                <controls:EntryLabel x:Name="comments" TextBinding="comments" LabelText="Comments"/>
+                <controls:AddMinusLabel x:Name="no_of_other_places" Val="{Binding no_of_other_places}" Min="0" Max="10" LabelText="Other places" OnSelectionChanged="OnOtherPlacesChanged"/>
+
+                <StackLayout x:Name="op1">
+                    <StackLayout Orientation="Horizontal">
+                        <Label  Text="Postcode" HorizontalOptions="StartAndExpand"/>
+                        <Entry Text="{Binding op_postcode1}" HorizontalOptions="End" WidthRequest="100"/>
+                    </StackLayout>
+                    <controls:TimeLabel  TheTime="{Binding op_time1}" LabelText="Time"  HorizontalOptions="FillAndExpand" WidthRequest="100"/>
+                </StackLayout>
+
+                <StackLayout x:Name="op2">
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Postcode" HorizontalOptions="StartAndExpand"/>
+                        <Entry  Text="{Binding op_postcode2}" HorizontalOptions="End" WidthRequest="100"/>
+                    </StackLayout>
+                    <controls:TimeLabel TheTime="{Binding op_time2}" LabelText="Time"  HorizontalOptions="FillAndExpand" WidthRequest="100"/>
+                </StackLayout>
+                
+                <StackLayout x:Name="op3">
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Postcode" HorizontalOptions="StartAndExpand"/>
+                        <Entry   Text="{Binding op_postcode3}" HorizontalOptions="End" WidthRequest="100" />
+                    </StackLayout>
+                    <controls:TimeLabel TheTime="{Binding op_time3}" LabelText="Time"  HorizontalOptions="FillAndExpand" WidthRequest="100"/>
+                </StackLayout>
+
+                <StackLayout x:Name="op4">
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Postcode" HorizontalOptions="StartAndExpand"/>
+                        <Entry   Text="{Binding op_postcode4}" HorizontalOptions="End" WidthRequest="100" />
+                    </StackLayout>
+                    <controls:TimeLabel TheTime="{Binding op_time4}" LabelText="Time"  HorizontalOptions="FillAndExpand" WidthRequest="100"/>
+                </StackLayout>
+
+                <StackLayout x:Name="op5">
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Postcode" HorizontalOptions="StartAndExpand"/>
+                        <Entry   Text="{Binding op_postcode5}" HorizontalOptions="End" WidthRequest="100" />
+                    </StackLayout>
+                    <controls:TimeLabel TheTime="{Binding op_time5}" LabelText="Time"  HorizontalOptions="FillAndExpand" WidthRequest="100"/>
+                </StackLayout>
+
+                <StackLayout x:Name="op6">
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Postcode" HorizontalOptions="StartAndExpand"/>
+                        <Entry   Text="{Binding op_postcode6}" HorizontalOptions="End" WidthRequest="100" />
+                    </StackLayout>
+                    <controls:TimeLabel TheTime="{Binding op_time6}" LabelText="Time"  HorizontalOptions="FillAndExpand" WidthRequest="100"/>
+                </StackLayout>
+
+                <StackLayout x:Name="op7">
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Postcode" HorizontalOptions="StartAndExpand"/>
+                        <Entry   Text="{Binding op_postcode7}" HorizontalOptions="End" WidthRequest="100" />
+                    </StackLayout>
+                    <controls:TimeLabel TheTime="{Binding op_time7}" LabelText="Time"  HorizontalOptions="FillAndExpand" WidthRequest="100"/>
+                </StackLayout>
+
+                <StackLayout x:Name="op8">
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Postcode" HorizontalOptions="StartAndExpand"/>
+                        <Entry   Text="{Binding op_postcode8}" HorizontalOptions="End" WidthRequest="100" />
+                    </StackLayout>
+                    <controls:TimeLabel TheTime="{Binding op_time8}" LabelText="Time"  HorizontalOptions="FillAndExpand" WidthRequest="100"/>
+                </StackLayout>
+
+                <StackLayout x:Name="op9">
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Postcode" HorizontalOptions="StartAndExpand"/>
+                        <Entry   Text="{Binding op_postcode9}" HorizontalOptions="End" WidthRequest="100" />
+                    </StackLayout>
+                    <controls:TimeLabel TheTime="{Binding op_time9}" LabelText="Time"  HorizontalOptions="FillAndExpand" WidthRequest="100"/>
+                </StackLayout>
+
+                <StackLayout x:Name="op10">
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Postcode" HorizontalOptions="StartAndExpand"/>
+                        <Entry   Text="{Binding op_postcode10}" HorizontalOptions="End" WidthRequest="100" />
+                    </StackLayout>
+                    <controls:TimeLabel TheTime="{Binding op_time10}" LabelText="Time"  HorizontalOptions="FillAndExpand" WidthRequest="100"/>
+                </StackLayout>
+                
+                <controls:YesNoLabel button_binding="toll_charges" LabelText="TollCharges" OnSelectionChanged="toll_charges_changed"/>
+                <StackLayout x:Name="toll_charges_area" IsVisible="False">
+                    <controls:EntryLabel TextBinding="toll_charge_for" LabelText="Charges are for"/>
+
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Charge Ammount" VerticalOptions="Center" HorizontalOptions="StartAndExpand"/>
+                        <Label Text="£" HorizontalOptions="End"/>
+                        <Entry Text="{Binding toll_charge_ammount}" WidthRequest="80" HorizontalOptions="End" Keyboard="Numeric"/>
+
+                    </StackLayout>
+                </StackLayout>
+                
+                <!--
+                <controls:OtherPlace x:Name="op1" TimeBinding="op_time1" ThePostcode="{Binding op_pcode1}"/>
+                <controls:OtherPlace x:Name="op2" TimeBinding="op_time2" ThePostcode="{Binding op_pcode2}"/>
+                <controls:OtherPlace x:Name="op3" TimeBinding="op_time3" ThePostcode="{Binding op_pcode3}"/>
+-->
+                <StackLayout Orientation="Horizontal">
+                    <Image x:Name="sign_tick" HorizontalOptions="EndAndExpand" Source=""/>
+                    <Button Text="Sign" HorizontalOptions="End" Clicked="SignButton_Clicked"/>
+                </StackLayout>
+
+                <Button Text="Send" HorizontalOptions="EndAndExpand" Clicked="Send_Clicked"/>
+
+                <StackLayout HeightRequest="45"></StackLayout>
+                
+                <Label Text="I confirm that the mileage claimed is a true and accurate account of the actual mileage used solely for business for Martindales Ltd and understand that any claim found to be deliberately exaggerated  will result in disciplinary action being taken by Martindales Ltd." />
+                <controls:Copyright/>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PropertySurvey.VanBrowse">
+    <ContentPage.Content>
+        <StackLayout Orientation="Vertical">
+            <ListView HasUnevenRows="True" x:Name="listView" ItemTapped="OnItemTapped">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout BackgroundColor="{Binding back_colour}"  Margin="3" Padding="3" >
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="{Binding item_number}" WidthRequest="170" />
+                                    <Label Text="{Binding item_type}" WidthRequest="170" />
+                                </StackLayout>
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="{Binding other_info}" WidthRequest="340" />
+                                </StackLayout>
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="{Binding commnts}" WidthRequest="340" />
+                                </StackLayout>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <!--<StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                <Button Text="Select" Clicked="OnSelect" HorizontalOptions="FillAndExpand"/>
+            </StackLayout>-->
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

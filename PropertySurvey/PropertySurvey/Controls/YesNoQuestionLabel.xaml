@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<StackLayout xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="MartControls.YesNoQuestionLabel"
+    Orientation="Horizontal"
+    LayoutChanged="layout_changed">
+
+    <Label  x:Name="TheLabel" HorizontalOptions="StartAndExpand" VerticalOptions="Center"/>
+    <Button x:Name="TheButton" FontSize="Small" Clicked="OnButton" HorizontalOptions="End"/>
+    <Button x:Name="QuestionButton" FontSize="Small" WidthRequest="45" Clicked="OnQuestionButtonPress" HorizontalOptions="End"/>
+</StackLayout>

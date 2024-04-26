@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PropertySurvey.VanDeliveryVan"             
+             xmlns:controls="clr-namespace:MartControls"
+             Title="Delivery Vehicle Checks">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Clicked="OnImagesClicked" Icon="images.png"/>
+    </ContentPage.ToolbarItems>
+
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                <controls:ControlLayout>
+                    <controls:YesNoLabel x:Name="is_complete" button_binding="is_complete" LabelText="Complete the check?" OnSelectionChanged="OnCompleteChanged"/>
+                </controls:ControlLayout>
+                <controls:ControlLayout x:Name="incomplete_area" IsVisible="False">
+                    <Label Text="Please explain why you were not able to complete the check, you do not need to fill in the rest of the sheet."/>
+                    <Entry Text="{Binding not_complete_reason}"/>
+                    <controls:Copyright/>
+                </controls:ControlLayout>
+                <controls:ControlLayout x:Name="complete_area" IsVisible="True">
+                    <controls:EntryLabel x:Name="name" TextBinding="name" LabelText="Name"/>
+                    <controls:EntryLabel x:Name="destination" TextBinding="destination" LabelText="Destination"/>
+                    <controls:EntryLabel x:Name="vehicle_reg" TextBinding="vehicle_registration" LabelText="Registration"/>
+                    <controls:EntryLabel x:Name="mileage" TextBinding="mileage" LabelText="Mileage" EntryKeyboard="Numeric"/>
+
+                    <controls:YesNoLabel button_binding="spare_i_2" LabelText="Loading/Storage Area Floor in Good Condition" OnSelectionChanged="OnFloorSelectionChanged"></controls:YesNoLabel>
+                    <StackLayout Orientation="Vertical" IsVisible="False" x:Name="floor_area">
+                        <Label Text="Please give a reason"/>
+                        <controls:EditorGrows Text="{Binding spare_s_2}" HorizontalOptions="FillAndExpand"/>
+                    </StackLayout>
+
+                    <controls:YesNoLabelEntryLabel x:Name="ats_card"     ButtonLabel="ATS Card" 
+                                                                                button_binding="ats_card" TextBinding="ats_card_s" />
+                    <controls:YesNoLabelEntryLabel x:Name="bodywork_check"     ButtonLabel="Bodywork Check"
+                                                                                button_binding="bodywork_check" TextBinding="bodywork_check_s" />
+                    <controls:YesNoLabelEntryLabel x:Name="breakdown_card"     ButtonLabel="Breakdown Card" 
+                                                                                button_binding="breakdown_card" TextBinding="breakdown_card_s" />
+                    <controls:YesNoLabelEntryLabel x:Name="clean_external"     ButtonLabel="Clean External" 
+                                                                                button_binding="clean_external" TextBinding="clean_external_s" />
+                    <controls:YesNoLabelEntryLabel x:Name="clean_internal"     ButtonLabel="Clean Internal" 
+                                                                                button_binding="clean_internal" TextBinding="clean_internal_s" />
+                    <controls:YesNoLabelEntryLabel x:Name="fan_belt"     ButtonLabel="Fan Belt" 
+                                                                                button_binding="fan_belt" TextBinding="fan_belt_s" />
+                    <controls:YesNoLabelEntryLabel x:Name="fire_extinguisher"     ButtonLabel="Fire Extinguisher" 
+                                                                                button_binding="fire_extinguisher" TextBinding="fire_extinguisher_s" />
+                    <controls:YesNoLabelEntryLabel x:Name="first_aid_box"     ButtonLabel="First Aid Box" 
+                                                                                button_binding="first_aid_box" TextBinding="first_aid_box_s" />
+                    <controls:YesNoLabelEntryLabel x:Name="fuel_card"     ButtonLabel="UK Fuel Card" 
+                                                                                button_binding="fuel_card" TextBinding="fuel_card_s" />
+                    <controls:YesNoLabelEntryLabel x:Name="spare_i_1"     ButtonLabel="Shell Fuel Card" 
+                                                                                button_binding="spare_i_1" TextBinding="spare_s_1" />
+                    <controls:YesNoLabelEntryLabel x:Name="horn"     ButtonLabel="Horn" 
+                                                                                button_binding="horn" TextBinding="horn_s" />
+                    <controls:YesNoLabelEntryLabel x:Name="jack"     ButtonLabel="Jack" 
+                                                                                button_binding="jack" TextBinding="jack_s" />
+                    <controls:YesNoLabelEntryLabel x:Name="jump_leads"     ButtonLabel="Jump Leads" 
+                                                                                button_binding="jump_leads" TextBinding="jump_leads_s" />
+                    <controls:YesNoLabelEntryLabel x:Name="keys_for_branches"     ButtonLabel="Keys For Branches + Sat" 
+                                                                                button_binding="keys_for_branches" TextBinding="keys_for_branches_s" />
+                    <controls:YesNoLabelEntryLabel x:Name="lights_inducators"     ButtonLabel="Lights + Inducators" 
+                                                                                button_binding="lights_inducators" TextBinding="lights_inducators_s" />
+                    <controls:YesNoLabelEntryLabel x:Name="oil_water_checked"     ButtonLabel="Oil + Water Checked" 
+                                                                                button_binding="oil_water_checked" TextBinding="oil_water_checked_s" />
+                    <controls:YesNoLabelEntryLabel x:Name="racks_poles"     ButtonLabel="Racks + Poles" 
+                                                                                button_binding="racks_poles" TextBinding="racks_poles_s" />
+                    <controls:YesNoLabelEntryLabel x:Name="ratchet_straps"     ButtonLabel="Ratchet Straps" 
+                                                                                button_binding="ratchet_straps" TextBinding="ratchet_straps_s" />
+                    <controls:YesNoLabelEntryLabel x:Name="receipt_book"     ButtonLabel="Receipt book" 
+                                                                                button_binding="receipt_book" TextBinding="receipt_book_s" />
+                    <controls:YesNoLabelEntryLabel x:Name="bump_hats"     ButtonLabel="Bump Hats (x2)" 
+                                                                                button_binding="bump_hats" TextBinding="bump_hats_s" />
+                    <controls:YesNoLabelEntryLabel x:Name="service_due_sticker"     ButtonLabel="Service Due Sticker" 
+                                                                                button_binding="service_due_sticker" TextBinding="service_due_sticker_s" />
+                    <controls:YesNoLabelEntryLabel x:Name="spanners_for_rack_removal"     ButtonLabel="Spanners For Rack Removal" 
+                                                                                button_binding="spanners_for_rack_removal" TextBinding="spanners_for_rack_removal_s" />
+                    <controls:YesNoLabelEntryLabel x:Name="spare_oil"     ButtonLabel="Spare Oil" 
+                                                                                button_binding="spare_oil" TextBinding="spare_oil_s" />
+                    <controls:YesNoLabelEntryLabel x:Name="coolant_anti_freeze_mix"     ButtonLabel="Coolant Anti freeze mix" 
+                                                                                button_binding="coolant_anti_freeze_mix" TextBinding="coolant_anti_freeze_mix_s" />
+                    <controls:YesNoLabelEntryLabel x:Name="spare_wheel"     ButtonLabel="Spare Wheel" 
+                                                                                button_binding="spare_wheel" TextBinding="spare_wheel_s" />
+                    <controls:YesNoLabelEntryLabel x:Name="tow_ropes"     ButtonLabel="Tow Ropes" 
+                                                                                button_binding="tow_ropes" TextBinding="tow_ropes_s" />
+                    <controls:YesNoLabelEntryLabel x:Name="tyre_pressure"     ButtonLabel="Tyre Pressure" 
+                                                                                button_binding="tyre_pressure" TextBinding="tyre_pressure_s" />
+                    <controls:YesNoLabelEntryLabel x:Name="van_height_sticker"     ButtonLabel="Van Height Sticker" 
+                                                                                button_binding="van_height_sticker" TextBinding="van_height_sticker_s" />
+                    <controls:YesNoLabelEntryLabel x:Name="van_locks"     ButtonLabel="Van Locks" 
+                                                                                button_binding="van_locks" TextBinding="van_locks_s" />
+                    <controls:YesNoLabelEntryLabel x:Name="wheel_nut_check_sticker"     ButtonLabel="Wheel Nut Check Sticker" 
+                                                                                button_binding="wheel_nut_check_sticker" TextBinding="wheel_nut_check_sticker_s" />
+                    <controls:YesNoLabelEntryLabel x:Name="wheelbrace"     ButtonLabel="Wheel Brace" 
+                                                                                button_binding="wheelbrace" TextBinding="wheelbrace_s" />
+                    <controls:YesNoLabelEntryLabel x:Name="windscreen_washer"     ButtonLabel="Windscreen Washer" 
+                                                                                button_binding="windscreen_washer" TextBinding="windscreen_washer_s" />
+                    <controls:YesNoLabelEntryLabel x:Name="pda_phone_accident_pack"     ButtonLabel="UK Fuel Card" 
+                                                                                button_binding="pda_phone_accident_pack" TextBinding="pda_phone_accident_pack_s" />
+                    <controls:YesNoLabelEntryLabel x:Name="passenger_front_pressure"     ButtonLabel="Passenger front pressure" 
+                                                                                button_binding="passenger_front_pressure" TextBinding="passenger_front_pressure_s" />
+                    <controls:YesNoLabelEntryLabel x:Name="passenger_rear_pressure"     ButtonLabel="Passenger rear pressure" 
+                                                                                button_binding="passenger_rear_pressure" TextBinding="passenger_rear_pressure_s" />
+                    <controls:YesNoLabelEntryLabel x:Name="driver_front_pressure"     ButtonLabel="Driver front pressure" 
+                                                                                button_binding="driver_front_pressure" TextBinding="driver_front_pressure_s" />
+                    <controls:YesNoLabelEntryLabel x:Name="driver_rear_pressure"     ButtonLabel="Driver rear pressure" 
+                                                                                button_binding="driver_rear_pressure" TextBinding="driver_rear_pressure_s" />
+                    <controls:YesNoLabelEntryLabel x:Name="spare_tyre_pressure"     ButtonLabel="Spare tyre pressure" 
+                                                                                button_binding="spare_tyre_pressure" TextBinding="spare_tyre_pressure_s" />
+
+                    <controls:Copyright/>
+                </controls:ControlLayout>
+            </StackLayout>
+
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
+    
+    

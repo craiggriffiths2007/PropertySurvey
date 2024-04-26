@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             xmlns:controls="clr-namespace:MartControls"
+             x:Class="PropertySurvey.ToolCheck"
+             Title="Tool Check">
+    <ContentPage.Content>
+        <controls:ControlLayout x:Name="Page0_inner">
+            <StackLayout Orientation="Horizontal">
+                <Label Text="" HorizontalOptions="StartAndExpand"/>
+                <Label WidthRequest="90" Text="Available&#13;&#10;on&#13;&#10;request" HorizontalTextAlignment="Center" HorizontalOptions="End"/>
+                <Label WidthRequest="90" Text="Fit&#13;&#10;for&#13;&#10;purpose" HorizontalTextAlignment="Center" HorizontalOptions="End"/>
+            </StackLayout>
+            <ScrollView>
+                <StackLayout Orientation="Vertical">
+                    <controls:YesNoLabelDouble x:Name="files_a"  button_binding="files_a"  button_binding2="files_f"  LabelText="Files" />
+                    <controls:YesNoLabelDouble x:Name="pliers_a" button_binding="pliers_a" button_binding2="pliers_f" LabelText="Pliers" />
+                    <controls:YesNoLabelDouble x:Name="chisels_a" button_binding="chisels_a" button_binding2="chisels_f" LabelText="Chisels" />
+                    <controls:YesNoLabelDouble x:Name="pincers_a" button_binding="pincers_a" button_binding2="pincers_f" LabelText="Pincers" />
+                    <controls:YesNoLabelDouble x:Name="scraper_a" button_binding="scraper_a" button_binding2="scraper_f" LabelText="Scraper" />
+                    <controls:YesNoLabelDouble x:Name="hacksaw_a" button_binding="hacksaw_a" button_binding2="hacksaw_f" LabelText="Hacksaw" />
+                    <controls:YesNoLabelDouble x:Name="crowbar_a" button_binding="crowbar_a" button_binding2="crowbar_f" LabelText="Crowbar" />
+                    <controls:YesNoLabelDouble x:Name="handsaw_a" button_binding="handsaw_a" button_binding2="handsaw_f" LabelText="Handsaw" />
+                    <controls:YesNoLabelDouble x:Name="molegrips_a" button_binding="molegrips_a" button_binding2="molegrips_f" LabelText="Molegrips" />
+                    <controls:YesNoLabelDouble x:Name="sidecutters_a" button_binding="sidecutters_a" button_binding2="sidecutters_f" LabelText="Sidecutters" />
+                    <controls:YesNoLabelDouble x:Name="hammer_a" button_binding="hammer_a" button_binding2="hammer_f" LabelText="Hammer" />
+                    <controls:YesNoLabelDouble x:Name="spiritlevel_a" button_binding="spiritlevel_a" button_binding2="spiritlevel_f" LabelText="Spirit Level" />
+                    <controls:YesNoLabelDouble x:Name="screwdrivers_a" button_binding="screwdrivers_a" button_binding2="screwdrivers_f" LabelText="Screw Drivers" />
+                    <controls:YesNoLabelDouble x:Name="bolsterchisel_a" button_binding="bolsterchisel_a" button_binding2="bolsterchisel_f" LabelText="Bolster Chisel" />
+                    <controls:YesNoLabelDouble x:Name="setsquare_a" button_binding="setsquare_a" button_binding2="setsquare_f" LabelText="Set Square" />
+                    <controls:YesNoLabelDouble x:Name="stanleyknife_a" button_binding="stanleyknife_a" button_binding2="stanleyknife_f" LabelText="Stanley Knife" />
+                    <controls:YesNoLabelDouble x:Name="clubhammer_a" button_binding="clubhammer_a" button_binding2="clubhammer_f" LabelText="Club Hammer" />
+                    <controls:YesNoLabelDouble x:Name="tapemeasure_a" button_binding="tapemeasure_a" button_binding2="tapemeasure_f" LabelText="Tape Measure" />
+                    <controls:YesNoLabelDouble x:Name="slidingbevel_a" button_binding="slidingbevel_a" button_binding2="slidingbevel_f" LabelText="Sliding Bevel" />
+                    <controls:YesNoLabelDouble x:Name="glazingshovel_a" button_binding="glazingshovel_a" button_binding2="glazingshovel_f" LabelText="Glazing Shovel" />
+                    <controls:YesNoLabelDouble x:Name="pointingtrowel_a" button_binding="pointingtrowel_a" button_binding2="pointingtrowel_f" LabelText="Pointing Trowel" />
+                    <controls:YesNoLabelDouble x:Name="setofallenkeys_a" button_binding="setofallenkeys_a" button_binding2="setofallenkeys_f" LabelText="Set of Allen Keys" />
+                    <controls:YesNoLabelDouble x:Name="adjustablespanner_a" button_binding="adjustablespanner_a" button_binding2="adjustablespanner_f" LabelText="Adjustable Spanner" />
+                    <!--<controls:YesNoLabelDouble x:Name="augerbits_a" button_binding="augerbits_a" button_binding2="augerbits_f" LabelText="" />
+                    <controls:YesNoLabelDouble x:Name="nailpunch_a" button_binding="nailpunch_a" button_binding2="nailpunch_f" LabelText="" />
+                    <controls:YesNoLabelDouble x:Name="puttyknife_a" button_binding="puttyknife_a" button_binding2="puttyknife_f" LabelText="" />
+                    <controls:YesNoLabelDouble x:Name="socketset_a" button_binding="socketset_a" button_binding2="socketset_f" LabelText="" />
+                    <controls:YesNoLabelDouble x:Name="copingsaw_a" button_binding="copingsaw_a" button_binding2="copingsaw_f" LabelText="" />-->
+
+                    <controls:YesNoLabelDouble x:Name="augerbitsjoin_a" button_binding="augerbitsjoin_a" button_binding2="augerbitsjoin_f" LabelText="Auger Bits (Joiner)" />
+                    <controls:YesNoLabelDouble x:Name="nailpunchjoin_a" button_binding="nailpunchjoin_a" button_binding2="nailpunchjoin_f" LabelText="Nail Punch (Joiner)" />
+                    <controls:YesNoLabelDouble x:Name="puttyknifejoin_a" button_binding="puttyknifejoin_a" button_binding2="puttyknifejoin_f" LabelText="Putty Knife (Joiner)" />
+                    <controls:YesNoLabelDouble x:Name="socketsetjoin_a" button_binding="socketsetjoin_a" button_binding2="socketsetjoin_f" LabelText="Socket Set (Garage Door)" />
+                    <controls:YesNoLabelDouble x:Name="copingsawjoin_a" button_binding="copingsawjoin_a" button_binding2="copingsawjoin_f" LabelText="Coping Saw (Optional)" />
+                    <controls:YesNoLabelDouble x:Name="rivetgunjoin_a" button_binding="rivetgunjoin_a" button_binding2="rivetgunjoin_f" LabelText="Rivet Gun (Optional)" />
+
+                    <controls:DateLabel x:Name="date_done" TheDate="{Binding date_done}" LabelText="Sheet Date"/>
+
+                    <controls:EntryLabel x:Name="branch" TextBinding="branch" LabelText="Branch"/>
+
+                    <controls:EntryLabel x:Name="registration" TextBinding="registration" LabelText="Registration"/>
+                    
+                    <controls:EntryLabel x:Name="signature_printed" TextBinding="signature_printed" LabelText="Fitter name"/>
+
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Fitter signature" HorizontalOptions="StartAndExpand"/>
+                        <Button x:Name="fitter_sign_button" HorizontalOptions="End" WidthRequest="45" Clicked="OnSign"/>
+                    </StackLayout>
+                    
+                    <controls:EntryLabel x:Name="signature_printed2" TextBinding="signature_printed2" LabelText="Checked by name"/>
+
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Checked by signature" HorizontalOptions="StartAndExpand"/>
+                        <Button x:Name="checkby_sign_button" HorizontalOptions="End" WidthRequest="45" Clicked="OnSign2"/>
+                    </StackLayout>
+
+                    <StackLayout HeightRequest="45"/>
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="Photograph" HorizontalOptions="StartAndExpand"/>
+                            <Button x:Name="photograph_button" HorizontalOptions="End" WidthRequest="45" Clicked="OnPhotograph"/>
+                        </StackLayout>
+                    <StackLayout HeightRequest="45"/>
+                    
+                    <Button Text="Send" HorizontalOptions="EndAndExpand" Clicked="Send_Clicked"/>
+
+                    <controls:Copyright/>
+                </StackLayout>
+            </ScrollView>
+        </controls:ControlLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PropertySurvey.VanCheckType"
+             xmlns:controls="clr-namespace:MartControls"
+             Title="Vehicles">
+    <ContentPage.Content>
+        <ScrollView>
+            <controls:ControlLayout>
+                <Label x:Name="l1" Text=" "/>
+                <Label x:Name="l2" Text=" "/>
+                <Button x:Name="i1" Text="Delivery Van" WidthRequest="230" HeightRequest="40" Margin="0,0,0,0" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" Clicked="OnDelVan"/>
+                <Button x:Name="i2" Text="Delivery HGV" WidthRequest="230" HeightRequest="40" Margin="0,0,0,0" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" Clicked="OnDelHGV"/>
+                <Button x:Name="i3" Text="Fitter Van" WidthRequest="230" HeightRequest="40" Margin="0,0,0,0" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" Clicked="OnFitVan"/>
+                <Button x:Name="i4" Text="Car" WidthRequest="230" HeightRequest="40" Margin="0,0,0,0" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" Clicked="OnCar"/>
+            </controls:ControlLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

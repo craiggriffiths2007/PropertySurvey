@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<s:CarouselValidate
+            xmlns="http://xamarin.com/schemas/2014/forms"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            x:Class="PropertySurvey.ConservatoryItem"
+            Title="Conservatory"
+            xmlns:controls="clr-namespace:MartControls"
+              xmlns:s="clr-namespace:PropertySurvey">
+
+    <ScrollView>
+        <controls:ControlLayout>
+            <controls:EntryLabel x:Name="no_repair_reason_entry" TextBinding="reason_not_repaired" LabelText="Reason cannot be repaired" IsVisible="False"/>
+
+            <StackLayout x:Name="replace_glass_area" Orientation="Horizontal">
+                <Label Text="Replace glass" HorizontalOptions="FillAndExpand"/>
+                <controls:YesNo x:Name="replace_glass_button" ButtonState="{Binding replace_glass}" OnSelectionChanged="replace_glass_changed"/>
+                <StackLayout Orientation="Horizontal" WidthRequest="3"/>
+                <Button x:Name="do_replace_glass_button" WidthRequest="45" Clicked="replace_glass_clicked"/>
+            </StackLayout>
+
+            <controls:CauseOfDamage x:Name="cause_of_damage_area"
+                cause_of_damage_binding      = "cause_of_damage"
+                reason_different_binding     = "cause_of_damage_reason_different"
+                point_of_entry_binding       = "point_of_entry"
+                was_it_locked_button_binding = "was_it_locked"
+                type_of_lock_picker_binding  = "type_of_lockng_system_required"/>
+
+            <controls:EditPickerLabel x:Name="WER_rating_picker" LabelText="WER rating" TextBinding="WER_rating"/>
+            <controls:EditPickerLabel x:Name="type_of_roof_picker" LabelText="Type of roof" TextBinding="type" OnTextChangedEvent="type_of_roof_changed" picker_title="Type of roof" max_text_length="29"/>
+            <controls:YesNoLabel x:Name="spars_lineup_button" button_binding="spars_line_up" LabelText="Do the spars line through with the window mullions" OnSelectionChanged="spar_alignment_clicked"/>
+            <controls:WarningMessage x:Name="drawing_warning_text" Text="All splits must be shown on your drawings."/>
+            <controls:YesNoLabel x:Name="roof_condition_button" button_binding="good_conditions" LabelText="Is the conservatory roof in good condition"/>
+            <controls:YesNoLabel x:Name="material_type_button" button_binding="material_type" LabelText="Material type" ButtonWidth="120"/>
+            <controls:EntryLabelUnits x:Name="ridge_length_entry" LabelText="Ridge length" TextBinding="ridge_length"/>
+            <controls:EditPickerLabel x:Name="wall_position_picker" LabelText="Wall position" TextBinding="wall_pos" OnTextChangedEvent="wall_position_changed" IsVisible="False" picker_title="Wall position" max_text_length="29"/>
+            <controls:YesNoLabel x:Name="roof_soffit_button" button_binding="does_roof_fit_under" LabelText="Does the roof fit on or underneath soffit" OnSelectionChanged="soffit_clicked"/>
+
+            <StackLayout x:Name="additional_drawing_area" IsVisible="False" Orientation="Horizontal">
+                <Label Text="Additional drawing must be completed" HorizontalOptions="FillAndExpand"/>
+                <Button x:Name="additional_drawing_button" Clicked="additional_drawings_click"/>
+            </StackLayout>
+
+            <controls:YesNoLabel x:Name="preset_drawings_button" button_binding="bDrawingsOnly" LabelText="Use preset diagrams" OnSelectionChanged="drawings_only_click"/>
+
+            <StackLayout x:Name="Page1" Orientation="Horizontal">
+                <Image x:Name="dimensions_image" VerticalOptions="Start"/>
+                <StackLayout>
+                    <controls:EntryLabelUnits x:Name="dimension_A" LabelText="A" TextBinding="sizeA"/>
+                    <controls:EntryLabelUnits x:Name="dimension_B" LabelText="B" TextBinding="sizeB"/>
+                    <controls:EntryLabelUnits x:Name="dimension_C" LabelText="C" TextBinding="sizeC"/>
+
+                    <StackLayout x:Name="dimensions_D_to_G_plus_angles">
+                        <controls:EntryLabelUnits x:Name="dimension_D" LabelText="D" TextBinding="sizeD"/>
+                        <controls:EntryLabelUnits x:Name="dimension_E" LabelText="E" TextBinding="sizeE"/>
+                        <controls:EntryLabelUnits x:Name="dimension_F" LabelText="F" TextBinding="sizeF"/>
+                        <controls:EntryLabelUnits x:Name="dimension_G" LabelText="G" TextBinding="sizeG"/>
+                        <controls:EntryLabelUnits x:Name="angle_1" LabelText="1" TextBinding="angle1" UnitsText="°"/>
+                        <controls:EntryLabelUnits x:Name="angle_2" LabelText="2" TextBinding="angle2" UnitsText="°"/>
+                        <controls:EntryLabelUnits x:Name="angle_3" LabelText="3" TextBinding="angle3" UnitsText="°"/>
+                        <controls:EntryLabelUnits x:Name="angle_4" LabelText="4" TextBinding="angle4" UnitsText="°"/>
+                    </StackLayout>
+                </StackLayout>
+            </StackLayout>
+                    
+            <controls:EntryLabelUnits x:Name="pitch_height_entry" LabelText="Pitch height" TextBinding="pitch_height"/>
+            <controls:EntryLabelUnits x:Name="profile_section_size_entry" LabelText="Profile section size" TextBinding="profile_section_size"/>
+            <controls:EntryLabelUnits x:Name="pitch_degree_entry" LabelText="Pitch degree" TextBinding="pitch_degree" UnitsText="°"/>
+            <controls:EntryLabelUnits x:Name="overall_length_entry" LabelText="Overall length of sheet" TextBinding="overall_length_of_sheet"/>
+            <controls:AddMinusLabel x:Name="roof_sheets_spin_value" Val="{Binding roof_sheets_quantity_1}" Min="0" Max="16" OnSelectionChanged="units_clicked" LabelText="Roof Sheets" Multiplier="True"/>
+            <controls:WidthHeight x:Name="pane_dimensions_01" width_label_text="Width 1" width_binding="sheet_width_1" height_label_text="Height 1" height_binding="sheet_height_1"/>
+            <controls:AddMinusLabel x:Name="add_minus_02" Val="{Binding roof_sheets_quantity_2}" Min="0" Max="16" OnSelectionChanged="units_clicked" LabelText="" Multiplier="True" IsVisible="False"/>
+            <controls:WidthHeight x:Name="pane_dimensions_02" width_label_text="Width 2" width_binding="sheet_width_2" height_label_text="Height 2" height_binding="sheet_height_2"/>
+            <controls:AddMinusLabel x:Name="add_minus_03" Val="{Binding roof_sheets_quantity_3}" Min="0" Max="16" OnSelectionChanged="units_clicked" LabelText="" Multiplier="True" IsVisible="False"/>
+            <controls:WidthHeight x:Name="pane_dimensions_03" width_label_text="Width 3" width_binding="sheet_width_3" height_label_text="Height 3" height_binding="sheet_height_3"/>
+            <controls:AddMinusLabel x:Name="add_minus_04" Val="{Binding roof_sheets_quantity_4}" Min="0" Max="16" OnSelectionChanged="units_clicked" LabelText="" Multiplier="True" IsVisible="False"/>
+            <controls:WidthHeight x:Name="pane_dimensions_04" width_label_text="Width 4" width_binding="sheet_width_4" height_label_text="Height 4" height_binding="sheet_height_4"/>
+            <controls:AddMinusLabel x:Name="add_minus_05" Val="{Binding roof_sheets_quantity_5}" Min="0" Max="16" OnSelectionChanged="units_clicked" LabelText="" Multiplier="True" IsVisible="False"/>
+            <controls:WidthHeight x:Name="pane_dimensions_05" width_label_text="Width 5" width_binding="sheet_width_5" height_label_text="Height 5" height_binding="sheet_height_5"/>
+            <controls:AddMinusLabel x:Name="add_minus_06" Val="{Binding roof_sheets_quantity_6}" Min="0" Max="16" OnSelectionChanged="units_clicked" LabelText="" Multiplier="True" IsVisible="False"/>
+            <controls:WidthHeight x:Name="pane_dimensions_06" width_label_text="Width 6" width_binding="sheet_width_6" height_label_text="Height 6" height_binding="sheet_height_6"/>
+            <controls:AddMinusLabel x:Name="add_minus_07" Val="{Binding roof_sheets_quantity_7}" Min="0" Max="16" OnSelectionChanged="units_clicked" LabelText="" Multiplier="True" IsVisible="False"/>
+            <controls:WidthHeight x:Name="pane_dimensions_07" width_label_text="Width 7" width_binding="sheet_width_7" height_label_text="Height 7" height_binding="sheet_height_7"/>
+            <controls:AddMinusLabel x:Name="add_minus_08" Val="{Binding roof_sheets_quantity_8}" Min="0" Max="16" OnSelectionChanged="units_clicked" LabelText="" Multiplier="True" IsVisible="False"/>
+            <controls:WidthHeight x:Name="pane_dimensions_08" width_label_text="Width 8" width_binding="sheet_width_8" height_label_text="Height 8" height_binding="sheet_height_8"/>
+            <controls:AddMinusLabel x:Name="add_minus_09" Val="{Binding roof_sheets_quantity_9}" Min="0" Max="16" OnSelectionChanged="units_clicked" LabelText="" Multiplier="True" IsVisible="False"/>
+            <controls:WidthHeight x:Name="pane_dimensions_09" width_label_text="Width 9" width_binding="sheet_width_9" height_label_text="Height 9" height_binding="sheet_height_9"/>
+            <controls:AddMinusLabel x:Name="add_minus_10" Val="{Binding roof_sheets_quantity_10}" Min="0" Max="16" OnSelectionChanged="units_clicked" LabelText="" Multiplier="True" IsVisible="False"/>
+            <controls:WidthHeight x:Name="pane_dimensions_10" width_label_text="Width 10" width_binding="sheet_width_10" height_label_text="Height 10" height_binding="sheet_height_10"/>
+            <controls:EditPickerLabel x:Name="roof_glazing_thickness_picker" LabelText="Roof glazing thickness" TextBinding="roof_glazing_thickness" max_text_length="29" picker_title="Roof glazing thickness"/>
+            <controls:EditPickerLabel x:Name="sheet_colour_picker" LabelText="Sheet colour" TextBinding="color" max_text_length="29" picker_title="Sheet colour"/>
+            <controls:EditPickerLabel x:Name="roof_colour_picker" LabelText="Roof colour" TextBinding="roof_color" OnTextChangedEvent="rood_colour_changed" max_text_length="29" picker_title="Roof colour"/>
+            <controls:WarningMessage x:Name="brown_warning_text" Text="Coloured cappings are obsolete, can we re-use the existing? If not then a new roof is needed."/>
+            <controls:EntryLabelUnits x:Name="flute_size_entry" LabelText="Flute size (chamber distance)" TextBinding="flute_size"/>
+            <controls:YesNoLabel x:Name="new_firrings_button" button_binding="new_firrings_req" LabelText="New firrings req."/>
+            <controls:YesNoLabel x:Name="new_gutters_button" button_binding="new_gutters_req" LabelText="New gutters req."/>
+
+            <controls:ItemSummary_PTO x:Name="summary_pto_area"
+                summary_binding="long_comments"
+                PTO_binding="parts_to_order"/>
+
+            <controls:Copyright/>
+        </controls:ControlLayout>
+    </ScrollView>
+</s:CarouselValidate>

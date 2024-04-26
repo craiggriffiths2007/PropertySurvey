@@ -1,0 +1,230 @@
+﻿@model PropertySurveyService.ViewModels.HeaderIndexViewModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Survey</h1>
+
+<div>
+    <table class="table">
+    <tbody>
+        <tr>
+            <td style="width:50%">
+
+
+    <h4>Details</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Header.RecID)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Header.RecID)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Header.bDone)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Header.bDone)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Header.bSent)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Header.bSent)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Header.iRecordType)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Header.iRecordType)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Header.typeA)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Header.typeA)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Header.typeB)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Header.typeB)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Header.fit_diary)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Header.fit_diary)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Header.fitters_instructions)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Header.fitters_instructions)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Header.fit_start)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Header.fit_start)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Header.fit_fin)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Header.fit_fin)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Header.fitter_work)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Header.fitter_work)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Header.parts_used)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Header.parts_used)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Header.claim_ref)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Header.claim_ref)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Header.fitter_comments)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Header.fitter_comments)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Header.udi_cont)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Header.udi_cont)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Header.sn_name)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Header.sn_name)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Header.uc_laname)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Header.uc_laname)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Header.uc_name)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Header.uc_name)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Header.uc_add1)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Header.uc_add1)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Header.uc_add2)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Header.uc_add2)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Header.uc_add3)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Header.uc_add3)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Header.uc_add4)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Header.uc_add4)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Header.uc_postcode)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Header.uc_postcode)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Header.uc_h_phone)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Header.uc_h_phone)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Header.uc_goahead)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Header.uc_goahead)
+        </dd>
+
+
+
+            <td style="width:50%">
+                    <h4>Items</h4>
+                    <hr />
+                    <table class="table">
+
+        <tbody>
+            @if (Model.SurveyItems != null)
+            {
+                @foreach (var item in Model.SurveyItems)
+                {
+                    <tr>
+                        <td>
+                            @item.ItemName
+                        </td>
+                        <td>
+                                            <a asp-controller="@item.ControllerName" asp-action="Details" asp-route-id="@item.Id">View</a>
+
+                        </td>
+                    </tr>
+                }
+            }
+
+
+
+        </tbody>
+    </table>
+    
+
+
+    <table class="table">
+        <tbody>
+             
+                    
+                                                @if (Model.Images != null)
+                                    {
+                                        @foreach (var item in Model.Images)
+                                        {
+                                    <tr>
+                                        <td>
+                                            <img src="data:image/png;base64,@item.Data" style='height: 100%; width: 100%; object-fit: contain' />
+
+                                        </td>
+
+                                    </tr>
+                                        }
+                                    }
+
+            </tbody>
+            </table>
+              
+
+            </td>
+        </tr>
+    </tbody>
+  </table>
+</div>
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>

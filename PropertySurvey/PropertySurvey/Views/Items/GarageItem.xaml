@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<s:CarouselValidate
+            xmlns="http://xamarin.com/schemas/2014/forms"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            x:Class="PropertySurvey.GarageItem"
+            Title="Garage"
+            xmlns:controls="clr-namespace:MartControls"
+            xmlns:s="clr-namespace:PropertySurvey">
+
+    <ScrollView>
+        <controls:ControlLayout>
+            <controls:CauseOfDamage
+                x:Name="cause_of_damage_area"
+                cause_of_damage_binding      = "cause_of_damage"
+                reason_different_binding     = "cause_of_damage_reason_different"
+                point_of_entry_binding       = "point_of_entry"
+                was_it_locked_button_binding = "was_it_locked"
+                type_of_lock_picker_binding  = "type_of_lockng_system_required"/>
+
+            <controls:EditPickerLabel x:Name="colour_picker" LabelText="Colour" TextBinding="color" picker_title="Colour" max_text_length="29"/>
+            <controls:YesNoLabel x:Name="subframe_material_button" button_binding="door_fits_into" LabelText="Subframe material" OnSelectionChanged="subframe_material_clicked"/>
+            <controls:YesNoLabel x:Name="new_subframe_button" button_binding="new_subframe_req" LabelText="New subframe"/>
+            <controls:YesNoLabel x:Name="obstruction_outside_button" button_binding="obstruction_outside_b" LabelText="Obstruction outside" OnSelectionChanged="obstruction_outside_clicked"/>
+            <Entry x:Name="obstruction_outside_text" Text="{Binding obstruction_outside}"/>
+            <controls:YesNoLabel x:Name="obstruction_inside_button" button_binding="obstruction_inside_b" LabelText="Obstruction inside" OnSelectionChanged="obstruction_inside_clicked"/>
+            <Entry x:Name="obstruction_inside_text" Text="{Binding obstruction_inside}"/>
+
+            <controls:WidthHeight
+                x:Name="door_dimensions"
+                width_label_text="Actual door width"
+                width_binding="actual_door_width"
+                height_label_text="Actual door height"
+                height_binding="actual_door_height"/>
+
+            <controls:YesNoLabel x:Name="frame_fix_type_button" button_binding="frame_fix_type" LabelText="Frame fix type" ButtonWidth="160"/>
+            <controls:YesNoLabel x:Name="perimiter_button" button_binding="door_within_perimeter" LabelText="Is the garage door in customers house perimeter" OnSelectionChanged="door_within_changed"/>
+            <controls:EntryLabel x:Name="where_is_garage_entry" TextBinding="where_is_garage" LabelText="Where is it" IsVisible="False"/>
+            <controls:EditPickerLabel x:Name="type_of_garage_picker" LabelText="Type of garage" TextBinding="type_of_garage" picker_title="Type of garage" max_text_length="29"/>
+            <controls:EditPickerLabel x:Name="new_electric_operator_picker" LabelText="New Electric operator required" TextBinding="new_electric_operator_req" OnTextChangedEvent="new_electric_operator_clicked" picker_title="New Electric operator required" max_text_length="29"/>
+            <controls:EditPickerLabel x:Name="hard_wired_picker" LabelText="Is the door motor hard wired or is it into a 240v plug" TextBinding="wire_type" IsVisible="False" OnTextChangedEvent="hard_wired_change" picker_title="Electrical connection"/>
+            <controls:YesNoLabel x:Name="socket_within_1m_button" button_binding="socket_within_1m" LabelText="Is there a 240v socket within 1m of where the motor is to be positioned" IsVisible="False" OnSelectionChanged="socket_within_1m_changed"/>
+            <Label x:Name="electrician_warning_message" Text="You must inform the customer that an electrician will be required to install one prior to our installation." IsVisible="False" HorizontalOptions="FillAndExpand" BackgroundColor="#FFE0E0"/>
+            <controls:YesNoLabel x:Name="electric_door_button" button_binding="electric_door" LabelText="Electric door" OnSelectionChanged="electric_door_clicked"/>
+            <controls:YesNoLabel x:Name="motor_position_button" button_binding="motor_position" LabelText="Motor position" OnSelectionChanged="motor_position_clicked"/>
+            <Label x:Name="motor_position_message" Text="" IsVisible="false" HorizontalOptions="FillAndExpand" BackgroundColor="#FFE0E0"/>
+            <controls:YesNoLabel x:Name="other_access_button" button_binding="other_access" LabelText="Other access into garage" OnSelectionChanged="other_access_clicked"/>
+            <Label x:Name="safety_box_warning_message" Text="Check electric box is fitted in the garage as a safety release switch should be fitted." IsVisible="False" HorizontalOptions="FillAndExpand" BackgroundColor="#FFE0E0"/>
+            <controls:YesNoLabel x:Name="safety_release_required_button" button_binding="need_safety_release" LabelText="Need safety release"/>
+            <controls:YesNoLabel x:Name="handle_outside_button" button_binding="handle_outside" LabelText="Handle on the outside"/>
+            <controls:YesNoLabel x:Name="door_stuck_button" button_binding="door_stuck_shut" LabelText="Garage door stuck shut"/>
+            <StackLayout Orientation="Horizontal">
+                <Image x:Name="garage_side" Source="garageside.jpg" VerticalOptions="Start"/>
+                <StackLayout>
+                        <controls:ControlLayout x:Name="Page2_inner">
+                            <controls:EntryLabelUnits x:Name="side_dimension_A" LabelText="A" TextBinding="side_size_A"/>
+                            <controls:EntryLabelUnits x:Name="side_dimension_B" LabelText="B" TextBinding="side_size_B"/>
+                            <controls:EntryLabelUnits x:Name="side_dimension_C" LabelText="C" TextBinding="side_size_C"/>
+                            <controls:EntryLabelUnits x:Name="side_dimension_D" LabelText="D" TextBinding="side_size_D"/>
+                            <controls:EntryLabelUnits x:Name="side_dimension_E" LabelText="E" TextBinding="side_size_E"/>
+                            <controls:EntryLabelUnits x:Name="side_dimension_F" LabelText="F" TextBinding="side_size_F"/>
+                            <controls:EntryLabelUnits x:Name="side_dimension_G" LabelText="G" TextBinding="side_size_G"/>
+                            <Label Text="Timber"/>
+                            <controls:EntryLabelUnits x:Name="side_dimension_1" LabelText="1" TextBinding="side_timber_1"/>
+                            <controls:EntryLabelUnits x:Name="side_dimension_2" LabelText="2" TextBinding="side_timber_2"/>
+
+                        </controls:ControlLayout>
+                </StackLayout>
+            </StackLayout>
+            <StackLayout HeightRequest="45"/>
+            <StackLayout Orientation="Horizontal">
+                <Image x:Name="garage_plan" Source="garageplan.jpg" VerticalOptions="Start"/>
+                <StackLayout>
+                    <controls:ControlLayout x:Name="Page3_inner">
+                        <controls:EntryLabelUnits x:Name="plan_dimension_A" LabelText="A" TextBinding="plan_size_A"/>
+                        <controls:EntryLabelUnits x:Name="plan_dimension_B" LabelText="B" TextBinding="plan_size_B"/>
+                        <controls:EntryLabelUnits x:Name="plan_dimension_C1" LabelText="C1" TextBinding="plan_size_C1"/>
+                        <controls:EntryLabelUnits x:Name="plan_dimension_C2" LabelText="C2" TextBinding="plan_size_C2"/>
+                        <controls:EntryLabelUnits x:Name="plan_dimension_D" LabelText="D" TextBinding="plan_size_D"/>
+                        <Label Text="Timber"/>
+                        <controls:EntryLabelUnits x:Name="plan_dimension_1" LabelText="1" TextBinding="plan_timber_1"/>
+                        <controls:EntryLabelUnits x:Name="plan_dimension_2" LabelText="2" TextBinding="plan_timber_2"/>
+                        
+                    </controls:ControlLayout>
+                </StackLayout>
+            </StackLayout>
+            
+            <controls:EditPickerLabel x:Name="opening_type_picker" LabelText="Opening type" TextBinding="opening_type" OnTextChangedEvent="opening_type_clicked"/>
+            <controls:EditPickerLabel x:Name="roller_door_type_picker" LabelText="Type of roller door" TextBinding="roller_door_type" IsVisible="False" OnTextChangedEvent="roller_door_type_changed"/>
+            <controls:EditPickerLabel x:Name="roller_door_box_picker" LabelText="Roll box type" TextBinding="roller_box_type" IsVisible="False" OnTextChangedEvent="roll_box_type_changed"/>
+            <controls:YesNoLabel x:Name="colour_match_button" button_binding="colour_match_roll_box" LabelText="Colour match roll box" IsVisible="False"/>
+
+            <StackLayout x:Name="additional_drawings_area" Orientation="Horizontal">
+                <Label x:Name="additional_drawing" Text="Additional drawings must be complete" HorizontalOptions="FillAndExpand"/>
+                <Button x:Name="additional_drawing_button" WidthRequest="45" Clicked="additional_drawing1_clicked"/>
+            </StackLayout>
+                    
+            <controls:EditPickerLabel x:Name="finish_picker" LabelText="Finish" TextBinding="finish"/>
+            <controls:YesNoLabel x:Name="opening_direction_button" button_binding="opening_direction" LabelText="Opening direction" ButtonWidth="160"/>
+            <controls:YesNoLabel x:Name="power_points_button" button_binding="power_points" LabelText="Power points"/>
+            <controls:YesNoLabel x:Name="insulated_button" button_binding="insulated" LabelText="Insulated"/>
+
+            <controls:ItemSummary_PTO
+                x:Name="summary_pto_area"
+                summary_binding="long_comments"
+                PTO_binding="parts_to_order"/>
+
+            <controls:Copyright/>
+        </controls:ControlLayout>
+    </ScrollView>
+</s:CarouselValidate>

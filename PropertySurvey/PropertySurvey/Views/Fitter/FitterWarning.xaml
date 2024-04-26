@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PropertySurvey.FitterWarning"
+             xmlns:controls="clr-namespace:MartControls"
+             Title="Warning">
+    <ContentPage.Content>
+        <controls:ControlLayout>
+            <ScrollView VerticalOptions="FillAndExpand">
+                <StackLayout>
+                    <Image Source="headprotection.jpg" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"/>
+                    <StackLayout HeightRequest="20"/>
+                    <Label Text="If work is being carried out at or above head height." VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"/>
+                    <StackLayout HeightRequest="20"/>
+                </StackLayout>
+            </ScrollView>
+            
+                <Button Text="Next" Clicked="OnClick" VerticalOptions="EndAndExpand" HorizontalOptions="EndAndExpand"/>
+            
+        </controls:ControlLayout>
+    </ContentPage.Content>
+</ContentPage>

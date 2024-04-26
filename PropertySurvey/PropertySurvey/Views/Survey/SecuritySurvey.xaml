@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PropertySurvey.SecuritySurvey"
+             xmlns:controls="clr-namespace:MartControls"
+             Title="Security Survey">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem x:Name="photos_text" Text="" Clicked="OnImagesClicked"/>
+        <ToolbarItem Clicked="OnImagesClicked" Icon="camera.png"/>
+    </ContentPage.ToolbarItems>
+    
+    <ContentPage.Content>
+            <ScrollView>
+                <controls:ControlLayout x:Name="page1">
+                    <controls:YesNoLabel x:Name="ss_req" LabelText="Is a Security Survey Required?" button_binding="ss_bIsSecuritySurvey" OnSelectionChanged="selection_changed"/>
+                    <StackLayout x:Name="SecSurvey">
+                        <controls:EditPickerLabel x:Name="many_windows_op" LabelText="How many windows are on the ground floor?" TextBinding="ss_nowindows" OnTextChangedEvent="Many_windows_op_OnTextChangedEvent"/>
+                        <controls:WarningMessage x:Name="window_warning" Text="Take 2 photos of each item, one inside and one outside." IsVisible="False"/>
+                        <controls:EditPickerLabel x:Name="many_doors_op" LabelText="How many doors are on the ground floor?" TextBinding="ss_nodoors" OnTextChangedEvent="Many_doors_op_OnTextChangedEvent"/>
+                        <controls:WarningMessage x:Name="door_warning" Text="Take 2 photos of each item, one inside and one outside." IsVisible="False"/>
+                        <StackLayout HeightRequest="60"/>
+                        <controls:EditPickerLabel x:Name="general_condition_op" LabelText="What is the general conditions of the items?" TextBinding="ss_gencondition" OnTextChangedEvent="General_condition_op_OnTextChangedEvent"/>
+                        <controls:EntryLabel x:Name="general_condition_expain_op" LabelText="Please explain the general condition:" TextBinding="ss_gencondition_others"/>
+                        <StackLayout HeightRequest="60"/>
+                        <StackLayout x:Name="window_area1">
+                            <controls:EditPickerLabel x:Name="windows_made_from_op" LabelText="What material are the windows made from?" TextBinding="ss_matwindows" OnTextChangedEvent="Windows_made_from_op_OnTextChangedEvent"/>
+                            <controls:EntryLabel x:Name="windows_made_from_explain_op" LabelText="Please explain the material:" TextBinding="ss_matwindows_other"/>
+                        </StackLayout>
+                        <StackLayout x:Name="door_area1">
+                            <controls:EditPickerLabel x:Name="doors_made_from_op" LabelText="What material are the doors made from?" TextBinding="ss_matdoors" OnTextChangedEvent="Doors_made_from_op_OnTextChangedEvent"/>
+                            <controls:EntryLabel x:Name="doors_made_from_explain_op" LabelText="Please explain the material:" TextBinding="ss_matdoors_other"/>
+                        </StackLayout>
+                        <StackLayout HeightRequest="60"/>
+                        <StackLayout x:Name="window_area2">
+                            <controls:EditPickerLabel x:Name="window_locking_system_op" LabelText="What type of locking system is on the windows?" TextBinding="ss_lockwindows" OnTextChangedEvent="Window_locking_system_op_OnTextChangedEvent"/>
+                            <controls:EntryLabel x:Name="window_locking_system_explain_op" LabelText="Please explain the locking system:" TextBinding="ss_lockwindows_other"/>
+                        </StackLayout>
+                        <StackLayout x:Name="door_area2">
+                            <controls:EditPickerLabel x:Name="door_locking_system_op" LabelText="What type of locking system is on the doors front and back?" TextBinding="ss_lockdoors" OnTextChangedEvent="Door_locking_system_op_OnTextChangedEvent"/>
+                            <controls:EntryLabel x:Name="doors_locking_system_explain_op" LabelText="Please explain the locking system:" TextBinding="ss_lockdoors_other"/>
+                        </StackLayout>
+                        <StackLayout x:Name="window_area3">
+                            <controls:YesNoLabel x:Name="window_add" LabelText="Is additional security suggested to any of the windows?" button_binding="ss_add_window_security" OnSelectionChanged="Window_add_OnSelectionChanged"/>
+                            <controls:EntryLabel x:Name="window_sec_explain_op" LabelText="What is required and where?" TextBinding="ss_secwindows_other"/>
+                        </StackLayout>
+                        <StackLayout x:Name="door_area3">
+                            <controls:YesNoLabel x:Name="door_add" LabelText="Is additional security suggested to any of the doors?" button_binding="ss_add_door_security" OnSelectionChanged="Door_add_OnSelectionChanged"/>
+                            <controls:EntryLabel x:Name="door_sec_explain_op" LabelText="What is required and where?" TextBinding="ss_secdoors_other"/>
+                        </StackLayout>
+                        <controls:EditPickerLabel x:Name="time_required_op" LabelText="What is the time required to complete this job?" TextBinding="ss_time_required" OnTextChangedEvent="Time_required_op_OnTextChangedEvent"/>
+                    </StackLayout>
+                    <controls:Copyright/>
+                </controls:ControlLayout>
+            </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

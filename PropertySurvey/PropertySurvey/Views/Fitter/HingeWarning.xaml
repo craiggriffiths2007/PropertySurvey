@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PropertySurvey.HingeWarning"
+             xmlns:controls="clr-namespace:MartControls">
+    <ContentPage.Content>
+        <controls:ControlLayout>
+            <ScrollView VerticalOptions="FillAndExpand">
+                <StackLayout>
+                    <Image Source="tophinge.jpg" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"/>
+                    <StackLayout HeightRequest="20"/>
+                    <Label Text="Take a photo of the fixing of the top hinge." VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"/>
+                    <StackLayout HeightRequest="20"/>
+                </StackLayout>
+            </ScrollView>
+            <StackLayout Orientation="Horizontal" VerticalOptions="End" Spacing="0">
+                <Button Text="OK" Clicked="OnClick" VerticalOptions="CenterAndExpand" HorizontalOptions="EndAndExpand"/>
+            </StackLayout>
+        </controls:ControlLayout>
+    </ContentPage.Content>
+</ContentPage>

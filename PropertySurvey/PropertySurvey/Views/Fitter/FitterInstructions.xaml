@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PropertySurvey.FitterInstructions"
+             xmlns:controls="clr-namespace:MartControls"
+             Title="Delivery / Instructions">
+    
+    <ContentPage.Content>
+        <controls:ControlLayout>
+            <ScrollView VerticalOptions="FillAndExpand">
+
+                <StackLayout>
+                    <StackLayout Margin="10">
+                        <Label x:Name="fitins" TextColor="Black" Text="{Binding cover_instructions}"/>
+                    </StackLayout>
+                    
+                    <StackLayout HeightRequest="30"/>
+
+                    <Label x:Name="del_ins_label" Text="DELIVERY ITEMS"/>
+                    <StackLayout Margin="10">
+                        <Label x:Name="del_ins" TextColor="Black" Text="{Binding cover_instructions}"/>
+                    </StackLayout>
+                    <controls:Copyright/>
+                </StackLayout>
+                
+            </ScrollView>
+            <StackLayout Orientation="Horizontal" VerticalOptions="End" Spacing="0">
+                <Button x:Name="next_button" Text="Next" Clicked="OnNext" HorizontalOptions="EndAndExpand"/>
+            </StackLayout>
+
+
+        </controls:ControlLayout>
+    </ContentPage.Content>
+</ContentPage>

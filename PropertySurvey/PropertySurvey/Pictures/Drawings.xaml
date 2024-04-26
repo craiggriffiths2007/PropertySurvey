@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PropertySurvey.Drawings"
+             xmlns:views="clr-namespace:SkiaSharp.Views.Forms;assembly=SkiaSharp.Views.Forms"
+             Title="Drawing"
+             >
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Clicked="OnDel" x:Name="del_button" Icon="garbage.png"/>
+        <ToolbarItem Clicked="OnAdd" x:Name="add_button" Icon="drawing.png"/>
+        <ToolbarItem Clicked="OnL" Icon="left.png"/>
+        <ToolbarItem x:Name="picnum" />
+        <ToolbarItem Clicked="OnR" Icon="right.png"/>
+    </ContentPage.ToolbarItems>
+
+    <ContentPage.Content>
+        <StackLayout Orientation="Vertical">
+            <Image Grid.Column="0" Grid.Row="0" Aspect="AspectFit" x:Name="image" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" />
+          
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PropertySurvey.TemplateType"
+             Title="Template">
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="CenterAndExpand" Spacing="20">
+
+            <Button Text="Windows" WidthRequest="230" Clicked="OnWindows" HorizontalOptions="Center" VerticalOptions="CenterAndExpand"/>
+            <Button Text="Doors + Combi Frames" WidthRequest="230" Clicked="OnDoors" HorizontalOptions="Center" VerticalOptions="CenterAndExpand"/>
+            <Button Text="Conservatories" WidthRequest="230" Clicked="OnCons" HorizontalOptions="Center" VerticalOptions="CenterAndExpand"/>
+            <Button Text="Section + Beading" WidthRequest="230" Clicked="OnSection" HorizontalOptions="Center" VerticalOptions="CenterAndExpand"/>
+            <Button Text="Handles" WidthRequest="230" Clicked="OnHandles" HorizontalOptions="Center" VerticalOptions="CenterAndExpand"/>
+            <Button Text="Greenhouse/Sheds" WidthRequest="230" Clicked="OnGreen" HorizontalOptions="Center" VerticalOptions="CenterAndExpand"/>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

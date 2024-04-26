@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PropertySurvey.SendSurveys"
+             Title="Send">
+    <ContentPage.Content>
+        <Grid>
+            <StackLayout Margin="3">
+                <Label Text="" IsVisible="False" x:Name="complete_label"/>
+                <StackLayout HeightRequest="45"/>
+                <ProgressBar x:Name="sending_progress"/>
+            </StackLayout>
+            <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="Center" HeightRequest="60" >
+                <Label x:Name="MessageLabel" Text="Sending.."/>
+                <Label x:Name="MessageImages" Text=""/>
+                <Grid HeightRequest="20"/>
+                <Button x:Name="CompleteButton" Clicked="OnCompleteClicked" Text="Done"  IsVisible="false"/>
+                <ActivityIndicator x:Name="act_ind" Color="DodgerBlue" IsRunning="True" WidthRequest="60" HeightRequest="60"/>
+            </StackLayout>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

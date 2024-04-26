@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<StackLayout xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="MartControls.YesNoLabelDouble"
+    Orientation="Horizontal"
+    HorizontalOptions="FillAndExpand"
+    xmlns:controls="clr-namespace:MartControls">
+
+    <Label x:Name="TheLabel" HorizontalOptions="FillAndExpand" VerticalOptions="Center"/>
+    <StackLayout Orientation="Horizontal">
+        <controls:YesNo x:Name="TheButton" OnSelectionChanged="OnButton" VerticalOptions="EndAndExpand"/>
+        <controls:YesNo x:Name="TheButton2" OnSelectionChanged="OnButton2" VerticalOptions="EndAndExpand"/>
+    </StackLayout>
+</StackLayout>

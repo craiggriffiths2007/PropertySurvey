@@ -1,0 +1,413 @@
+﻿@model IEnumerable<PropertySurveyService.Models.GarageTable>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.HeaderId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.udi_cont)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.item_number)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.opening_direction)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.cause_of_damage)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.cause_of_damage_reason_different)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.door_fits_into)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.new_subframe_req)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.obstruction_outside_b)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.obstruction_outside)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.obstruction_inside_b)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.obstruction_inside)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.actual_door_width)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.actual_door_height)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.frame_fix_type)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.type_of_garage)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.new_electric_operator_req)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.side_size_A)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.side_size_B)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.side_size_C)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.side_size_D)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.side_size_E)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.side_size_F)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.side_size_G)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.side_timber_1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.side_timber_2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.plan_size_A)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.plan_size_B)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.plan_size_C1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.plan_size_C2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.plan_size_D)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.plan_timber_1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.plan_timber_2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.color)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.opening_type)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.finish)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.power_points)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.electric_door)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.handle_outside)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.other_access)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.need_safety_release)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.no_of_pics)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.no_of_photos)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.insulated)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.door_stuck_shut)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.motor_position)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.no_of_vids)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.bDifferentFromOriginal)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ChangeItemTo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.print_name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.long_comments)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.isComplete)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.door_within_perimeter)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.socket_within_1m)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.wire_type)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.colour_match_roll_box)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.additional_drawn)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.roller_door_type)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.roller_box_type)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.parts_to_order)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.point_of_entry)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.type_of_lockng_system_required)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.was_it_locked)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.where_is_garage)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.HeaderId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.udi_cont)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.item_number)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.opening_direction)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.cause_of_damage)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.cause_of_damage_reason_different)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.door_fits_into)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.new_subframe_req)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.obstruction_outside_b)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.obstruction_outside)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.obstruction_inside_b)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.obstruction_inside)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.actual_door_width)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.actual_door_height)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.frame_fix_type)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.type_of_garage)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.new_electric_operator_req)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.side_size_A)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.side_size_B)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.side_size_C)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.side_size_D)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.side_size_E)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.side_size_F)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.side_size_G)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.side_timber_1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.side_timber_2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.plan_size_A)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.plan_size_B)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.plan_size_C1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.plan_size_C2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.plan_size_D)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.plan_timber_1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.plan_timber_2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.color)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.opening_type)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.finish)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.power_points)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.electric_door)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.handle_outside)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.other_access)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.need_safety_release)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.no_of_pics)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.no_of_photos)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.insulated)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.door_stuck_shut)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.motor_position)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.no_of_vids)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.bDifferentFromOriginal)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ChangeItemTo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.print_name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.long_comments)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.isComplete)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.door_within_perimeter)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.socket_within_1m)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.wire_type)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.colour_match_roll_box)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.additional_drawn)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.roller_door_type)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.roller_box_type)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.parts_to_order)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.point_of_entry)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.type_of_lockng_system_required)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.was_it_locked)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.where_is_garage)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

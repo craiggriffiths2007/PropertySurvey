@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PropertySurvey.DiagnosticsPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Button Text="Header" WidthRequest="110" Clicked="header_clicked"/>
+                <Button Text="Aluminium" WidthRequest="110" Clicked="alum_clicked"/>
+                <Button Text="Bifold" WidthRequest="110" Clicked="bifold_clicked"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Button Text="Composite" WidthRequest="110" Clicked="comp_clicked"/>
+                <Button Text="Conservatory" WidthRequest="110" Clicked="cons_clicked"/>
+                <Button Text="Garage" WidthRequest="110" Clicked="garage_clicked"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Button Text="Glass" WidthRequest="110" Clicked="glass_clicked"/>
+                <Button Text="Greenhouse" WidthRequest="110" Clicked="green_clicked"/>
+                <Button Text="Lock" WidthRequest="110" Clicked="lock_clicked"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Button Text="Panel" WidthRequest="110" Clicked="panel_clicked"/>
+                <Button Text="Timber" WidthRequest="110" Clicked="timber_clicked"/>
+                <Button Text="Upvc" WidthRequest="110" Clicked="upvc_clicked"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

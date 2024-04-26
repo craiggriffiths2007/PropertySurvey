@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PropertySurvey.MessageToInsurance"
+             xmlns:controls="clr-namespace:MartControls"
+             Title="Message to Insurance Company">
+    <ContentPage.Content>
+        <controls:ControlLayout>
+
+            <controls:YesNoLabel x:Name="is_messagetoinsurer" button_binding="is_messagetoinsurer" LabelText="Any issues to report back to the insurance company?" HorizontalOptions="FillAndExpand" OnSelectionChanged="on_changed"/>
+
+            <StackLayout x:Name="message_area" IsVisible="false">
+
+                <controls:EditorGrows Text="{Binding messagetoinsurer}" x:Name="messagetoinsurer"/>
+
+            </StackLayout>
+            <StackLayout HeightRequest="45"/>
+
+            <Button HorizontalOptions="End" Text="Done" Clicked="on_done"/>
+            <controls:Copyright/>
+        </controls:ControlLayout>
+    </ContentPage.Content>
+</ContentPage>

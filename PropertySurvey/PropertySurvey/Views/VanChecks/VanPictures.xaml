@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PropertySurvey.VanPictures"
+             NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50*" />
+                <RowDefinition Height="50*" />
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="50*" />
+                <ColumnDefinition Width="50*" />
+            </Grid.ColumnDefinitions>
+
+            <StackLayout Orientation="Vertical" Grid.Row="0" Grid.Column="0">
+                <Grid>
+                <!--<Label Text="Passenger Side"/>-->
+                <Image Aspect="AspectFit" x:Name="van1"/>
+                </Grid>
+            </StackLayout>
+
+            <StackLayout Orientation="Vertical" Grid.Row="0" Grid.Column="1">
+                <Grid>
+                    <!--<Label Text="Driver Side"/>-->
+                    <Image Aspect="AspectFit" x:Name="van2"/>
+                </Grid>
+            </StackLayout>
+
+            <StackLayout Orientation="Vertical" Grid.Row="1" Grid.Column="0">
+                <Grid>
+                    <!--<Label Text="Front"/>-->
+                    <Image Aspect="AspectFit" x:Name="van3"/>
+                </Grid>
+            </StackLayout>
+
+            <StackLayout Orientation="Vertical" Grid.Row="1" Grid.Column="1">
+                <Grid>
+                    <!--<Label Text="Rear"/>-->
+                    <Image Aspect="AspectFit" x:Name="van4"/>
+                </Grid>
+            </StackLayout>
+
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

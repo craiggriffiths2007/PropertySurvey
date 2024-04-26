@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<s:CarouselValidateNoImage
+            xmlns="http://xamarin.com/schemas/2014/forms"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            x:Class="PropertySurvey.AccidentDetailsVehicle"
+            xmlns:controls="clr-namespace:MartControls"
+            xmlns:s="clr-namespace:PropertySurvey"
+            Title="Details">
+    <ContentPage TabIndex="0">
+        <ScrollView>
+            <controls:ControlLayout x:Name="page1">
+                <Label Text="Please provide a comprehensive description of the accident circumstances"/>
+                <controls:EditorGrows x:Name="description_entry" Text="{Binding d_description}"/>
+
+                <controls:DateLabel x:Name="acc_date" LabelText="Date" TheDate="{Binding acc_date}"/>
+                <controls:TimeLabel x:Name="acc_time" LabelText="Time" TheTime="{Binding acc_time}"/>
+                
+               
+
+                <Label Text="Place"/>
+                <controls:EditorGrows Text="{Binding d_place}"/>
+                <Label Text="Weather"/>
+                <controls:EditorGrows Text="{Binding d_weather}"/>
+                <controls:EntryLabel LabelText="Speed of impact" TextBinding="d_speed" Orientation="Horizontal"/>
+                <controls:Copyright/>
+            </controls:ControlLayout>
+        </ScrollView>
+    </ContentPage>
+</s:CarouselValidateNoImage>

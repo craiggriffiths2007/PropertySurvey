@@ -1,0 +1,157 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<s:CarouselValidate
+            xmlns="http://xamarin.com/schemas/2014/forms"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            x:Class="PropertySurvey.TimberItem" 
+            Title="Timber"
+            xmlns:controls="clr-namespace:MartControls"
+            xmlns:s="clr-namespace:PropertySurvey">
+
+    <ScrollView>
+        <controls:ControlLayout>
+            <controls:EditPickerLabel x:Name="timber_item_picker" LabelText="Timber Item" TextBinding="timber_item" max_text_length="30" picker_title="Timber Item"  OnTextChangedEvent="timber_item_changed"/>
+            <controls:YesNoLabel x:Name="flat_question" LabelText="Is the property a flat" button_binding="is_a_flat" IsVisible="false" OnSelectionChanged="flat_changed"/>
+            <controls:WarningMessage x:Name="flat_warning_text" Text="Thumb turn locks must be used."/>
+            <controls:EditPickerLabel x:Name="replacement_reason_picker" LabelText="Reason for replacement" TextBinding="replace_reason" IsVisible="False"/>
+            <controls:YesNoLabel x:Name="cosmetic_damage_button" LabelText="Cosmetic Damage" button_binding="cosmetic_damage" IsVisible="False"/>
+            <controls:YesNoLabel x:Name="collect_and_copy_button" LabelText="Collect and Copy" button_binding="collect_and_copy" OnSelectionChanged="collect_and_copy_changed"/>
+            <controls:YesNoLabel x:Name="temporary_button" LabelText="Temporary:" button_binding="temporary" IsVisible="false"/>
+            <controls:YesNoLabel x:Name="preglazed_door_button" LabelText="Preglazed Door" button_binding="pre_glazed_door" IsVisible="False"/>
+            <controls:EditPickerLabel x:Name="additional_locks_picker" LabelText="Additional locks" max_text_length="30" TextBinding="additional_locks" IsVisible="False" picker_title="Additional locks"/>
+
+            <StackLayout x:Name="new_lock_area" Orientation="Horizontal" IsVisible="False">
+                <Label Text="New locking mechanism required" HorizontalOptions="FillAndExpand"/>
+                <controls:YesNo ButtonState="{Binding bNewLockingMech}" OnSelectionChanged="new_lock_required_clicked"/>
+                <StackLayout Orientation="Horizontal" WidthRequest="3"/>
+                <Button x:Name="new_lock_button" WidthRequest="45" Clicked="new_lock_clicked"/>
+            </StackLayout>
+
+            <StackLayout x:Name="new_lock_make_area" IsVisible="False">
+                <controls:EditPickerLabel x:Name="lock_make_picker" LabelText="Lock make" max_text_length="30" TextBinding="lock_make" picker_title="Lock make"/>
+                <controls:EntryLabel x:Name="lock_codes_entry" LabelText="Lock codes" TextBinding="lock_codes" max_text_length="30"/>
+            </StackLayout>
+                    
+            <StackLayout x:Name="handles_area" Orientation="Horizontal" IsVisible="False">
+                <Label Text="Handles required" HorizontalOptions="FillAndExpand"/>
+                <controls:YesNo x:Name="handles_required_button" ButtonState="{Binding handles_req}" OnSelectionChanged="handles_required_changed"/>
+                <StackLayout Orientation="Horizontal" WidthRequest="3"/>
+                <Button x:Name="handles_button" WidthRequest="45" Clicked="handles_info_clicked"/>
+            </StackLayout>
+            <Entry x:Name="handles_text" Text="{Binding handles_text}" IsVisible="False" MaxLength="30"/>
+
+            <StackLayout x:Name="replace_glass_area" Orientation="Horizontal">
+                <Label Text="Replace glass" HorizontalOptions="FillAndExpand"/>
+                <controls:YesNo x:Name="replace_glass_button" ButtonState="{Binding replace_glass}" OnSelectionChanged="replace_glass_changed"/>
+                <StackLayout Orientation="Horizontal" WidthRequest="3"/>
+                <Button x:Name="do_replace_glass_button" WidthRequest="45" Clicked="replace_glass_clicked"/>
+            </StackLayout>
+
+            <controls:EditPickerLabel x:Name="wer_rating_picker" LabelText="WER Rating" TextBinding="WER_rating" IsVisible="False" max_text_length="30"/>
+            <controls:EditPickerLabel x:Name="mouldings_picker" LabelText="Mouldings" TextBinding="moulding"/>
+            <Label x:Name="reason_explain_label" Text="Why cannot item be repaired" IsVisible="False"/>
+            <controls:EditorGrows x:Name="reason_explain_text" Text="{Binding replace_explain}" IsVisible="False"/>
+            <controls:YesNoLabel x:Name="gaskets_button" button_binding="gaskets" LabelText="Gaskets" OnSelectionChanged="gaskets_changed"/>
+            <Entry x:Name="gasket_text" Text="{Binding gaskets_text}" IsVisible="False" HorizontalOptions="FillAndExpand"/>
+
+            <controls:CauseOfDamage x:Name="cause_of_damage_area"
+                cause_of_damage_binding      = "cause_of_damage"
+                reason_different_binding     = "cause_of_damage_reason_different"
+                point_of_entry_binding       = "point_of_entry"
+                was_it_locked_button_binding = "was_it_locked"
+                type_of_lock_picker_binding  = "type_of_lockng_system_required"/>
+
+            <controls:EditPickerLabel x:Name="door_wood_picker" LabelText="Door wood" TextBinding="timber_wood" IsVisible="False" picker_title="Door Wood"/>
+            <controls:EditPickerLabel x:Name="frame_picker" LabelText="Frame" TextBinding="timber_frame_wood" picker_title="Frame"/>
+            <controls:YesNoLabel x:Name="new_frame_button" LabelText="New frame" button_binding="timber_new_frame_req"/>
+            <controls:YesNoLabel x:Name="weather_bar_button" LabelText="Weather bar required" button_binding="weather_bar" IsVisible="False"/>
+            <controls:EditPickerLabel x:Name="room_location_picker" LabelText="Room location" TextBinding="room_location" picker_title="Room location"/>
+            <controls:EditPickerLabel x:Name="hinge_type_picker" LabelText="Hinge type" TextBinding="hinge_type" IsVisible="False"/>
+            <controls:YesNoLabel x:Name="docL_compliant_button" LabelText="Document 'L'" button_binding="doc_l_compliant" OnSelectionChanged="document_L_changed"/>
+            <controls:EditPickerLabel x:Name="reason_not_document_L_picker" LabelText="Reason not Document 'L' Compliant" TextBinding="doc_l_compliant_reason" IsVisible="False" picker_title="Reason not document 'L'"/>
+
+            <controls:Letterbox x:Name="letter_box_area"
+                letter_box_binding="letter_box"
+                letter_box_position_binding="letter_box_pos"
+                IsVisible="False"/>
+
+            <controls:PetFlap
+                x:Name="pet_flap_area"
+                IsVisible="False"
+                pet_flap_binding  = "pet_flap"
+                flap_type_binding = "pet_type"
+                magnetic_binding  = "pet_magnetic"/>
+
+            <controls:YesNoLabel x:Name="repair_frame_button" LabelText="Repair frame" button_binding="repair_frame"/>
+            <controls:EditPickerLabel x:Name="door_thickness_picker" LabelText="Door thickness - mm" IsVisible="False" TextBinding="door_thickness" OnTextChangedEvent="door_thickness_changed" max_text_length="10" picker_title="Door thickness"/>
+            <controls:EditPickerLabel x:Name="door_size_picker" LabelText="Door size" IsVisible="False" TextBinding="standard_sizes" OnTextChangedEvent="door_size_changed" max_text_length="30" picker_title="Door size"/>
+            <controls:EntryLabel x:Name="door_size_reason_non_standard" LabelText="Reason not standard" IsVisible="False" TextBinding="reasonnonstandard"/>
+
+            <controls:WidthHeight
+                x:Name="door_width_height_area"
+                IsVisible="False"
+                width_label_text="Door width"
+                width_binding="door_width"
+                height_label_text="Door height"
+                height_binding="door_height"
+                units="units_inches"/>
+
+            <controls:YesNoLabel x:Name="glazed_button" LabelText="Glazed" IsVisible="False" button_binding="timber_glazed"/>
+            <controls:YesNoLabel x:Name="opens_button" LabelText="Opens" button_binding="opens"/>
+            <controls:YesNoLabel x:Name="new_sash_button" LabelText="New sash req" button_binding="new_sash_required"/>
+            <controls:YesNoLabel x:Name="head_drip_button" LabelText="Head drip" button_binding="head_drip"/>
+            <controls:YesNoLabel x:Name="draught_strip_button" LabelText="Draught strip" button_binding="draught_strip"/>
+            <controls:EditPickerLabel x:Name="cills_picker" LabelText="Cills" TextBinding="cills" max_text_length="30" picker_title="Cills"/>
+            <controls:YesNoLabel x:Name="thresher_button" LabelText="Thresher" button_binding="thresher" IsVisible="False"/>
+            <controls:EditPickerLabel x:Name="glass_pattern_picker" LabelText="Glass pattern" TextBinding="glass_pattern" OnTextChangedEvent="glass_pattern_changed"/>
+            <controls:YesNoLabel x:Name="single_double_button" LabelText="Single or double" button_binding="single_double" IsVisible="False" OnSelectionChanged="single_double_changed" ButtonWidth="160"/>
+            <controls:EditPickerLabel x:Name="trickle_vents_picker" LabelText="Trickle vents" TextBinding="trickle_vents" max_text_length="30" picker_title="Trickle vents"/>
+            <controls:EditPickerLabel x:Name="hardware_colour_picker" LabelText="Hardware colour" TextBinding="hardware_color" max_text_length="30" picker_title="Hardware colour"/>
+            <controls:YesNoLabel x:Name="door_slides_button" LabelText="Door slides on the" button_binding="slide_position"/>
+            <controls:EditPickerLabel x:Name="spacer_thickness_picker" LabelText="Spacer thickness" TextBinding="spacer_thickness" IsVisible="False" max_text_length="30" picker_title="Spacer thickness"/>
+            <controls:EditPickerLabel x:Name="spacer_colour_picker" LabelText="Spacer colour" TextBinding="spacer_color" IsVisible="false" OnTextChangedEvent="space_colour_changed" max_text_length="30" picker_title="Spacer colour"/>
+            <controls:WarningMessage x:Name="spacer_warning" Text="Limited stock. Try to use super spacer."/>
+            <controls:EditPickerLabel x:Name="locks_picker" LabelText="Locks" TextBinding="locks" max_text_length="30" picker_title="Locks"/>
+
+            <controls:WidthHeight
+                x:Name="brick_dimensions"
+                width_label_text="Brick width"
+                width_binding="brick_width"
+                height_label_text="Brick height"
+                height_binding="brick_height"/>
+
+            <controls:WidthHeight
+                x:Name="internal_dimensions"
+                width_label_text="Internal width"
+                width_binding="internal_width"
+                height_label_text="Internal height"
+                height_binding="internal_height"/>
+
+            <controls:YesNoLabel x:Name="fire_rated_button" LabelText="Does this door need fire rated glass" button_binding="beading_type" IsVisible="False"/>
+            <controls:EditPickerLabel x:Name="inside_door_colour_picker" LabelText="Inside door colour" TextBinding="door_color" IsVisible="False" OnTextChangedEvent="inside_door_colour_changed" picker_title="Inside door colour" max_text_length="30"/>
+            <controls:EditPickerLabel x:Name="inside_door_code_picker" TextBinding="door_color_code" IsVisible="False" picker_title="Inside door code/col" max_text_length="30"/>
+            <controls:EditPickerLabel x:Name="outside_door_colour_picker" LabelText="Outside door colour" TextBinding="door_color_out" IsVisible="False" OnTextChangedEvent="outside_door_colour_changed" picker_title="Outside door colour" max_text_length="30"/>
+            <controls:EditPickerLabel x:Name="outside_door_code_picker" TextBinding="door_color_code_out" IsVisible="False" picker_title="Outside door code/col" max_text_length="30"/>
+            <controls:EditPickerLabel x:Name="inside_frame_colour_picker" LabelText="Inside frame colour" TextBinding="frame_color" OnTextChangedEvent="inside_frame_colour_changed" picker_title="Inside frame colour" max_text_length="30"/>
+            <controls:EditPickerLabel x:Name="inside_frame_code_picker" TextBinding="frame_color_code" picker_title="Inside frame code/col" max_text_length="30"/>
+            <controls:EditPickerLabel x:Name="outside_frame_colour_picker" LabelText="Outside frame colour" TextBinding="frame_color_out" OnTextChangedEvent="outside_frame_colour_changed" picker_title="Outside frame colour" max_text_length="30"/>
+            <controls:EditPickerLabel x:Name="outside_frame_code_picker" TextBinding="frame_color_code_out" picker_title="Outside frame code/col" max_text_length="30"/>
+            <controls:EditPickerLabel x:Name="glass_type_picker" LabelText="Glass type" TextBinding="glass_type" IsVisible="false" max_text_length="30" picker_title="Glass type"/>
+
+            <controls:SpecialGlass x:Name="special_glass_area"
+                special_glass_binding="special_glass"
+                diamond_lead_complete_binding="lead_bDiamondComplete"
+                georgian_lead_complete_binding="lead_bGeorgianComplete"
+                back_to_back_complete_binding="lead_bGeorgianComplete"
+                georgian_bar_complete_binding="lead_bBarComplete"/>
+
+            <controls:EditPickerLabel x:Name="document_L_picker" LabelText="Document 'L'" TextBinding="docl" IsVisible="false" max_text_length="70" picker_title="Document 'L'"/>
+
+            <controls:ItemSummary_PTO
+                x:Name="summary_pto_area"
+                summary_binding="long_timber_comments"
+                PTO_binding="parts_to_order"/>
+
+            <controls:Copyright/>
+        </controls:ControlLayout>
+    </ScrollView>
+</s:CarouselValidate>

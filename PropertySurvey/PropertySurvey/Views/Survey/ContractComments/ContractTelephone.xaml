@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PropertySurvey.ContractTelephone"             
+             xmlns:controls="clr-namespace:MartControls"
+             Title="Contract Telephone">
+    <ContentPage.Content>
+        <controls:ControlLayout>
+
+            <Label Text="Home"  HorizontalOptions="FillAndExpand"/>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                <Entry Text="{Binding ContractHPhone}" HorizontalOptions="FillAndExpand" IsEnabled="False"/>
+                <Button  Text="Call" HeightRequest="35" FontSize="Small" Clicked="OnCallHome" HorizontalOptions="End"/>
+            </StackLayout>
+
+            <Label Text="Work"  HorizontalOptions="FillAndExpand"/>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                <Entry Text="{Binding ContractWPhone}" HorizontalOptions="FillAndExpand" IsEnabled="False"/>
+                <Button  Text="Call" HeightRequest="35" FontSize="Small" Clicked="OnCallWork" HorizontalOptions="End"/>
+            </StackLayout>
+
+            <Label Text="Mobile"  HorizontalOptions="FillAndExpand"/>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                <Entry Text="{Binding ContractMPhone}" HorizontalOptions="FillAndExpand" IsEnabled="False"/>
+                <Button  Text="Call" HeightRequest="35" FontSize="Small" Clicked="OnCallMobile" HorizontalOptions="End"/>
+            </StackLayout>
+
+            <Label Text="Additional 1"  HorizontalOptions="FillAndExpand"/>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                <Entry Text="{Binding ContractAddPhone1}" HorizontalOptions="FillAndExpand" IsEnabled="False"/>
+                <Button  Text="Call" HeightRequest="35" FontSize="Small" Clicked="OnCallAdd1" HorizontalOptions="End"/>
+            </StackLayout>
+
+            <Label Text="Additional 2"  HorizontalOptions="FillAndExpand"/>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                <Entry Text="{Binding ContractAddPhone2}" HorizontalOptions="FillAndExpand" IsEnabled="False"/>
+                <Button  Text="Call" HeightRequest="35" FontSize="Small" Clicked="OnCallAdd2" HorizontalOptions="End"/>
+            </StackLayout>
+            <controls:Copyright/>
+        </controls:ControlLayout>
+    </ContentPage.Content>
+</ContentPage>

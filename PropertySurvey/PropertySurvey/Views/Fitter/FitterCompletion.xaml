@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<CarouselPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PropertySurvey.FitterCompletion"
+              xmlns:controls="clr-namespace:MartControls"
+              Title="Completion" >
+
+    <CarouselPage.ToolbarItems>
+        <ToolbarItem x:Name="page_num" Text=""/>
+    </CarouselPage.ToolbarItems>
+
+    <ContentPage x:Name="content1">
+        <ScrollView>
+            <controls:ControlLayout x:Name="page1">
+                <controls:EditPickerLabel x:Name="unfinished_code" LabelText="Unfinished Code" TextBinding="funfinished_code"/>
+                <controls:EntryLabel x:Name="reason_unfinished" TextBinding="freason_unfinished" LabelText="Reason Unfinished"/>
+                <controls:EntryLabel x:Name="parts_needed" TextBinding="fparts_required" LabelText="Parts (including sizes) needed to complete the job"/>
+                <StackLayout x:Name="additional_drawings_area" Orientation="Horizontal">
+                    <Label x:Name="add_drawing" Text="Additional Drawing" HorizontalOptions="FillAndExpand"/>
+                    <Button x:Name="add_drawing_button" WidthRequest="45" Clicked="additional_drawing1_clicked"/>
+                </StackLayout>
+
+                <controls:Copyright/>
+            </controls:ControlLayout>
+        </ScrollView>
+    </ContentPage>
+    <ContentPage x:Name="content2">
+        <ScrollView>
+            <controls:ControlLayout x:Name="page2">
+                <controls:AddMinusLabel Val="{Binding no_of_fitters}" Min="1" Max="8" OnSelectionChanged="OnFittersChanged" LabelText="No. of Fitters"/>
+
+                <controls:EntryLabel x:Name="fname1" TextBinding="fname1" LabelText="Fitter Name 1"/>
+                <controls:EntryLabel x:Name="fname2" TextBinding="fname2" LabelText="Fitter Name 2"/>
+                <controls:EntryLabel x:Name="fname3" TextBinding="fname3" LabelText="Fitter Name 3"/>
+                <controls:EntryLabel x:Name="fname4" TextBinding="fname4" LabelText="Fitter Name 4"/>
+                <controls:EntryLabel x:Name="fname5" TextBinding="fname5" LabelText="Fitter Name 5"/>
+                <controls:EntryLabel x:Name="fname6" TextBinding="fname6" LabelText="Fitter Name 6"/>
+                <controls:EntryLabel x:Name="fname7" TextBinding="fname7" LabelText="Fitter Name 7"/>
+                <controls:EntryLabel x:Name="fname8" TextBinding="fname8" LabelText="Fitter Name 8"/>
+
+                <controls:YesNoLabel button_binding="fbexcess_paid" LabelText="Excess Paid" OnSelectionChanged="ExcessYesNoLabel_OnSelectionChanged"/>
+                <controls:EntryLabel x:Name="excesspd" TextBinding="freason_excess_not_paid" LabelText="Reason excess not paid"/>
+
+                <controls:YesNoLabel button_binding="fbmandate_signed" LabelText="Mandate Signed" OnSelectionChanged="MandateYesNoLabel_OnSelectionChanged"/>
+                <controls:EntryLabel x:Name="mandatesigned" TextBinding="freason_mandate_not_signed" LabelText="Reason Mandate not Signed"/>
+
+                <controls:YesNoLabel x:Name="garage_motor" button_binding="garage_door_motor" LabelText="Garage door motor"/>
+
+                <controls:TimeLabel x:Name="ftime_arrived" TheTime="{Binding ftime_arrived}" LabelText="Time Arrived"/>
+                <controls:TimeLabel x:Name="ftime_left" TheTime="{Binding ftime_left}" LabelText="Time Left"/>
+
+                <controls:DateLabel x:Name="date_completed" TheDate="{Binding expiry}" LabelText="Date work completed"/>
+
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Signature" HorizontalOptions="StartAndExpand"/>
+                    <Button x:Name="fitter_sign_button" HorizontalOptions="End" WidthRequest="45" Clicked="OnSign"/>
+                </StackLayout>
+
+                <controls:YesNoLabel button_binding="fbadditional_paid" LabelText="Additional Paid" OnSelectionChanged="AdditionalYesNoLabel_OnSelectionChanged"/>
+                <controls:EntryLabel x:Name="addpaid" TextBinding="fhow_mutch_additional_paid" LabelText="Additional Ammount"/>
+                <!--EntryKeyboard="Numeric"-->
+
+                <controls:YesNoLabel button_binding="uspot_p1" LabelText="Is there a Lintel present?" OnSelectionChanged="LintelYesNoLabel_OnSelectionChanged"/>
+
+                <StackLayout Orientation="Vertical" x:Name="lintel_area" IsVisible="False">
+                    <Label Text="You must advise the customer that a Lintel is required and ask the customer to sign below to confirm that they understand."/>
+                    <StackLayout Orientation="Horizontal" >
+                        <Label Text="Signature" HorizontalOptions="StartAndExpand"/>
+                        <Button x:Name="lintel_sign_button" HorizontalOptions="End" WidthRequest="45" Clicked="OnLintelSign"/>
+                    </StackLayout>
+                </StackLayout>
+
+                <controls:YesNoLabel x:Name="tower_scaff_button" button_binding="isTowerScaff" LabelText="Have you used a mobile tower?" OnSelectionChanged="TowerYesNoLabel_OnSelectionChanged"/>
+
+                <controls:Copyright/>
+            </controls:ControlLayout>
+        </ScrollView>
+    </ContentPage>
+</CarouselPage>

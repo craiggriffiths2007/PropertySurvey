@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PropertySurvey.BifoldSignature"
+             Title="">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout Orientation="Vertical" VerticalOptions="FillAndExpand" >
+                <StackLayout Orientation="Vertical" VerticalOptions="FillAndExpand">
+                    <StackLayout Orientation="Horizontal" HeightRequest="80">
+                        <Image x:Name="type_image" HorizontalOptions="Start" Aspect="AspectFit"/>
+                        <Image x:Name="cill_image" HorizontalOptions="EndAndExpand" Aspect="AspectFit"/>
+                    </StackLayout>
+                    <Grid xmlns:signature="clr-namespace:SignaturePad.Forms;assembly=SignaturePad.Forms" VerticalOptions="FillAndExpand">
+                        <signature:SignaturePadView x:Name="signaturePad"  StrokeCompleted="SignatureChanged" Cleared="SignatureChanged"/>
+                    </Grid>
+                </StackLayout>
+                <Button x:Name="save_button" Text="Save" IsEnabled="False" VerticalOptions="End" HorizontalOptions="EndAndExpand" Clicked="SaveButton_Clicked"/>
+
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PropertySurvey.ContractComments"
+             xmlns:controls="clr-namespace:MartControls"
+             Title="Contract Comments">
+    <ContentPage.Content>
+        <Grid>
+            <StackLayout Orientation="Vertical">
+                <controls:ControlLayout Orientation="Horizontal">
+                    <Label Text="Contract"/>
+                    <Entry x:Name="cont_num" HorizontalOptions="FillAndExpand" Text="00" Keyboard="Numeric"/>
+                    <Button Text="Find" Clicked="OnFind"/>
+                </controls:ControlLayout>
+                <ListView HasUnevenRows="True" x:Name="listView" ItemTapped="OnItemTapped">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <StackLayout BackgroundColor="{Binding back_colour}"  Margin="3" Padding="3" >
+                                    <Label Text="{Binding jtitle}" />
+                                    <StackLayout Orientation="Horizontal">
+                                        <Label Text="{Binding logged_by}" WidthRequest="130" />
+                                        <Label Text="{Binding date}" WidthRequest="100" />
+                                        <Label Text="{Binding time}" WidthRequest="100" />
+                                    </StackLayout>
+                                    <StackLayout Orientation="Horizontal">
+                                        <Label Text="{Binding comment}" TextColor="Black"/>
+
+                                    </StackLayout>
+                                </StackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+                <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                    <Button Text="View Info" Clicked="OnViewInfo" HorizontalOptions="FillAndExpand" x:Name="view_info_button"/>
+                    <Button Text="Add Comment" Clicked="OnAddComment" HorizontalOptions="FillAndExpand" x:Name="add_comment_button"/>
+                    <!--<Button Text="Select" Clicked="OnSelect" HorizontalOptions="FillAndExpand"/>-->
+                </StackLayout>
+            </StackLayout>
+            <StackLayout HorizontalOptions="Center" VerticalOptions="Center" HeightRequest="60" WidthRequest="60">
+                <ActivityIndicator x:Name="act_ind" Color="DodgerBlue" IsRunning="False" WidthRequest="60" HeightRequest="60"/>
+            </StackLayout>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

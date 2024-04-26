@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage 
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PropertySurvey.LeadBarPosition"
+             Title="Georgian Lead Designer"
+             xmlns:controls="clr-namespace:MartControls"
+             xmlns:views="clr-namespace:SkiaSharp.Views.Forms;assembly=SkiaSharp.Views.Forms"
+             NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        <StackLayout x:Name="stack_size" Orientation="Vertical">
+            <views:SKCanvasView x:Name="SkCanvasView" PaintSurface="OnPainting" EnableTouchEvents="True" Touch="OnTouch" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand"/>
+            <StackLayout Orientation="Vertical" VerticalOptions="End" HorizontalOptions="FillAndExpand">
+                <StackLayout Orientation="Horizontal" >
+                    <Label Text="A" FontAttributes="Bold" TextColor="Green"/>
+                    <Entry x:Name="size_a" Text="{Binding sizeA}" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center"/>
+                    <Label Text="B" FontAttributes="Bold" TextColor="Red"/>
+                    <Entry x:Name="size_b" Text="{Binding sizeB}" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center"/>
+                    <Label Text="C" FontAttributes="Bold" TextColor="Blue"/>
+                    <Entry x:Name="size_c" Text="{Binding sizeC}" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center"/>
+                    <Label Text="D" FontAttributes="Bold" TextColor="Purple"/>
+                    <Entry x:Name="size_d" Text="{Binding sizeD}" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center"/>
+                    <Button x:Name="left_right" Text="" Clicked="Button_Clicked"/>
+                </StackLayout>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
